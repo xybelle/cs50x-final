@@ -21,12 +21,10 @@ int main(void)
 
     // TODO: Calculate number of years until we reach threshold
     // b = n / 3 , d = n / 4
-    // y = n + b - d
- 
+    // n = n + b - d
+    // y++
+    // 
 
-    for (int y = 0; y  y++)
-    {
-        // TODO: Print number of years
-        printf(It will take %i\n.", y);
-    }
+    // TODO: Print number of years
+    printf(It will take %i\n.", y);
 }
