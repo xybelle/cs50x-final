@@ -23,9 +23,15 @@ int main(void)
     // b = n / 3 , d = n / 4
     // j = n + b - d
     // y++
-    //
+    int b = n / 3;
+    int d = n / 4;
+    int j = n + b - d;
+    int y = 0;
+    while (j < t)
+    {
+        y++;
+    }
 
     // TODO: Print number of years
-    int y = 0
     printf("It will take %i\n.", y);
 }
