@@ -17,7 +17,7 @@ int main(void)
     {
         t = get_int("Ending population size: ");
     }
-    while (t <= n);
+    while (t < n);
 
     // TODO: Calculate number of years until we reach threshold
     int y = 0;
