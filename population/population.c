@@ -20,9 +20,6 @@ int main(void)
     while (t < n);
 
     // TODO: Calculate number of years until we reach threshold
-    // b = n / 3 , d = n / 4
-    // j = n + b - d
-    // y++
     int y = 0;
     while (n < t)
     {
