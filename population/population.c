@@ -21,7 +21,7 @@ int main(void)
 
     // TODO: Calculate number of years until we reach threshold
     // b = n / 3 , d = n / 4
-    // n = n + b - d
+    // j = n + b - d
     // y++
     //
 
