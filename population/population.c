@@ -23,7 +23,7 @@ int main(void)
     int y = 0;
     while (n < t)
     {
-        n += n/12;
+        n += n / 12;
         y++;
     }
 
