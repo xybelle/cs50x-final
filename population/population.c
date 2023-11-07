@@ -9,7 +9,7 @@ int main(void)
     {
         n = get_int("Starting population size: ");
     }
-    while (n <= 9);
+    while (n < 9);
 
     // TODO: Prompt for end size
     int t;
