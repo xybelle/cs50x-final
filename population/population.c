@@ -23,8 +23,8 @@ int main(void)
     // b = n / 3 , d = n / 4
     // y = n + b - d
 
-    
-    for (int y = 0; y++)
+
+    for (int y = 0; y  y++)
     {
         // TODO: Print number of years
         printf(It will take %i\n.", y);
