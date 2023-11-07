@@ -29,7 +29,7 @@ int main(void)
     int y = 0;
     while (j < t)
     {
-        j = j + b -d;
+        j = n + j;
         y++;
     }
 
