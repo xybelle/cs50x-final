@@ -29,12 +29,8 @@ int main(void)
     int y = 0;
     while (j < t)
     {
-        j = n + j;
+        j = j + j/3 - j/4;
         y++;
-    }
-    do
-    {
-        j 
     }
 
     // TODO: Print number of years
