@@ -26,7 +26,7 @@ int main(void)
     int b = n / 3;
     int d = n / 4;
     int j = n + b - d;
-    int y = 0;
+    int y = 1;
     while (j < t)
     {
         j = j + j/3 - j/4;
