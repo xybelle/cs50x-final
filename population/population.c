@@ -29,9 +29,10 @@ int main(void)
     int y = 0;
     while (j < t)
     {
+        j = j + b -d;
         y++;
     }
 
     // TODO: Print number of years
-    printf("It will take %i\n.", y);
+    printf("It will take %i\n years.", y);
 }
