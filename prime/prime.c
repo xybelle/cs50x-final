@@ -35,4 +35,5 @@ bool prime(int number)
         if (number % n == 0)
             return false;
     }
+    return true;
 }
