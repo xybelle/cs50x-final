@@ -42,3 +42,8 @@ bool prime(int number)
     }
     return true;
 }
+
+    for (int n = 5; n <= number; n++)
+    {
+        if (number % n)
+    }
