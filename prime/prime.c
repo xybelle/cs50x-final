@@ -31,19 +31,9 @@ int main(void)
 bool prime(int number)
 {
     // TODO
-    if (number == 2 || number == 3)
+   for (int n = 2; n <= number; n++)
+    {
+        if (number % n == 0)
         return true;
-    if (number <=1 || number % 2 == 0 || number % 3 == 0)
-        return false;
-    for (int n = 5; n * n <= n; n += 6)
-    {
-        if (number % n == 0 || n % (n + 2) == 0)
-        return false;
     }
-    return true;
 }
-
-    for (int n = 5; n <= number; n++)
-    {
-        if (number % n)
-    }
