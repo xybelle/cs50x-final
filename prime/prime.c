@@ -31,5 +31,5 @@ int main(void)
 bool prime(int number)
 {
     // TODO
-    return number % number || 1 == 1;
+    return number % number || 1 == 0;
 }
