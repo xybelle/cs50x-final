@@ -25,7 +25,7 @@ int main(void)
 
         printf(" ");
 
-        for (l = k; l < k; l++)
+        for (l = 1; l <= i; l++)
         {
             printf("#");
         }
