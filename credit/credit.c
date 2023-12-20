@@ -25,6 +25,7 @@ int main(void)
     // Get numbers to calculate checksum
 
     // Check starting digits
+    int first
 
     // Check if length and starting digits are valid
 
