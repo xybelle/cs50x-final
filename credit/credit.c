@@ -70,5 +70,9 @@ int main(void)
             printf("Invalid\n");
         }
     }
-
+    else
+    {
+        printf("Invalid\n");
+    }
+}
 
