@@ -45,13 +45,11 @@ int main(void)
     {
         printf("Visa\n");
     }
-
-    if (firsttwo <= 37 && count == 15)
+    else if (firsttwo <= 37 && count == 15)
     {
         printf("AMEX\n");
     }
-
-    if (firsttwo == 51, 52, 53, 54, 55 && count == 16)
+    else if (firsttwo == 51, 52, 53, 54, 55 && count == 16)
     {
         printf("MasterCard\n");
     }
