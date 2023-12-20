@@ -1,18 +1,15 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_card(void);
-int last_number(int n);
+int last_number(int ln);
 
 int main(void)
 {
     // Prompt for input
-    int c = get_long("Card number: ");
-    
+    int card = get_long("Card number: ");
 
     // Get numbers to calculate checksum
     int ln = last_number(card);
-
     printf("%i\n", ln);
 
     // Check card length
@@ -22,17 +19,11 @@ int main(void)
     // Check if length and starting digits are valid
 
     // Print card type and validity
-
 }
 
-int get_card(void)
+int last_number(int ln)
 {
-
-    return c;
+    ln = ln % 10;
+    return ln;
 }
 
-int last_number(int n)
-{
-    c = n / 10;
-    return n % 10;
-}
