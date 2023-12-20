@@ -9,4 +9,9 @@ int main(void)
         cc = get_long("Card number: ");
     }
     while (cc > 5699999999999999);
+
+    switch(cc)
+    {
+        case 
+    }
 }
