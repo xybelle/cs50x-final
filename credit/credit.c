@@ -50,10 +50,8 @@ int main(void)
     {
         printf("AMEX\n");
     }
-    else
-    {
-        printf("Invalid)
-    }
+
+    if (firsttwo == 51, 52, 53, 54, 55 && count == 16)
 }
 
 
