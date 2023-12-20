@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 bool cardlengthcheck(long card);
-int findlenght(long card);
+int findlength(long card);
 bool checksum(long card);
 void firsttwo(long card);
 
