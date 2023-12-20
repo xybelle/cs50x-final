@@ -27,8 +27,8 @@ int main(void)
 
 bool cardlength(long card);
 {
-    int len = findlenght(card);
-    return ((len == 13 || len == 15 || len == 16) && checksum(card))
+    int length = findlenght(card);
+    return ((length == 13 || length == 15 || length == 16) && checksum(card))
 }
 
 int findlength(long card)
@@ -41,6 +41,29 @@ int findlength(long card)
     }
     return count
 }
+
+bool checksum(long card)
+{
+    int sum = 0;
+    long temp = card;
+
+    while (temp > 0)
+    {
+        int last = temp % 10;
+        sum = sum + last;
+        temp = temp / 100;
+    }
+
+    while (temp > 0)
+    {
+        int seclast = (temp % 10);
+        int multemp = seclast * 2;
+        sum = sum + (multemp % 10) + (multemp / 10);
+        temp = temp / 100;
+    }
+    return (sum % 10) == 0;
+}
+
 
         // Check starting digits
         long firsttwo;
@@ -104,25 +127,5 @@ int findlength(long card)
     }
 }
 
-bool checksum(long card)
-{
-    int sum = 0;
-    long temp = card;
 
-    while (temp > 0)
-    {
-        int last = temp % 10;
-        sum = sum + last;
-        temp = temp / 100;
-    }
-
-    while (temp > 0)
-    {
-        int seclast = (temp % 10);
-        int multemp = seclast * 2;
-        sum = sum + (multemp % 10) + (multemp / 10);
-        temp = temp / 100;
-    }
-    return (sum % 10) == 0;
-}
 
