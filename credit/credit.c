@@ -40,7 +40,7 @@ int main(void)
 
 
     // Print card type and validity
-    if (40 >= firsttwo >= 49, le == 13 || le == 16)
+    if (firsttwo >= 40 || firsttwo <= 49, le == 13 || le == 16)
     {
         printf("VISA\n");
     }
