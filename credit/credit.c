@@ -9,7 +9,7 @@ int main(void)
     // Prompt for input
     long card = get_card();
 
-    // Calculate checksum
+    // Get numbers to calculate checksum
     int ln = last_number(card);
     printf("%d\n", ln);
 
