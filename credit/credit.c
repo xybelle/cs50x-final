@@ -8,5 +8,5 @@ int main(void)
     {
         cc = get_long("Card number: ");
     }
-    while (cc < 9999999999999999)
+    while (cc > 5699999999999999);
 }
