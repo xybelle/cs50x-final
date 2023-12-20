@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool validity_checker(long card);
+bool checksum(long card);
 
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
     card = get_long("Card number: ");
 
     // Calculate checksum
-    if (validity_checker(card))
+    if (checksum(card))
     {
         long lastnum = calculate_last(card);
 
@@ -73,6 +73,26 @@ int main(void)
     else
     {
         printf("Invalid\n");
+    }
+}
+
+bool checksum(long card)
+{
+    int sum = 0;
+    long temp = card
+
+    while (temp > 0)
+    {
+        int last = temp % 10;
+        sum = sum + last;
+        temp = temp / 100;
+    }
+
+    while (temp > 0)
+    {
+        int seclast = (temp % 10);
+        int multemp = seclast * 2;
+        sum = sum + ()
     }
 }
 
