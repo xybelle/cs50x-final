@@ -1,9 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool checksum(long card);
-int findlenght(long card);
 bool cardlength(long card);
+int findlenght(long card);
+bool checksum(long card);
 void firsttwo(long card);
 
 int main(void)
