@@ -55,6 +55,7 @@ bool checksum(long card)
         temp = temp / 100;
     }
 
+    temp = card / 10;
     while (temp > 0)
     {
         int seclast = (temp % 10);
