@@ -7,13 +7,21 @@ int main(void)
 {
     // Prompt for input
     long card = get_long("Card number: ");
-    long ln = card % 10;
+
     long a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
 
     // Get individual numbers
-    long p = ln()
+    p = card % 10;
+    o = (card / 10) % 10;
+    n = (o / 10) % 10;
+    m = (n / 10) % 10;
+    l = (m / 10) % 10;
+    k = (l / 10) % 10;
+    j = (k / 10) % 10;
+    i = (j / 10) % 10;
+    h = (i / 10) % 10;
 
-    printf("%li\n", ln);
+    printf("%li \t %li \t %li\n", p , o , n);
 
     // Get numbers to calculate checksum
 
