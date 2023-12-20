@@ -13,5 +13,9 @@ int main(void)
 
     // Check starting digits
 
+    // Check if length and starting digits are valid
+
+
     // Print card type and validity
+    printf("%s\n", )
 }
