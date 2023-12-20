@@ -26,7 +26,17 @@ int main(void)
     printf("first digit = %li\n", firsttwo);
 
     // Check if length and starting digits are valid
-    
+    long count = 0;
+    scanf("%ld", &card);
+    do
+    {
+        card /= 10;
+        count++;
+    }
+    while (card != 0);
+
+    printf("Number of digits: %li\n", count);
+
 
     // Print card type and validity
     if (firsttwo >= 4)
