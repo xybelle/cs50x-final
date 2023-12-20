@@ -27,7 +27,7 @@ int main(void)
 
     // Check if length and starting digits are valid
     long le, count = 0;
-    
+
     le = card;
     do
     {
@@ -40,9 +40,13 @@ int main(void)
 
 
     // Print card type and validity
-    if (firsttwo >= 4)
+    if (firsttwo >= 4, le == 13 || le == 16)
     {
         printf("VISA\n");
+    }
+    else
+    {
+        printf("Invalid\n");
     }
 }
 
