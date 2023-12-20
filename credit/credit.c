@@ -28,7 +28,7 @@ int main()
 
 bool cardlengthcheck(long card)
 {
-    int length = findlenght(card);
+    int length = findlength(card);
     return ((length == 13 || length == 15 || length == 16) && checksum(card));
 }
 
