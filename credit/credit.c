@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    long cc;
+    long cc = 0;
     do
     {
         cc = get_long("Card number: ");
