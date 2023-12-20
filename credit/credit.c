@@ -55,7 +55,7 @@ int main(void)
             printf("AMEX\n");
         }
     }
-    else if (51 < firsttwo && firsttwo < 55)
+    else if (51 <= firsttwo && firsttwo <= 55)
     {
         if (count == 16)
         {
