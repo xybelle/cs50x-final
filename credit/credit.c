@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int get_card(void);
+int last_number(int n);
 
 int main(void)
 {
@@ -27,4 +28,9 @@ int get_card(void)
 {
     int c = get_long("Card number: ");
     return c;
+}
+
+int last_number(int n)
+{
+    return n % 10;
 }
