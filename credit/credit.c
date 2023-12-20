@@ -9,7 +9,9 @@ int main(void)
     // Calculate checksum
     int checksum = calc_check(int sum)
 
-    // Check card length and starting digits
+    // Check card length
 
-    // 
+    // Check starting digits
+
+    // Print card type and validity
 }
