@@ -32,5 +32,6 @@ int get_card(void)
 
 int last_number(int n)
 {
+    c = n / 10;
     return n % 10;
 }
