@@ -3,6 +3,34 @@
 
 int main(void)
 {
-    int 
+    int size, i, j, k, l;
+
+    do
+    {
+        size = get_int("Height: ");
+    }
+    while (size < 1 || size > 8);
+
+    for (i = 1; i <= size; i++)
+    {
+        for (j = i; j < size; j++)
+        {
+            printf(" ");
+        }
+
+        for (k = 1; k <= i; k++)
+        {
+            printf("#");
+        }
+
+        printf(" ");
+
+        for (l = j; l < size; l++)
+        {
+            printf("#");
+        }
+
+        printf("\n");
+    }
 
 }
