@@ -18,7 +18,7 @@ int main(void)
 
     if (cardlength(card))
     {
-        checksum(card);
+        firsttwo(card);
     }
     else
     {
