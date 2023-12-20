@@ -10,6 +10,10 @@ int main(void)
     card = get_long("Card number: ");
 
     // Calculate checksum
+    if (validity_checker(card))
+    {
+        print_
+    }
     long lastnum = calculate_last(card);
 
     // Check starting digits
