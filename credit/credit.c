@@ -14,7 +14,7 @@ int main(void)
 
     // Check starting digits
     long firsttwo;
-    scanf("%ld", &card);
+    scanf("%li", &card);
 
     firsttwo = card;
 
