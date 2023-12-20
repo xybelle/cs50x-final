@@ -27,14 +27,19 @@ int main(void)
 
 bool cardlength(long card);
 {
-    int len = findlength(card);
+    int len = findlenght(card);
     return ((len == 13 || len == 15 || len == 16) && checksum(card))
 }
 
 int findlength(long card)
 {
-    long le, count = 0;
-    le = card;
+    int count = 0;
+    while (card != 0)
+    {
+        card = card / 10;
+        count++;
+    }
+    return count
 }
 
         // Check starting digits
