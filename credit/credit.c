@@ -15,7 +15,11 @@ int main(void)
 
     // Check if length and starting digits are valid
 
-
     // Print card type and validity
     printf("%s\n", )
+}
+
+int get_number(int n)
+{
+    for (n)
 }
