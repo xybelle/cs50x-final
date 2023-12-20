@@ -52,6 +52,9 @@ int main(void)
     }
 
     if (firsttwo == 51, 52, 53, 54, 55 && count == 16)
+    {
+        printf("MasterCard\n");
+    }
 }
 
 
