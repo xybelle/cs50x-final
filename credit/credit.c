@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long calculate_last(long card);
+bool validity_checker(long card);
 
 int main(void)
 {
