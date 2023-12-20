@@ -1,13 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
+long get_card(void);
+
 int main(void)
 {
     // Prompt for input
-    int card = get_card();
+    long card = get_card();
 
     // Calculate checksum
-    int checksum = calc_check(int sum)
 
     // Check card length
 
@@ -16,7 +17,13 @@ int main(void)
     // Check if length and starting digits are valid
 
     // Print card type and validity
-    printf("%s\n", )
+    
+}
+
+long get_card(void)
+{
+    long c = get_long("Card number: ");
+    return c;
 }
 
 int get_number(int n)
