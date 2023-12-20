@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool cardlength(long card);
+bool cardlengthcheck(long card);
 int findlenght(long card);
 bool checksum(long card);
 void firsttwo(long card);
@@ -16,7 +16,7 @@ int main()
     }
     while (card <= 0);
 
-    if (cardlength(card))
+    if (cardlengthcheck(card))
     {
         firsttwo(card);
     }
@@ -26,7 +26,7 @@ int main()
     }
 }
 
-bool cardlength(long card)
+bool cardlengthcheck(long card)
 {
     int length = findlenght(card);
     return ((length == 13 || length == 15 || length == 16) && checksum(card));
