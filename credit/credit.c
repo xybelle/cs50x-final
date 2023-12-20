@@ -14,18 +14,21 @@ int main(void)
     // Get numbers to calculate checksum
 
     // Check starting digits
-    long first, second;
+    long firsttwo;
     scanf("%ld", &card);
 
-    first = card;
+    firsttwo = card;
 
-    while (first >= 10)
+    while (firsttwo >= 100)
     {
-        first = first / 10;
+        firsttwo = firsttwo / 10;
     }
-    printf("first digit = %li", first);
+    printf("first digit = %li\n", firsttwo);
 
-
+    if (firsttwo >= 4)
+    {
+        printf("VISA\n");
+    }
 
     // Check if length and starting digits are valid
 
