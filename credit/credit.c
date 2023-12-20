@@ -9,8 +9,6 @@ int main(void)
     long card;
     printf("Card number: ");
 
-    // Check card length
-
     // Get numbers to calculate checksum
 
     // Check starting digits
@@ -25,7 +23,7 @@ int main(void)
     }
     printf("first digit = %li\n", firsttwo);
 
-    // Check if length and starting digits are valid
+    // Check length
     long le, count = 0;
 
     le = card;
@@ -38,7 +36,6 @@ int main(void)
 
     printf("Number of digits: %li\n", count);
 
-
     // Print card type and validity
     if (firsttwo >= 40 && count >= 13)
     {
@@ -47,6 +44,15 @@ int main(void)
     else
     {
         printf("Invalid\n");
+    }
+
+    if (firsttwo <= 37 && count == 15)
+    {
+        printf("AMEX\n");
+    }
+    else
+    {
+        printf("Invalid)
     }
 }
 
