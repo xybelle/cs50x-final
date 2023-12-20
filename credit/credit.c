@@ -12,8 +12,6 @@ int main(void)
     // Calculate checksum
     if (checksum(card))
     {
-        long lastnum = calculate_last(card);
-
         // Check starting digits
         long firsttwo;
         scanf("%li", &card);
@@ -79,7 +77,7 @@ int main(void)
 bool checksum(long card)
 {
     int sum = 0;
-    long temp = card
+    long temp = card;
 
     while (temp > 0)
     {
@@ -92,7 +90,9 @@ bool checksum(long card)
     {
         int seclast = (temp % 10);
         int multemp = seclast * 2;
-        sum = sum + ()
+        sum = sum + (multemp % 10) + (multemp / 10);
+        temp = temp / 100;
     }
+    return (sum % 10) == 0;
 }
 
