@@ -12,6 +12,8 @@ int main(void)
 
     switch(cc)
     {
-        case 
+        case(cc == 4000000000000000 || cc == 4999999999999999):
+            printf("Visa\n");
+            break;
     }
 }
