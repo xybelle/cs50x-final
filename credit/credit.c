@@ -13,7 +13,7 @@ int main(void)
     // Get numbers to calculate checksum
 
     // Check starting digits
-    int n, first;
+    int first;
     scanf("%ld", &card);
 
     first = card;
