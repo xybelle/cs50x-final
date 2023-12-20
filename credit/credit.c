@@ -8,6 +8,9 @@ int main(void)
     // Prompt for input
     long card = get_long("Card number: ");
 
+    // Check card length
+    int cardlength = 
+
     long a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
 
     // Get individual numbers
@@ -24,9 +27,6 @@ int main(void)
     printf("%li \t %li \t %li\n", p , o , n);
 
     // Get numbers to calculate checksum
-
-
-    // Check card length
 
     // Check starting digits
 
