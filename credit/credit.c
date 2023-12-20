@@ -10,6 +10,7 @@ int main(void)
     printf("Card number: ");
 
     // Get numbers to calculate checksum
+    
 
     // Check starting digits
     long firsttwo;
