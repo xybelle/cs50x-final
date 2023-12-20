@@ -13,7 +13,7 @@ int main(void)
     // Get numbers to calculate checksum
 
     // Check starting digits
-    int first;
+    int n, first;
     scanf("%ld", &card);
 
     first = card;
@@ -22,7 +22,7 @@ int main(void)
     {
         first = first / 10;
     }
-    printf("first digit = %d", first);
+    printf("first digit = %i", first);
 
     // Check if length and starting digits are valid
 
