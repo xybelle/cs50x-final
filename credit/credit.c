@@ -24,6 +24,6 @@ int get_number(int n)
     do
     {
         n = n % 10;
-        return n
+        return n;
     }
 }
