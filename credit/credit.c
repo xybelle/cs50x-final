@@ -16,7 +16,7 @@ int main(void)
     }
     else if (cc >= 3400000000000000 && cc <= 3799999999999999)
     {
-        printf("American Express\n");
+        printf("AMEX\n");
     }
     else if (cc >= 5100000000000000 && cc <= 5599999999999999)
     {
