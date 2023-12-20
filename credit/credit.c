@@ -7,7 +7,7 @@ int main(void)
 {
     // Prompt for input
     long card = get_long("Card number: ");
-    long ln = card / 10;
+    long ln = card % 10;
 
     printf("%li\n", ln);
 
