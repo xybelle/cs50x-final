@@ -22,14 +22,6 @@ int main(void)
         printf("Invalid\n");
     }
 
-    long a, b, c, d, e, f, g, h, i, j, k, l, m, o, p;
-
-    // Get individual numbers
-    p = card % 10;
-    o = (card / 10) % 10;
-
-    printf("%li \t %li\n", p , o);
-
     // Get numbers to calculate checksum
 
     // Check starting digits
