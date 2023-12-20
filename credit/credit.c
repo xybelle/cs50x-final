@@ -53,11 +53,11 @@ int main(void)
     {
         printf("AMEX\n");
     }
-    else if ( (51 <= firsttwo) <= 55) && count == 16)
+    else if ( (51 <= firsttwo) <= 55) && count = 16)
     {
         printf("MasterCard\n");
     }
-    
+
     else
     {
         printf("Invalid\n");
