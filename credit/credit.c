@@ -14,7 +14,7 @@ int main(void)
     {
         card = get_long("Number: ");
     }
-    while (card <= 0)
+    while (card <= 0);
 
     if (cardlength(card))
     {
@@ -26,10 +26,10 @@ int main(void)
     }
 }
 
-bool cardlength(long card);
+bool cardlength(long card)
 {
     int length = findlenght(card);
-    return ((length == 13 || length == 15 || length == 16) && checksum(card))
+    return ((length == 13 || length == 15 || length == 16) && checksum(card));
 }
 
 int findlength(long card)
@@ -40,7 +40,7 @@ int findlength(long card)
         card = card / 10;
         count++;
     }
-    return count
+    return count;
 }
 
 bool checksum(long card)
@@ -75,5 +75,12 @@ void firsttwo(long card)
     {
         printf("MasterCard\n");
     }
-    else if ((card >= 4e12 && card ))
+    else if (card >= 4e12 || card >= 4e15)
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("Invalid\n");
+    }
 }
