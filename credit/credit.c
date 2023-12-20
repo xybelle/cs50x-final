@@ -31,6 +31,5 @@ long get_card(void)
 
 int last_number(int n)
 {
-    n = n % 10;
-    return n * 2;
+    return n % 10;
 }
