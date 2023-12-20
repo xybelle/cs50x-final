@@ -10,7 +10,8 @@ int main(void)
     printf("Card number: ");
 
     // Get numbers to calculate checksum
-    long lastnum = calculate_last(card)
+    long lastnum = calculate_last(card);
+    printf("Sum: ");
 }
 
 long calculate_last(long card)
