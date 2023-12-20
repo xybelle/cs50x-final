@@ -37,13 +37,13 @@ int main(void)
     printf("Number of digits: %li\n", count);
 
     // Print card type and validity
-    if (firsttwo >= 40 && count >= 13)
+    if (firsttwo >= 40 && count == 13)
     {
         printf("VISA\n");
     }
-    else
+    else if (firsttwo >= 40 && count == 16)
     {
-        printf("Invalid\n");
+        printf("Visa\n");
     }
 
     if (firsttwo <= 37 && count == 15)
