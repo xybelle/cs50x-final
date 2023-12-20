@@ -26,14 +26,15 @@ int main(void)
     printf("first digit = %li\n", firsttwo);
 
     // Check if length and starting digits are valid
-    long count = 0;
-    scanf("%ld", &card);
+    long le, count = 0;
+    
+    le = card;
     do
     {
-        card /= 10;
+        le /= 10;
         count++;
     }
-    while (card != 0);
+    while (le != 0);
 
     printf("Number of digits: %li\n", count);
 
