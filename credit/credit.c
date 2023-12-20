@@ -10,7 +10,8 @@ int main(void)
     long ln = card % 10;
     long a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
 
-    p = 
+    // Get individual numbers
+    long p = ln()
 
     printf("%li\n", ln);
 
