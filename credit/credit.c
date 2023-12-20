@@ -17,21 +17,18 @@ int main(void)
         n = n / 10;
         count++;
     }
+    if (count < 13)
+    {
+        printf("Invalid\n");
+    }
 
-    long a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
+    long a, b, c, d, e, f, g, h, i, j, k, l, m, o, p;
 
     // Get individual numbers
     p = card % 10;
     o = (card / 10) % 10;
-    n = (o / 10) % 10;
-    m = (n / 10) % 10;
-    l = (m / 10) % 10;
-    k = (l / 10) % 10;
-    j = (k / 10) % 10;
-    i = (j / 10) % 10;
-    h = (i / 10) % 10;
 
-    printf("%li \t %li \t %li\n", p , o , n);
+    printf("%li \t %li\n", p , o);
 
     // Get numbers to calculate checksum
 
