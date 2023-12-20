@@ -10,10 +10,10 @@ int main(void)
 
     // Check card length
     int count = 0;
-    scanf("%ld", &card);
+    scanf("%ld", &n);
     while (card != 0)
     {
-        card = card / 10;
+        n = n / 10;
         count++;
     }
     if (count < 13)
