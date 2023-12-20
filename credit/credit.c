@@ -7,7 +7,7 @@ int main(void)
 {
     // Prompt for input
     long card;
-    printf("Card number: ");
+    get_long("Card number: ");
 
     // Check card length
 
