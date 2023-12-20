@@ -14,6 +14,14 @@ int main(void)
     {
         printf("Visa\n");
     }
+    else if (cc >= 3400000000000000 && cc <= 3799999999999999)
+    {
+        printf("American Express\n");
+    }
+    else if (cc >= 5100000000000000 && cc <= 5599999999999999)
+    {
+        printf("Mastercard\n");
+    }
     else;
     {
         printf("Invalid\n");
