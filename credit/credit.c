@@ -7,7 +7,7 @@ int main(void)
 {
     // Prompt for input
     long card;
-    printf("Card number: ");
+    card = get_long("Card number: ");
 
     // Calculate checksum
     long lastnum = calculate_last(card);
@@ -68,3 +68,5 @@ int main(void)
         printf("Invalid\n");
     }
 }
+
+
