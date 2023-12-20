@@ -4,6 +4,7 @@
 bool checksum(long card);
 int findlenght(long card);
 bool cardlength(long card);
+void firsttwo(long card);
 
 int main(void)
 {
@@ -62,4 +63,17 @@ bool checksum(long card)
         temp = temp / 100;
     }
     return (sum % 10) == 0;
+}
+
+void firsttwo(long card)
+{
+    if ((card >= 34e13 && card < 35e13) || (card >= 37e13 && card < 38e13))
+    {
+        printf("AMEX\n");
+    }
+    else if ((card >= 51e14 && card < 56e14))
+    {
+        printf("MasterCard\n");
+    }
+    else if ((card >= 4e12 && card ))
 }
