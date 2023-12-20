@@ -6,7 +6,7 @@ int findlenght(long card);
 bool checksum(long card);
 void firsttwo(long card);
 
-int main(void)
+int main()
 {
     // Prompt for input
     long card;
