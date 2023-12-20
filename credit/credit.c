@@ -7,7 +7,8 @@ int last_number(int n);
 int main(void)
 {
     // Prompt for input
-    int card = get_card();
+    int c = get_long("Card number: ");
+    
 
     // Get numbers to calculate checksum
     int ln = last_number(card);
@@ -26,7 +27,7 @@ int main(void)
 
 int get_card(void)
 {
-    int c = get_long("Card number: ");
+
     return c;
 }
 
