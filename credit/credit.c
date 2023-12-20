@@ -25,14 +25,14 @@ int main(void)
     }
     printf("first digit = %li\n", firsttwo);
 
+    // Check if length and starting digits are valid
+    
+
+    // Print card type and validity
     if (firsttwo >= 4)
     {
         printf("VISA\n");
     }
-
-    // Check if length and starting digits are valid
-
-    // Print card type and validity
 }
 
 
