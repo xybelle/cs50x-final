@@ -10,8 +10,8 @@ int main(void)
     long card = get_card();
 
     // Calculate checksum
-    int ln = last_number();
-    printf("%d\n", n);
+    int ln = last_number(card);
+    printf("%d\n", ln);
 
     // Check card length
 
