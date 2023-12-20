@@ -70,3 +70,6 @@ int main(void)
 }
 
 long calculate_last(long card)
+{
+    
+}
