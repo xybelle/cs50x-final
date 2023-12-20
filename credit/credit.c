@@ -68,10 +68,3 @@ int main(void)
         printf("Invalid\n");
     }
 }
-
-long calculate_last(long card)
-{
-    long p;
-    p = card
-
-}
