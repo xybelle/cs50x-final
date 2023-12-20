@@ -37,7 +37,7 @@ int main(void)
     printf("Number of digits: %li\n", count);
 
     // Print card type and validity
-    if (40 < firsttwo && firsttwo < 49)
+    if (40 <= firsttwo && firsttwo <= 49)
     {
         if (count == 13)
         {
