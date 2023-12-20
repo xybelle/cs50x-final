@@ -37,15 +37,14 @@ int main(void)
     printf("Number of digits: %li\n", count);
 
     // Print card type and validity
-    if (firsttwo >= 40 && count == 13)
+    if (13 < firsttwo && firsttwo < 40)
     {
-        printf("VISA\n");
+        if (count == 15);
+        {
+            printf("VISA\n");
+        }
     }
-    else if (firsttwo >= 40 && count == 16)
-    {
-        printf("Visa\n");
-    }
-    else if (firsttwo == 37 && count == 15)
+    else if (34 < firsttwo && firsttwo < 37)
     {
         printf("AMEX\n");
     }
@@ -53,9 +52,12 @@ int main(void)
     {
         printf("AMEX\n");
     }
-    else if ( (51 <= firsttwo) <= 55) && count = 16)
+    else if (51 < firsttwo && firsttwo < 55)
     {
-        printf("MasterCard\n");
+        if (count == 16)
+        {
+            printf("MasterCard\n");
+        }
     }
 
     else
