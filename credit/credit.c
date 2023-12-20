@@ -9,7 +9,14 @@ int main(void)
     long card = get_long("Card number: ");
 
     // Check card length
-    int cardlength = 
+    int n;
+    int count = 0;
+    scanf("%d", &n);
+    while (n != 0)
+    {
+        n = n / 10;
+        count++;
+    }
 
     long a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p;
 
