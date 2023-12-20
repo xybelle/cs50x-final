@@ -39,13 +39,18 @@ int main(void)
     // Print card type and validity
     if (13 < firsttwo && firsttwo < 40)
     {
-        if (count == 15);
+        if (count == 13);
+        {
+            printf("VISA\n");
+        }
+        else if (count == 16);
         {
             printf("VISA\n");
         }
     }
     else if (34 < firsttwo && firsttwo < 37)
     {
+        if (count == 15)
         printf("AMEX\n");
     }
     else if (firsttwo == 34 && count == 15)
