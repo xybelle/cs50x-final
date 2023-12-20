@@ -9,7 +9,7 @@ int main(void)
     long card;
     printf("Card number: ");
 
-    // Get numbers to calculate checksum
+    // Calculate checksum
     long lastnum = calculate_last(card);
 
     // Check starting digits
