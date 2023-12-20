@@ -14,7 +14,7 @@ int main(void)
     // Get numbers to calculate checksum
 
     // Check starting digits
-    int first;
+    long first, second;
     scanf("%ld", &card);
 
     first = card;
@@ -23,7 +23,9 @@ int main(void)
     {
         first = first / 10;
     }
-    printf("first digit = %i", first);
+    printf("first digit = %li", first);
+
+
 
     // Check if length and starting digits are valid
 
