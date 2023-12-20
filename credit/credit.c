@@ -2,16 +2,41 @@
 #include <stdio.h>
 
 bool checksum(long card);
+int findlenght(long card);
+bool cardlength(long card);
 
 int main(void)
 {
     // Prompt for input
     long card;
-    card = get_long("Card number: ");
-
-    // Calculate checksum
-    if (checksum(card))
+    do
     {
+        card = get_long("Number: ");
+    }
+    while (card <= 0)
+
+    if (cardlength(card))
+    {
+        checksum(card);
+    }
+    else
+    {
+        printf("Invalid\n");
+    }
+}
+
+bool cardlength(long card);
+{
+    int len = findlength(card);
+    return ((len == 13 || len == 15 || len == 16) && checksum(card))
+}
+
+int findlength(long card)
+{
+    long le, count = 0;
+    le = card;
+}
+
         // Check starting digits
         long firsttwo;
         scanf("%li", &card);
