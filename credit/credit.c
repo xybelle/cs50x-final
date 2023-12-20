@@ -21,9 +21,6 @@ int main(void)
 
 int get_number(int n)
 {
-    do
-    {
-        n = n % 10;
-        return n * 2;
-    }
+    n = n % 10;
+    return n * 2;
 }
