@@ -6,10 +6,10 @@
 int main(void)
 {
     // Prompt for input
-    int card = get_long("Card number: ");
-    int ln = card / 10;
-    int n = ln % 10;
-    printf("%i\n", n);
+    long card = get_long("Card number: ");
+    long ln = card / 10;
+
+    printf("%li\n", ln);
 
     // Get numbers to calculate checksum
 
