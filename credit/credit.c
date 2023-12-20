@@ -11,7 +11,7 @@ int main(void)
 
     // Calculate checksum
     int ln = last_number();
-    printf("%d\n, n);
+    printf("%d\n", n);
 
     // Check card length
 
