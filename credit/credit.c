@@ -9,9 +9,10 @@ int main(void)
     long card = get_long("Card number: ");
 
     // Check card length
+    int n;
     int count = 0;
-    scanf("%ld", &n);
-    while (card != 0)
+    scanf("%i", &n);
+    while (n != 0)
     {
         n = n / 10;
         count++;
