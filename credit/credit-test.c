@@ -8,6 +8,7 @@ int main(void)
     printf("Card number: ");
 
     // Get numbers to calculate checksum
+    int 
     scanf("%li", &card);
     printf("Sum: ");
 }
