@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 long get_card(void);
-int last_number(int n);
+long last_number(int n);
 
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
     long card = get_card();
 
     // Get numbers to calculate checksum
-    int ln = last_number(card);
+    long ln = last_number(card);
     printf("%d\n", ln);
 
     // Check card length
@@ -29,7 +29,7 @@ long get_card(void)
     return c;
 }
 
-int last_number(int n)
+long last_number(int n)
 {
     return n % 10;
 }
