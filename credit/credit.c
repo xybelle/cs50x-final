@@ -7,5 +7,9 @@ int main(void)
     int card = get_card();
 
     // Calculate checksum
-    int checksum = calc_check()
+    int checksum = calc_check(int sum)
+
+    // Check card length and starting digits
+
+    // 
 }
