@@ -9,23 +9,20 @@ int main(void)
     long card = get_long("Card number: ");
 
     // Check card length
-    int n;
-    int count = 0;
-    scanf("%i", &n);
-    while (n != 0)
-    {
-        n = n / 10;
-        count++;
-    }
-    if (count < 13)
-    {
-        printf("Invalid\n");
-    }
 
     // Get numbers to calculate checksum
 
     // Check starting digits
-    int first
+    int first;
+    scanf("%ld", &card);
+
+    first = card;
+
+    while (first >= 10)
+    {
+        first = first / 10;
+    }
+    printf("first digit = %d", first);
 
     // Check if length and starting digits are valid
 
