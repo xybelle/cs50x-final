@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-
+long calculate_last(long card);
 
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
     printf("Card number: ");
 
     // Get numbers to calculate checksum
-    
+    long lastnum = calculate_last(card)
 
     // Check starting digits
     long firsttwo;
@@ -69,4 +69,4 @@ int main(void)
     }
 }
 
-
+long calculate_last(long card)
