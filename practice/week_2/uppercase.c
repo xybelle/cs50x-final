@@ -5,13 +5,18 @@
 
 int main(void)
 {
-    string name = get_string("Before: ");
+    string s = get_string("Before: ");
     printf("After:  ");
-    for (int i = 0; i < strlen(name); i++)
+    for (int i = 0; i < strlen(s); i++)
     {
-        if (s[i] >= 'a' && s[i] <= 'z')
+        if (islower(s[i]))
         {
-            printf("%c", s)
+            printf("%c", toupper(s[i]));
+        }
+        else
+        {
+            printf("%c", s[i])
         }
     }
+    printf("\n");
 }
