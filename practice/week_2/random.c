@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool valid_triangle(int z);
+bool valid_triangle(int x);
 
 int main(void)
 {
@@ -13,12 +13,20 @@ int main(void)
 
     int y = valid_triangle(x[i]);
 
-    printf("%i\n", y)
+    printf("%i\n", y);
 }
 
-bool valid_triangle(int z)
+bool valid_triangle(int x)
 {
-    int sumoftwosides(int x);
-    return 0;
+    if (x[0] <= 0 || x[1] <= 0 || x[2] <= 0)
+    {
+        return false;
+    }
+
+    if ((x[0] + x[1] <= x[2]) || (x[0] + x[2] <= x[1]) || (x[2] + x[1] <= x[0]))
+    {
+        return false;
+    }
+    return true;
 }
 
