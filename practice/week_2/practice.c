@@ -11,7 +11,7 @@ int main(void)
     while (length < 1);
 
     int array[length];
-    for (int i = length; i >= 0 ; i--)
+    for (int i = 0; i < length ; i++)
     {
         printf("%i\n", array[i]);
 
