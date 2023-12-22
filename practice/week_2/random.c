@@ -8,7 +8,7 @@ int main(void)
     int x[3];
     for (int i = 0, i < 3, i ++)
     {
-        int x = get_int("Give me a positive number: ");
+        x[i] = get_int("Give me a positive number: ");
     }
 
     int y = valid_triangle(x[]);
