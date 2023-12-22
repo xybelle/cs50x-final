@@ -24,7 +24,9 @@ int main()
 
 int GetInt(int a, int b)
 {
-    printf("Give me an integer: ");
+    int a = get_int("Give me an integer: ");
+    int b = get_int("Give me another integer: ");
+    
 }
 
 //float mult_two_numbers(float a, float b)
