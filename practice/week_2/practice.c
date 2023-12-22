@@ -12,7 +12,7 @@ int main(void)
     int array[length];
     for (int i = 0; i < length ; i++)
     {
-        array[i] = array
+        array[i] = 2 * array[i - 1];
         printf("%i\n", array[i]);
 
     }
