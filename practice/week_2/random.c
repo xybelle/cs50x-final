@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool valid_triangle(int x);
+bool valid_triangle(int x[]);
 
 int main(void)
 {
