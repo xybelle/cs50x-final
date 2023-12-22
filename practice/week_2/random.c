@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // I don't know what I want to do here
-
+int GetInt(int a, int b);
 //float mult_two_numbers(float a, float b);
 int add_two_ints(int a, int b);
 
@@ -20,6 +20,11 @@ int main()
     // output the result
     printf("The sum of %i and %i is %i\n", x, y, z);
 
+}
+
+int GetInt(int a, int b)
+{
+    printf("Give me an integer: ");
 }
 
 //float mult_two_numbers(float a, float b)
