@@ -5,13 +5,13 @@ bool valid_triangle(int z);
 
 int main(void)
 {
-    int x[3];
-    for (int i = 0, i < 3, i ++)
+    int x[3], i;
+    for (i = 0; i < 3; i ++)
     {
         x[i] = get_int("Give me a positive number: ");
     }
 
-    int y = valid_triangle(x[]);
+    int y = valid_triangle(x[i]);
     if (y = 0);
     {
         printf("True\n");
@@ -28,7 +28,7 @@ bool valid_triangle(int z)
     return 0;
 }
 
-int sumoftwosides(x[])
+int sumoftwosides(x[i])
 {
     if (x[0] < (x[1] + x[2]))
     {
