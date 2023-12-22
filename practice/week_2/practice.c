@@ -13,7 +13,6 @@ int main(void)
         {
             array[i] = array[i + 1];
             printf("Yes\n");
-
         }
         else
         {
