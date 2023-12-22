@@ -11,7 +11,7 @@ int main(void)
         x[i] = get_int("Give me a positive number: ");
     }
 
-    int y = valid_triangle(x[i]);
+    int y = valid_triangle(x[]);
 
     printf("%i\n", y);
 }
