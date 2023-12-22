@@ -8,7 +8,7 @@ int main(void)
 {
     string word = get_string("Word: ");
 
-    for (int a = 0; a < str[a]; a++)
+    for (int a = 0; a < strlen[word]; a++)
     {
         str[a] = tolower(str[a]);
     }
