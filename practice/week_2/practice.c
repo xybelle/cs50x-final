@@ -9,10 +9,10 @@ int main(void)
         length = get_int("Length: ");
     }
     while (length < 1);
-
     int array[length];
     for (int i = 0; i < length ; i++)
     {
+        array[i] = array
         printf("%i\n", array[i]);
 
     }
