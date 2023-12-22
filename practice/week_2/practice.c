@@ -9,11 +9,14 @@ int main(void)
     int array[];
     for (int i = 0; i < length; i++)
     {
+        if (array[i] < array[i +1])
+        {
+            printf("Yes\n");
+        }
+        else
+        {
+            printf("No\n");
+        }
 
-    }
-
-    do
-    {
-        
     }
 }
