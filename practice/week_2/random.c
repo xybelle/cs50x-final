@@ -3,7 +3,7 @@
 
 // I don't know what I want to do here
 
-float mult_two_numbers(float a, float b);
+//float mult_two_numbers(float a, float b);
 int add_two_ints(int a, int b);
 
 int main()
@@ -22,10 +22,10 @@ int main()
 
 }
 
-float mult_two_numbers(float a, float b)
-{
-    return a * b;
-}
+//float mult_two_numbers(float a, float b)
+//{
+//    return a * b;
+//}
 
 int add_two_ints(int a, int b)
 {
