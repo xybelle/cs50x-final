@@ -15,8 +15,9 @@ int main(void)
         }
         else
         {
-            break;
             printf("No\n");
+            break;
         }
+
     }
 }
