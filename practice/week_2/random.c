@@ -24,6 +24,19 @@ int main(void)
 
 bool valid_triangle(int z)
 {
-    if (int sum = x[0] +
+    int sumoftwosides(x);
+    return 0;
+}
+
+int sumoftwosides(x[])
+{
+    if (x[0] < (x[1] + x[2]))
+    {
+        return 0;
+    }
+    else
+    {
+        printf("False\n");
+    }
 }
 
