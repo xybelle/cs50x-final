@@ -3,6 +3,11 @@
 
 int main(void)
 {
-    int array[];
-    for (int i = 0; )
+    int length;
+    do
+    {
+        length = get_int("Length: ");
+    }
+    while (length < 1);
+
 }
