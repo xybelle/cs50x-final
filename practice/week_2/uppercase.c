@@ -13,3 +13,5 @@ int main(void)
     }
     printf("\n");
 }
+
+// float mult_two_floatnumbers (float a, float b)
