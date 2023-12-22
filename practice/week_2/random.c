@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool valid_triangle(int x[]);
+bool valid_triangle(int z[]);
 
 int main(void)
 {
@@ -11,19 +11,19 @@ int main(void)
         x[i] = get_int("Give me a positive number: ");
     }
 
-    int y = valid_triangle(x[]);
+    int y = valid_triangle(x);
 
     printf("%i\n", y);
 }
 
-bool valid_triangle(int x)
+bool valid_triangle(int z[])
 {
-    if (x[0] <= 0 || x[1] <= 0 || x[2] <= 0)
+    if (z[0] <= 0 || z[1] <= 0 || z[2] <= 0)
     {
         return false;
     }
 
-    if ((x[0] + x[1] <= x[2]) || (x[0] + x[2] <= x[1]) || (x[2] + x[1] <= x[0]))
+    if ((z[0] + z[1] <= z[2]) || (z[0] + z[2] <= z[1]) || (z[2] + z[1] <= z[0]))
     {
         return false;
     }
