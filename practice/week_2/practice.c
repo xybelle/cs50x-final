@@ -9,6 +9,11 @@ int main(void)
     int array[length];
     for (int i = 0; i < length; i++)
     {
-        array[i] < array[i +1]);
+        for (array[i] < array[i +1])
+        {
+            
+
+        }
+
     }
 }
