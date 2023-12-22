@@ -12,6 +12,7 @@ int main(void)
         if (array[i] < array[i + 1])
         {
             printf("Yes\n");
+            array[i] = array[i + 1];
         }
         else
         {
