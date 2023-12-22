@@ -5,8 +5,8 @@
 int main(void)
 {
     string word = get_string("Word: ");
-    int length = strlen(word);
     string result = tolower(word);
+    int length = strlen(result);
     int array[length];
 
     for (int i = 0; i < length; i++)
