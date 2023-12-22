@@ -14,11 +14,11 @@ int main(void)
     int y = valid_triangle(x[]);
     if (y = 0);
     {
-        printf("The numbers would form a triangle.\n");
+        printf("True\n");
     }
     else
     {
-        printf("The numbers would not form a triangle.\n:);
+        printf("False\n");
     }
 }
 
