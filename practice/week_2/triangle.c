@@ -27,13 +27,13 @@ bool valid_triangle(int z[])
 {
     if (z[0] <= 0 || z[1] <= 0 || z[2] <= 0)
     {
-        return false;
+        return 0;
     }
 
     if ((z[0] + z[1] <= z[2]) || (z[0] + z[2] <= z[1]) || (z[2] + z[1] <= z[0]))
     {
-        return false;
+        return 0;
     }
-    return true;
+    return 1;
 }
 
