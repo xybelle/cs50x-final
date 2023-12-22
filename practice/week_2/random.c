@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 bool valid_triangle(int z);
-int sumoftwosides(int x);
 
 int main(void)
 {
@@ -13,27 +12,13 @@ int main(void)
     }
 
     int y = valid_triangle(x[i]);
-    if (y == 0)
-    {
-        printf("True\n");
-    }
-    else
-    {
-        printf("False\n");
-    }
+
+    printf("%i\n", y)
 }
 
 bool valid_triangle(int z)
 {
     int sumoftwosides(int x);
     return 0;
-}
-
-int sumoftwosides(int x)
-{
-    if (x[0] < (x[1] + x[2]))
-    {
-        return 0;
-    }
 }
 
