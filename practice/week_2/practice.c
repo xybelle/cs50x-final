@@ -15,7 +15,6 @@ int main(void)
     {
         array[i] = 2 * array[i - 1];
         printf("%i\n", array[i]);
-
     }
 
 }
