@@ -7,14 +7,10 @@
 int main(void)
 {
     string word = get_string("Word: ");
-
-    for (int a = 0; a < strlen[word]; a++)
-    {
-        tolower(str[a]);
-    }
+    int length = strlen(word);
     int array[length];
 
-    for (int i = 0; i < strlen(word); i++)
+    for (int i = 0; i < length; i++)
     {
         if (array[i] > array[i + 1])
         {
