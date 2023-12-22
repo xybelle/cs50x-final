@@ -14,4 +14,4 @@ int main(void)
     printf("\n");
 }
 
-// float mult_two_floatnumbers (float a, float b)
+// float mult_two_floats(float a, float b)
