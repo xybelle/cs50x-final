@@ -13,7 +13,11 @@ int main(void)
 
     int y = valid_triangle(x);
 
-    printf("%i\n", y);
+    if (y == 0)
+    {
+        printf("True\n");
+    }
+    printf("False\n");
 }
 
 bool valid_triangle(int z[])
