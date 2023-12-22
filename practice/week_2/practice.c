@@ -10,12 +10,12 @@ int main(void)
 
     for (int a = 0; a < strlen[word]; a++)
     {
-        str[a] = tolower(str[a]);
+        tolower(str[a]);
     }
     int length = strlen(result);
     int array[length];
 
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         if (array[i] > array[i + 1])
         {
