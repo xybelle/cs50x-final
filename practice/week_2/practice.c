@@ -6,7 +6,11 @@
 int main(void)
 {
     string word = get_string("Word: ");
-    string result = tolower(word);
+
+    for (int a = 0; a < str[a]; a++)
+    {
+        str[a] = tolower(str[a]);
+    }
     int length = strlen(result);
     int array[length];
 
