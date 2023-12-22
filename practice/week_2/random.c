@@ -2,17 +2,15 @@
 #include <stdio.h>
 
 // I don't know what I want to do here
-int GetInt(int a, int b);
+int GetIntA(int a);
+int GetIntB(int b);
 //float mult_two_numbers(float a, float b);
 int add_two_ints(int a, int b);
 
 int main()
 {
-    // ask user for input
-    printf("Give me an integer: ");
-    int x = GetInt();
-    printf("Give me another integer: ");
-    int y = GetInt();
+    int x = GetIntA();
+    int y = GetIntB();
 
     // add the two numbers together via a function call
     int z = add_two_ints(x, y);
@@ -22,11 +20,15 @@ int main()
 
 }
 
-int GetInt(int a, int b)
+int GetIntA(int a)
 {
     int a = get_int("Give me an integer: ");
+    return a;
+}
+int GetIntB(int b)
+{
     int b = get_int("Give me another integer: ");
-    
+    return b;
 }
 
 //float mult_two_numbers(float a, float b)
