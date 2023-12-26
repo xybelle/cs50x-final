@@ -34,7 +34,7 @@ string replace(string r)
 
     for (int i = 0; i < n; i ++)
     {
-        switch (s[i])
+        switch (s[0][i])
         {
             case 'a':
                 return '6';
