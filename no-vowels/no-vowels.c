@@ -31,6 +31,9 @@ string replace(string r[], string argv[1]);
     r = tolower(r);
     for (int i = 0; i < n; i ++)
     {
-        if (r[i] != a ')
+        do
+        {
+            printf
+        }
     }
 }
