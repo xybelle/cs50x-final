@@ -18,11 +18,9 @@ int main(int argc, string argv[])
         printf("Error: please type ./no-vowels (word)\n");
         return 1;
     }
-    else
-    {
-        string r = argv[1];
-        printf("%s\n", replace(r));
-    }
+
+    string r = argv[1];
+    printf("%s\n", replace(r));
 }
 
 string replace(string r[])
