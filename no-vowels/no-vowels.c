@@ -19,10 +19,10 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string r = argv[1];
+    // string r = argv[1];
     for (int i = 0; i = strlen(r); i++)
     {
-        printf("%c", r[1][i]);
+        printf("%c", argv[1][i]);
     }
     printf("%c\n", replace(r));
 }
