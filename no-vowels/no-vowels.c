@@ -28,17 +28,18 @@ int main(int argc, string argv[])
 string replace(string r)
 {
     int n = strlen(r);
+    r = tolower(r)
     for (int i = 0; i < n; i ++)
     {
         switch (r[i])
         {
-            case 'A' || 'a':
+            case 'a':
                 return '6';
-            case 'E' || 'e':
+            case 'e':
                 return '3';
-            case 'I' || 'i':
+            case 'i':
                 return '1';
-            case 'O' || 'o':
+            case 'o':
                 return '0';
             default:
                 return r[i];
