@@ -19,10 +19,11 @@ int main(int argc, string argv[])
     else
     {
         string r;
-        printf(r)
+        printf(replace(r));
     }
-
-
 }
 
-string replace(string );
+string replace(string r);
+{
+    
+}
