@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 
 string replace(string argv[1])
 {
-    int n = strlen(r);
+    int n = strlen(argv[1]);
     for (int i = 0; i < n ; i++)
     {
         argv[1][i] = tolower(argv[1][i]);
