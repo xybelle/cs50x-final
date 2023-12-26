@@ -25,31 +25,23 @@ int main(int argc, string argv[])
     }
 }
 
-string replace(string r);
+string replace(string r)
 {
     int n = strlen(r);
-    r = tolower(r);
     for (int i = 0; i < n; i ++)
     {
-        if (r[i] == 'a')
+        switch (r[i])
         {
-            r[i] = '6';
-        }
-        else if (r[i] == 'e')
-        {
-            r[i] = '3';
-        }
-        else if (r[i] == 'i')
-        {
-            r[i] = '1';
-        }
-        else if (r[1] == 'o')
-        {
-            r[i] = '0'
-        }
-        else
-        {
-            return r[i];
+            case 'A' || 'a':
+                return '6';
+            case 'E' || 'e':
+                return '3';
+            case 'I' || 'i':
+                return '1';
+            case 'O' || 'o':
+                return '0';
+            default:
+                return r[i];
         }
     }
 }
