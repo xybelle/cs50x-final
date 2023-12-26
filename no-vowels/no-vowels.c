@@ -35,15 +35,15 @@ string replace(string argv[1])
         switch (argv[1][i])
         {
             case 'a':
-                return char '6';
+                return "6";
             case 'e':
-                return char '3';
+                return "3";
             case 'i':
-                return char '1';
+                return "1";
             case 'o':
-                return char '0';
+                return "0";
             default:
-                return r[i];
+                return argv[1][i];
         }
     }
 }
