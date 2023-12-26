@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     else
     {
         string r = argv[1];
-        printf("%s\n", replace(r[]));
+        printf("%s\n", replace(r));
     }
 }
 
