@@ -29,7 +29,7 @@ string replace(string r)
     string s;
     for (int i = 0; i < n ; i++)
     {
-        return tolower(s[i]);
+        s[i] = tolower(s[i]);
     }
 
     for (int i = 0; i < n; i ++)
