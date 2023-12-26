@@ -31,10 +31,22 @@ string replace(string r[], string argv[1]);
     r = tolower(r);
     for (int i = 0; i < n; i ++)
     {
-        if (r[i] == 'a', 'e', 'i', 'o')
+        if (r[i] == 'a')
         {
-            return r[i];
+            r[i] = '6';
         }
-        
+        if (r[i] == 'e')
+        {
+            r[i] = '3';
+        }
+        if (r[i] == 'i')
+        {
+            r[i] = '1';
+        }
+        if (r[1] == 'o')
+        {
+            r[i] = '0'
+        }
+
     }
 }
