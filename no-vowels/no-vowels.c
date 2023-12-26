@@ -20,8 +20,8 @@ int main(int argc, string argv[])
     }
     else
     {
-        string r;
-        printf(replace(r));
+
+        printf(replace(argv[]));
     }
     printf("\n");
 }
