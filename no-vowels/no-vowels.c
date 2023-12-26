@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        string novowels = replace(argv);
+        string r = replace(argv);
         printf("%s\n", replace(novowels));
     }
 }
