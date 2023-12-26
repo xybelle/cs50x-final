@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        string r;
+        string r = tolower(r);
         printf(replace(r));
     }
 }
