@@ -35,6 +35,7 @@ string replace(string r[], string argv[1]);
         {
             return r[i];
         }
+        char a = '6';
         
 
     }
