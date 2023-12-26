@@ -46,4 +46,5 @@ float calc_hours(int hours[], int weeks, char output)
         }
         return total / weeks;
     }
+    return 0;
 }
