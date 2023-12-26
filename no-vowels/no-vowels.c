@@ -30,6 +30,6 @@ string replace(string r[], string argv[1]);
     int n = strlen(argv[1]);
     for (int i = 0; i < n; i ++)
     {
-        if (r[i] == ')
+        if (r[i] != a ')
     }
 }
