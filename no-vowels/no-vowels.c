@@ -4,7 +4,9 @@
 // Get practice with switch
 
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
 // function to replace vowels with numbers
 string replace(string r);
@@ -23,11 +25,11 @@ int main(int argc, string argv[])
     }
 }
 
-string replace(string r, string argv[1]);
+string replace(string r[], string argv[1]);
 {
     int n = strlen(argv[1]);
     for (int i = 0; i < n; i ++)
     {
-        
+        if (r[i] == ')
     }
 }
