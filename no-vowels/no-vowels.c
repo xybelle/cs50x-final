@@ -20,6 +20,10 @@ int main(int argc, string argv[])
     }
 
     string r = argv[1];
+    for (int i = 0; i = strlen(r); i++)
+    {
+        printf("%c", r[i]);
+    }
     printf("%c\n", replace(r));
 }
 
