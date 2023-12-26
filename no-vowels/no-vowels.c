@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     }
 
     string r = argv[1];
-    printf("%s\n", replace(r));
+    printf("%c\n", replace(r));
 }
 
 string replace(string r[])
