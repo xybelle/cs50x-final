@@ -26,10 +26,10 @@ int main(int argc, string argv[])
 string replace(string r)
 {
     int n = strlen(r);
-    r = tolower(r)
+    char s = tolower(r)
     for (int i = 0; i < n; i ++)
     {
-        switch (r[i])
+        switch (s[i])
         {
             case 'a':
                 return '6';
