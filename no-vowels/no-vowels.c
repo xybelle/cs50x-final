@@ -13,7 +13,7 @@ string replace(string r);
 
 int main(int argc, string argv[])
 {
-    if ((argc > 2) && (argc < 1))
+    if ((argc <= 1) || (argc > 2))
     {
         printf("Error: please type ./no-vowels (word)\n");
         return 1;
