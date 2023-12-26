@@ -23,6 +23,7 @@ int main(int argc, string argv[])
         string r;
         printf(replace(r));
     }
+    printf("\n");
 }
 
 string replace(string r[], string argv[1]);
@@ -35,18 +36,21 @@ string replace(string r[], string argv[1]);
         {
             r[i] = '6';
         }
-        if (r[i] == 'e')
+        else if (r[i] == 'e')
         {
             r[i] = '3';
         }
-        if (r[i] == 'i')
+        else if (r[i] == 'i')
         {
             r[i] = '1';
         }
-        if (r[1] == 'o')
+        else if (r[1] == 'o')
         {
             r[i] = '0'
         }
-
+        else
+        {
+            return r[i];
+        }
     }
 }
