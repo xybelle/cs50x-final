@@ -29,9 +29,11 @@ float calc_hours(int hours[], int weeks, char output)
 {
     if(output == 'T')
     {
+        int total = 0;
         for (int i = 0; i < weeks; i++)
         {
-            hours[i] 
+            total = total + hours[i];
         }
+        return total;
     }
 }
