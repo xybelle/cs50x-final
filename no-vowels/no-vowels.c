@@ -23,7 +23,11 @@ int main(int argc, string argv[])
     }
 }
 
-string replace(string r);
+string replace(string r, string argv[1]);
 {
-    
+    int n = strlen(argv[1]);
+    for (int i = 0; i < n; i ++)
+    {
+        
+    }
 }
