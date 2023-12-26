@@ -6,7 +6,10 @@
 #include <cs50.h>
 #include <stdio.h>
 
+// function to replace vowels with numbers
+string replace(string );
+
 int main(int argc, string argv[])
 {
-    
+
 }
