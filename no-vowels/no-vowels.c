@@ -26,7 +26,12 @@ int main(int argc, string argv[])
 string replace(string r)
 {
     int n = strlen(r);
-    char s = tolower(r)
+    string s;
+    for (int i = 0; i < n ; i++)
+    {
+        tolower(s[i]);
+    }
+
     for (int i = 0; i < n; i ++)
     {
         switch (s[i])
