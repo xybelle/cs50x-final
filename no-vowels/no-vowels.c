@@ -43,6 +43,6 @@ string replace(string argv[1])
             case 'o':
                 return "0";
         }
-        return argv[1];
     }
+    return argv[1];
 }
