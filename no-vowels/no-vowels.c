@@ -21,18 +21,14 @@ int main(int argc, string argv[])
     int n = strlen(argv[1]);
     for (int i = 0; i < n; i++)
     {
-        if (argv[1][i] = a)
-        {
-            replce
-        }
-        printf("%c", argv[1][i]);
+        printf("%s", replace(argv));
     }
     printf("\n");
 }
 
 string replace(string argv[1])
 {
-    int n = strlen(argv);
+    int n = strlen(argv[1]);
     string string;
     for (int i = 0; i < n; i ++)
     {
