@@ -47,13 +47,13 @@ string replace(string argv[1])
             switch (argv[1][i])
             {
                 case 'a':
-                    return "6";
+                    argv[1][i] = "6";
                 case 'e':
-                    return "3";
+                    argv[1][i] = "3";
                 case 'i':
-                    return "1";
+                    argv[1][i] = "1";
                 case 'o':
-                    return "0";
+                    argv[1][i] = "0";
             }
         }
         else
