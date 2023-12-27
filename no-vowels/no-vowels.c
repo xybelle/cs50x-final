@@ -30,24 +30,11 @@ int main(int argc, string argv[])
 string replace(string argv[1])
 {
     int n = strlen(argv[1]), i = 0;
-    char c[n];
-    string word = c[n]
-    for (i < n ; i++)
-    {
-        argv[1][i] = tolower(argv[1][i]);
-        argv[1][i] = c[i];
-    }
-
     for (i < n; i ++)
     {
-        if ((c[i] != 'a') || (c[i] !='e') || (c[i] !='i') || (c[i] !='o'))
+        if ((argv[1][i] != 'a') || (argv[1][i] !='e') || (argv[1][i] !='i') || (argv[1][i] !='o'))
         {
-            // return argv[1][i];
-            return c[i];
-        }
-        else
-        {
-            switch (c[i])
+            switch (arv[1][i])
             {
                 case 'a':
                     return "6";
@@ -58,6 +45,10 @@ string replace(string argv[1])
                 case 'o':
                     return "0";
             }
+        }
+        else
+        {
+            return 
         }
     }
     return argv[1];
