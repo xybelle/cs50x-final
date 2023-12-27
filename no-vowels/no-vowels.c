@@ -25,6 +25,7 @@ int main(int argc, string argv[])
 
 string replace(string argv[1])
 {
+    string argv;
     switch (argv)
     {
         case 'a':
