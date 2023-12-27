@@ -9,7 +9,7 @@
 #include <string.h>
 
 // function to replace vowels with numbers
-string replace(string argv[1]);
+string replace(string argv[1], char string);
 
 int main(int argc, string argv[])
 {
@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     printf("%s", replace(argv));
 }
 
-string replace(string argv[1])
+string replace(string argv[1], char string)
 {
     int n = strlen(argv[1]);
     char string;
@@ -50,7 +50,7 @@ string replace(string argv[1])
         {
             string[i] = argv[1][i];
         }
-        
+
     }
     return string = argv[1];
 }
