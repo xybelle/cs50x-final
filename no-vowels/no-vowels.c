@@ -59,4 +59,5 @@ string replace(string argv[1])
             argv[1][i] = 0;
             break;
     }
+    return c;
 }
