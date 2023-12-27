@@ -38,32 +38,25 @@ int main(int argc, string argv[])
 string replace(string argv[1])
 {
     int n = strlen(argv[1]);
-    char string[];
-    for (int i = 0; i < n; i ++)
+    char c;
+    for (int i = 0; i < n; i++)
     {
-        if ((argv[1][i] = 'a') || (argv[1][i] ='e') || (argv[1][i] ='i') || (argv[1][i] ='o'))
-        {
-            switch (argv[1][i])
-            {
-                case 'a':
-                    argv[1][i] = 6;
-                    break;
-                case 'e':
-                    argv[1][i] = 3;
-                    break;
-                case 'i':
-                    argv[1][i] = 1;
-                    break;
-                case 'o':
-                    argv[1][i] = 0;
-                    break;
-            }
-        }
-        else
-        {
-            string[i] = argv[1][i];
-        }
-
+        c[i] = argv[1][i];
     }
-    return string = argv[1];
+
+    switch (c[i])
+    {
+        case 'a':
+            argv[1][i] = 6;
+            break;
+        case 'e':
+            argv[1][i] = 3;
+            break;
+        case 'i':
+            argv[1][i] = 1;
+            break;
+        case 'o':
+            argv[1][i] = 0;
+            break;
+    }
 }
