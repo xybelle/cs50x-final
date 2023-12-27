@@ -18,43 +18,38 @@ int main(int argc, string argv[])
         printf("Usage: ./no-vowels (word)\n");
         return 1;
     }
-    int n = strlen(argv[1]);
-    for (int i = 0; i < n; i++)
-    {
-        printf("%s", replace(argv));
-    }
-    printf("\n");
+
+    printf("%s", replace(argv));
 }
 
 string replace(string argv[1])
 {
     int n = strlen(argv[1]);
     string string;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i ++)
     {
-        char c[n] = argv[1][i];
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        if ((c[i] = 'a') || (c[i] ='e') || (c[i] ='i') || (c[i] ='o'))
+        if ((argv[1][i] = 'a') || (argv[1][i] ='e') || (argv[1][i] ='i') || (argv[1][i] ='o'))
         {
             switch (argv[1][i])
             {
                 case 'a':
-                    c[i] = 6;
+                    argv[1][i] = 6;
+                    break;
                 case 'e':
-                    c[i] = 3;
+                    argv[1][i] = 3;
+                    break;
                 case 'i':
-                    c[i] = 1;
+                    argv[1][i] = 1;
+                    break;
                 case 'o':
-                    c[i] = 0;
+                    argv[1][i] = 0;
+                    break;
             }
         }
         else
         {
-            return string = c[i];
+            return string = argv[1];
         }
     }
-    return string;
+    return string = argv[1];
 }
