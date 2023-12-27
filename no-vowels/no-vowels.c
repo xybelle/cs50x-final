@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     int n = strlen(argv[1]);
     for (int i = 0; i < n; i++)
     {
-        printf("%s", replace(argv));
+        printf("%s", replace(argv[1]));
     }
     printf("\n");
 }
