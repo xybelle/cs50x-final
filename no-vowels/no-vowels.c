@@ -48,7 +48,7 @@ string replace(string argv[1])
         }
         else
         {
-            return string = argv[1];
+            return string[i] = argv[1][i];
         }
     }
     return string = argv[1];
