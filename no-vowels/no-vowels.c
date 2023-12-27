@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     int n = strlen(argv[1]);
     for (int i = 0; i < n; i++)
     {
-        if ((argv[1][i] != "a") )
+
         printf("%c", argv[1][i]);
     }
     printf("\n");
@@ -29,12 +29,12 @@ int main(int argc, string argv[])
 
 string replace(string argv[1])
 {
-    int n = strlen(argv[1]), i = 0;
-    for (i < n; i ++)
+    int n = strlen(argv[1]);
+    for (int i = 0; i < n; i ++)
     {
         if ((argv[1][i] = 'a') || (argv[1][i] ='e') || (argv[1][i] ='i') || (argv[1][i] ='o'))
         {
-            switch (arv[1][i])
+            switch (argv[1][i])
             {
                 case 'a':
                     return "6";
