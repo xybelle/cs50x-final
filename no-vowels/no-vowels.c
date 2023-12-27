@@ -42,6 +42,8 @@ string replace(string argv[1])
                 return "1";
             case 'o':
                 return "0";
+            default:
+                return argv[1][i];
         }
     }
     return argv[1];
