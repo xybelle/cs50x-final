@@ -25,8 +25,9 @@ int main(int argc, string argv[])
 
 string replace(string argv[1])
 {
-    char c[];
-    for (int i = 0, n = strlen(argv[1]); i < n ; i++)
+    int n = strlen(argv[1]);
+    char c[n];
+    for (int i = 0; i < n ; i++)
     {
         argv[1][i] = tolower(argv[1][i]);
         argv[1][i] = c[i];
@@ -34,7 +35,7 @@ string replace(string argv[1])
 
     for (int i = 0; i < n; i ++)
     {
-        if ((c[i] != 'a') || (c[i] !='e') || (c[i] !='i') || c[i] !='o'))
+        if ((c[i] != 'a') || (c[i] !='e') || (c[i] !='i') || (c[i] !='o'))
         {
             // return argv[1][i];
             return c[i];
