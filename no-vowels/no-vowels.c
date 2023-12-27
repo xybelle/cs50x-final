@@ -37,11 +37,10 @@ string replace(string argv[1])
         {
             // return argv[1][i];
             return c[i];
-            
         }
         else
         {
-            switch (argv[1][i])
+            switch (c[i])
             {
                 case 'a':
                     return "6";
