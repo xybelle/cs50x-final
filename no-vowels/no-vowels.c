@@ -37,20 +37,19 @@ string replace(string argv[1])
             switch (argv[1][i])
             {
                 case 'a':
-                    argv[1][i] = "6";
+                    argv[1][i] = 6;
                 case 'e':
-                    argv[1][i] = "3";
+                    argv[1][i] = 3;
                 case 'i':
-                    argv[1][i] = "1";
+                    argv[1][i] = 1;
                 case 'o':
-                    argv[1][i] = "0";
+                    argv[1][i] = 0;
             }
         }
         else
         {
-            return string = argv[1][i];
+            return string = argv[1];
         }
     }
     // return argv[1];
 }
-
