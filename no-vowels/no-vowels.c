@@ -51,5 +51,5 @@ string replace(string argv[1])
             return string = argv[1];
         }
     }
-    // return argv[1];
+    return string = argv[1];
 }
