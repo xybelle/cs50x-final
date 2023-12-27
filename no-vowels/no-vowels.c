@@ -24,11 +24,12 @@ int main(int argc, string argv[])
 string replace(string argv[1])
 {
     int n = strlen(argv[1]);
-    char c[] = arg
     for (int i = 0; i < n ; i++)
     {
         argv[1][i] = tolower(argv[1][i]);
     }
+    char c[]:
+    c[0] = argv[1][0];
 
     for (int i = 0; i < n; i ++)
     {
