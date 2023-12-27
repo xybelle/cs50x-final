@@ -15,7 +15,7 @@ int main(int argc, string argv[])
 {
     if ((argc <= 1) || (argc > 2))
     {
-        printf("Error: please type ./no-vowels (word)\n");
+        printf("Usage: ./no-vowels (word)\n");
         return 1;
     }
     printf("%s\n", replace(argv));
