@@ -32,18 +32,25 @@ string replace(string argv[1])
 
     for (int i = 0; i < n; i ++)
     {
-        switch (argv[1][i])
+        if (argv[1][i] |= 'a' , 'e', 'i', 'o')
         {
-            case 'a':
-                return "6";
-            case 'e':
-                return "3";
-            case 'i':
-                return "1";
-            case 'o':
-                return "0";
-            default:
-                return argv[1][i];
+            return argv[1][i];
+        }
+        else
+        {
+            switch (argv[1][i])
+            {
+                case 'a':
+                    return "6";
+                case 'e':
+                    return "3";
+                case 'i':
+                    return "1";
+                case 'o':
+                    return "0";
+                default:
+                    return argv[1][i];
+            }
         }
     }
     return argv[1];
