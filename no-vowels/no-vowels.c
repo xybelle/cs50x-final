@@ -18,8 +18,12 @@ int main(int argc, string argv[])
         printf("Usage: ./no-vowels (word)\n");
         return 1;
     }
+    int n = strlen(argv[1]);
+    for (int i = 0; i < n; i++)
+    {
+        char string[i] = argv[1][i];
+    }
 
-    char c[] = argv[1];
     printf("%c%c%C%C\n", c);
 }
 
