@@ -32,9 +32,9 @@ string replace(string argv[1])
 
     for (int i = 0; i < n; i ++)
     {
-        if (argv[1][i] |= 'a' , 'e', 'i', 'o')
+        if ((argv[1][i] != 'a') || (argv[1][i] !='e') || (argv[1][i] !='i') || (argv[1][i] !='o'))
         {
-            return argv[1][i];
+            // return argv[1][i];
             argv[1][i + 1];
         }
         else
@@ -49,8 +49,6 @@ string replace(string argv[1])
                     return "1";
                 case 'o':
                     return "0";
-                default:
-                    return argv[1][i];
             }
         }
     }
