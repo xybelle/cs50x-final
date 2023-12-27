@@ -25,20 +25,22 @@ int main(int argc, string argv[])
 
 string replace(string nv)
 {
-    switch (nv)
+    if ((nv[i] = 'a') || (nv[i] = 'e') || (nv[i] = 'i') || (nv[i] = 'o'))
     {
-        case 'a':
-            nv[i] = 6;
-            break;
-        case 'e':
-            nv[i] = 3;
-            break;
-        case 'i':
-            nv[i] = 1;
-            break;
-        case 'o':
-            nv[i] = 0;
-            break;
+        switch (nv)
+        {
+            case 'a':
+                nv[i] = 6;
+                break;
+            case 'e':
+                nv[i] = 3;
+                break;
+            case 'i':
+                nv[i] = 1;
+                break;
+            case 'o':
+                nv[i] = 0;
+                break;
     }
     return nv;
 }
