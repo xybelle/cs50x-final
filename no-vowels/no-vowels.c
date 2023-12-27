@@ -35,6 +35,7 @@ string replace(string argv[1])
         if (argv[1][i] |= 'a' , 'e', 'i', 'o')
         {
             return argv[1][i];
+            argv[1][i + 1];
         }
         else
         {
