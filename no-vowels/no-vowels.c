@@ -42,6 +42,7 @@ string replace(string nv)
             case 'o':
                 nv[i] = 0;
                 break;
+        }
     }
     return nv;
 }
