@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     int n = strlen(argv[1]);
     for (int i = 0; i < n; i++)
     {
-        if ()
+        if ((argv[1][i] != "a") )
         printf("%c", argv[1][i]);
     }
     printf("\n");
