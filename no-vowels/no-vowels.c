@@ -18,13 +18,13 @@ int main(int argc, string argv[])
         printf("Error: please type ./no-vowels (word)\n");
         return 1;
     }
-
     printf("%s\n", replace(argv));
 }
 
 string replace(string argv[1])
 {
     int n = strlen(argv[1]);
+    char c[] = arg
     for (int i = 0; i < n ; i++)
     {
         argv[1][i] = tolower(argv[1][i]);
