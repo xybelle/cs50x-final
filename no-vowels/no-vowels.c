@@ -25,7 +25,7 @@ int main(int argc, string argv[])
 string replace(string argv[1])
 {
     int n = strlen(argv[1]);
-    string string;
+    char string;
     for (int i = 0; i < n; i ++)
     {
         if ((argv[1][i] = 'a') || (argv[1][i] ='e') || (argv[1][i] ='i') || (argv[1][i] ='o'))
@@ -48,8 +48,9 @@ string replace(string argv[1])
         }
         else
         {
-            return string[i] = argv[1][i];
+            string[i] = argv[1][i];
         }
+        
     }
     return string = argv[1];
 }
