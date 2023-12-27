@@ -25,6 +25,7 @@ int main(int argc, string argv[])
 
 string replace(string nv)
 {
+    int i = strlen(nv);
     if ((nv[i] = 'a') || (nv[i] = 'e') || (nv[i] = 'i') || (nv[i] = 'o'))
     {
         switch (nv)
