@@ -32,7 +32,7 @@ string replace(string argv[1])
     int n = strlen(argv[1]), i = 0;
     for (i < n; i ++)
     {
-        if ((argv[1][i] != 'a') || (argv[1][i] !='e') || (argv[1][i] !='i') || (argv[1][i] !='o'))
+        if ((argv[1][i] = 'a') || (argv[1][i] ='e') || (argv[1][i] ='i') || (argv[1][i] ='o'))
         {
             switch (arv[1][i])
             {
@@ -48,9 +48,9 @@ string replace(string argv[1])
         }
         else
         {
-            return 
+            return argv[1][i];
         }
     }
-    return argv[1];
+    // return argv[1];
 }
 
