@@ -19,7 +19,20 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    printf("%s", replace(argv));
+    int n = strlen(argv[1]);
+    for (int i = 0; i < n; i++)
+    {
+        if ((argv[1][i] = 'a') || (argv[1][i] ='e') || (argv[1][i] ='i') || (argv[1][i] ='o'))
+        {
+            argv[1][i] = replace(argv);
+            printf("%c", argv[1][i]);
+        }
+        else
+        {
+            printf("%c", argv[1][i]);
+        }
+    }
+    printf("\n");
 }
 
 string replace(string argv[1])
