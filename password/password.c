@@ -8,6 +8,10 @@
 #include <string.h>
 
 bool valid(string password);
+bool lower(string password);
+bool upper(string password);
+bool digit(string password);
+bool symbol(string password);
 
 
 int main(void)
@@ -27,6 +31,18 @@ int main(void)
 
 bool valid(string password)
 {
+    if ((lower(password)) && (upper(password)) && (digit(password)) && (symbol(password)))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool lower(string password)
+{
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
@@ -42,3 +58,36 @@ bool valid(string password)
     return true;
 }
 
+bool upper(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (isupper(password[j]))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool digit(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (isdigit(password[j]))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    return true;
+}
