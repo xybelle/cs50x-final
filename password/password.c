@@ -8,10 +8,7 @@
 #include <string.h>
 
 bool valid(string password);
-bool lower(string password);
-bool upper(string password);
-bool digit(string password);
-bool symbol(string password);
+
 
 int main(void)
 {
@@ -27,63 +24,15 @@ int main(void)
 }
 
 // TODO: Complete the Boolean function below
-bool valid(string password)
-{
-    if (lower(password) && upper(password) && digit(password) && symbol(password))
-    {
-        return true;
-    }
-    return false;
-}
 
-bool lower(string password)
+bool valid(string password)
 {
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
         if (islower(password[j]))
-        {
             return true;
-        }
     }
     return false;
 }
 
-bool upper(string password)
-{
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
-    {
-        if (isupper(password[j]))
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-bool digit(string password)
-{
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
-    {
-        if (isdigit(password[j]))
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-bool symbol(string password)
-{
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
-    {
-        if (isprint(password[j]))
-        {
-            return true;
-        }
-    }
-    return false;
-}
