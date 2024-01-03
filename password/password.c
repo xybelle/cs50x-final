@@ -39,6 +39,6 @@ bool valid(string password)
             return false;
         }
     }
-    return false;
+    return true;
 }
 
