@@ -24,11 +24,11 @@ int main(void)
     int index = 0.0588 * (float) L - 0.296 * (float) S - 15.8;
 
     // Print the grade level
-    if (index >= 16)
+    if ((int) round(index) >= 16)
     {
         printf("Grade 16+\n");
     }
-    else if (index < 1)
+    else if ((int) round(index) < 1)
     {
         printf("Before Grade 1\n");
     }
