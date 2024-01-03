@@ -84,13 +84,13 @@ bool symbol(string password)
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
-        if (isprint(password[j]) == 0)
+        if (isprint(password[j]) == 1)
         {
-            return 0;
+            return 1;
             break;
         }
     }
-    return 1;
+    return 0;
 }
 
 
