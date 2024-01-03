@@ -32,21 +32,21 @@ bool valid(string password)
 {
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
-    if (islower(password[j]) == 1)
     {
-        return 1;
-    }
-    if (isupper(password[j]) == 1)
-    {
-        return 1;
-    }
-    if (isdigit(password[j]) == 1)
-    {
-        return 1;
-    }
-    if (isprint(password[j]) == 1)
-    {
-        return 1;
+        if (islower(password[j]))
+        {
+            if (isupper(password[j]))
+            {
+                if (isdigit(password[j]))
+                {
+                    if (isprint(password[j]))
+                    {
+                        return 1;
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     return 0;
