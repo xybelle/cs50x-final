@@ -34,7 +34,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %f\n", (float) round(index));
+        printf("Grade %i\n", (int) round(index));
     }
 
     printf("%i %i %i %f\n", letters, words, sentences, (float) round(index));
