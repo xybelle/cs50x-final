@@ -8,6 +8,10 @@
 #include <string.h>
 
 bool valid(string password);
+bool lower(string password);
+bool upper(string password);
+bool digit(string password);
+bool symbol(string password);
 
 int main(void)
 {
