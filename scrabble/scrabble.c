@@ -24,4 +24,10 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    int score = 0;
+    int i = strlen(word)
+    for (int j = 0; j < 1; j++)
+    {
+        count == 
+    }
 }
