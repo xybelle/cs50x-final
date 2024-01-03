@@ -28,9 +28,9 @@ string replace(string nv)
     int i = strlen(nv);
     for (int j = 0; j < i; j++)
     {
-        if(nv[i] == a)
+        if(nv[i] == 'a')
         {
-            nv[i] ="6";
+            nv[i] = '6';
         }
 
     }
