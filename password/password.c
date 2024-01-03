@@ -35,7 +35,7 @@ bool valid(string password)
     {
         return true;
     }
-    return true;
+    return false;
 }
 
 bool lower(string password)
@@ -47,12 +47,8 @@ bool lower(string password)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
     }
-    return true;
+    return false;
 }
 
 bool upper(string password)
@@ -64,12 +60,8 @@ bool upper(string password)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
     }
-    return true;
+    return false;
 }
 
 bool digit(string password)
@@ -81,10 +73,19 @@ bool digit(string password)
         {
             return true;
         }
-        else
+    }
+    return false;
+}
+
+bool symbol(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (isprint(password[j]))
         {
-            return false;
+            return true;
         }
     }
-    return true;
+    return false;
 }
