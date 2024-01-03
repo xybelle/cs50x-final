@@ -35,10 +35,7 @@ bool valid(string password)
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
+    return true;
 }
 
 bool lower(string password)
