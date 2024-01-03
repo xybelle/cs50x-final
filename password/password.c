@@ -30,11 +30,11 @@ int main(void)
 
 bool valid(string password)
 {
-    if ((lower(password)) && (upper(password)) && (digit(password)) && (symbol(password)))
+    if ((lower(password) == 1) && (upper(password) == 1) && (digit(password) == 1) && (symbol(password) == 1))
     {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
 bool lower(string password)
