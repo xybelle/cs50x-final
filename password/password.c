@@ -3,6 +3,7 @@
 // Practice using the ctype library
 
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 
 bool valid(string password);
@@ -23,6 +24,9 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    
+    isdigit(password)
+    {
+        return true;
+    }
     return false;
 }
