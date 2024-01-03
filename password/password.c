@@ -25,7 +25,7 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    if (lower == true && upper == true && digit == true && symbol == true)
+    if (lower(password) && upper(password) && digit(password) && symbol(password))
     {
         return true;
     }
