@@ -45,7 +45,7 @@ bool lower(string password)
         if (islower(password[j]) == 1)
         {
             return 1;
-            break;
+            upper(password);
         }
     }
     return 0;
@@ -59,7 +59,7 @@ bool upper(string password)
         if (isupper(password[j]) == 1)
         {
             return 1;
-            break;
+            digit(password);
         }
     }
     return 0;
@@ -73,7 +73,7 @@ bool digit(string password)
         if (isdigit(password[j]) == 1)
         {
             return 1;
-            break;
+            symbol(password);
         }
     }
     return 0;
@@ -87,7 +87,7 @@ bool symbol(string password)
         if (isprint(password[j]) == 1)
         {
             return 1;
-            break;
+            valid(password);
         }
     }
     return 0;
