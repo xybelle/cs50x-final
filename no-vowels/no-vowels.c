@@ -25,13 +25,23 @@ int main(int argc, string argv[])
 
 string replace(string nv)
 {
-    int i = 0;
-    int h = strlen(nv);
-    for (int j = 0; j < h; j++)
+    int i =  strlen(nv);
+    for (int j = 0; j < i; j++)
     {
-        if(nv[i] == 'a')
+        switch (nv[j])
         {
-            nv[i] = '6';
+            case 'a':
+                nv[j] = '6';
+                break;
+            case 'e':
+                nv[j] = '3';
+                break;
+            case 'i':
+                nv[j] ='1';
+                break;
+            case 'o':
+                nv[j] = '0';
+                break;
         }
 
     }
