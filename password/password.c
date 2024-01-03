@@ -30,6 +30,7 @@ int main(void)
 
 bool valid(string password)
 {
+    
     if ((lower(password) == 1) && (upper(password) == 1) && (digit(password) == 1) && (symbol(password) == 1))
     {
         return 1;
@@ -45,6 +46,7 @@ bool lower(string password)
         if (islower(password[j]) == 1)
         {
             return 1;
+            break;
             upper(password);
         }
     }
@@ -59,6 +61,7 @@ bool upper(string password)
         if (isupper(password[j]) == 1)
         {
             return 1;
+            break;
             digit(password);
         }
     }
@@ -73,6 +76,7 @@ bool digit(string password)
         if (isdigit(password[j]) == 1)
         {
             return 1;
+            break;
             symbol(password);
         }
     }
@@ -87,6 +91,7 @@ bool symbol(string password)
         if (isprint(password[j]) == 1)
         {
             return 1;
+            break;
             valid(password);
         }
     }
