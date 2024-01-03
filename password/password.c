@@ -31,7 +31,9 @@ bool valid(string password)
     for (int j = 0; j < 1; j++)
     {
         if (islower(password[j]))
+        {
             return true;
+        }
         else
         {
             return false;
