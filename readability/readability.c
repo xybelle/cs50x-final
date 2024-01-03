@@ -36,9 +36,6 @@ int main(void)
     {
         printf("Grade %i\n", (int) round(index));
     }
-
-    printf("%i %i %i %f\n", letters, words, sentences, (float) round(index));
-
 }
 
 int count_letters(string text)
@@ -75,7 +72,7 @@ int count_sentences(string text)
     int cs = 0;
     for (int i = 0, j = strlen(text); i < j; i++)
     {
-        if (ispunct(text[i]))
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             cs++;
         }
