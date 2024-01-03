@@ -33,16 +33,16 @@ string replace(string nv)
             switch (nv[i])
             {
                 case 'a':
-                    nv[i] = 6;
+                    nv[i] = '6';
                     break;
                 case 'e':
-                    nv[i] = 3;
+                    nv[i] = '3';
                     break;
                 case 'i':
-                    nv[i] = 1;
+                    nv[i] = '1';
                     break;
                 case 'o':
-                    nv[i] = 0;
+                    nv[i] = '0';
                     break;
             }
         }
