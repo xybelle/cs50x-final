@@ -43,7 +43,6 @@ bool valid(string password)
             lower = true;
             break;
         }
-
     }
     for (int j = 0; j < i; j++)
     {
@@ -63,7 +62,8 @@ bool valid(string password)
     }
     for (int j = 0; j < i; j++)
     {
-        if ((password[j] > 32 && password[j] < 48) || (password[j] > 57 && password[j] < 65) || (password[j] > 90 && password[j] < 97) || (password[j] > 122 && password[j] < 127))
+        if ((password[j] > 32 && password[j] < 48) || (password[j] > 57 && password[j] < 65) ||
+            (password[j] > 90 && password[j] < 97) || (password[j] > 122 && password[j] < 127))
         {
             symbol = true;
             break;
