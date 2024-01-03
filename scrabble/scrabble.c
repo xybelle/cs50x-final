@@ -23,13 +23,13 @@ int main(void)
     {
         printf("Player 1 wins!\n");
     }
-    else if (score2 == score1)
+    else if (score1 < score2)
     {
-        printf("Tie!\n");
+        printf("Player 2 wins!\n");
     }
     else
     {
-        printf("Player 2 wins!\n");
+        printf("Tie!\n");
     }
 }
 
