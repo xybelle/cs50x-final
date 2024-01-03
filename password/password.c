@@ -63,7 +63,7 @@ bool valid(string password)
     }
     for (int j = 0; j < i; j++)
     {
-        if (isprint(password[j]))
+        if ((password[j] >= 33) || (password[j]) <=126)
         {
             symbol = true;
             break;
