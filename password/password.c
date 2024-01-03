@@ -56,5 +56,9 @@ bool valid(string password)
         }
     }
 
-    return 0;
+    if ((lower == true) && (upper == true) && (digit == true) && (symbol == true))
+    {
+        return true;
+    }
+    return false;
 }
