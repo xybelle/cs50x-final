@@ -28,8 +28,6 @@ string replace(string nv)
     int i = strlen(nv);
     for (int j = 0; j < i; j++)
     {
-        if ((nv[i] == 'a') || (nv[i] == 'e') || (nv[i] == 'i') || (nv[i] == 'o'))
-        {
             switch (nv[i])
             {
                 case 'a':
@@ -45,7 +43,7 @@ string replace(string nv)
                     nv[i] = '0';
                     break;
             }
-        }
+        
     }
     return nv;
 }
