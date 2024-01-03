@@ -25,8 +25,9 @@ int main(int argc, string argv[])
 
 string replace(string nv)
 {
-    int i = strlen(nv);
-    for (int j = 0; j < i; j++)
+    int i = 0;
+    int h = strlen(nv);
+    for (int j = 0; j < h; j++)
     {
         if(nv[i] == 'a')
         {
