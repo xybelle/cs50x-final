@@ -32,9 +32,9 @@ bool valid(string password)
 {
     if ((lower(password) == 1) && (upper(password) == 1) && (digit(password) == 1) && (symbol(password) == 1))
     {
-        return false;
+        return 1;
     }
-    return true;
+    return 0;
 }
 
 bool lower(string password)
@@ -44,11 +44,11 @@ bool lower(string password)
     {
         if (islower(password[j]) == 0)
         {
-            return true;
+            return 0;
             break;
         }
     }
-    return false;
+    return 1;
 }
 
 bool upper(string password)
@@ -58,11 +58,11 @@ bool upper(string password)
     {
         if (isupper(password[j]) == 0)
         {
-            return true;
+            return 0;
             break;
         }
     }
-    return false;
+    return 1;
 }
 
 bool digit(string password)
@@ -72,11 +72,11 @@ bool digit(string password)
     {
         if (isdigit(password[j]) == 0)
         {
-            return true;
+            return 0;
             break;
         }
     }
-    return false;
+    return 1;
 }
 
 bool symbol(string password)
@@ -86,11 +86,11 @@ bool symbol(string password)
     {
         if (isprint(password[j]) == 0)
         {
-            return true;
+            return 0;
             break;
         }
     }
-    return false;
+    return 1;
 }
 
 
