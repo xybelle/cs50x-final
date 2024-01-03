@@ -30,58 +30,36 @@ int main(void)
 
 bool valid(string password)
 {
-
-    if ((lower(password) == 1) && (upper(password) == 1) && (digit(password) == 1) && (symbol(password) == 1))
+    int i = strlen(password);
+    if (islower(password[j]) == 1)
     {
         return 1;
+        break;
+        upper(password);
     }
-    return 0;
-}
-
-bool lower(string password)
-{
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
-    {
-        if (islower(password[j]) == 1)
-        {
-            return 1;
-            break;
-            upper(password);
-        }
-    }
-    return 0;
-}
-
-bool upper(string password)
-{
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
-    {
-        if (isupper(password[j]) == 1)
+    if (isupper(password[j]) == 1)
         {
             return 1;
             break;
             digit(password);
         }
-    }
-    return 0;
-}
-
-bool digit(string password)
-{
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
-    {
-        if (isdigit(password[j]) == 1)
+    if (isdigit(password[j]) == 1)
         {
             return 1;
             break;
             symbol(password);
         }
-    }
+    if (isprint(password[j]) == 1)
+        {
+            return 1;
+            break;
+            valid(password);
+        }
+
     return 0;
 }
+
+
 
 bool symbol(string password)
 {
