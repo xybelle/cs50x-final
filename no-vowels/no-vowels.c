@@ -25,7 +25,7 @@ int main(int argc, string argv[])
 
 string replace(string nv)
 {
-    int i =  strlen(nv);
+    int i = strlen(nv);
     for (int j = 0; j < i; j++)
     {
         switch (nv[j])
@@ -37,7 +37,7 @@ string replace(string nv)
                 nv[j] = '3';
                 break;
             case 'i':
-                nv[j] ='1';
+                nv[j] = '1';
                 break;
             case 'o':
                 nv[j] = '0';
