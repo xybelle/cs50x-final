@@ -42,14 +42,24 @@ bool valid(string password)
         {
             lower = true;
         }
+
+    }
+    for (int j = 0; j < 1; j++)
+    {
         if (isupper(password[j]))
         {
             upper = true;
         }
+    }
+    for (int j = 0; j < 1; j++)
+    {
         if (isdigit(password[j]))
         {
             digit = true;
         }
+    }
+    for (int j = 0; j < 1; j++)
+    {
         if (isprint(password[j]))
         {
             symbol = true;
