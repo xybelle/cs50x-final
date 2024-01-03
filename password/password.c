@@ -25,15 +25,10 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    int i = strlen(password);
-    for (int j = 0; j < 1; j++)
+    if (lower == true && upper == true && digit == true && symbol == true)
     {
-        if (isdigit(password[j]))
-        {
-            return true;
-        }
+        return true;
     }
-
     return false;
 }
 
@@ -56,6 +51,32 @@ bool upper(string password)
     for (int j = 0; j < 1; j++)
     {
         if (isupper(password[j]))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool digit(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (isdigit(password[j]))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool symbol(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (isprint(password[j]))
         {
             return true;
         }
