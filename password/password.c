@@ -36,7 +36,7 @@ bool valid(string password)
     bool digit = false;
     bool symbol = false;
 
-    for (int j = 0; j < 1; j++)
+    for (int j = 0; j < i; j++)
     {
         if (islower(password[j]))
         {
@@ -45,7 +45,7 @@ bool valid(string password)
         }
 
     }
-    for (int j = 0; j < 1; j++)
+    for (int j = 0; j < i; j++)
     {
         if (isupper(password[j]))
         {
@@ -53,7 +53,7 @@ bool valid(string password)
             break;
         }
     }
-    for (int j = 0; j < 1; j++)
+    for (int j = 0; j < i; j++)
     {
         if (isdigit(password[j]))
         {
@@ -61,7 +61,7 @@ bool valid(string password)
             break;
         }
     }
-    for (int j = 0; j < 1; j++)
+    for (int j = 0; j < i; j++)
     {
         if (isprint(password[j]))
         {
