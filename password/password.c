@@ -41,7 +41,7 @@ bool valid(string password)
 bool lower(string password)
 {
     int i = strlen(password);
-    for (int j = 0; j < 1; j++)
+    while (password != '\0')
     {
         if (islower(password[j]))
         {
