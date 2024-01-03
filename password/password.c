@@ -16,7 +16,7 @@ bool symbol(string password);
 int main(void)
 {
     string password = get_string("Enter your password: ");
-    if (valid(password))
+    if (valid(password) == 0)
     {
         printf("Your password is valid!\n");
     }
