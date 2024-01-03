@@ -21,9 +21,21 @@ int main(void)
     // Compute the Coleman-Liau index
     int L = (letters / (100 * words));
     int S = (sentences / (100 * words));
-    int round(index) = 0.0588 * L - 0.296 * S - 15.8;
+    int index = 0.0588 * (float) L - 0.296 * (float) S - 15.8;
 
     // Print the grade level
+    if (index >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else if (index < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
+        printf("Grade %i\n", (int) round(index));
+    }
 
     printf("%i %i %i\n", letters, words, sentences);
 
