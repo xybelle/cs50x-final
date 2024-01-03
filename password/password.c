@@ -28,11 +28,37 @@ bool valid(string password)
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
-        if (isdigit(password))
+        if (isdigit(password[j]))
         {
             return true;
         }
     }
 
+    return false;
+}
+
+bool lower(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (islower(password[j]))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool upper(string password)
+{
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
+    {
+        if (isupper(password[j]))
+        {
+            return true;
+        }
+    }
     return false;
 }
