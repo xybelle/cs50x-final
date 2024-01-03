@@ -32,7 +32,11 @@ bool valid(string password)
     {
         if (islower(password[j]))
             return true;
+        else
+        {
+            return false;
+        }
     }
-    return false;
+    return true;
 }
 
