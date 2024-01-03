@@ -28,7 +28,7 @@ string replace(string nv)
     int i = strlen(nv);
     for (int j = 0; j < i; j++)
     {
-        if ((nv[i] = 'a') || (nv[i] = 'e') || (nv[i] = 'i') || (nv[i] = 'o'))
+        if ((nv[i] == 'a') || (nv[i] == 'e') || (nv[i] == 'i') || (nv[i] == 'o'))
         {
             switch (nv[i])
             {
@@ -39,7 +39,7 @@ string replace(string nv)
                     nv[i] = '3';
                     break;
                 case 'i':
-                    nv[i] = '1';
+                    nv[i] ='1';
                     break;
                 case 'o':
                     nv[i] = '0';
