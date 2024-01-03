@@ -7,12 +7,11 @@
 #include <stdio.h>
 #include <string.h>
 
+bool valid(string password);
 bool lower(string password);
 bool upper(string password);
 bool digit(string password);
 bool symbol(string password);
-bool valid(string password);
-
 
 int main(void)
 {
@@ -28,6 +27,15 @@ int main(void)
 }
 
 // TODO: Complete the Boolean function below
+
+bool valid(string password)
+{
+    if ((lower(password)) && (upper(password)) && (digit(password)) && (symbol(password)))
+    {
+        return true;
+    }
+    return false;
+}
 
 bool lower(string password)
 {
@@ -85,11 +93,4 @@ bool symbol(string password)
     return false;
 }
 
-bool valid(string password)
-{
-    if ((lower(password)) && (upper(password)) && (digit(password)) && (symbol(password)))
-    {
-        return true;
-    }
-    return false;
-}
+
