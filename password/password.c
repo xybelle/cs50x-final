@@ -40,12 +40,13 @@ bool valid(string password)
 
 bool lower(string password)
 {
-    int i = 0;
-    while (password[i] != '\0')
+    int i = strlen(password);
+    for (int j = 0; j < 1; j++)
     {
         if (islower(password[j]))
         {
             return true;
+            break;
         }
     }
     return false;
@@ -59,6 +60,7 @@ bool upper(string password)
         if (isupper(password[j]))
         {
             return true;
+            break;
         }
     }
     return false;
@@ -72,6 +74,7 @@ bool digit(string password)
         if (isdigit(password[j]))
         {
             return true;
+            break;
         }
     }
     return false;
@@ -85,6 +88,7 @@ bool symbol(string password)
         if (isprint(password[j]))
         {
             return true;
+            break;
         }
     }
     return false;
