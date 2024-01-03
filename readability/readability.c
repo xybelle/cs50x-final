@@ -11,12 +11,14 @@ int main(void)
 
     // Count the number of letters, words, and sentences in the text
 
-    int letters;
-    while 
-
     // Compute the Coleman-Liau index
 
     // Print the grade level
     printf("\n");
 
+}
+
+int count_letters(string text)
+{
+    // Return the number of letters in text
 }
