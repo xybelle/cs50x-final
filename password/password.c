@@ -16,7 +16,7 @@ bool symbol(string password);
 int main(void)
 {
     string password = get_string("Enter your password: ");
-    if (valid(password) == 0)
+    if (valid(password) == 1)
     {
         printf("Your password is valid!\n");
     }
@@ -32,9 +32,9 @@ bool valid(string password)
 {
     if ((lower(password) == 1) && (upper(password) == 1) && (digit(password) == 1) && (symbol(password) == 1))
     {
-        return 0;
+        return 1;
     }
-    return 1;
+    return 0;
 }
 
 bool lower(string password)
@@ -42,13 +42,13 @@ bool lower(string password)
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
-        if (islower(password[j]) == 0)
+        if (islower(password[j]) == 1)
         {
-            return 0;
+            return 1;
             break;
         }
     }
-    return 1;
+    return 0;
 }
 
 bool upper(string password)
@@ -56,13 +56,13 @@ bool upper(string password)
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
-        if (isupper(password[j]) == 0)
+        if (isupper(password[j]) == 1)
         {
-            return 0;
+            return 1;
             break;
         }
     }
-    return 1;
+    return 0;
 }
 
 bool digit(string password)
@@ -70,13 +70,13 @@ bool digit(string password)
     int i = strlen(password);
     for (int j = 0; j < 1; j++)
     {
-        if (isdigit(password[j]) == 0)
+        if (isdigit(password[j]) == 1)
         {
-            return 0;
+            return 1;
             break;
         }
     }
-    return 1;
+    return 0;
 }
 
 bool symbol(string password)
