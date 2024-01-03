@@ -41,6 +41,7 @@ bool valid(string password)
         if (islower(password[j]))
         {
             lower = true;
+            break;
         }
         if (isupper(password[j]))
         {
