@@ -40,8 +40,8 @@ bool valid(string password)
 
 bool lower(string password)
 {
-    int i = strlen(password);
-    while (password != '\0')
+    int i = 0;
+    while (password[i] != '\0')
     {
         if (islower(password[j]))
         {
