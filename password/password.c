@@ -32,9 +32,9 @@ bool valid(string password)
 {
     if ((lower(password) == 1) && (upper(password) == 1) && (digit(password) == 1) && (symbol(password) == 1))
     {
-        return 1;
+        return 0;
     }
-    return 0;
+    return 1;
 }
 
 bool lower(string password)
