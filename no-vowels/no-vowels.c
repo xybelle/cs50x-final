@@ -28,22 +28,11 @@ string replace(string nv)
     int i = strlen(nv);
     for (int j = 0; j < i; j++)
     {
-            switch (nv[i])
-            {
-                case 'a':
-                    nv[i] = '6';
-                    break;
-                case 'e':
-                    nv[i] = '3';
-                    break;
-                case 'i':
-                    nv[i] ='1';
-                    break;
-                case 'o':
-                    nv[i] = '0';
-                    break;
-            }
-        
+        if(nv[i] == a)
+        {
+            nv[i] ="6";
+        }
+
     }
     return nv;
 }
