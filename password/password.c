@@ -31,21 +31,28 @@ int main(void)
 bool valid(string password)
 {
     int i = strlen(password);
+    bool lower = false;
+    bool upper = false;
+    bool digit = false;
+    bool symbol = false;
+
     for (int j = 0; j < 1; j++)
     {
         if (islower(password[j]))
         {
-            if (isupper(password[j]))
-            {
-                if (isdigit(password[j]))
-                {
-                    if (isprint(password[j]))
-                    {
-                        return 1;
-                        break;
-                    }
-                }
-            }
+            lower = true;
+        }
+        if (isupper(password[j]))
+        {
+            upper = true;
+        }
+        if (isdigit(password[j]))
+        {
+            digit = true;
+        }
+        if (isprint(password[j]))
+        {
+            symbol = true;
         }
     }
 
