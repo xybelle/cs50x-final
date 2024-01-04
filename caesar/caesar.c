@@ -7,9 +7,13 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./caesar key\n");
     }
-    else
+    else if (isdigit(argv[1]))
     {
         plaintext();
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
     }
 }
 
