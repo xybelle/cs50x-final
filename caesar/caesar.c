@@ -18,14 +18,17 @@ int main(int argc, string argv[])
         return 0;
     }
 
+    // Check if argv[1] is a digit
     if (only_digits(argv))
     {
         printf("True\n");
+        return 0;
     }
     else
 
     {
-        printf("False\n");
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
 
 }
