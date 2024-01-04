@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -22,7 +23,7 @@ int main(int argc, string argv[])
     {
         if (isalnum(argv[1]))
         {
-            
+
         }
     }
 
