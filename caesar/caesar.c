@@ -71,5 +71,5 @@ char rotate (char c, int k)
     {
         c = ((int) c - 97) + k;
     }
-    return c;
+    return (char) c;
 }
