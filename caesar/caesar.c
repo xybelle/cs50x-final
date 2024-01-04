@@ -64,6 +64,7 @@ bool only_digits(string argv[1])
 
 char rotate (char c, int k)
 {
+    if (c <= 'A' && c < )
     if (isupper(c))
     {
         c = ((int) c - 65) + (k + 65);
