@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+bool all_unique(char c);
 
 int main(int argc, string argv[])
 {
@@ -18,6 +18,7 @@ int main(int argc, string argv[])
     if (count != 26)
     {
         printf("Key must contain 26 characters.\n");
+        return 1;
     }
 
     // Check if key contains anything but alphabet
@@ -32,12 +33,14 @@ int main(int argc, string argv[])
     if (digit >= 1)
     {
         printf("Key must contain 26 characters.\n");
+        return 1;
     }
 
     // Check if each key is unique
     if (all_unique(argv[1]))
     {
-        return 0;
+        // Prompt user for plaintext
+        string plaintext = get_string("Plaintext:  ");
     }
     else
     {
@@ -45,9 +48,22 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Prompt user for plaintext
+
 
     // Print ciphertext
 }
 
-bool key_count(string key)
+bool all_unique(char c)
+{
+    for (int i = 0; i < 26; i++)
+    {
+        for (int j = i + 1; j < 26; j++)
+        {
+            if (c[i] == c[j])
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
