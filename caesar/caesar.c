@@ -62,4 +62,16 @@ bool only_digits(string argv[1])
     return false;
 }
 
-// char rotate (char c, int k)
+char rotate (char c, int k)
+{
+    if (isupper(c[j]))
+    {
+        c = POINTS[word[j] - 65];
+    }
+    else if (islower(word[j]))
+    {
+            score += POINTS[word[j] - 97];
+    }
+
+    return c;
+}
