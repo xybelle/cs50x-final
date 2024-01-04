@@ -27,13 +27,13 @@ int main(int argc, string argv[])
         int k = atoi(argv[1]);
         int i = strlen(argv[1]);
         string plaintext = get_string("Plaintext:  ");
-        printf("Ciphertext: ");
+
         for (int j = 0; j < i; j++)
         {
             plaintext[j] = rotate (plaintext[j], k);
         }
 
-
+        printf("Ciphertext: ");
         for (int j = 0; j < i; j++)
         {
             printf("%c\n", plaintext[j]);
