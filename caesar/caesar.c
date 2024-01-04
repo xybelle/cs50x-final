@@ -36,7 +36,7 @@ int main(int argc, string argv[])
 
         for (int j = 0; j < i; j++)
         {
-            printf("%c", plaintext[j]);
+            printf("%c\n", plaintext[j]);
         }
 
     }
