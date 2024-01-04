@@ -50,5 +50,4 @@ int main(int argc, string argv[])
     // Print ciphertext
 }
 
-
-
+bool key_count(string key)
