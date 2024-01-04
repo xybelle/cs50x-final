@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 bool only_digits(string argv[1]);
 
@@ -18,13 +18,21 @@ int main(int argc, string argv[])
         return 0;
     }
 
-    printf("%i\n", only_digits(argv));
+    if (only_digits(argv))
+    {
+        printf("True\n");
+    }
+    else
+
+    {
+        printf("False\n");
+    }
 
 }
 
 bool only_digits(string argv[1])
 {
-    int i = strlen(argv);
+    int i = strlen(argv[1]);
     for (int j = 0, j < i; j++)
     {
         if (isdigit(argv[1][j]))
