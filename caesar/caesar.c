@@ -60,11 +60,11 @@ char rotate (char c, int k)
 {
     if (isupper(c))
     {
-        c = (int) - 65];
+        c = (int) c - k;
     }
     else if (islower(word[j]))
     {
-            score += POINTS[word[j] - 97];
+        c = (int) c - k;
     }
 
     return c;
