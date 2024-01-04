@@ -69,7 +69,7 @@ char rotate (char c, int k)
     {
         c = ((int) c - 65) + (k + 65);
         {
-            if (c > 'Z');
+            if (c > 'Z')
             {
                 return c - 26;
             }
