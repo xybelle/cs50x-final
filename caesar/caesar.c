@@ -25,9 +25,9 @@ int main(int argc, string argv[])
     {
         // Convert argv[1] to int
         int k = atoi(argv[1]);
-        int i = strlen(argv[1]);
-        string plaintext = get_string("Plaintext:  ");
 
+        string plaintext = get_string("Plaintext:  ");
+        int i = strlen(plaintext);
         for (int j = 0; j < i; j++)
         {
             plaintext[j] = rotate (plaintext[j], k);
