@@ -35,12 +35,8 @@ int main(int argc, string argv[])
     // Convert argv[1] to int
     int key(string argv[1]);
     char plaintext[] = get_string("Plaintext:  ");
-    int i = strlen(plaintext);
     printf("Ciphertext:  ");
-    for (int j = 0; j < i; j++)
-    {
-        rotate(plaintext[j]);
-    }
+    
 
 
 }
