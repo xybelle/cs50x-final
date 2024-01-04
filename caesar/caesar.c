@@ -32,7 +32,11 @@ int main(int argc, string argv[])
             char plaintext[j] = rotate (plaintext[j], k);
         }
 
-        printf("Ciphertext: %c%c%c ", plaintext[0], plaintext[1], plaintext[2]);
+        printf("Ciphertext: ");
+        for (int j = 0; j < i; j++)
+        {
+            printf("%c", plaintext[j]);
+        }
 
     }
     else
