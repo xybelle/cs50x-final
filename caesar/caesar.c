@@ -22,8 +22,10 @@ int main(int argc, string argv[])
     // Check if argv[1] is a digit
     if (only_digits(argv))
     {
-        printf("True\n");
-        return 0;
+        // Convert argv[1] to int
+        int key(string argv[1]);
+        string plaintext = get_string("Plaintext:  ");
+        printf("Ciphertext: %c%c%c ", plaintext[0], plaintext[1], plaintext[2]);
     }
     else
 
@@ -32,10 +34,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Convert argv[1] to int
-    int key(string argv[1]);
-    char plaintext[] = get_string("Plaintext:  ");
-    printf("Ciphertext: %c%c%c ", plaintext[0], plaintext[1], plaintext[2]);
+
+
 
 
 
