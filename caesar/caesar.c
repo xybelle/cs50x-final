@@ -76,5 +76,9 @@ char rotate (char c, int k)
         }
         return (char) c;
     }
+    else
+    {
+        
+    }
     return (char) c;
 }
