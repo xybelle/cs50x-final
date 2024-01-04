@@ -58,7 +58,6 @@ bool only_digits(string argv[1])
         {
             return true;
         }
-        return false;
     }
     return false;
 }
