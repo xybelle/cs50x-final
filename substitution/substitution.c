@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     int digit = 0;
     for (int i = 0; i < count; i++)
     {
-        if (isdigit(argv[1]))
+        if (isdigit(argv[1][i]))
         {
             digit++;
         }
@@ -35,7 +35,6 @@ int main(int argc, string argv[])
     // Check if each key is unique
 
     // Prompt user for plaintext
-    
 
     // Print ciphertext
 }
