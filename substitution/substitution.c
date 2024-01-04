@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
-bool all_alpha(string key)
-bool all_unique(string key)
-bool key_count(string key)
+bool all_alpha(string key);
+bool all_unique(string key);
+bool key_count(string key);
 
 int main(int argc, string argv[])
 {
