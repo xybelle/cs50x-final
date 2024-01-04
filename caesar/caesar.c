@@ -32,6 +32,11 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // Convert argv[1] to int
+    int key(string argv[1]);
+    string plaintext = get_string("Plaintext:  ");
+
+
 }
 
 bool only_digits(string argv[1])
@@ -47,3 +52,4 @@ bool only_digits(string argv[1])
     return false;
 }
 
+rotate (char , int)
