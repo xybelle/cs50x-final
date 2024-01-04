@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
-bool all_unique(char c);
+bool all_alpha(string key)
+bool all_unique(string key)
+bool key_count(string key)
 
 int main(int argc, string argv[])
 {
@@ -58,9 +60,15 @@ int main(int argc, string argv[])
     // Print ciphertext
 }
 
-bool all_alpha(string argv)
+bool key_count(string key)
 {
-    int digit = 0, count = strlen(argv[1]);
+    int count = strlen(key)
+    return count && all_unique(key);
+}
+
+bool all_alpha(string key)
+{
+    int digit = 0;
     for (int i = 0; i < count; i++)
     {
         if (isdigit(argv[1][i]))
@@ -76,7 +84,7 @@ bool all_alpha(string argv)
     return true;
 }
 
-bool all_unique(char c)
+bool all_unique(string key)
 {
     for (int i = 0; i < 26; i++)
     {
