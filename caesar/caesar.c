@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("Plaintext:  ");
     int i = strlen(plaintext);
     printf("Ciphertext:  ");
-    for
+    for ()
 
 
 }
@@ -55,4 +55,4 @@ bool only_digits(string argv[1])
     return false;
 }
 
-char rotate (char c, int n)
+char rotate (char c, int key)
