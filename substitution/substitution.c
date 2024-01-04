@@ -9,7 +9,16 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    else if (key_count(argv))
+
+    // Check if key contains 26 characters
+
+    // Check if key contains anything but alphabet
+
+    // Check if each key is unique
+
+    // Prompt user for plaintext
+
+    // Print ciphertext
 }
 
 
