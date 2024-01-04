@@ -52,4 +52,4 @@ bool only_digits(string argv[1])
     return false;
 }
 
-rotate (char , int)
+char rotate (char c, int n)
