@@ -60,12 +60,11 @@ char rotate (char c, int k)
 {
     if (isupper(c))
     {
-        c = (int) c - k;
+        c = ((int) c - 65) + k;
     }
     else if (islower(word[j]))
     {
-        c = (int) c - k;
+        c = ((int) c - 97) + k;
     }
-
     return c;
 }
