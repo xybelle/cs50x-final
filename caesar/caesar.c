@@ -3,7 +3,7 @@
 
 int main(int argc, string argv[])
 {
-    // Make sure program was run with just one commandline argument
+    // Check number of command-line argument
     if ((argc <= 0 ) || (argc > 2))
     {
         printf("Usage: ./caesar key\n");
