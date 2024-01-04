@@ -11,9 +11,14 @@ int main(int argc, string argv[])
     }
 
     // Check if key contains 26 characters
-    string key = argv[1]
-    
+    int count = strlen(argv);
+    if (count != 26)
+    {
+        printf("Key must contain 26 characters.\n");
+    }
+
     // Check if key contains anything but alphabet
+    
 
     // Check if each key is unique
 
@@ -23,4 +28,4 @@ int main(int argc, string argv[])
 }
 
 
-bool key_count(int count)
+
