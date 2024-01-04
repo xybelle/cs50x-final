@@ -16,33 +16,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Check if key contains 26 characters
-    int count = strlen(argv[1]);
-    if (count == 26)
-    {
-        all_alpha(argv[1]);
-    }
-    else
-    {
-        printf("Key must contain 26 characters.\n");
-        return 1;
-    }
-    // Check if key contains anything but alphabet
-    int digit = 0;
-    for (int i = 0; i < count; i++)
-    {
-        if (isdigit(argv[1][i]))
-        {
-            digit++;
-        }
-    }
-    if (digit >= 1)
-    {
-        printf("Key must contain 26 characters.\n");
-        return 1;
-    }
-
-    // Check if each key is unique
     if (all_unique(argv[1]))
     {
         // Prompt user for plaintext
@@ -60,12 +33,14 @@ int main(int argc, string argv[])
     // Print ciphertext
 }
 
+// Check if key contains 26 characters
 bool key_count(string key)
 {
     int count = strlen(key)
     return count && all_unique(key);
 }
 
+// Check if key contains anything but alphabet
 bool all_alpha(string key)
 {
     int digit = 0;
@@ -84,6 +59,7 @@ bool all_alpha(string key)
     return true;
 }
 
+// Check if each key is unique
 bool all_unique(string key)
 {
     for (int i = 0; i < 26; i++)
@@ -98,5 +74,3 @@ bool all_unique(string key)
     }
     return true;
 }
-
-
