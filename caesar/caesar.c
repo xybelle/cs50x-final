@@ -35,8 +35,8 @@ int main(int argc, string argv[])
     // Convert argv[1] to int
     int key(string argv[1]);
     char plaintext[] = get_string("Plaintext:  ");
-    printf("Ciphertext:  ");
-    
+    printf("Ciphertext: %c%c%c ", plaintext[0], plaintext[1], plaintext[2]);
+
 
 
 }
@@ -54,4 +54,4 @@ bool only_digits(string argv[1])
     return false;
 }
 
-char rotate (char c, int key)
+// char rotate (char c, int key)
