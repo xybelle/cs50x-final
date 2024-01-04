@@ -23,9 +23,16 @@ int main(int argc, string argv[])
     if (only_digits(argv))
     {
         // Convert argv[1] to int
-        int key(string argv[1]);
+        int k(string argv[1]);
+        int i = strlen(argv);
         string plaintext = get_string("Plaintext:  ");
+        for (int j = 0; j < i; j++)
+        {
+            char plaintext[j] = rotate (plaintext[j], k);
+        }
+
         printf("Ciphertext: %c%c%c ", plaintext[0], plaintext[1], plaintext[2]);
+
     }
     else
 
@@ -33,6 +40,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
 
 
 
@@ -54,4 +62,4 @@ bool only_digits(string argv[1])
     return false;
 }
 
-// char rotate (char c, int key)
+// char rotate (char c, int k)
