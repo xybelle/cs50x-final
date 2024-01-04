@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+char p[] = {A, }
+
 int main(int argc, string argv[])
 {
     // Check the number of command-line argument
