@@ -10,7 +10,7 @@ char rotate (char c, int k);
 int main(int argc, string argv[])
 {
     // Check number of command-line argument
-    if ((argc <= 1 ) || (argc > 2) || (isalpha(argc)))
+    if ((argc <= 1 ) || (argc > 2) || (isalnum(argc)))
     {
         printf("Usage: ./caesar key\n");
         return 1;
