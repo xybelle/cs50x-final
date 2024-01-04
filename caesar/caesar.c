@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 
 bool only_digits(string argv[1]);
@@ -16,7 +17,7 @@ int main(int argc, string argv[])
         return 0;
     }
 
-    printf("%s\n", only_digits(argv))
+    printf("%i\n", only_digits(argv));
 
 }
 
