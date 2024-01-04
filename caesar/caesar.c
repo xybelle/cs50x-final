@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool only_digits(string argv[1]);
+
 int main(int argc, string argv[])
 {
     // Check number of command-line argument
@@ -14,7 +16,19 @@ int main(int argc, string argv[])
         return 0;
     }
 
+    printf(")
+
 }
 
-string only_digits()
+bool only_digits(string argv[1])
+{
+    if (isdigit(argv[1]))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
