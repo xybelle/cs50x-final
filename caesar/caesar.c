@@ -35,7 +35,9 @@ int main(int argc, string argv[])
     // Convert argv[1] to int
     int key(string argv[1]);
     string plaintext = get_string("Plaintext:  ");
-    printf("Ciphertext:  ", )
+    int i = strlen(plaintext);
+    printf("Ciphertext:  ");
+    for
 
 
 }
