@@ -36,8 +36,9 @@ int main(int argc, string argv[])
         printf("Ciphertext: ");
         for (int j = 0; j < i; j++)
         {
-            printf("%c\n", plaintext[j]);
+            printf("%c", plaintext[j]);
         }
+        printf("\n");
 
     }
     else
