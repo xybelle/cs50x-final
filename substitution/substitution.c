@@ -11,4 +11,4 @@ int main(int argc, string argv[])
     else if (key_count(argv))
 }
 
-int 
+int key_count(string argv[1])
