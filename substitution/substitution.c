@@ -35,6 +35,15 @@ int main(int argc, string argv[])
     }
 
     // Check if each key is unique
+    if (all_unique(argv[1]))
+    {
+        return 0;
+    }
+    else
+    {
+        printf("Key has duplicates\n");
+        return 1;
+    }
 
     // Prompt user for plaintext
 
