@@ -18,6 +18,9 @@ int main(int argc, string argv[])
     }
 }
 
-string conversion()
+int plaintext(string argv[1], string plain)
+{
+    
+}
 
 
