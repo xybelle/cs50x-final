@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     if (only_digits(argv))
     {
         // Convert argv[1] to int
-        int k(string argv[1]);
+        int k = atoi(argv[1]);
         int i = strlen(argv[1]);
         string plaintext = get_string("Plaintext:  ");
         for (int j = 0; j < i; j++)
@@ -66,7 +66,7 @@ char rotate (char c, int k)
     {
         c = ((int) c - 65) + k;
     }
-    else if (islower(word[j]))
+    else if (islower(c))
     {
         c = ((int) c - 97) + k;
     }
