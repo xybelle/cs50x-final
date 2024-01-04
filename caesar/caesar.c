@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         return 0;
     }
 
-    printf(")
+    printf("%s\n", only_digits(argv))
 
 }
 
