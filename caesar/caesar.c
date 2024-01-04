@@ -51,10 +51,8 @@ int main(int argc, string argv[])
 
 bool only_digits(string argv[1])
 {
-    int i = strlen(argv[1]);
-    for (int j = 0; j < i; j++)
-    {
-        if (isdigit(argv[1][j]))
+    int i = atoi(argv[1]);
+        if (isdigit(i))
         {
             return true;
         }
