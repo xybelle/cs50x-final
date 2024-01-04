@@ -19,17 +19,23 @@ int main(int argc, string argv[])
     }
 
     // Check if key contains anything but alphabet
-    do
+    int digit = 0;
+    for (int i = 0; i < count; i++)
     {
-        if (isalnum(argv[1]))
+        if (isdigit(argv[1]))
         {
-
+            digit++;
         }
+    }
+    if (digit >= 1)
+    {
+        printf("Key must contain 26 characters.\n");
     }
 
     // Check if each key is unique
 
     // Prompt user for plaintext
+    
 
     // Print ciphertext
 }
