@@ -64,14 +64,17 @@ bool only_digits(string argv[1])
 
 char rotate (char c, int k)
 {
-    if ((c >= 'A' && c < 91) || (c <=))
-    if (isupper(c))
+    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
     {
-        c = ((int) c - 65) + (k + 65);
-    }
-    else if (islower(c))
-    {
-        c = ((int) c - 97) + (k + 97);
+        if (isupper(c))
+        {
+            c = ((int) c - 65) + (k + 65);
+        }
+        else if (islower(c))
+        {
+            c = ((int) c - 97) + (k + 97);
+        }
+        return (char) c;
     }
     return (char) c;
 }
