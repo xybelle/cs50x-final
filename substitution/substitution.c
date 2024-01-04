@@ -58,6 +58,24 @@ int main(int argc, string argv[])
     // Print ciphertext
 }
 
+bool all_alpha(string argv)
+{
+    int digit = 0, count = strlen(argv[1]);
+    for (int i = 0; i < count; i++)
+    {
+        if (isdigit(argv[1][i]))
+        {
+            digit++;
+        }
+    }
+    if (digit >= 1)
+    {
+        printf("Key must contain 26 characters.\n");
+        return 1;
+    }
+    return true;
+}
+
 bool all_unique(char c)
 {
     for (int i = 0; i < 26; i++)
@@ -73,4 +91,4 @@ bool all_unique(char c)
     return true;
 }
 
-bool all_alpha(string card)
+
