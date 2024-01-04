@@ -5,6 +5,7 @@
 #include <string.h>
 
 bool only_digits(string argv[1]);
+char rotate (char c, int k);
 
 int main(int argc, string argv[])
 {
@@ -40,13 +41,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-
-
-
-
-
-
-
 }
 
 bool only_digits(string argv[1])
@@ -64,9 +58,9 @@ bool only_digits(string argv[1])
 
 char rotate (char c, int k)
 {
-    if (isupper(c[j]))
+    if (isupper(c))
     {
-        c = POINTS[word[j] - 65];
+        c = (int) - 65];
     }
     else if (islower(word[j]))
     {
