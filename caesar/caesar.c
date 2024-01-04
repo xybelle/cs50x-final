@@ -18,8 +18,6 @@ int main(int argc, string argv[])
         return 0;
     }
 
-    int k = string
-
     printf("%i\n", only_digits(argv));
 
 }
@@ -27,9 +25,12 @@ int main(int argc, string argv[])
 bool only_digits(string argv[1])
 {
     int i = strlen(argv);
-    if (isdigit(argv[1]))
+    for (int j = 0, j < i; j++)
     {
-        return true;
+        if (isdigit(argv[1][j]))
+        {
+            return true;
+        }
     }
     else
     {
