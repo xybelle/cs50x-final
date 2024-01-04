@@ -5,5 +5,6 @@
 int main(void)
 {
     string key = get_string("Key: ");
-    c
+    char u[];
+    
 }
