@@ -9,23 +9,10 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-
-    // Make sure every character in arg[1] is a digit
-    if (isdigit(argv[1]))
+    else if (argc == 1)
     {
-        plaintext(argv[1]);
+        return 0;
     }
-    // Convert argv[1] from a 'string' to an 'int'
-    else if
-    {
-        conversion(argv[1]);
-    }
-}
-
-// Prompt User for plaintext
-int plaintext(string argv[1], string plain)
-{
 
 }
-
 
