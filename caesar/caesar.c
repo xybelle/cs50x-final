@@ -10,15 +10,12 @@ char rotate (char c, int k);
 int main(int argc, string argv[])
 {
     // Check number of command-line argument
-    if ((argc <= 1 ) || (argc > 2) || (isalnum(argc) == true))
+    if ((argc <= 1 ) || (argc > 2))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    
-
-    // Check if argv[1] is a digit
-    if (only_digits(argv))
+    else if (only_digits(argv))
     {
         // Convert argv[1] to int
         int k = atoi(argv[1]);
@@ -46,6 +43,7 @@ int main(int argc, string argv[])
     }
 }
 
+// Check if argv[1] is a digit
 bool only_digits(string argv[1])
 {
     int i = strlen(argv[1]);
