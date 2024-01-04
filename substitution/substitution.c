@@ -9,7 +9,7 @@ bool key_count(string key);
 int main(int argc, string argv[])
 {
     // Check the number of command-line argument
-    string key = argv[1]
+    string key = argv[1];
     if ((argc <= 1) || (argc > 2))
     {
         printf("Usage: ./substitution key\n");
