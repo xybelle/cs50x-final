@@ -16,28 +16,27 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    if (all_unique(argv[1]))
+    if (key_count(key))
     {
-        // Prompt user for plaintext
-        string plaintext = get_string("Plaintext:  ");
-        printf("Ciphertext: %s", ciphertext(argv));
+        if (all_unique(key))
+        {
+            // Prompt user for plaintext
+            string plaintext = get_string("Plaintext:  ");
+            printf("Ciphertext: %s", ciphertext(key));
+        }
     }
     else
     {
         printf("Key has duplicates\n");
         return 1;
     }
-
-
-
-    // Print ciphertext
 }
 
 // Check if key contains 26 characters
 bool key_count(string key)
 {
-    int count = strlen(key)
-    return count && all_unique(key);
+    int count = strlen(key);
+    return count && all_alpha(key);
 }
 
 // Check if key contains anything but alphabet
@@ -73,4 +72,10 @@ bool all_unique(string key)
         }
     }
     return true;
+}
+
+// Ciphertext
+string ciphertext(char key[])
+{
+
 }
