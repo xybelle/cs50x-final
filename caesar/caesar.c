@@ -16,3 +16,5 @@ int main(int argc, string argv[])
 
 }
 
+string only_digits()
+
