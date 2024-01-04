@@ -29,7 +29,7 @@ int main(int argc, string argv[])
         string plaintext = get_string("Plaintext:  ");
         for (int j = 0; j < i; j++)
         {
-            char plaintext[j] = rotate (plaintext[j], k);
+            string plaintext[j] = rotate (plaintext[j], k);
         }
 
         printf("Ciphertext: ");
