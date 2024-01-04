@@ -4,7 +4,7 @@
 int main(int argc, string argv[])
 {
     // Make sure program was run with just one commandline argument
-    if ((argc <= 1 ) || (argc > 2))
+    if ((argc < 1 ) || (argc > 2))
     {
         printf("Usage: ./caesar key\n");
         return 1;
