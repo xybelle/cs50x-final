@@ -66,19 +66,19 @@ char rotate (char c, int k)
 {
     if (isalpha(c))
     {
+        int ci = 0;
         if (isupper(c))
         {
-            c = ((c - 65) + k) % 26;
+            ci = c - 65;
+            c = (ci + k) % 26;
+            return c;
         }
         else if (islower(c))
         {
-            c = ((c - 97) + k) % 26;
+            ci = c - 97;
+            c = (ci + k) % 26;
+            return c;
         }
-        return c;
     }
-    else
-    {
-        return c;
-    }
-    return (char) c;
+    return c;
 }
