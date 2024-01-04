@@ -51,11 +51,10 @@ int main(int argc, string argv[])
 
 bool only_digits(string argv[1])
 {
-    int i = atoi(argv[1]);
-        if (isdigit(i))
-        {
-            return true;
-        }
+    char i = atoi(argv[1]);
+    if (isdigit(i))
+    {
+        return true;
     }
     return false;
 }
