@@ -18,12 +18,15 @@ int main(int argc, string argv[])
         return 0;
     }
 
+    int k = string
+
     printf("%i\n", only_digits(argv));
 
 }
 
 bool only_digits(string argv[1])
 {
+    int i = strlen(argv);
     if (isdigit(argv[1]))
     {
         return true;
