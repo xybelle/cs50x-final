@@ -68,14 +68,8 @@ char rotate (char c, int k)
     {
         if (isupper(c))
         {
-            c = (c - 65) + k + 65;
-            {
-                if (c > 'Z')
-                {
-                    return c - 26;
-                }
-                return c;
-            }
+            c = (c - 65) + k  65;
+
         }
         else if (islower(c))
         {
