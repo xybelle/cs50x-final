@@ -66,11 +66,11 @@ char rotate (char c, int k)
 {
     if (isupper(c))
     {
-        c = ((int) c - 65) + k;
+        c = ((int) c - 65) + (k + 65);
     }
     else if (islower(c))
     {
-        c = ((int) c - 97) + k;
+        c = ((int) c - 97) + (k + 97);
     }
     return (char) c;
 }
