@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 bool all_alpha(string key);
@@ -66,19 +67,19 @@ bool key_count(string key)
 // Check if key contains anything but alphabet
 bool all_alpha(string key)
 {
-    int digit = 0;
+    int count = 0;
     for (int i = 0; i < 26; i++)
     {
-        if (isdigit(key[i]))
+        if (isalpha(key[i]))
         {
-            digit++;
+            count++;
         }
     }
-    if (digit >= 1)
+    if (count == 26)
     {
-        printf("Key must contain 26 characters.\n");
+        return true;
     }
-    return true;
+    return false;
 }
 
 // Check if each key is unique
@@ -107,17 +108,14 @@ char ciphertext(char plaintext, string key)
         if (isupper(plaintext))
         {
             ci = plaintext - 65;
-            key[ci] = toupper(key[ci]);
-            cipher = key[ci] % 26;
-            return cipher + 65;
+            cipher = key[ci];
+            return toupper(cipher);
         }
         else if (islower(plaintext))
         {
             ci = plaintext - 97;
-
-            key[ci] = tolower(key[ci]);
-            cipher = key[ci] % 26;
-            return cipher + 97;
+            cipher = tolower(key[ci]);
+            return cipher;
         }
     }
     return plaintext;
