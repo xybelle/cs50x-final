@@ -88,11 +88,9 @@ void print_winner(void)
         if (candidates[i].votes) > candidates[i + 1].votes)
         {
             swap(candidates[i].name, candidates[i + 1].name);
-            swapped = true;
         }
     }
-    if (swapped == false)
-        break;
+    
 
     return candidates[candidate_count].name;
 }
