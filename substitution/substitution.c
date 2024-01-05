@@ -107,15 +107,14 @@ char ciphertext(char plaintext, char key[])
         if (isupper(plaintext))
         {
             ci = plaintext - 65;
-            key[ci] = 
-            cipher = key[ci];
-            return cipher;
+            cipher = key[ci] % 26;
+            return cipher + 65;
         }
         else if (islower(plaintext))
         {
             ci = plaintext - 97;
-            cipher = key[ci];
-            return cipher + 32;
+            cipher = key[ci] % 26;
+            return cipher + 97;
         }
     }
     return plaintext;
