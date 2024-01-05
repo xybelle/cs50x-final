@@ -6,12 +6,12 @@
 bool all_alpha(string key);
 bool all_unique(string key);
 bool key_count(string key);
-char ciphertext(char plaintext, char key);
+char ciphertext(char plaintext, string key);
 
 int main(int argc, string argv[])
 {
     // Check the number of command-line argument
-    
+    string key = argv[1];
     if ((argc <= 1) || (argc > 2))
     {
         printf("Usage: ./substitution key\n");
@@ -98,7 +98,7 @@ bool all_unique(string key)
 }
 
 // Ciphertext
-char ciphertext(char plaintext, char key[])
+char ciphertext(char plaintext, string key)
 {
     int ci = 0;
     char cipher = 0;
