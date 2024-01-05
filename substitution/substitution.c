@@ -95,7 +95,7 @@ bool all_unique(string key)
 char ciphertext(char key[], string plaintext)
 {
     int plain_length = strlen(plaintext), ci = 0;
-    char cipher = '\0';
+    char cipher[plain_length];
     for (int i = 0; i < plain_length; i++)
     {
         if (isalpha(plaintext[i]))
@@ -103,17 +103,17 @@ char ciphertext(char key[], string plaintext)
             if (isupper(plaintext[i]))
             {
                 ci = plaintext[i] - 65;
-                cipher = key[ci];
-                return cipher;
+                cipher[i] = key[ci];
+                return cipher[i];
             }
             else if (islower(plaintext[i]))
             {
                 ci = plaintext[i] - 97;
-                cipher = key[ci];
-                return cipher;
+                cipher[i] = key[ci];
+                return cipher[i];
             }
         }
-        return cipher;
+        return cipher[i];
     }
     return cipher;
 }
