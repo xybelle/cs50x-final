@@ -24,7 +24,8 @@ int main(int argc, string argv[])
         {
             // Prompt user for plaintext
             string plaintext = get_string("Plaintext:  ");
-            printf("Ciphertext: %s\n", ciphertext(key, plaintext));
+            printf("Ciphertext: ");
+            
         }
     }
     else
