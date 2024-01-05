@@ -88,10 +88,10 @@ string ciphertext(char key[], string plaintext)
     {
         if (isalpha(key))
         {
-            ci = c - 65;
+            ci = plaintext[i] - 65;
             c = (ci + k) % 26;
 
-            plaintext[i] = 
+            plaintext[i] =
             return c + 65;
         }
         plaintext[i] = key[i] + 25;
