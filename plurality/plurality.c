@@ -83,11 +83,11 @@ void print_winner(void)
         return;
     print_winner(candidate_count - 1);
 
-    for (int i = 0; i < (candidate_count - 2))
+    for (int i = 0; i < (candidate_count - 2); i++)
     {
         if (candidates[i].votes) > candidates[i + 1].votes)
         {
-
+            
         }
     }
     return candidates[].name;
