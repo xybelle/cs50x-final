@@ -8,4 +8,4 @@ How do you know?: performed best in all scenarios
 
 sort3 uses: selection
 
-How do you know?: (because it's the only other option)
+How do you know?: not as efficient as sort 2 especially in large (because it's the only other option)
