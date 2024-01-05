@@ -83,7 +83,11 @@ bool all_unique(string key)
 // Ciphertext
 string ciphertext(char key[], string plaintext)
 {
-    int plain_length = strlen(plaintext);
+    int plain_length = strlen(plaintext), ci = 0;
+    if (isalpha(key))
+    {
+        ci = key - 65;
+    }
     for (int i = 0; i < plain_length; i++)
     {
         plaintext[i] = key[i] + 25;
