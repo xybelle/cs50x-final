@@ -82,7 +82,7 @@ void print_winner(void)
     int temp = MAX;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes == MAX)
+        if (candidates[i].votes == temp)
         {
             printf("%s\n", candidates[i].name);
             temp--;
