@@ -80,5 +80,5 @@ bool vote(string name)
 void print_winner(void)
 {
     
-    return;
+    return candidates[].name;
 }
