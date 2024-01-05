@@ -93,7 +93,7 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes = 9)
+        if (candidates[i].votes >=)
         printf("%s\n", candidates[])
     }
 
