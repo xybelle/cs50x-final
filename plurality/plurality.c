@@ -65,8 +65,8 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    if (strcomp(candidate[i].name, ))
-    return false;
+    if (strcomp(candidate[i].name, name) == 1)
+        return false;
 }
 
 // Print the winner (or winners) of the election
