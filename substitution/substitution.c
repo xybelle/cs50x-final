@@ -107,6 +107,7 @@ char ciphertext(char plaintext, char key[])
         if (isupper(plaintext))
         {
             ci = plaintext - 65;
+            key[ci] = 
             cipher = key[ci];
             return cipher;
         }
