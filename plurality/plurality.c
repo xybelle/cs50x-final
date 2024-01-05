@@ -88,6 +88,7 @@ void print_winner(void)
             winner = candidates[i].name;
             temp--;
         }
+        
     }
     printf("%s\n", winner);
 }
