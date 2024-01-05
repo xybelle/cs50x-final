@@ -81,9 +81,9 @@ void print_winner(void)
 {
     int temp = MAX;
     string winner;
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < temp; i++)
     {
-        if (candidates[temp].votes == temp)
+        if (candidates[i].votes == temp)
         {
             winner = candidates[i].name;
             temp--;
