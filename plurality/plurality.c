@@ -90,5 +90,5 @@ void print_winner(void)
             swap(candidates[i].name, candidates[i + 1].name)
         }
     }
-    return candidates[].name;
+    return candidates[candidate_count].name;
 }
