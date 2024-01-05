@@ -109,9 +109,10 @@ char ciphertext(char key[], string plaintext)
             {
                 ci = plaintext[i] - 97;
                 cipher = key[ci];
+                return cipher;
             }
-            return cipher;
         }
+        return cipher;
     }
     return cipher;
 }
