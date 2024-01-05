@@ -94,7 +94,7 @@ bool all_unique(string key)
 char ciphertext(char key[], string plaintext)
 {
     int plain_length = strlen(plaintext), ci = 0;
-    char cipher;
+    char cipher = '\0';
     for (int i = 0; i < plain_length; i++)
     {
         if (isalpha(plaintext[i]))
