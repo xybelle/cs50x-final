@@ -83,7 +83,7 @@ void print_winner(void)
     string winner;
     for (int i = 0; i < temp; i++)
     {
-        if (candidates[i].votes == temp)
+        if (candidates[i].votes == 9)
         {
             winner = candidates[i].name;
             temp--;
