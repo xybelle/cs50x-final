@@ -6,7 +6,7 @@
 bool all_alpha(string key);
 bool all_unique(string key);
 bool key_count(string key);
-char ciphertext(char key[], char plaintext);
+char ciphertext(char plaintext, char key[]);
 
 int main(int argc, string argv[])
 {
@@ -24,11 +24,18 @@ int main(int argc, string argv[])
         {
             // Prompt user for plaintext
             string plaintext = get_string("Plaintext:  ");
-            printf("Ciphertext: ");
+
             int len = strlen(plaintext);
+
+            // Call function to rotate each character
             for (int i = 0; i < len; i++)
             {
-                printf("%c", ciphertext(key, plaintext));
+                plaintext[i] = ciphertext(plaintext[i], key);
+            }
+            printf("Ciphertext: ");
+            for (int i = 0; i < len; i++)
+            {
+                printf("%c", plaintext[i]);
             }
             printf("\n");
         }
@@ -92,28 +99,24 @@ bool all_unique(string key)
 }
 
 // Ciphertext
-char ciphertext(char key[], char plaintext[])
+char ciphertext(char plaintext, char key[])
 {
-    int plain_length = strlen(plaintext), ci = 0;
-    char cipher[plain_length];
-    for (int i = 0; i < plain_length; i++)
+    int ci = 0;
+    char cipher = 0;
+    if (isalpha(plaintext))
     {
-        if (isalpha(plaintext[i]))
+        if (isupper(plaintext))
         {
-            if (isupper(plaintext[i]))
-            {
-                ci = plaintext[i] - 65;
-                cipher[i] = key[ci];
-                return cipher[i];
-            }
-            else if (islower(plaintext[i]))
-            {
-                ci = plaintext[i] - 97;
-                cipher[i] = key[ci];
-                return cipher[i];
-            }
+            ci = plaintext - 65;
+            cipher = key[ci];
+            return cipher;
         }
-        return cipher[i];
+        else if (islower(plaintext))
+        {
+            ci = plaintext - 97;
+            cipher = key[ci];
+            return cipher;
+        }
     }
     return plaintext;
 }
