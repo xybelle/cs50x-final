@@ -38,6 +38,10 @@ int main(int argc, string argv[])
 bool key_count(string key)
 {
     int count = strlen(key);
+    if (count != 26)
+    {
+        printf("Key must contain 26 characters.\n");
+    }
     return count && all_alpha(key);
 }
 
