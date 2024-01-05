@@ -25,12 +25,22 @@ int main(int argc, string argv[])
             // Prompt user for plaintext
             string plaintext = get_string("Plaintext:  ");
             printf("Ciphertext: ");
+            do
+            {
+                printf("%c", ciphertext(key, plaintext));
+            }
+            while (plaintext != '\0')
 
+        }
+        else
+        {
+            printf("Key has duplicates\n");
+            return 1;
         }
     }
     else
     {
-        printf("Key has duplicates\n");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
 }
