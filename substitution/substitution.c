@@ -115,5 +115,5 @@ char ciphertext(char key[], char plaintext[])
         }
         return cipher[i];
     }
-    return plaintext[];
+    return (char) plaintext;
 }
