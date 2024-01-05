@@ -86,7 +86,7 @@ string ciphertext(char key[], string plaintext)
     int plain_length = strlen(plaintext);
     for (int i = 0; i < plain_length; i++)
     {
-        plaintext[i] = key[i];
+        plaintext[i] = key[i] + 25;
     }
     return plaintext;
 }
