@@ -79,7 +79,7 @@ bool all_alpha(string key)
         printf("Key must contain 26 characters.\n");
         return 1;
     }
-    return true;
+    return 0;
 }
 
 // Check if each key is unique
