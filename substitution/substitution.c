@@ -23,7 +23,7 @@ int main(int argc, string argv[])
         if (all_unique(key))
         {
             // Prompt user for plaintext
-            string plaintext = get_string("Plaintext:  ");
+            string plaintext = get_string("plaintext:  ");
 
             int len = strlen(plaintext);
 
@@ -32,7 +32,7 @@ int main(int argc, string argv[])
             {
                 plaintext[i] = ciphertext(plaintext[i], key);
             }
-            printf("Ciphertext: ");
+            printf("ciphertext: ");
             for (int i = 0; i < len; i++)
             {
                 printf("%c", plaintext[i]);
