@@ -87,7 +87,7 @@ void print_winner(void)
     {
         if (candidates[i].votes) > candidates[i + 1].votes)
         {
-            
+            swap(candidates[i].name, candidates[i + 1].name)
         }
     }
     return candidates[].name;
