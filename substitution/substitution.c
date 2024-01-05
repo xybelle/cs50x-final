@@ -6,7 +6,7 @@
 bool all_alpha(string key);
 bool all_unique(string key);
 bool key_count(string key);
-string ciphertext(char key[], string plaintext);
+char ciphertext(char key[], string plaintext);
 
 int main(int argc, string argv[])
 {
@@ -81,7 +81,7 @@ bool all_unique(string key)
 }
 
 // Ciphertext
-string ciphertext(char key[], string plaintext)
+char ciphertext(char key[], string plaintext)
 {
     int plain_length = strlen(plaintext), ci = 0;
     for (int i = 0; i < plain_length; i++)
