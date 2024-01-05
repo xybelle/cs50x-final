@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -44,9 +45,9 @@ bool key_count(string key)
 bool all_alpha(string key)
 {
     int digit = 0;
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < 26; i++)
     {
-        if (isdigit(argv[1][i]))
+        if (isdigit(key[i]))
         {
             digit++;
         }
@@ -66,7 +67,7 @@ bool all_unique(string key)
     {
         for (int j = i + 1; j < 26; j++)
         {
-            if (c[i] == c[j])
+            if (key[i] == key[j])
             {
                 return false;
             }
