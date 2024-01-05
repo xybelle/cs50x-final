@@ -11,7 +11,7 @@ char ciphertext(char plaintext, char key);
 int main(int argc, string argv[])
 {
     // Check the number of command-line argument
-    string key = argv[1];
+    
     if ((argc <= 1) || (argc > 2))
     {
         printf("Usage: ./substitution key\n");
@@ -35,7 +35,7 @@ int main(int argc, string argv[])
             printf("ciphertext: ");
             for (int i = 0; i < len; i++)
             {
-                printf("%i ", plaintext[i]);
+                printf("%c", plaintext[i]);
             }
             printf("\n");
         }
