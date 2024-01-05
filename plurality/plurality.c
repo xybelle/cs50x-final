@@ -91,7 +91,11 @@ void print_winner(void)
         }
     }
 
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes = 9)
+        printf("%s\n", candidates[])
+    }
 
     return candidates[candidate_count].name;
 }
