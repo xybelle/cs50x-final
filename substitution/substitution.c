@@ -25,11 +25,11 @@ int main(int argc, string argv[])
             // Prompt user for plaintext
             string plaintext = get_string("Plaintext:  ");
             printf("Ciphertext: ");
-            do
+            int len = strlen(plaintext);
+            for (int i = 0; i < len; i++)
             {
                 printf("%c", ciphertext(key, plaintext));
             }
-            while (plaintext != 0);
         }
         else
         {
