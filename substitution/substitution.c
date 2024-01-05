@@ -92,7 +92,7 @@ bool all_unique(string key)
 }
 
 // Ciphertext
-char ciphertext(char key[], string plaintext)
+char ciphertext(char key[], char plaintext[])
 {
     int plain_length = strlen(plaintext), ci = 0;
     char cipher[plain_length];
@@ -115,5 +115,5 @@ char ciphertext(char key[], string plaintext)
         }
         return cipher[i];
     }
-    return plaintext;
+    return plaintext[];
 }
