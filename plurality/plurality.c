@@ -70,8 +70,10 @@ bool vote(string name)
         if (strcmp(candidates[i].name, name) == 0)
         {
             candidates[i].vote + 1;
+            return true;
         }
     }
+    return false;
 }
 
 // Print the winner (or winners) of the election
