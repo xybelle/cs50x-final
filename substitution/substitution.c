@@ -96,19 +96,17 @@ char ciphertext(char key[], string plaintext)
     int plain_length = strlen(plaintext), ci = 0;
     for (int i = 0; i < plain_length; i++)
     {
-        if (isalpha(key))
+        if (isalpha(plaintext[i]))
         {
+            if (isupper(plaintext[i]))
             {
-                if (isupper(key))
-                {
-                    ci = plaintext[i] - 65;
-                    plaintext[i] = key[ci];
-                }
-                else if (islower(key))
-                {
-                    ci = plaintext[i] - 97;
-                    plaintext[i] = key[ci];
-                }
+                ci = plaintext[i] - 65;
+                plaintext[i] = key[ci];
+            }
+            else if (islower(plaintext[i]))
+            {
+                ci = plaintext[i] - 97;
+                plaintext[i] = key[ci];
             }
             return plaintext;
         }
