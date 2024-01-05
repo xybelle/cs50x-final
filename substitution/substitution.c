@@ -88,13 +88,19 @@ string ciphertext(char key[], string plaintext)
     {
         if (isalpha(key))
         {
-            ci = plaintext[i] - 65;
-            plaintexti[i] = (ci + k) % 26;
-
-            plaintext[i] =
-            return c + 65;
+            {
+                if (isupper(key))
+                {
+                    ci = plaintext[i] - 65;
+                    plaintext[i] = key[ci];
+                }
+                else if (islower(key))
+                {
+                    ci = plaintext[i] - 97;
+                    plaintext[i] = key[ci];
+                }
+            }
+            return plaintext;
         }
-        plaintext[i] = key[i] + 25;
-    }
     return plaintext;
 }
