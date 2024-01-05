@@ -85,10 +85,13 @@ void print_winner(void)
     {
         if (candidates[i].votes > max)
         {
-            winner = candidates[i].name;
             max = candidates[i].votes;
         }
+
+        if ()
     }
+
+
 
     printf("%s\n", winner);
 }
