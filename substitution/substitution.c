@@ -30,7 +30,6 @@ int main(int argc, string argv[])
                 printf("%c", ciphertext(key, plaintext));
             }
             while (plaintext != '\0')
-
         }
         else
         {
