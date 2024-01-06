@@ -199,7 +199,7 @@ bool is_tie(int min)
             remaining++;
     }
 
-    if (remaining % min == 0)
+    if ((remaining * min) == voter_count)
     {
         return true;
     }
