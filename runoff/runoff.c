@@ -135,7 +135,6 @@ bool vote(int voter, int rank, string name)
                 preferences[i][j] = candidates[i].name;
                 candidates[i].vote++;
             }
-            return true;
         }
     }
     return false;
