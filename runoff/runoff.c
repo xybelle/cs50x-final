@@ -145,7 +145,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; i++)
         {
-            if (!candidates[preferences[i][j]].eliminated)
+            if (candidates[preferences[i][j]].eliminated == false)
             {
                 candidates[preferences[i][j]].votes++;
                 break;
@@ -181,7 +181,7 @@ int find_min(void)
     int min = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
-        if ((!candidates[i].eliminated) && (candidates[i].votes < min))
+        if ((candidates[i].eliminated == false) && (candidates[i].votes < min))
         {
             min = candidates[i].votes;
         }
