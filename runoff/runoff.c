@@ -152,8 +152,6 @@ void tabulate(void)
             preferences[i][1] = candidates[i].name;
             candidates[i].vote++;
         }
-        else
-            break;
     }
     return;
 }
