@@ -133,7 +133,6 @@ bool vote(int voter, int rank, string name)
             for (int j = 0; j < candidate_count; j++)
             {
                 preferences[i][j] = candidates[i].name;
-                candidates[i].vote++;
             }
         }
     }
@@ -179,7 +178,7 @@ bool print_winner(void)
 int find_min(void)
 {
     for (int i = 0; i < candidate_count; i++)
-    
+
     return 0;
 }
 
