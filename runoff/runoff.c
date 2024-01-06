@@ -144,16 +144,18 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // If candidate i is eliminated, continue and count preferences[i][1], then break
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        if (!candidate[i].eliminated)
+        for (int i = 0; i < candidate_count; i++)
         {
-            candidates[i].vote++;
-        }
-        else
-        {
-            preferences[i][0] = candidates[i].name;
-            candidates[i].vote++;
+            if (!candidate[i].eliminated)
+            {
+                candidates[i].vote++;
+            }
+            else
+            {
+                preferences[i][0] = candidates[i].name;
+            }
         }
     }
     return;
