@@ -199,6 +199,7 @@ bool is_tie(int min)
             remaining++;
     }
 
+    remaining
     if (remaining % min = 0)
     {
         return true;
