@@ -199,9 +199,9 @@ bool is_tie(int min)
             remaining++;
     }
 
-    for (int i = 0; i < remaining; j++)
+    if (min % remaining = 0)
     {
-        candidates[i].votes + 
+        return true;
     }
     return false;
 }
