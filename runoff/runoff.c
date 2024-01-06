@@ -146,9 +146,11 @@ void tabulate(void)
 {
     // If candidate i is eliminated, continue and count preferences[i][1], then break
     for (int i = 0; i < ; i++)
-    if (candidate[i].eliminated == 0)
     {
+        if (candidate[i].eliminated == 0)
+        {
 
+        }
     }
     return;
 }
