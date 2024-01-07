@@ -164,12 +164,11 @@ void sort_pairs(void)
     {
         for (int j = i + 1; i < pair_count; j++)
         {
-            n = pairs[i].winner - pairs[i].loser;
-            o = pairs[j].winner - pairs[j].loser;
-
-            if (n < p)
+            if ((pairs[i].winner - pairs[i].loser) < (pairs[j].winner - pairs[j].loser))
             {
                 o = p;
+                p = n;
+                n = p;
             }
         }
     }
