@@ -166,9 +166,7 @@ void sort_pairs(void)
         {
             if ((pairs[i].winner - pairs[i].loser) < (pairs[j].winner - pairs[j].loser))
             {
-                o = p;
-                p = n;
-                n = p;
+                pairs[i] = 
             }
         }
     }
