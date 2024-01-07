@@ -172,12 +172,13 @@ void lock_pairs(void)
     bool loop;
     for (int i = 0; i < pair_count; i++)
     {
-
-    }
-
-    while (loop = false)
-    {
-        for (int i = 0; i <)
+        loop = false;
+        for (int j = 0; j <= i; j++)
+        {
+            if (pairs[i].loser == pairs[j].winner)
+                loop = true;
+            else if (pairs[i].winner == pairs[j]
+        }
     }
     return;
 }
