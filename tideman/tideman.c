@@ -148,7 +148,7 @@ void sort_pairs(void)
     int temp1 = 0, temp2 = 0;
     for (int i = 0; i < pair_count; i++)
     {
-        for (int j = ; j < pair_count; j++)
+        for (int j = 0; j < pair_count; j++)
         {
             if (preferences[pairs[i].winner][pairs[i].loser] < preferences[pairs[j].winner[pairs[j].loser]])
             {
