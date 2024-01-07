@@ -3,6 +3,7 @@
     "files.associations": {
         "string.h": "c",
         "string": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "typeinfo": "c"
     }
 }
