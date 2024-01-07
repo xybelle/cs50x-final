@@ -150,12 +150,15 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     int n = pair_count;
-
+    if (n <= 0)
+    {
+        return;
+    }
     for (int i = 0; i < (pair_count - 1); i++)
     {
         for (int j = 0; j < (pair_count - 2); j++)
         {
-            if 
+            if
         }
     }
     return;
