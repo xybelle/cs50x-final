@@ -189,6 +189,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    printf("%s\n", )
+    printf("%s\n", candidates[pairs[0].winner])
     return;
 }
