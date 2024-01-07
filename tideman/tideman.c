@@ -151,7 +151,10 @@ void sort_pairs(void)
 {
     int n = pair_count;
 
-    for (n; n)
+    for (int i = 0; i < (pair_count - 1); i++)
+    {
+        
+    }
     return;
 }
 
