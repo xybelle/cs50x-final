@@ -177,8 +177,11 @@ void lock_pairs(void)
         {
             if (pairs[i].loser == pairs[j].winner)
                 loop = true;
-            else if (pairs[i].winner == pairs[j]
+            else if (pairs[i].winner == pairs[j].loser)
+                loop = true;
         }
+        if (loop == false)
+            locked[pairs[i].winner][pairs[i].loser] = true;
     }
     return;
 }
