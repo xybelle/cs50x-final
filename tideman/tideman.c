@@ -166,7 +166,7 @@ void sort_pairs(void)
         {
             if (preferences[pairs[i].winner][pairs[i].loser] > preferences[pairs[j].winner][pairs[j].loser])
             {
-                max = preferences[pairs[i].winner][pairs[i].loser];
+                
             }
         }
     }
