@@ -101,7 +101,7 @@ bool vote(int rank, string name, int ranks[])
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name, candidates[]) == 0)
+        if (strcmp(candidates[i], name) == 0)
         {
             ranks[i] = rank;
             return true;
@@ -116,7 +116,7 @@ void record_preferences(int ranks[])
     for (int i = 0; i < candidate_count; i++)
     {
         preferences[i][i + 1]++;
-        return true;
+        return;
     }
     return;
 }
@@ -157,8 +157,8 @@ void sort_pairs(void)
         {
             if (preferences[pairs[i].winner][pairs[i].loser] < preferences[pairs[j].winner][pairs[j].loser])
             {
-                temp = preferences[pairs[i]winner][pairs[i].loser];
-                preferences[pairs[i]winner][pairs[i].loser] = preferences[pairs[j].winner][pairs[j].loser];
+                temp = preferences[pairs[i].winner][pairs[i].loser];
+                preferences[pairs[i].winner][pairs[i].loser] = preferences[pairs[j].winner][pairs[j].loser];
                 preferences[pairs[j].winner][pairs[j].loser] = temp;
 
             }
@@ -190,6 +190,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    printf("%s\n", candidates[pairs[0].winner])
+    printf("%s\n", candidates[pairs[0].winner]);
     return;
 }
