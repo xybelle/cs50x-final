@@ -9,9 +9,12 @@ typedef struct
 } candidate;
 
 candidate candidates[4];
-candidates[1].name = "Samia";
 
 int main(void)
 {
-    
+    const int n = 4;
+    for (int i = 0; i < n; i++)
+    {
+        candidates[i].name = get_string("Candidate name: ");
+    }
 }
