@@ -186,6 +186,8 @@ void lock_pairs(void)
     return;
 }
 
+bool loop(int find, int )
+
 // Print the winner of the election
 void print_winner(void)
 {
