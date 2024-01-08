@@ -210,7 +210,15 @@ void print_winner(void)
             }
         }
 
-        if 
+        if (arrow == true)
+        {
+            continue;
+        }
+
+        else if (arrow == false)
+        {
+            printf("%s\n", candidates[i]);
+        }
     }
     return;
 }
