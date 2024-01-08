@@ -191,7 +191,7 @@ void lock_pairs(void)
                 loop = true;
             }
         }
-    }
+    } 
 
 
     return;
