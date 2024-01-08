@@ -167,7 +167,7 @@ void lock_pairs(void)
     bool loop = false;
     for (int i = 0; i < pair_count; i++)
     {
-        for (int j = 0 + 1; j <= pair_count; j++)
+        for (int j = i + 1; j <= i; j++)
         {
             if (pairs[i].loser == pairs[j].winner)
             {
@@ -185,8 +185,6 @@ void lock_pairs(void)
     }
     return;
 }
-
-bool loop(int find, int )
 
 // Print the winner of the election
 void print_winner(void)
