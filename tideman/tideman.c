@@ -182,7 +182,10 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (pairs[i].loser )
+            if (pairs[i] > pairs[i + 1])
+            {
+                locked
+            }
         }
     }
 
