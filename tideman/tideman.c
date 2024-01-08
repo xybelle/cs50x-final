@@ -186,6 +186,18 @@ void lock_pairs(void)
     return;
 }
 
+bool loop(int find, int n)
+{
+    for (int i = 0; i < pair_count; i++)
+    {
+        if (loop(find, n))
+        {
+            return false;
+        }
+        else if (loop())
+    }
+}
+
 // Print the winner of the election
 void print_winner(void)
 {
