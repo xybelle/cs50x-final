@@ -182,9 +182,9 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pair_count; j++)
         {
-            if (pairs[i] > pairs[i + 1])
+            if (pairs[i] < pairs[i + 1])
             {
-                locked
+                locked[pairs[i].winner][pairs[i].loser] = true;
             }
         }
     }
