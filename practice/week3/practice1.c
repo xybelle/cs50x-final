@@ -2,19 +2,26 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct
-{
-    string name;
-    int votes;
-} candidate;
-
-candidate candidates[4];
+int factorial(int n);
 
 int main(void)
 {
-    const int n = 4;
-    for (int i = 0; i < n; i++)
+    int n;
+    do
     {
-        candidates[i].name = get_string("Candidate name: ");
+        n = get_int("n: ");
     }
+    while (n < 0);
+
+    printf("%i\n", factorial(n));
+}
+
+int factorial(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
 }
