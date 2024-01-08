@@ -9,7 +9,7 @@ typedef struct
 } candidate;
 
 candidate candidates[4];
-candidate[1].name = "Samia";
+candidates[1].name = "Samia";
 
 int main(void)
 {
