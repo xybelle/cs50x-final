@@ -192,10 +192,14 @@ bool loop(int find, int n)
     {
         if (locked(find, n))
         {
-            return false;
+            return;
         }
-        else if (loop())
+        else if (locked(n, i))
+        {
+            return loop(find, i);
+        }
     }
+    return true;
 }
 
 // Print the winner of the election
