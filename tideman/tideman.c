@@ -32,6 +32,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool loop(int winner, int loser);
 
 int main(int argc, string argv[])
 {
@@ -166,29 +167,32 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        locked[pairs[i].winner][pairs[i].loser] = loop(pairs[i].winner, pairs[i].loser);
+        if (!loop(pairs[i].winner, pairs[i].loser))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
     }
     return;
 }
 
-bool loop(int find, int n)
+bool loop(int winner, int loser)
 {
+    if (loser == winner)
+    {
+        return true;
+    }
+
     for (int i = 0; i < pair_count; i++)
     {
-        if (locked[n][find])
+        if (locked[loser][i])
         {
-            return false;
-        }
-        else if (locked[find][n])
-        {
-            return false;
-        }
-        else if (locked[n][i])
-        {
-            return loop(find, i);
+            if (loop(winner, i))
+            {
+                return true;
+            }
         }
     }
-    return true;
+    return false;
 }
 
 // Print the winner of the election
