@@ -198,16 +198,19 @@ bool loop(int winner, int loser)
 // Print the winner of the election
 void print_winner(void)
 {
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[i][i])
+        bool arrow = false;
+        for (int j = 0; j < candidate_count; j++)
         {
-            if ()
+            if (locked[j][i])
+            {
+                arrow = true;
+                break;
+            }
         }
-        else
-        {
-            return;
-        }
+
+        if 
     }
     return;
 }
