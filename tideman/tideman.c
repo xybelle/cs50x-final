@@ -177,6 +177,10 @@ void lock_pairs(void)
             {
                 loop = true;
             }
+            else
+            {
+                
+            }
         }
         if (loop == false)
         {
