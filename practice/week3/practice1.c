@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct
+{
+    string name;
+    int votes;
+} candidate;
+
+
+
 int main(void)
 {
     // Arrays of strings
