@@ -190,7 +190,7 @@ bool loop(int find, int n)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if (loop(find, n))
+        if (locked(find, n))
         {
             return false;
         }
