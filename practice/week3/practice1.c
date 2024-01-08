@@ -8,9 +8,8 @@ typedef struct
     int votes;
 } candidate;
 
-candidate president;
-president.name = "Samia";
-president.votes = "10";
+candidate candidates[4];
+candidate[1].name = "Samia";
 
 int main(void)
 {
