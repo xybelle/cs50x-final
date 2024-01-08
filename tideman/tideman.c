@@ -181,7 +181,10 @@ bool loop(int find, int n)
         {
             return false;
         }
-        else if (locked(find, ))
+        else if (locked(find, n))
+        {
+            return false;
+        }
         else if (locked(n, i))
         {
             return loop(find, i);
