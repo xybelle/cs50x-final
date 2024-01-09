@@ -183,14 +183,11 @@ bool loop(int winner, int loser)
 
     for (int i = 0; i < pair_count; i++)
     {
-        for (int j = 0; j < pair_count; j++)
+        if (locked[loser][i])
         {
-            if (loop(loser, i))
+            if (loop(winner, i))
             {
-                if (loop(winner, i))
-                {
-                    return true;
-                }
+                return true;
             }
         }
     }
@@ -205,19 +202,20 @@ void print_winner(void)
         bool arrow = false;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (pairs[i].winner == pairs[j].loser)
+            if (locked == pairs[j].loser)
             {
                 arrow = true;
                 break;
             }
-            if (arrow == true)
-            {
-                continue;
-            }
-            if (arrow == false)
-            {
-                printf("%s\n", candidates[i]);
-            }
+        }
+
+        if (arrow == true)
+        {
+            continue;
+        }
+        else if (arrow == false)
+        {
+            printf("%s\n", candidates[i]);
         }
     }
     return;
