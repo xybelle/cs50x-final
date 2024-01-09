@@ -210,9 +210,13 @@ void print_winner(void)
                 arrow = true;
                 break;
             }
-            if (pairs)
+            if (arrow == true)
             {
-                return;
+                continue;
+            }
+            if (arrow == false)
+            {
+                printf("%s\n", candidates[i]);
             }
         }
     }
