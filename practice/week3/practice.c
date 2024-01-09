@@ -145,14 +145,29 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-
+    for (int i = 0; i < pair_count; i++)
+    {
+        for (int j = i + 1; j < pair_count; i++)
+        {
+            int temp;
+            if (preferences[i][j] < preferences[j][i])
+            {
+                temp = pairs[i];
+                pairs[i] = pairs[j];
+                pairs[j] = temp;
+            }
+        }
+    }
     return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-
+    for (int i = 0; i < pair_count; i++)
+    {
+        if 
+    }
     return;
 }
 
