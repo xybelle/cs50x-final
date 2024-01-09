@@ -202,7 +202,7 @@ void print_winner(void)
         bool arrow = false;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked == pairs[j].loser)
+            if (locked[j][i])
             {
                 arrow = true;
                 break;
