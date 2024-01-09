@@ -189,7 +189,7 @@ bool loop(int winner, int loser)
             {
                 if (loop(winner, i))
                 {
-                    loop()
+                    return true;
                 }
             }
         }
@@ -200,5 +200,16 @@ bool loop(int winner, int loser)
 // Print the winner of the election
 void print_winner(void)
 {
+    for (int i = 0; i < candidate_count; i++)
+    {
+        bool arrow = false;
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[i][j])
+            {
+                printf("%s\n", candidates[i]);
+            }
+        }
+    }
     return;
 }
