@@ -205,11 +205,12 @@ void print_winner(void)
         bool arrow = false;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked[i][j])
+            if (pairs[i].winner == pairs[j].loser)
             {
-                printf("%s\n", candidates[i]);
+                arrow = true;
+                break;
             }
-            else
+            if (pairs)
             {
                 return;
             }
