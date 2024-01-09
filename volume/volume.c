@@ -7,6 +7,8 @@
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
 
+typedef uint8_t header[HEADER_SIZE];
+
 int main(int argc, char *argv[])
 {
     // Check command-line arguments
@@ -35,7 +37,12 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
 
-    while (fread(&))
+    while (fread(&header, sizeof(header), 1, input) != 0)
+    {
+        fwrite(&output, sizeof(header), 1, output);
+    }
+
+    
 
     // TODO: Read samples from input file and write updated data to output file
 
