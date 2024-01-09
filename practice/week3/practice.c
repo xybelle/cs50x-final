@@ -129,9 +129,9 @@ void add_pairs(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if (preference[i][j] > preferences[j][i])
+            if (!(i == j) && (preference[i][j] > preferences[j][i]))
             {
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
@@ -145,11 +145,11 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
+    pair temp;
     for (int i = 0; i < pair_count; i++)
     {
-        for (int j = i + 1; j < pair_count; i++)
+        for (int j = i + 1; j <= pair_count; j++)
         {
-            int temp;
             if (preferences[i][j] < preferences[j][i])
             {
                 temp = pairs[i];
@@ -166,7 +166,7 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if (loop(pairs[i].winner, pairs[i].loser))
+        if (!loop(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
