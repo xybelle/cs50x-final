@@ -122,7 +122,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 RGBTRIPLE average_mid(RGBTRIPLE *average)
 {
     // mid mid
-    for (int i = -1; i < 2; i++)
+
+    if ()
+    for (int x = -1; i < 2; i++)
     {
         for (int j = -1; j < 2; j++)
         {
