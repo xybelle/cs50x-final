@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void min(int *a, int *b);
+int min(int *a, int *b);
 
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
     printf("%i %i %i\n", rgbtRed, rgbtGreen, rgbtBlue);
 }
 
-void min(int *a, int *b)
+int min(int *a, int *b)
 {
     return (*a < *b) ? *a : *b;
 }
