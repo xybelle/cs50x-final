@@ -5,16 +5,16 @@ int min(int *a, int *b);
 int main(void)
 {
     int rgbtRed, rgbtGreen, rgbtBlue;
-    int sepiaRed = 255, sepiaGreen = 265, sepiaBlue = 165, max = 255;
+    float sepiaRed = 254.6, sepiaGreen = 265.9, sepiaBlue = 165, max = 255;
 
-    rgbtRed = min(&sepiaRed, &max);
-    rgbtGreen = min(&sepiaGreen, &max);
-    rgbtBlue = min(&sepiaBlue, &max);
+    rgbtRed = round(min(&sepiaRed, &max));
+    rgbtGreen = round(min(&sepiaGreen, &max));
+    rgbtBlue = round(min(&sepiaBlue, &max));
 
     printf("%i %i %i\n", rgbtRed, rgbtGreen, rgbtBlue);
 }
 
-int min(int *a, int *b)
+float min(int *a, int *b)
 {
     return (*a < *b) ? *a : *b;
 }
