@@ -27,6 +27,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // Allocate memory for output
+    
+
     FILE *output = fopen(argv[2], "w");
     if (output == NULL)
     {
