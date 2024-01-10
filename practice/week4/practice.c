@@ -2,17 +2,20 @@
 
 int main(void)
 {
+    int rgbtRed, rgbtGreen, rgbtBlue;
     int sepiaRed = 255, sepiaGreen = 265, sepiaBlue = 165;
-    if (sepiaRed <= 255 || sepiaGreen <= 255 || sepiaBlue <= 255 )
+    if (sepiaRed <= 255  sepiaGreen <= 255 || sepiaBlue <= 255 )
             {
-                image[i][j].rgbtRed = sepiaRed;
-                image[i][j].rgbtGreen = sepiaGreen;
-                image[i][j].rgbtBlue = sepiaBlue;
+                rgbtRed = sepiaRed;
+                rgbtGreen = sepiaGreen;
+                rgbtBlue = sepiaBlue;
             }
             else
             {
-                image[i][j].rgbtRed = 255;
-                image[i][j].rgbtGreen = 255;
-                image[i][j].rgbtBlue = 255;
+                rgbtRed = 255;
+                rgbtGreen = 255;
+                rgbtBlue = 255;
             }
+
+    printf("%i %i %i\n", rgbtRed, rgbtGreen, rgbtBlue);
 }
