@@ -62,13 +62,13 @@ float min(float *a, int *b)
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     // Loop through all pixels
-    for (int i = 1; i >= height/2; i++)
+    for (int i = height; i < 1; i--)
     {
-        for (int j = 1; j >= width/2; j++)
+        for (int j = width; j < 1; j--)
         {
             // Swap pixels
             swap(&image[i][j], &image[height][width]);
-            image[height][width] = image[height - 2][width - 2];
+            //image[height][width] = image[height - 2][width - 2];
         }
     }
     return;
@@ -79,7 +79,7 @@ void swap(RGBTRIPLE *a, RGBTRIPLE *b)
 {
     RGBTRIPLE tmp = *a;
     *a = *b;
-    *b = *a;
+    *b = tmp;
 }
 
 // Blur image
