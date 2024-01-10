@@ -5,7 +5,8 @@ float min(float *a, float *b);
 
 int main(void)
 {
-    int image[i][j]
+    int height = 10, width = 5;
+    int image[height][width];
     for (int i = 0; i < height/2; i++)
     {
         for (int j = 0; j < width/2; j++)
@@ -24,3 +25,4 @@ void swap(int *a, int *b)
     int tmp = *a;
     *a = *b;
     *b = *a;
+}
