@@ -5,17 +5,22 @@ float min(float *a, float *b);
 
 int main(void)
 {
-    int rgbtRed, rgbtGreen, rgbtBlue;
-    float sepiaRed = 255.6, sepiaGreen = 265.9, sepiaBlue = 165, max = 255;
-
-    rgbtRed = round(min(&sepiaRed, &max));
-    rgbtGreen = round(min(&sepiaGreen, &max));
-    rgbtBlue = round(min(&sepiaBlue, &max));
-
-    printf("%i %i %i\n", rgbtRed, rgbtGreen, rgbtBlue);
+    int image[i][j]
+    for (int i = 0; i < height/2; i++)
+    {
+        for (int j = 0; j < width/2; j++)
+        {
+            // Swap pixels
+            swap(&image[i][j], &image[height][width]);
+            image[height - 1][width - 1];
+        }
+    }
+    return;
 }
 
-float min(float *a, float *b)
+// Swap pixels
+void swap(int *a, int *b)
 {
-    return (*a < *b) ? *a : *b;
-}
+    int tmp = *a;
+    *a = *b;
+    *b = *a;
