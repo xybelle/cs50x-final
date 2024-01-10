@@ -62,12 +62,12 @@ float min(float *a, int *b)
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     // Loop through all pixels
-    for (int i = 0; i < height; i++)
+    for (int i = 1; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 1; j < width; j++)
         {
             // Swap pixels
-            swap(&image[i][j], &image[height - 1][width - 1]);
+            swap(&image[i][j], &image[height][width]);
             image[height][width] = image[height - 2][width - 2];
         }
     }
