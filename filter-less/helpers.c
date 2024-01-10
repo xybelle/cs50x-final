@@ -119,3 +119,5 @@ RGBTRIPLE average_mid(RGBTRIPLE *average)
 {
     average = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3
 }
+
+// average = copy[i][j-1].rgbtRED]
