@@ -128,7 +128,7 @@ RGBTRIPLE average_mid(RGBTRIPLE *average)
     {
         for (int j = -1; j < 2; j++)
         {
-            image[i][j].rgbtRed += copy[i][j].rgbtRed;
+            image[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
             count++;
         }
     }
