@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // mid (9x)
             }
 
-            else if ((i == 2) && (j == 1) || (i == (height - 1)) && (j == (width - 1))
+            else if ((i == 0) && (j >= 1) || (i == (height - 1)) && (j == (width - 1))
             {
                 // sides (6x)
             }
