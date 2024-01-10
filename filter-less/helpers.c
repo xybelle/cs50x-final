@@ -99,7 +99,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             else if ()
             {
                 // mid (9x)
-                image[i][j].rgbtRed = average_mid
+                image[i][j].rgbtRed = average_mid(RGBTRIPLE copy[i][j]);
                 image[i][j].rgbtGreen =
                 image[i][j].rgbtBlue =
             }
@@ -114,3 +114,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+
+RGBTRIPLE average_mid(RGBTRIPLE copy[i][j])
