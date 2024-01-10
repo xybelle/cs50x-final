@@ -39,7 +39,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                  + (.131 * image[i][j].rgbtBlue);
 
             // Update pixel values
-            if (sepiaRed || s)
+            if (sepiaRed || sepiaGreen || sepiaBlue )
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtGreen = sepiaGreen;
             image[i][j].rgbtBlue = sepiaBlue;
