@@ -25,6 +25,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     int sepiaRed, sepiaGreen, sepiaBlue;
+    int max = 255;
     // Loop through all pixels
     for (int i = 0; i < height; i++)
     {
@@ -39,18 +40,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                  + (.131 * image[i][j].rgbtBlue);
 
             // Update pixel values
-            if (sepiaRed <= 255 || sepiaGreen <= 255 || sepiaBlue <= 255 )
-            {
-                image[i][j].rgbtRed = sepiaRed;
-                image[i][j].rgbtGreen = sepiaGreen;
-                image[i][j].rgbtBlue = sepiaBlue;
-            }
-            else
-            {
-                image[i][j].rgbtRed = 255;
-                image[i][j].rgbtGreen = 255;
-                image[i][j].rgbtBlue = 255;
-            }
+            image[i][j].rgbtRed = min(sepiaRed, max);
+            image[i][j].rgbtGreen = min(sepiaRed, max;
+            image[i][j].rgbtBlue = 255;
         }
     }
     return;
