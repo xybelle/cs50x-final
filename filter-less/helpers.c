@@ -57,6 +57,15 @@ int min(int *a, int *b)
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Loop through all pixels
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            // Swap pixels
+        }
+
+    }
     return;
 }
 
