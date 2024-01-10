@@ -27,10 +27,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Allocate memory for output
     FILE *output = malloc(HEADER_SIZE);
-
-    FILE *output = fopen(argv[2], "w");
+    *output = fopen(argv[2], "w");
 
 
     if (output == NULL)
