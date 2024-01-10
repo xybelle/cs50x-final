@@ -48,6 +48,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+// Return which is lower
+int min(int *a, *b)
+{
+    return (*a < *b) ? *a : *b;
+}
+
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
