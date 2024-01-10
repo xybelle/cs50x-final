@@ -27,9 +27,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *output = malloc(HEADER_SIZE);
-    *output = fopen(argv[2], "w");
-
+    FILE *output = fopen(argv[2], "w");
 
     if (output == NULL)
     {
