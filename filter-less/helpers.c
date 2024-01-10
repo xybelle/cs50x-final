@@ -9,10 +9,11 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // Get average of r, g, b
+            
 
             // Update pixel values
 
-            
+
         }
     }
     return;
