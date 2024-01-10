@@ -41,8 +41,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             // Update pixel values
             image[i][j].rgbtRed = min(sepiaRed, max);
-            image[i][j].rgbtGreen = min(sepiaRed, max;
-            image[i][j].rgbtBlue = 255;
+            image[i][j].rgbtGreen = min(sepiaGreen, max);
+            image[i][j].rgbtBlue = min(sepiaBlue, max);
         }
     }
     return;
