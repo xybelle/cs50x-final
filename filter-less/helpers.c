@@ -68,7 +68,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             // Swap pixels
             swap(&image[i][j], &image[height][width]);
-            image[height - 1][width - 1];
+            image[height - 2][width - 2];
         }
     }
     return;
@@ -94,6 +94,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    
+
     return;
 }
