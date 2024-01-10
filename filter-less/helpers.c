@@ -37,7 +37,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                  + (.168 * image[i][j].rgbtBlue);
             sepiaBlue = (.272 * image[i][j].rgbtRed) + (.534 * image[i][j].rgbtGreen)
                  + (.131 * image[i][j].rgbtBlue);
-                 
+
             // Update pixel values
             if (sepiaRed <= 255 || sepiaGreen <= 255 || sepiaBlue <= 255 )
             {
@@ -45,11 +45,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtGreen = sepiaGreen;
                 image[i][j].rgbtBlue = sepiaBlue;
             }
-            else (sepiaRed )
+            else
             {
-                image[i][j].rgbtRed = sepiaRed;
-                image[i][j].rgbtGreen = sepiaGreen;
-                image[i][j].rgbtBlue = sepiaBlue;
+                image[i][j].rgbtRed = 255;
+                image[i][j].rgbtGreen = 255;
+                image[i][j].rgbtBlue = 255;
             }
         }
     }
