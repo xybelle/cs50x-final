@@ -49,7 +49,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Return which is lower
-int min(int *a, *b)
+void min(int *a, int *b)
 {
     return (*a < *b) ? *a : *b;
 }
