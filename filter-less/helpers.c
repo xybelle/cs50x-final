@@ -2,7 +2,7 @@
 #include <math.h>
 
 float min(float *a, float *b);
-void swap(int *a, int *b);
+void swap(RGBTRIPLE *a, RGBTRIPLE *b);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -75,7 +75,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Swap pixels
-void swap(int *a, int *b)
+void swap(RGBTRIPLE *a, RGBTRIPLE *b)
 {
     int tmp = *a;
     *a = *b;
