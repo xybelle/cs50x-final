@@ -6,7 +6,7 @@ int main(void)
     int sepiaRed = 255, sepiaGreen = 265, sepiaBlue = 165;
     if (sepiaRed <= 255  sepiaGreen <= 255 || sepiaBlue <= 255 )
             {
-                rgbtRed = sepiaRed;
+                rgbtRed = min(sepiaRed, 255);
                 rgbtGreen = sepiaGreen;
                 rgbtBlue = sepiaBlue;
             }
