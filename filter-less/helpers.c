@@ -90,7 +90,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if ((i == 0) && (j == 0) || (i == 0) && (j == width) || (i == height) && (j == 0) ||
+            copy[i][j] = image[i][j];
+        }
+    }
+
+                if ((i == 0) && (j == 0) || (i == 0) && (j == width) || (i == height) && (j == 0) ||
                 (i == height) && (j == width))
             {
                 // corner (4x)
@@ -112,9 +116,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 // sides (6x)
             }
-            copy[i][j] = image[i][j];
-        }
-    }
     return;
 }
 
