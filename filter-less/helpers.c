@@ -1,7 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 
-float min(float *a, float *b);
+float min(float *a, int *b);
 void swap(RGBTRIPLE *a, RGBTRIPLE *b);
 
 // Convert image to grayscale
@@ -53,7 +53,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Return which is lower
-float min(float *a, float *b)
+float min(float *a, int *b)
 {
     return (*a < *b) ? *a : *b;
 }
