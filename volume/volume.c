@@ -28,9 +28,11 @@ int main(int argc, char *argv[])
     }
 
     // Allocate memory for output
-    
+    FILE *output = malloc(HEADER_SIZE);
 
     FILE *output = fopen(argv[2], "w");
+
+
     if (output == NULL)
     {
         printf("Could not open file.\n");
