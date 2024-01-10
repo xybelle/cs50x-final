@@ -4,12 +4,13 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     // Loop through all pixels
+    int avergb;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
             // Get average of r, g, b
-            
+            avergb = round(image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3;
 
             // Update pixel values
 
