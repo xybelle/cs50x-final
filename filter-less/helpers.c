@@ -67,7 +67,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // Swap pixels
-            swap(&image[i][j], &image[height][width]);
+            swap(&image[i][j], &image[height - 1][width - 1]);
             image[height][width] = image[height - 2][width - 2];
         }
     }
