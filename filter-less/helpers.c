@@ -1,6 +1,9 @@
 #include "helpers.h"
 #include <math.h>
 
+float min(float *a, float *b);
+void swap(int *a, int *b);
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -64,10 +67,19 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // Swap pixels
+            
         }
 
     }
     return;
+}
+
+// Swap pixels
+void swap(int *a, int *b)
+{
+    int tmp = *a;
+    *a = *b;
+    *b = *a;
 }
 
 // Blur image
