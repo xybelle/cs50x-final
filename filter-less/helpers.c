@@ -116,17 +116,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtGreen = copy[i][j].rgbtGreen / counter;
                 image[i][j].rgbtBlue = copy[i][j].rgbtBlue / counter;
             }
-
-
-
+            // corners (4x)
             else if ()
             {
-                // mid (9x)
                 image[i][j].rgbtRed = average_mid(&copy[i][j]);
                 image[i][j].rgbtGreen =
                 image[i][j].rgbtBlue =
             }
-
+            // sides (6x)
             else if ((i == 0) && (j >= 1) || (i == height) && (j >= 1) || (i >= 1) && (j == 0) ||
                 (i >= 1) && (j == width))
             {
