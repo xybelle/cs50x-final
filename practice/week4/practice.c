@@ -26,3 +26,39 @@ void swap(int *a, int *b)
     *a = *b;
     *b = *a;
 }
+
+
+
+
+void swap(RGBTRIPLE *a, RGBTRIPLE *b, int h, int w);
+
+           swap(&image[i][j], &image[h][w], h, w);
+// Swap pixels
+void swap(RGBTRIPLE *a[h][w], RGBTRIPLE *b[h][w], int h, int w)
+{
+    RGBTRIPLE tmp[h][w];
+    for (int i = 0; i < h; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            tmp[i][j] = *a[h][w];
+        }
+    }
+
+    for (int i = 0; i < h; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            *a[i][j] = *b[h][w];
+        }
+    }
+
+    for (int i = 0; i < h; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            *b[i][j] = tmp[h][w];
+        }
+    }
+}
+

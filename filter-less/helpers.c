@@ -2,7 +2,7 @@
 #include <math.h>
 
 float min(float *a, int *b);
-void swap(RGBTRIPLE *a, RGBTRIPLE *b, int h, int w);
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -68,7 +68,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j <= width/2; j++)
         {
             // Swap pixels
-            swap(&image[i][j], &image[h][w], h, w);
+            RGBTRIPLE tmp = image[i][j];
+            image[i][j] = image[h][w];
+            image[h][w] = image[i][j];
             h--;
             w--;
             // image[height][width] = image[height - 2][width - 2];
@@ -77,34 +79,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-// Swap pixels
-void swap(RGBTRIPLE *a[h][w], RGBTRIPLE *b[h][w], int h, int w)
-{
-    RGBTRIPLE tmp[h][w];
-    for (int i = 0; i < h; i++)
-    {
-        for (int j = 0; j < w; j++)
-        {
-            tmp[i][j] = *a[h][w];
-        }
-    }
-
-    for (int i = 0; i < h; i++)
-    {
-        for (int j = 0; j < w; j++)
-        {
-            *a[i][j] = *b[h][w];
-        }
-    }
-
-    for (int i = 0; i < h; i++)
-    {
-        for (int j = 0; j < w; j++)
-        {
-            *b[i][j] = tmp[h][w];
-        }
-    }
-}
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
