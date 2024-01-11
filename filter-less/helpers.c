@@ -118,8 +118,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtBlue = copy[i][j].rgbtBlue / counter;
             }
             // corners (4x)
-            else if (i == 0 && j == 0 || (i == height - 1) && j == 0 || i == height && j == o ||
-                i == height && j == width)
+            else if (i == 0 && j == 0 || (i == height - 1) && j == 0 || i == 0 && (j == width - 1)  ||
+                (i == height - 1) && (j == width - 1))
             {
                 for (int x = 0; x < 2; x++)
                 {
