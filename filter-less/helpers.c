@@ -174,5 +174,3 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-
-// average = copy[i][j-1].rgbtRED]
