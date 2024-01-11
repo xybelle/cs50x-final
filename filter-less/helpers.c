@@ -69,13 +69,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j <= width/2; j++)
         {
             // Swap pixels
-            RGBTRIPLE *tmp[h][w] = malloc((h * w) * sizeof(RGBTRIPLE));
+            RGBTRIPLE *tmp = malloc(h * w * sizeof(RGBTRIPLE));
 
             for (int x = 0; x < h; x++)
             {
                 for (int y = 0; y < w; y++)
                 {
-                    tmp[i][j] = 0;
+                    *(tmp + x * w +y) = x + y;
                 }
             }
             *tmp[i][j] = image[i][j];
