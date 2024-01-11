@@ -99,9 +99,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j =0; j < width; j++)
         {
             // mid mid
+            int counter = 0;
             if (i > 1 && i = (height - 1) || j > 1 && j = (width - 1))
             {
-                int counter = 0;
+
                 for (int x = -1; x < 2; x++)
                 {
                     for (int y = -1; y < 2; y++)
@@ -119,15 +120,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // corners (4x)
             else if ()
             {
-                image[i][j].rgbtRed = average_mid(&copy[i][j]);
-                image[i][j].rgbtGreen =
-                image[i][j].rgbtBlue =
+
             }
             // sides (6x)
             else if ((i == 0) && (j >= 1) || (i == height) && (j >= 1) || (i >= 1) && (j == 0) ||
                 (i >= 1) && (j == width))
             {
                 // sides (6x)
+                for (int x = -1; x < 2; x++)
+                {
+                    for (int y = -1; y < 2; y++)
+                    {
+                        copy[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
+                        copy[i][j].rgbtGreen += copy[i + x][j + y].rgbtGreen;
+                        copy[i][j].rgbtBlue += copy[i + x][j + y].rgbtBlue;
+                        counter++;
+                    }
+                }
             }
         }
     }
