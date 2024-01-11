@@ -126,8 +126,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             else if ((i == 0) && (j >= 1) || (i == height) && (j >= 1) || (i >= 1) && (j == 0) ||
                 (i >= 1) && (j == width))
             {
-                // upper side (6x)
-                for (int x = 0; x < 2; x++)
+                // upper-lower side (6x)
+                for (int x = -1; x < 1; x++)
                 {
                     for (int y = -1; y < 2; y++)
                     {
