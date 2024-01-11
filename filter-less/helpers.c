@@ -123,13 +123,29 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             }
             // sides (6x)
-            else if ((i == 0) && (j >= 1) || (i == height) && (j >= 1) || (i >= 1) && (j == 0) ||
-                (i >= 1) && (j == width))
+            else if ((i == 0) && (j >= 1) || (i == height) && (j >= 1))
             {
-                // upper-lower side (6x)
+                // upper-lower side (6)
                 for (int x = -1; x < 1; x++)
                 {
                     for (int y = -1; y < 2; y++)
+                    {
+                        copy[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
+                        copy[i][j].rgbtGreen += copy[i + x][j + y].rgbtGreen;
+                        copy[i][j].rgbtBlue += copy[i + x][j + y].rgbtBlue;
+                        counter++;
+                    }
+                }
+                image[i][j].rgbtRed = copy[i][j].rgbtRed / counter;
+                image[i][j].rgbtGreen = copy[i][j].rgbtGreen / counter;
+                image[i][j].rgbtBlue = copy[i][j].rgbtBlue / counter;
+            }
+            else if ((i >= 1) && (j == 0) || (i >= 1) && (j == width))
+            {
+                // right-left sides (6)
+                for (int x = -1; < 2; x++)
+                {
+                    for (int y = -1; y < 1; y++)
                     {
                         copy[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
                         copy[i][j].rgbtGreen += copy[i + x][j + y].rgbtGreen;
