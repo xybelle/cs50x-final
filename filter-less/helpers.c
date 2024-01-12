@@ -62,6 +62,7 @@ float min(float *a, int *b)
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
 
