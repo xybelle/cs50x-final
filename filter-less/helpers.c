@@ -63,12 +63,23 @@ float min(float *a, int *b)
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int h = height, w = width;
-    RGBTRIPLE *tmp = malloc(h * w * sizeof(RGBTRIPLE))
+    RGBTRIPLE *tmp = malloc(h * sizeof(RGBTRIPLE));
+    if (tmp == NULL)
+    {
+        return;
+    }
+    for (int i = 0; i < h; i++)
+    {
+        tmp[i] = malloc(w * sizeof(RGBTRIPLE));
+        if (tmp[i] == null)
+        {
+            return;
+        }
+    }
 
     // Copy to temporary
     for (int i = 0; i < height; i++)
     {
-        
         for (int j = 0, n = width/2; j <= n; j++)
         {
             *tmp[i][j] = image[i][w];
