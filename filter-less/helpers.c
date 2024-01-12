@@ -124,7 +124,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Left and right edges
-            if ( j == 0 && ((1 < j) && (j < 2)) || j == width - 1 && ((1 < i) && (i < 2)))
+            if ( j == 0 && ((1 < i) && (i < 2)) || j == width - 1 && ((1 < i) && (i < 2)))
             {
                 for (int x = -1; x < 2; x++)
                 {
@@ -142,7 +142,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Upper and lower edges
-            if (j == 0 && ((1 < i) && (i < 2)) || j == width - 1 && ((1 < i) && (i < 2)))
+            if (i == 0 && ((1 < j) && (j < 2)) || i == height - 1 && ((1 < j) && (j < 2)))
             {
                 for (int x = 0; x < 2; x++)
                 {
