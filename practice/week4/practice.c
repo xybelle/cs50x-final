@@ -28,7 +28,16 @@ void swap(int *a, int *b)
 }
 
 
-
+// Swap pixels
+    for (int i = 0; i < height; i++)
+    {
+        w = width;
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = tmp[i][w];
+            w--;
+        }
+    }
 
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
