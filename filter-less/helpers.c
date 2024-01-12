@@ -64,7 +64,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
 
     int h = height, w = width;
-    RGBTRIPLE tmp;
+    RGBTRIPLE tmp[h][w];
     // Loop through all pixels
     for (int i = 0; i <= height; i++)
     {
