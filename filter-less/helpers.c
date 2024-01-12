@@ -148,8 +148,3 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-
-int averagergb(float counter, float red, float green, float blue)
-{
-    averagergb = 
-}
