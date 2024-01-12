@@ -80,7 +80,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
-                
+                tmp[i][j] = image[i][w];
+                image[i][w] = image[i][j];
+                image[i][j] = tmp[i][j];
+                w--;
             }
 
         }
