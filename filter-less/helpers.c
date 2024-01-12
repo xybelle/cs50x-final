@@ -105,8 +105,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             float counter = 0.0, red = 0.0, green = 0.0, blue = 0.0;
             // Corners
-            if (((i == 0 && j == 0) || ((i == height - 1) && j == 0) || (i == 0 && (j == width - 1)) ||
-                ((i == height - 1) && (j == width - 1))))
+            if (((i == 0 && j == 0) || ((i == height - 1) && j == 0) || (i == 0 && (j == width - 1))
+                || ((i == height - 1) && (j == width - 1))))
             {
                 for (int x = 0; x < 2; x++)
                 {
@@ -124,7 +124,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Edges
-            if ( i == 0 && (1 < j > 2)
+            if ( i == 0 && ((1 < j) && (j < 2)) || i == height - 1 && ((1 < j) && (j < 2)) ||
+                j == 0 && ((1 < i) && (i < 2)) || j == width - 1 && ((1 < i) && (i < 2)))
+            {
+                for (int x = -1; x < 2; x++)
+                {
+                    for (int y = )
+                }
+            }
 
             // Middle part
             if ((i >= 1 && i <= (height - 2)) || (j >= 1 && j <= (width - 2)))
