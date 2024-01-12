@@ -91,6 +91,8 @@ void swap(RGBTRIPLE *a, RGBTRIPLE *b)
     *tmp = *a;
     *a = *b;
     *b = *a;
+
+    free(tmp);
 }
 
 // Blur image
