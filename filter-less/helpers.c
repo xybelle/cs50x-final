@@ -64,6 +64,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int h = height, w = width;
     RGBTRIPLE tmp[h][w];
+
+    // Copy to temporary
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -72,6 +74,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    // Swap pixels
     for (int i = 0; i < height; i++)
     {
         w = width;
