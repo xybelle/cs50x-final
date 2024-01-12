@@ -30,35 +30,38 @@ void swap(int *a, int *b)
 
 
 
-void swap(RGBTRIPLE *a, RGBTRIPLE *b, int h, int w);
-
-           swap(&image[i][j], &image[h][w], h, w);
-// Swap pixels
-void swap(RGBTRIPLE *a[h][w], RGBTRIPLE *b[h][w], int h, int w)
+// Reflect image horizontally
+void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE tmp[h][w];
-    for (int i = 0; i < h; i++)
+
+    int h = height, w = width;
+  //  RGBTRIPLE tmp[h][w];
+    RGBTRIPLE *tmp[h][w];
+    tmp[h][w] = malloc(h * w * sizeof(RGBTRIPLE));
+    if ( tmp[h][w] == NULL)
     {
-        for (int j = 0; j < w; j++)
+        return;
+    }
+    // Loop through all pixels
+    for (int i = 0; i <= height; i++)
+    {
+        for (int j = 0; j <= width; j++)
         {
-            tmp[i][j] = *a[h][w];
+            // Copy to temporary
+            *tmp[i][j] = image[i][j];
         }
     }
 
-    for (int i = 0; i < h; i++)
+    for (int i = 0; i <= height; i++)
     {
-        for (int j = 0; j < w; j++)
+        for (int j = 0, n = width/2; j < n; j++)
         {
-            *a[i][j] = *b[h][w];
+            image[i][j] = image[h][w];
+            image[h][w] = *tmp[i][j];
+            h--;
+            w--;
         }
     }
-
-    for (int i = 0; i < h; i++)
-    {
-        for (int j = 0; j < w; j++)
-        {
-            *b[i][j] = tmp[h][w];
-        }
-    }
+    free(tmp[h][w]);
+    return;
 }
-
