@@ -19,13 +19,7 @@ int main(void)
     return;
 }
 
-// Swap pixels
-void swap(int *a, int *b)
-{
-    int tmp = *a;
-    *a = *b;
-    *b = *a;
-}
+
 
 
 // Swap pixels
