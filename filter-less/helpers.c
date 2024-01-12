@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 float min(float *a, int *b);
-void swap(RGBTRIPLE *a, RGBTRIPLE *b);
+void swap(RGBTRIPLE *a, RGBTRIPLE *b, RGBTRIPLE *tmp);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -64,14 +64,28 @@ float min(float *a, int *b)
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int h = height, w = width;
+    RGBTRIPLE **tmp = malloc(height * sizeof(RGBTRIPLE *));
+    if (tmp == NULL)
+    {
+        return;
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        tmp[i] = malloc(width * sizeof(RGBTRIPLE));
+        if (tmp[i] == NULL)
+        {
+            return;
+        }
+    }
 
 
     // Copy to temporary
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0, n = width/2; j <= n; j++)
+        for (int j = 0; j < width; j++)
         {
-            swap(&image[i][j], &image[i][w]);
+            swap(&image[i][j], &image[i][w], &tmp[i][j]);
             w--;
         }
 
@@ -80,13 +94,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Swap pixels
-void swap(RGBTRIPLE *a, RGBTRIPLE *b)
+void swap(RGBTRIPLE *a, RGBTRIPLE *b, RGBTRIPLE *tmp)
 {
-    RGBTRIPLE tmp = *a;
+    *tmp = *a;
     *a = *b;
     *b = *a;
-
-    free(tmp);
 }
 
 // Blur image
