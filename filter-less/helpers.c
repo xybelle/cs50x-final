@@ -106,8 +106,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float counter = 0;
 
             // Edge and corner
-            if (((i == 0 && j == 0) || ((i == height) && j == 0) || (i == 0 && (j == width)) ||
-                ((i == height) && (j == width))))
+            if (((i == 0 && j == 0) || ((i == height - 1) && j == 0) || (i == 0 && (j == width - 1)) ||
+                ((i == height - 1) && (j == width - 1))))
             {
                 for (int x = -1; x < 2; x++)
                 {
