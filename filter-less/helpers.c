@@ -123,14 +123,40 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtBlue = round(blue / (float) counter);
             }
 
-            // Edges
-            if ( i == 0 && ((1 < j) && (j < 2)) || i == height - 1 && ((1 < j) && (j < 2)) ||
-                j == 0 && ((1 < i) && (i < 2)) || j == width - 1 && ((1 < i) && (i < 2)))
+            // Left and right edges
+            if ( i == 0 && ((1 < j) && (j < 2)) || i == height - 1 && ((1 < j) && (j < 2)))
             {
                 for (int x = -1; x < 2; x++)
                 {
-                    for (int y = )
+                    for (int y = 0; y < 2; y++)
+                    {
+                        red += copy[i + x][j + y].rgbtRed;
+                        green += copy[i + x][j + y].rgbtGreen;
+                        blue += copy[i + x][j + y].rgbtBlue;
+                        counter++;
+                    }
                 }
+                image[i][j].rgbtRed = round(red / (float) counter);
+                image[i][j].rgbtGreen = round(green / (float) counter);
+                image[i][j].rgbtBlue = round(blue / (float) counter);
+            }
+
+            // Upper and lower edges
+            if (j == 0 && ((1 < i) && (i < 2)) || j == width - 1 && ((1 < i) && (i < 2)))
+            {
+                for (int x = 0; x < 2; x++)
+                {
+                    for (int y = -1; y < 2; y++)
+                    {
+                        red += copy[i + x][j + y].rgbtRed;
+                        green += copy[i + x][j + y].rgbtGreen;
+                        blue += copy[i + x][j + y].rgbtBlue;
+                        counter++;
+                    }
+                }
+                image[i][j].rgbtRed = round(red / (float) counter);
+                image[i][j].rgbtGreen = round(green / (float) counter);
+                image[i][j].rgbtBlue = round(blue / (float) counter);
             }
 
             // Middle part
