@@ -62,7 +62,33 @@ float min(float *a, int *b)
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    int h = height, w = width;
+    RGBTRIPLE tmp[h][w];
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            tmp[i][j] = image[i][j];
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0, n = width/2; j < n, j++)
+        {
+            image[i][j] = image[h][w];
+            h--;
+            w--;
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0, n = width/2; j < n; j++)
+        {
+            image[h][w] = tmp[i][j];
+        }
+    }
     return;
 }
 
