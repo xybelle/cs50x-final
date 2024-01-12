@@ -19,7 +19,21 @@ int main(void)
     return;
 }
 
+// Allocate memory for tmp[i][j]
+RGBTRIPLE **tmp = malloc(height * sizeof(RGBTRIPLE *));
+    if (tmp == NULL)
+    {
+        return;
+    }
 
+    for (int i = 0; i < height; i++)
+    {
+        tmp[i] = malloc(width * sizeof(RGBTRIPLE));
+        if (tmp[i] == NULL)
+        {
+            return;
+        }
+    }
 
 
 // Swap pixels
