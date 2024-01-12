@@ -108,9 +108,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Edge and corner
             if (((i == 0 && j == 0) || ((i == height) && j == 0) || (i == 0 && (j == width)) || ((i == height) && (j == width))))
             {
-                for (int x = -1; i < 2; x++)
+                for (int x = -1; x < 2; x++)
                 {
-                    for (int y = -1; j < 2; y++)
+                    for (int y = -1; y < 2; y++)
                     {
                         copy[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
                         copy[i][j].rgbtGreen += copy[i + x][j + y].rgbtGreen;
@@ -147,6 +147,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-
     return;
 }
