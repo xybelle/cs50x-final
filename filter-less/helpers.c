@@ -72,7 +72,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < h; i++)
     {
         tmp[i] = malloc(w * sizeof(RGBTRIPLE));
-        if (tmp[i] == null)
+        if (tmp[i] == NULL)
         {
             return;
         }
@@ -83,7 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0, n = width/2; j <= n; j++)
         {
-            *tmp[i][j] = image[i][w];
+            tmp[i][j] = image[i][w];
             image[i][w] = image[i][j];
             image[i][j] = *tmp[i][j];
             w--;
