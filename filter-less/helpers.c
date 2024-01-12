@@ -103,6 +103,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            int counter = 0;
             if (((i == 0 && j == 0) || ((i == height) && j == 0) || (i == 0 && (j == width)) || ((i == height) && (j == width))))
             {
                 for (int i = 0; i < 4; i++)
@@ -112,6 +113,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         copy[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
                         copy[i][j].rgbtGreen += copy[i + x][j + y].rgbtGreen;
                         copy[i][j].rgbtBlue += copy[i + x][j + y].rgbtBlue;
+                        counter++;
                     }
                 }
             }
