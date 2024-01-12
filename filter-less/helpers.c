@@ -73,12 +73,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             if (width % 2 == 0)
             {
-
+                tmp[i][j] = image[i][w];
+                image[i][w] = image[i][j];
+                image[i][j] = tmp[i][j];
+                w--;
             }
-            tmp[i][j] = image[i][w];
-            image[i][w] = image[i][j];
-            image[i][j] = tmp[i][j];
-            w--;
+            else
+            {
+                
+            }
+
         }
 
     }
