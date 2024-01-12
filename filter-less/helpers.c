@@ -82,7 +82,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Swap pixels
 void swap(RGBTRIPLE *a, RGBTRIPLE *b)
 {
-    RGBTRIPLE tmp = *a;
+    RGBTRIPLE tmp;
+    tmp =
     *a = *b;
     *b = *a;
 }
