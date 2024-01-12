@@ -99,6 +99,25 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            if (((i == 0 && j == 0) || ((i == height) && j == 0) || (i == 0 && (j == width)) || ((i == height) && (j == width))))
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    for (int j = 0; j < 4; j++)
+                    {
+                        copy[i][j].rgbtRed += copy[i + x][j + y].rgbtRed;
+                        copy[i][j].rgbtGreen += copy[i + x][j + y].rgbtGreen;
+                        copy[i][j].rgbtBlue += copy[i + x][j + y].rgbtBlue;
+                    }
+                }
+            }
+        }
+    }
+    // Corners
     if (((i == 0 && j == 0) || ((i == height) && j == 0) || (i == 0 && (j == width)) ||
         ((i == height) && (j == width))))
     {
@@ -112,5 +131,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
+
+    // Middle
+    if (i >)
     return;
 }
