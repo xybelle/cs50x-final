@@ -81,7 +81,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             w--;
         }
     }
-
     return;
 }
 
