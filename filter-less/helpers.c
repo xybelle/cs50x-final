@@ -65,6 +65,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
     int h = height, w = width;
     RGBTRIPLE *tmp[h][w] = malloc(sizeof(RGBTRIPLE));
+    if ( == NULL)
+    {
+        return 1;
+    }
     // Loop through all pixels
     for (int i = 0; i <= height; i++)
     {
