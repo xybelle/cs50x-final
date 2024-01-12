@@ -4,6 +4,8 @@
         "string.h": "c",
         "string": "c",
         "algorithm": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "*.tcc": "c",
+        "string_view": "c"
     }
 }
