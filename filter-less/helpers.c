@@ -66,11 +66,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE tmp[h][w];
     for (int i = 0; i < height; i++)
     {
+        for (int j = 0; j < width; j++)
+        {
+            tmp[i][j] = image[i][j];
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
         for (int j = 0, n = width/2; j < n; j++)
         {
-            tmp[i][j] = image[h][w];
-            image[h][w] = image[i][j];
-            image[i][j] = tmp[i][j];
+            image[i][j] = tmp[h][w];
             w--;
         }
     }
