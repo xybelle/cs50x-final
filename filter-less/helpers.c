@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include <math.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -101,11 +102,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     for (int i = 0; i < height; i++)
     {
-        bool skip = false;
         for (int j = 0; j < width; j++)
         {
             float counter = 0.0, red = 0.0, green = 0.0, blue = 0.0;
-
+            bool skip = false;
             for (int x = -1; x < 2; x++)
             {
                 for (int y = -1; y < 2; y++)
