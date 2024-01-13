@@ -23,7 +23,9 @@ int main(int argc, char *argv[])
     }
 
     while (fread())
-
+    {
+        fwrite
+    }
 
 
     // Files generated should be named 000.jp for the first and counting up
