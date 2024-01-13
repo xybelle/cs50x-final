@@ -43,8 +43,9 @@ int main(int argc, char *argv[])
             fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
             count++;
             fclose(img);
-            free(filename);
         }
     }
+    free(filename);
     fclose(card);
+    return 0;
 }
