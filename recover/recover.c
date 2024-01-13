@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
                     return 3;
                 }
 
-                fwrite(buffer, sizeof(buffer, BLOCK_SIZE, ))
+                fwrite(buffer, sizeof(buffer, BLOCK_SIZE, img))
             }
 
 
