@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+const int BLOCK = 512;
+
 int main(int argc, char *argv[])
 {
     // Check if 2 argv
@@ -23,7 +25,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    uint8_t buffer[512];
+    uint8_t buffer[BLOCK];
 
     while (fread())
     {
