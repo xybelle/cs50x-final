@@ -125,7 +125,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 break;
             }
-        }
+        
 
         if (!skip)
         {
