@@ -17,13 +17,17 @@ int main(int argc, char *argv[])
 
     // Open memory card
     FILE *card = fopen(argv[1], "rb");
-    FILE *img = fopen(filename, "wb");
-
-    // Check if .raw - if not inform user and return 1
     if (card == NULL)
     {
         printf("Cannot open %s\n", argv[1]);
-        return 1;
+        return 2;
+    }
+
+    FILE *img = fopen(filename, "wb");
+    if (img == NULL)
+    {
+        printf("Cannot create");
+        return 3;
     }
 
     uint8_t buffer[BLOCK];
