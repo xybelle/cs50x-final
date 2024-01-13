@@ -229,4 +229,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtBlue = round(blue / (float) counter);
             }
 if ((i >= 1 && i <= (height - 2)) || (j >= 1 && j <= (width - 2)))
-            {
+            
