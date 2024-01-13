@@ -28,19 +28,22 @@ int main(int argc, char *argv[])
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&)
         {
-            FILE *img = fopen(filename, "wb");
-            if (img == NULL)
+            if ((buffer[3] & 0xf0) == 0xe0)
             {
-                printf("Cannot create");
-                return 3;
+                FILE *img = fopen(filename, "wb");
+                if (img == NULL)
+                {
+                    printf("Cannot create");
+                    return 3;
+                }
+
+                fwrite(buffer, sizeof(buffer, BLOCK_SIZE, ))
             }
 
-            fwrite(buffer, sizeof(buffer, BLOCK_SIZE, ))
-        }
 
-        fwrite(buffer, sizeof(buffer), BLOCK_SIZE, jpeg);
+        }
 
         int count = 0;
         sprintf(filename, "%03i.jpg", count);
