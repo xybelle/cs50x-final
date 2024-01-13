@@ -22,7 +22,8 @@ int main(int argc, char *argv[])
     }
 
     uint8_t buffer[BLOCK_SIZE];
-    int count = 0;
+    int *count = malloc(sizeof(int));
+    count = 0;
 
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
@@ -50,7 +51,7 @@ int main(int argc, char *argv[])
             free(filename);
         }
     }
-    
+    free(count);
     fclose(card);
     return 0;
 }
