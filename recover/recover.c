@@ -7,7 +7,7 @@ const int BLOCK_SIZE = 512;
 int main(int argc, char *argv[])
 {
     // Check if single command-line is entered
-    if (!argc != 2)
+    if (argc != 2)
     {
         printf("Usage: ./recover FILE\n");
         return 1;
@@ -30,21 +30,21 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-                filename = malloc(sizeof(char *));
-                sprintf(filename, "%03i.jpg", count);
+            filename = malloc(sizeof(char *));
+            sprintf(filename, "%03i.jpg", count);
 
-                FILE *img = fopen(filename, "w");
-                if (img == NULL)
-                {
-                    printf("Cannot create");
-                    return 3;
-                }
-                
-                fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
-                count++;
-                fclose(img);
+            FILE *img = fopen(filename, "w");
+            if (img == NULL)
+            {
+                printf("Cannot create");
+                return 3;
+            }
+
+            fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
+            count++;
+            fclose(img);
+            free(filename);
         }
     }
-
     fclose(card);
 }
