@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
                     printf("Cannot create");
                     return 3;
                 }
-
+                filename = malloc(sizeof(char *));
                 sprintf(filename, "%03i.jpg", count);
                 fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
                 count++;
