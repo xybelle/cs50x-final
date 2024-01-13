@@ -39,8 +39,9 @@ int main(int argc, char *argv[])
                 }
 
                 sprintf(img, "%03i.jpg", count);
-                fwrite(buffer, sizeof(buffer, BLOCK_SIZE, img))
+                fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
                 count++;
+                fclose(img);
             }
         }
     }
