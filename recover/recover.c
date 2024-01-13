@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
             fclose(img);
         }
     }
+    
     free(filename);
     fclose(card);
     return 0;
