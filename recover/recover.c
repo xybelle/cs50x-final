@@ -33,10 +33,10 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
 
     // Read from memory card while there are still data left
-    while (fread(buffer, sizeof(buffer), BLOCK, card) == BLOCK)
+    while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK)
     {
         if ()
-        fwrite(buffer, sizeof(buffer), BLOCK, jpeg);
+        fwrite(buffer, sizeof(buffer), BLOCK_SIZE, jpeg);
 
         int count = 0;
         sprintf(filename, "%03i.jpg", count);
