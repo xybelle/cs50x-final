@@ -23,21 +23,19 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    FILE *img = fopen(filename, "wb");
-    if (img == NULL)
-    {
-        printf("Cannot create");
-        return 3;
-    }
-
     uint8_t buffer[BLOCK_SIZE];
 
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK)
     {
-        if ()
+        
         fwrite(buffer, sizeof(buffer), BLOCK_SIZE, jpeg);
-
+        FILE *img = fopen(filename, "wb");
+        if (img == NULL)
+        {
+            printf("Cannot create");
+            return 3;
+        }
         int count = 0;
         sprintf(filename, "%03i.jpg", count);
         count++;
