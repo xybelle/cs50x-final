@@ -42,4 +42,5 @@ int main(int argc, char *argv[])
     // Files generated should be named 000.jp for the first and counting up
     // Program if uses malloc must not leak memory
 
+    fclose(card);
 }
