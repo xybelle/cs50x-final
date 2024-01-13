@@ -24,6 +24,10 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
     int count = 0;
     char *filename = malloc(sizeof(char *));
+    if (filename == NULL)
+    {
+        return 3;
+    }
 
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
@@ -37,7 +41,7 @@ int main(int argc, char *argv[])
             {
                 fclose(card);
                 printf("Cannot create");
-                return 3;
+                return 4;
             }
 
             fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
