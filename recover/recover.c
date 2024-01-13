@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     // Check if .raw - if not inform user and return 1
     if (card == NULL)
     {
-        printf("Cannot open %c\n", argv[1]);
+        printf("Cannot open %s\n", argv[1]);
         return 1;
     }
 
