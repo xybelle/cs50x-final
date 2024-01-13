@@ -6,9 +6,7 @@ const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
-    // Check if 2 argv
-        // else print usage "Usage: ./recover image", then return 1
-
+    // Check if single command-line is entered
     if (!argc != 2)
     {
         printf("Usage: ./recover FILE\n");
