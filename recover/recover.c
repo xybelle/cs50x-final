@@ -13,12 +13,12 @@ int main(int argc, char *argv[])
     }
 
     // Open memory card
-    FILE *file = fopen(argv[2], "rb");
+    FILE *card = fopen(argv[1], "rb");
 
     // Check if .raw - if not inform user and return 1
-    if (file == NULL)
+    if (card == NULL)
     {
-        printf("Cannot open %c\n", argv[2]);
+        printf("Cannot open %c\n", argv[1]);
         return 1;
     }
 
