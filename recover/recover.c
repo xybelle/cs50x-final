@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
     }
 
     // Open memory card
-    FILE *card = fopen(argv[1], "r");
+    FILE *card = fopen(argv[1], "rb");
+    FILE *img = fopen(filename, "wb");
 
     // Check if .raw - if not inform user and return 1
     if (card == NULL)
