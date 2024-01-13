@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] ==)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] == 0xe0)
         {
             FILE *img = fopen(filename, "wb");
             if (img == NULL)
