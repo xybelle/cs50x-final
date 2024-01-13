@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const int BLOCK = 512;
+const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         return 3;
     }
 
-    uint8_t buffer[BLOCK];
+    uint8_t buffer[BLOCK_SIZE];
 
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK, card) == BLOCK)
