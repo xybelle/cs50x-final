@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
             }
 
             fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
-            *count++;
+            *count = *(count + 1);
             fclose(img);
             free(filename);
         }
