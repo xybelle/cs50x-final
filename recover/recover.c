@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
     }
 
     uint8_t buffer[BLOCK_SIZE];
+    char *filename = 
 
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
