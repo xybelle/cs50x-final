@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     }
 
     // Open memory card
-    FILE *card = fopen(argv[1], "rb");
+    FILE *card = fopen(argv[1], "r");
     if (card == NULL)
     {
         printf("Cannot open %s\n", argv[1]);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         {
             if ((buffer[3] & 0xf0) == 0xe0)
             {
-                FILE *img = fopen(filename, "wb");
+                FILE *img = fopen(filename, "w");
                 if (img == NULL)
                 {
                     printf("Cannot create");
