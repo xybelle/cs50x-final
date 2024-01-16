@@ -43,10 +43,14 @@ int main(int argc, char *argv[])
             }
             fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
             count++;
+            else;
+            {
+                fclose(img);
+            }
         }
         else
         {
-            fclose(img);
+            fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
         }
     }
 
