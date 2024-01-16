@@ -50,6 +50,10 @@ int main(int argc, char *argv[])
             fclose(img);
             free(filename);
         }
+        else
+        {
+            continue;
+        }
     }
     free(count);
     fclose(card);
