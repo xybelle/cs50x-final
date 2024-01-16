@@ -41,12 +41,11 @@ int main(int argc, char *argv[])
             }
 
             fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
-            *count = *(count + 1);
+            count++;
 
             if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
                 fclose(img);
-                free(filename);
             }
         }
         else
@@ -54,7 +53,7 @@ int main(int argc, char *argv[])
             continue;
         }
     }
-    free(count);
+
     fclose(card);
     return 0;
 }
