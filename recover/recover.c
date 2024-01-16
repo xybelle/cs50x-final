@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     const int BLOCK_SIZE = 512;
     uint8_t buffer[BLOCK_SIZE];
     int counter = 0;
-    char *filename = malloc(8);
+    char filename[8];
     sprintf(filename, "%03i.jpg", counter);
 
 
