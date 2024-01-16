@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const int BLOCK_SIZE = 512;
-
 int main(int argc, char *argv[])
 {
     // Check if single command-line is entered
@@ -21,6 +19,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    const int BLOCK_SIZE = 512;
     uint8_t buffer[BLOCK_SIZE];
     int count = 0;
     char filename[8];
