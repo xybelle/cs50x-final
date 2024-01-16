@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 
     uint8_t buffer[BLOCK_SIZE];
     int count = 0;
-    char filename[4];
-    sprintf(filename, "%03i.jpg", *count);
+    char filename[8];
+    sprintf(filename, "%03i.jpg", count);
 
     // Read from memory card while there are still data left
     while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
