@@ -24,11 +24,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
     int *count = malloc(sizeof(int));
     *count = 0;
-    char *filename = malloc(sizeof(char *));
-    if (filename == NULL)
-        {
-            return 3;
-        }
+    char filename[4];
     sprintf(filename, "%03i.jpg", *count);
 
     // Read from memory card while there are still data left
