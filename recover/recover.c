@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
     FILE *img = fopen(filename, "w");
     if (img == NULL)
     {
+        fclose(card);
         fclose(img);
         printf("Cannot create");
         return 4;
