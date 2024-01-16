@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
 
     const int BLOCK_SIZE = 512;
     uint8_t buffer[BLOCK_SIZE];
-    int count = 0;
+    int counter = 0;
     char filename[8];
-    sprintf(filename, "%03i.jpg", count);
+    sprintf(filename, "%03i.jpg", counter);
 
 
 
