@@ -22,8 +22,7 @@ int main(int argc, char *argv[])
     }
 
     uint8_t buffer[BLOCK_SIZE];
-    int *count = malloc(sizeof(int));
-    *count = 0;
+    int count = 0;
     char filename[4];
     sprintf(filename, "%03i.jpg", *count);
 
