@@ -67,6 +67,7 @@ int main(int argc, char *argv[])
                     fclose(card);
                     return 6;
                 }
+                fwrite(buffer, 1, BLOCK_SIZE, img);
             }
         }
         else
