@@ -47,7 +47,6 @@ int main(int argc, char *argv[])
                 if (img == NULL)
                 {
                     fclose(card);
-                    fclose(img);
                     return 6;
                 }
 
