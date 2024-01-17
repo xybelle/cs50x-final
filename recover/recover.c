@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     {
         return 4;
     }
-    sprintf(filename, "%03i.jpg", counter);
+
 
 
     FILE *img = fopen(filename, "w");
@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
                 firstjpg = true;
                 newjpg = false;
                 fwrite(buffer, 1, BLOCK_SIZE, img);
+                sprintf(filename, "%03i.jpg", counter);
                 counter++;
             }
             else if (firstjpg && newjpg)
