@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,40 +23,62 @@ int main(int argc, char *argv[])
     const int BLOCK_SIZE = 512;
     uint8_t buffer[BLOCK_SIZE];
     int counter = 0;
-    char filename[8];
+    char *filename = malloc(8 * sizeof(char));
+    if (filename == NULL)
+    {
+        return 4;
+    }
     sprintf(filename, "%03i.jpg", counter);
 
 
+    FILE *img = fopen(filename, "w");
+    if (img == NULL)
+    {
+        fclose(card);
+        fclose(img);
+        printf("Cannot create");
+        return 5;
+    }
 
     // Read from memory card while there are still data left
-    while (fread(buffer, sizeof(buffer), BLOCK_SIZE, card) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
     {
-        FILE *img = fopen(filename, "w");
-        if (img == NULL)
-        {
-            fclose(card);
-            fclose(img);
-            printf("Cannot create");
-            return 4;
-        }
+        bool firstjpg = false;
+        bool newjpg = true;
+        
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+            if (firstjpg == false)
             {
-                fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
+                firstjpg = true;
+                newjpg = false;
+                fwrite(buffer, 1, BLOCK_SIZE, img);
                 counter++;
             }
-            else
+            else if (firstjpg == true && newjpg == true)
             {
                 fclose(img);
+                firstjpg = false;
+                img = fopen(filename, "w");
+                if (img == NULL)
+                {
+                    fclose(card);
+                    fclose(img);
+                    printf("Cannot create");
+                    return 5;
+                }
             }
         }
         else
         {
-            fwrite(buffer, sizeof(buffer), BLOCK_SIZE, img);
+            if (counter >= 1)
+            {
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
         }
     }
 
     fclose(card);
+    free(filename);
     return 0;
 }
