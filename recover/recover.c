@@ -45,18 +45,16 @@ int main(int argc, char *argv[])
     // Read from memory card while there are still data left
     while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
     {
-
-
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if (firstjpg == false)
+            if (!firstjpg)
             {
                 firstjpg = true;
                 newjpg = false;
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 counter++;
             }
-            else if (firstjpg == true && newjpg == true)
+            else if (firstjpg && newjpg)
             {
                 fclose(img);
                 firstjpg = false;
@@ -65,7 +63,7 @@ int main(int argc, char *argv[])
                 {
                     fclose(card);
                     fclose(img);
-                    printf("Cannot create");
+                    printf("Cannot create\n");
                     return 5;
                 }
             }
