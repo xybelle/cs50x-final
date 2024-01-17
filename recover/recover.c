@@ -24,10 +24,6 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
     int counter = 0;
     char filename[8];
-    if (filename == NULL)
-    {
-        return 4;
-    }
 
     FILE *img = NULL; // Initialize to NULL
 
@@ -74,7 +70,11 @@ int main(int argc, char *argv[])
     }
 
     fclose(card);
+
+    if (img != NULL)
+    {
+        fclose(img);
+    }
     fclose(img);
-    free(filename);
     return 0;
 }
