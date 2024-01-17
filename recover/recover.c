@@ -54,7 +54,10 @@ int main(int argc, char *argv[])
             }
             else if (firstjpg && newjpg)
             {
-                fclose(img);
+                if (img != NULL)
+                {
+                    fclose(img);
+                }
                 firstjpg = false;
                 newjpg = true;
             }
@@ -68,12 +71,10 @@ int main(int argc, char *argv[])
         }
     }
 
-    fclose(card);
-
     if (img != NULL)
     {
         fclose(img);
     }
-
+    fclose(card);
     return 0;
 }
