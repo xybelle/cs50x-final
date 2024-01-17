@@ -39,13 +39,14 @@ int main(int argc, char *argv[])
         printf("Cannot create");
         return 5;
     }
+    bool firstjpg = false;
+    bool newjpg = true;
 
     // Read from memory card while there are still data left
     while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
     {
-        bool firstjpg = false;
-        bool newjpg = true;
-        
+
+
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (firstjpg == false)
