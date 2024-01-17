@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     FILE *img = NULL; // Initialize to NULL
 
-    bool firstjpg = true;
+    bool firstjpg = false;
     bool newjpg = true;
 
     // Read from memory card while there is still data left
@@ -35,8 +35,9 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if (firstjpg)
+            if (!firstjpg)
             {
+                firstjpg = true;
                 sprintf(filename, "%03i.jpg", counter);
                 counter++;
 
@@ -50,7 +51,7 @@ int main(int argc, char *argv[])
 
                 fwrite(buffer, 1, BLOCK_SIZE, img);
             }
-            else if (!firstjpg)
+            else
             {
                 if (img != NULL)
                 {
