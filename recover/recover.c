@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     FILE *card = fopen(argv[1], "rb");
     if (card == NULL)
     {
-        printf("Cannot open %s\n", argv[1]);
+        printf("Could not open input file\n", argv[1]);
         return 2;
     }
 
@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
                 img = fopen(filename, "wb");
                 if (img == NULL)
                 {
+                    printf("Could not create image file\n");
                     fclose(card);
                     return 6;
                 }
