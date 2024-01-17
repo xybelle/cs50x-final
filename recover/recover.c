@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if (counter >= 1)
+            if (img != NULL && counter >= 1)
             {
                 fwrite(buffer, 1, BLOCK_SIZE, img);
             }
