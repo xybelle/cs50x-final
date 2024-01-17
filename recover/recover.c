@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     }
 
     // Open memory card
-    FILE *card = fopen(argv[1], "r");
+    FILE *card = fopen(argv[1], "rb");
     if (card == NULL)
     {
         printf("Cannot open %s\n", argv[1]);
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", counter);
                 counter++;
 
-                img = fopen(filename, "w");
+                img = fopen(filename, "wb");
                 if (img == NULL)
                 {
                     fclose(card);
