@@ -29,8 +29,6 @@ int main(int argc, char *argv[])
         return 4;
     }
 
-
-
     FILE *img = fopen(filename, "w");
     if (img == NULL)
     {
@@ -51,22 +49,25 @@ int main(int argc, char *argv[])
             {
                 firstjpg = true;
                 newjpg = false;
-                fwrite(buffer, 1, BLOCK_SIZE, img);
+
                 sprintf(filename, "%03i.jpg", counter);
                 counter++;
-            }
-            else if (firstjpg && newjpg)
-            {
-                fclose(img);
-                firstjpg = false;
+
                 img = fopen(filename, "w");
                 if (img == NULL)
                 {
                     fclose(card);
                     fclose(img);
-                    printf("Cannot create\n");
-                    return 5;
+                    return 6;
                 }
+
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
+            else if (firstjpg && newjpg)
+            {
+                fclose(img);
+                firstjpg = false;
+                newjpg = true;
             }
         }
         else
@@ -79,6 +80,7 @@ int main(int argc, char *argv[])
     }
 
     fclose(card);
+    fclose(img);
     free(filename);
     return 0;
 }
