@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
                 {
                     fclose(img);
                 }
-                firstjpg = false;
+                
                 newjpg = true;
             }
         }
