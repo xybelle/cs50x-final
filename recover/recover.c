@@ -23,20 +23,14 @@ int main(int argc, char *argv[])
     const int BLOCK_SIZE = 512;
     uint8_t buffer[BLOCK_SIZE];
     int counter = 0;
-    char *filename = malloc(8 * sizeof(char));
+    char filename[8];
     if (filename == NULL)
     {
         return 4;
     }
 
-    FILE *img = fopen(filename, "w");
-    if (img == NULL)
-    {
-        fclose(card);
-        fclose(img);
-        printf("Cannot create");
-        return 5;
-    }
+    FILE *img = NULL; // Initialize to NULL
+
     bool firstjpg = false;
     bool newjpg = true;
 
