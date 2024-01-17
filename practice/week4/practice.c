@@ -38,7 +38,6 @@ int main(int argc, char *argv[])
             if (!firstjpg)
             {
                 firstjpg = true;
-                newjpg = false;
 
                 sprintf(filename, "%03i.jpg", counter);
                 counter++;
