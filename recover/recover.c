@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     bool firstjpg = false;
     bool newjpg = true;
 
-    // Read from memory card while there are still data left
+    // Read from memory card while there is still data left
     while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -75,6 +75,6 @@ int main(int argc, char *argv[])
     {
         fclose(img);
     }
-    fclose(img);
+
     return 0;
 }
