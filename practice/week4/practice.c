@@ -1,232 +1,81 @@
+#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
 
-float min(float *a, float *b);
-
-int main(void)
+int main(int argc, char *argv[])
 {
-    int height = 10, width = 5;
-    int image[height][width];
-    for (int i = 0; i < height/2; i++)
+    // Check if single command-line is entered
+    if (argc != 2)
     {
-        for (int j = 0; j < width/2; j++)
+        printf("Usage: ./recover FILE\n");
+        return 1;
+    }
+
+    // Open memory card
+    FILE *card = fopen(argv[1], "rb");
+    if (card == NULL)
+    {
+        printf("Could not open input file\n", argv[1]);
+        return 2;
+    }
+
+    const int BLOCK_SIZE = 512;
+    uint8_t buffer[BLOCK_SIZE];
+    int counter = 0;
+    char filename[8];
+
+    FILE *img = NULL; // Initialize to NULL
+
+    bool firstjpg = false;
+    bool newjpg = true;
+
+    // Read from memory card while there is still data left
+    while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
+    {
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // Swap pixels
-            swap(&image[i][j], &image[height][width]);
-            image[height - 1][width - 1];
+            if (!firstjpg)
+            {
+                firstjpg = true;
+                newjpg = false;
+
+                sprintf(filename, "%03i.jpg", counter);
+                counter++;
+
+                img = fopen(filename, "wb");
+                if (img == NULL)
+                {
+                    printf("Could not create image file\n");
+                    fclose(card);
+                    return 6;
+                }
+
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
+            else if (firstjpg && newjpg)
+            {
+                if (img != NULL)
+                {
+                    fclose(img);
+                }
+
+                newjpg = true;
+            }
+        }
+        else
+        {
+            if (img != NULL && counter >= 1)
+            {
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
         }
     }
-    return;
+
+    if (img != NULL)
+    {
+        fclose(img);
+    }
+    fclose(card);
+    return 0;
 }
-
-
-
-// Blur image
-void blur(int height, int width, RGBTRIPLE image[height][width])
-{
-    RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            copy[i][j] = image[i][j];
-        }
-    }
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            float counter = 0.0, red = 0.0, green = 0.0, blue = 0.0;
-            // Corners
-            if (((i == 0 && j == 0) || ((i == height - 1) && j == 0) || (i == 0 && (j == width - 1))
-                || ((i == height - 1) && (j == width - 1))))
-            {
-                for (int x = 0; x < 2; x++)
-                {
-                    for (int y = 0; y < 2; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-            // Left and right edges
-            if ( (j == 0 && ((i >= 1) && (i < height - 2))) || (j == width - 1 && ((i >= 1) && (i < height - 2))))
-            {
-                for (int x = -1; x < 2; x++)
-                {
-                    for (int y = 0; y <= 1; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-            // Upper and lower edges
-            if ((i == 0 && ((j >= 1) && (j < width - 2))) || (i == height - 1 && ((j >= 1) && (j < width - 2))))
-            {
-                for (int x = 0; x <= 1; x++)
-                {
-                    for (int y = -1; y < 2; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-            // Middle part
-            if ((i >= 1 && i <= (height - 2)) || (j >= 1 && j <= (width - 2)))
-            {
-
-                for (int x = -1; x < 2; x++)
-                {
-                    for (int y = -1; y < 2; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-        }
-    }
-    return;
-}
-
-            if ((i >= 1 && i <= (height - 2)) || (j >= 1 && j <= (width - 2)))
-            {
-
-                for (int x = -1; x < 2; x++)
-                {
-                    for (int y = -1; y < 2; y++)
-                    {
-                        if (i + x < 0 || i + x >= width || j + y < 0 || j + y >= width)
-                        {
-                            break;
-                        }
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-
-            // Left edge
-            if (j == 0 && ((i >= 1) && (i < height - 2)))
-            {
-                for (int x = -1; x < 2; x++)
-                {
-                    for (int y = 0; y <= 1; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-            // Right edge
-            if (j == width - 1 && ((i >= 1) && (i < height - 2)))
-            {
-                for (int x = -1; x < 2; x++)
-                {
-                    for (int y = -1; y <= 0; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-            // Upper edge
-            if (i == 0 && ((j >= 1) && (j < width - 2)))
-            {
-                for (int x = 0; x <= 1; x++)
-                {
-                    for (int y = -1; y < 2; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-            // Lower edge
-            if (i == height - 1 && ((j >= 1) && (j < width - 2)))
-            {
-                for (int x = -1; x <= 0; x++)
-                {
-                    for (int y = -1; y < 2; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-
-            // Corners
-            if (((i == 0 && j == 0) || ((i == height - 1) && j == 0) || (i == 0 && (j == width - 1))
-                || ((i == height - 1) && (j == width - 1))))
-            {
-                for (int x = 0; x < 2; x++)
-                {
-                    for (int y = 0; y < 2; y++)
-                    {
-                        red += copy[i + x][j + y].rgbtRed;
-                        green += copy[i + x][j + y].rgbtGreen;
-                        blue += copy[i + x][j + y].rgbtBlue;
-                        counter++;
-                    }
-                }
-                image[i][j].rgbtRed = round(red / (float) counter);
-                image[i][j].rgbtGreen = round(green / (float) counter);
-                image[i][j].rgbtBlue = round(blue / (float) counter);
-            }
-if ((i >= 1 && i <= (height - 2)) || (j >= 1 && j <= (width - 2)))
-            
