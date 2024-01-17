@@ -31,6 +31,9 @@ int main(int argc, char *argv[])
     bool newjpg = true;
 
     // Read from memory card while there is still data left
+    
+
+
     while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -38,6 +41,8 @@ int main(int argc, char *argv[])
             if (!firstjpg)
             {
                 firstjpg = true;
+                newjpg = false;
+
                 sprintf(filename, "%03i.jpg", counter);
                 counter++;
 
@@ -51,22 +56,14 @@ int main(int argc, char *argv[])
 
                 fwrite(buffer, 1, BLOCK_SIZE, img);
             }
-            else
+            else if (firstjpg && newjpg)
             {
                 if (img != NULL)
                 {
                     fclose(img);
                 }
-                sprintf(filename, "%03i.jpg", counter);
-                counter++;
 
-                img = fopen(filename, "wb");
-                if (img == NULL)
-                {
-                    printf("Could not create image file\n");
-                    fclose(card);
-                    return 6;
-                }
+                newjpg = true;
             }
         }
         else

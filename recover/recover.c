@@ -38,8 +38,6 @@ int main(int argc, char *argv[])
             if (!firstjpg)
             {
                 firstjpg = true;
-                newjpg = false;
-
                 sprintf(filename, "%03i.jpg", counter);
                 counter++;
 
@@ -53,14 +51,22 @@ int main(int argc, char *argv[])
 
                 fwrite(buffer, 1, BLOCK_SIZE, img);
             }
-            else if (firstjpg && newjpg)
+            else
             {
                 if (img != NULL)
                 {
                     fclose(img);
                 }
+                sprintf(filename, "%03i.jpg", counter);
+                counter++;
 
-                newjpg = true;
+                img = fopen(filename, "wb");
+                if (img == NULL)
+                {
+                    printf("Could not create image file\n");
+                    fclose(card);
+                    return 6;
+                }
             }
         }
         else
