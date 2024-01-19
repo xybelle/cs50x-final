@@ -36,8 +36,10 @@ bool check(const char *word)
     // Traverse linked list
     while (tmp->next != NULL)
     {
-        strcasecmp(word, table[x])
-        tmp = tmp->next;
+        if (strcasecmp(word, table[x]) != 0)
+        {
+            tmp = tmp->next;
+        }
     }
 
     return true;
