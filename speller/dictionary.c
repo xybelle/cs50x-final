@@ -26,10 +26,15 @@ bool check(const char *word)
 {
     // TODO
     // Return true if word is in the dictionary, false otherwise
+
+    // Obtain hash value
     int x = hash(word);
 
-    
-    node *tmp = NULL;
+    // Access linked list
+    node *tmp = table[x];
+
+    // Traverse linked list
+    strcasecmp()
 
     return true;
 }
