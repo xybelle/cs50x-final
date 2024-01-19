@@ -44,36 +44,23 @@ bool load(const char *dictionary)
     }
 
     // Read each word in the file
-    int index = 0;
-    char c;
-    while (fread(&c, sizeof(char), 1, src))
+    char words[LENGTH];
+    while(fscanf(dictionary, "%s", word) == 1)
     {
-        word[index] = c;
-        index++;
-
-        // Found a new word
-        if(index > 0 && c == "\n");
+        // Create space for new hash table node
+        node *new_node = (malloc(sizeof(node)));
+        if (new_node == NULL)
         {
-            word[index] = '\0';
-            index = 0;
+            return 1;
         }
 
-        if (index > 0 && word[index] == '\0')
-        {
-            int x = hash(word);
-            node *n = malloc(sizeof(node));
-            if(n == NULL)
-            {
-                return 1;
-            }
-
-            n->word = word[index];
-            n->next = NULL;
-
-            n->next = table[x];
-            table[x] = n;
-        }
     }
+
+    // Copy the word into the new node
+
+    // Hash the word to obtain its hash value
+
+    // Insert the new node into the hash table (using the index specified by its hash value)
 
     // Close dictionary
     fclose(src);
