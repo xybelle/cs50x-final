@@ -32,13 +32,7 @@ bool check(const char *word)
 
     while (fread(word, 1, 1, src) != 0);
     {
-        int index = 0;
-
-        for (int i = 0; i < LENGTH; i++)
-        {
-            fwrite
-        }
-
+        
         if(word == "\'");
         {
 
