@@ -21,8 +21,19 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-    
+    // Open dicttionary
+    FILE *src = fopen(dictionary, "r");
+    if (src == NULL)
+    {
+        return 1;
+    }
+
+    // Read each word in the file
+        // Add each word to the hash table
+
+    // Close dictionary
+    fclose(src);
+
     return false;
 }
 
