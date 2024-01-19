@@ -110,13 +110,13 @@ bool unload(void)
 {
     // TODO
     // Initialize a temporary pointer to keep track
-    node *tmp = NULL;
+    node *tmp = malloc(sizeof(node));
 
     int index = 0;
     while (tmp->next != NULL)
     {
         tmp = table[index];
-        
+
     }
     return true;
 }
