@@ -25,16 +25,19 @@ bool check(const char *word)
     FILE *src = fopen(dictionary, "r");
     if (src == NULL)
     {
-        return 1;
+        return false;
     }
 
     // Read each word in the file
+    while (fread(dictionary, 1, 1, src) != 0);
+    {
         // Add each word to the hash table
+    }
 
     // Close dictionary
     fclose(src);
 
-    return false;
+    return true;
 }
 
 // Hashes word to a number
