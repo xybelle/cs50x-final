@@ -20,7 +20,7 @@ typedef struct node
 const unsigned int ALPHA_SIZE = 26;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26 * 26 * 26;
+const unsigned int N = 26 * ALPHA_SIZE * ALPHA_SIZE;
 
 // Global variable to store total size
 unsigned int total_size = 0;
@@ -67,18 +67,19 @@ unsigned int hash(const char *word)
     // Use the first three characters of the word
     for (int i = 0; i < 3; i++)
     {
-
+        // Handle uppercase characters
+        if (isupper(word[i]))
+        {
+            result = result * ALPHA_SIZE + (word[i] - 'A');
+        }
+        else // Handle lowercase characters
+        {
+            result = result * ALPHA_SIZE + (word[i] - 'a');
+        }
     }
 
-    if (!isalpha(word))
-
-    int a = toupper(word[0] - 'A');
-    int b = toupper(word[1] - 'A');
-    int c = toupper(word[2] - 'A');
-    int x = (a * 26 * 26) + (b * 26) + c;
-
     // Ensure the result is within the range of the hash table size
-    return x % N;
+    return result % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
