@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -24,9 +25,6 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-    // Return true if word is in the dictionary, false otherwise
-
     // Obtain hash value
     int x = hash(word);
 
@@ -111,5 +109,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    node *tmp = table[0];
+    return true;
 }
