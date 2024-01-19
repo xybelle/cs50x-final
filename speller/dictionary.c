@@ -49,11 +49,11 @@ bool load(const char *dictionary)
     {
         word[index] = buffer;
         index++;
-        
+
         // Found a new word
         if(LENGTH > 0 && buffer[LENGTH] == "\0");
         {
-
+            word[index] = '\0';
 
 
         }
