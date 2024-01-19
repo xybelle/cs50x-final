@@ -19,6 +19,9 @@ typedef struct node
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26 * 26 * 26;
 
+// Global variable to store total size
+unsigned int total_size = 0;
+
 // Hash table
 node *table[N];
 
@@ -89,6 +92,9 @@ bool load(const char *dictionary)
         // Copy the word into the new node
         strcpy(new_node->word, words);
 
+        // Increment total size
+        total_size++;
+
         // Hash the word to obtain its hash value
         int x = hash(words);
 
@@ -106,19 +112,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    int counter = 0;
-
-    for (int i = 0; i < N; i++)
-    {
-        node *tmp = table[i];
-
-        while (tmp != NULL)
-        {
-            counter++;
-            tmp = tmp->next;
-        }
-    }
-    return counter;
+    return total_size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
