@@ -125,20 +125,17 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
-    // Initialize a temporary pointer to keep track
-    node *tmp1 = malloc(sizeof(node));
-    node *tmp2 = malloc(sizeof(node));
-
-    int index = 0;
-    while (index != N - 1)
+    for (int i = 0; i < N; i++)
     {
-        tmp1 = table[index];
-        tmp2 = tmp1;
+        node *tmp1 = table[i];
+        node *tmp2;
 
-        tmp1 = tmp1->next;
-        free(tmp2);
-        index++;
+        while (tmp1 != NULL)
+        {
+            tmp2 = tmp1;
+            tmp1 = tmp1->next;
+            free(tmp2);
+        }
     }
     return true;
 }
