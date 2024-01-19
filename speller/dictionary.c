@@ -53,7 +53,7 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     if (!isalpha(word[0]) || isdigit(word[0]))
     {
-        continue;
+        continue; // skip
     }
     return toupper(word[0]) - 'A';
 }
