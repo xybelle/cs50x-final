@@ -104,27 +104,30 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    size = 0;
-
     node *tmp = malloc(sizeof(node));
     if (tmp == NULL)
     {
-        return;
+        return 0;
     }
 
+    int index = 0, counter = 0;
     while (index != N - 1)
     {
-        tmp = table
+        tmp = table[index];
+
         if (table[index] == NULL)
         {
             continue;
         }
         else
         {
-            while ()
+            while (tmp->next != NULL)
+            {
+                counter++;
+            }
         }
     }
-    return 0;
+    return counter;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
