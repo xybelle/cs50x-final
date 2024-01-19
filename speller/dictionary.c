@@ -50,7 +50,10 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    int x = toupper(word[0] - 'A') * 26 * 26 + toupper(word[1] - 'A') * 26 * 26 + toupper(word[2] - 'A') * 26 * 26;
+    int a = toupper(word[0] - 'A') * 26 * 26;
+    int b = toupper(word[1] - 'A') * 26 * 26;
+    int c = toupper(word[2] - 'A') * 26 * 26;
+    int x = a + b + c;
 
     if (x > N)
     {
