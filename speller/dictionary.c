@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -55,7 +56,7 @@ bool load(const char *dictionary)
         }
 
         // Copy the word into the new node
-        strcpy(new_node, words);
+        strcpy(new_node->word, words);
 
         // Hash the word to obtain its hash value
         int x = hash(words);
@@ -64,7 +65,7 @@ bool load(const char *dictionary)
         new_node->next = table[x];
         table[x] = new_node;
     }
-    
+
     // Close dictionary
     fclose(src);
 
