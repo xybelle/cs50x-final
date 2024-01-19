@@ -43,13 +43,13 @@ bool load(const char *dictionary)
     }
 
     // Read each word in the file
-    while (fread(word, sizeof(word), 1, src));
+    char buffer[LENGTH];
+    while (fread(buffer, 1, 1, src));
     {
-
         // Found a new word
-        if(index > 0 && word[index] == "\0");
+        if(LENGTH > 0 && buffer[LENGTH] == "\0");
         {
-
+            word
         }
 
 
