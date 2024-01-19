@@ -102,6 +102,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    while (index != N - 1)
+    {
+        
+    }
     return 0;
 }
 
