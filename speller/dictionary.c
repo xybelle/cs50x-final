@@ -110,12 +110,22 @@ bool unload(void)
 {
     // TODO
     // Initialize a temporary pointer to keep track
-    node *tmp = malloc(sizeof(node));
+    node *tmp1 = malloc(sizeof(node));
+    node *tmp2 = malloc(sizeof(node));
 
     int index = 0;
     while (tmp->next != NULL)
     {
-        tmp = table[index];
+        tmp1 = table[index];
+        tmp2 = table[index];
+
+        tmp1 = tmp1->next;
+        free(tmp2);
+
+        
+
+
+
 
     }
     return true;
