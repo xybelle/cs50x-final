@@ -29,11 +29,22 @@ bool check(const char *word)
     }
 
     // Read each word in the file
-    while (fread(dictionary, 1, 1, src) != 0);
-    {
-        node *w = NULL;
 
-        
+    while (fread(word, 1, 1, src) != 0);
+    {
+        int index = 0;
+
+        for (int i = 0; i < LENGTH; i++)
+        {
+            fwrite
+        }
+
+        if(word == "\'");
+        {
+
+        }
+
+
         // Add each word to the hash table
     }
 
