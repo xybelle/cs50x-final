@@ -59,7 +59,7 @@ bool load(const char *dictionary)
 
         if (index > 0 && word[index] == '\0')
         {
-            int x = toupper(word[0]) - 'A';
+            int x = hash(word);
             node *n = malloc(sizeof(node));
             if(n == NULL)
             {
