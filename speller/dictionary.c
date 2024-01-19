@@ -47,7 +47,6 @@ bool load(const char *dictionary)
 
     // Read each word in the file
     char words[LENGTH];
-    int counter = 0;
     while (fscanf(src, "%s", words) == 1)
     {
         // Create space for new hash table node
@@ -59,7 +58,7 @@ bool load(const char *dictionary)
 
         // Copy the word into the new node
         strcpy(new_node->word, words);
-        counter++;
+        size();
 
         // Hash the word to obtain its hash value
         int x = hash(words);
@@ -83,8 +82,7 @@ unsigned int size(void)
     {
         return 0;
     }
-
-
+    size++;
     return size;
 }
 
