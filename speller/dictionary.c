@@ -21,6 +21,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    // TODO
     return false;
 }
 
@@ -28,24 +29,12 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    if (!isalpha(word[0]) || isdigit(word[0]))
-    {
-        return;
-    }
     return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
-    return false;
-}
-
-// Returns number of words in dictionary if loaded, else 0 if not yet loaded
-unsigned int size(void)
-{
-    // TODO
     // Open dicttionary
     FILE *src = fopen(dictionary, "r");
     if (src == NULL)
@@ -54,8 +43,7 @@ unsigned int size(void)
     }
 
     // Read each word in the file
-
-    while (fread(word, 1, 1, src) != 0);
+    while (fread(word, sizeof(word), 1, src));
     {
         if(word > 0 && == "\0");
         {
@@ -70,6 +58,12 @@ unsigned int size(void)
     fclose(src);
 
     return true;
+}
+
+// Returns number of words in dictionary if loaded, else 0 if not yet loaded
+unsigned int size(void)
+{
+    // TODO
     return 0;
 }
 
