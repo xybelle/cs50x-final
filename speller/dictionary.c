@@ -56,7 +56,7 @@ bool load(const char *dictionary)
             word[index] = '\0';
             index = 0;
         }
-
+        
         // Add each word to the hash table
     }
 
