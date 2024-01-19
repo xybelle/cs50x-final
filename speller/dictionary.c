@@ -16,6 +16,9 @@ typedef struct node
     struct node *next;
 } node;
 
+// Initialize alphabet size
+const unsigned int ALPHA_SIZE = 26;
+
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26 * 26 * 26;
 
@@ -64,7 +67,7 @@ unsigned int hash(const char *word)
     // Use the first three characters of the word
     for (int i = 0; i < 3; i++)
     {
-        
+
     }
 
     if (!isalpha(word))
