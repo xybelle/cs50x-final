@@ -135,6 +135,8 @@ bool unload(void)
             tmp1 = tmp1->next;
             free(tmp2);
         }
+
+        table[i] = NULL;
     }
     return true;
 }
