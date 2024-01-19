@@ -26,9 +26,12 @@ bool check(const char *word)
 {
     // TODO
     // Return true if word is in the dictionary, false otherwise
+    int x = hash(word);
 
     
-    return false;
+    node *tmp = NULL;
+
+    return true;
 }
 
 // Hashes word to a number
