@@ -94,6 +94,8 @@ bool load(const char *dictionary)
 
     // Close dictionary
     fclose(src);
+    
+    free(new_node);
 
     return true;
 }
@@ -102,9 +104,21 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    node *counter = malloc(sizeof(node));
+    if (counter == NULL)
+    {
+        return 1;
+    }
     while (index != N - 1)
     {
-        
+        if (table[index] == NULL)
+        {
+            continue;
+        }
+        else
+        {
+            while ()
+        }
     }
     return 0;
 }
