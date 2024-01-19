@@ -55,6 +55,7 @@ int main(void)
 bool unload(node *list)
 {
     // TODO: Free all allocated nodes
+    node
     return false;
 }
 
