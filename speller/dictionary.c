@@ -109,6 +109,14 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    node *tmp = table[0];
+    // Initialize a temporary pointer to keep track
+    node *tmp = NULL;
+
+    int index = 0;
+    while (tmp->next != NULL)
+    {
+        tmp = table[index];
+        
+    }
     return true;
 }
