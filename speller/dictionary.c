@@ -54,14 +54,17 @@ bool load(const char *dictionary)
             return 1;
         }
 
+        // Copy the word into the new node
+        strcpy(new_node, words);
+
+        // Hash the word to obtain its hash value
+        int x = hash(words);
+
+        // Insert the new node into the hash table (using the index specified by its hash value)
+        new_node->next = table[x];
+        table[x] = new_node;
     }
-
-    // Copy the word into the new node
-
-    // Hash the word to obtain its hash value
-
-    // Insert the new node into the hash table (using the index specified by its hash value)
-
+    
     // Close dictionary
     fclose(src);
 
