@@ -31,6 +31,9 @@ bool check(const char *word)
     // Read each word in the file
     while (fread(dictionary, 1, 1, src) != 0);
     {
+        node *w = NULL;
+
+        
         // Add each word to the hash table
     }
 
