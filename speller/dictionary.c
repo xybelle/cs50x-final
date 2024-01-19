@@ -32,7 +32,7 @@ bool check(const char *word)
 
     while (fread(word, 1, 1, src) != 0);
     {
-        if(word == "\0");
+        if(word > 0 && == "\0");
         {
 
         }
