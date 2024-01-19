@@ -33,5 +33,5 @@ int main(void)
 int hash(string phrase)
 {
     return toupper(phrase[0]) - 'A';
-    return 0;
+    return tolower(phrase[0]) - 'a';
 }
