@@ -29,11 +29,7 @@ bool check(const char *word)
     int x = hash(word);
 
     // Access linked list
-    node *tmp = malloc(sizeof(node));
-    if (tmp == NULL)
-    {
-        return 1;
-    }
+    node *tmp = table[0];
 
     // Traverse linked list
     while (tmp->next != NULL)
