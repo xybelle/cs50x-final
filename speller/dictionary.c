@@ -59,6 +59,7 @@ bool load(const char *dictionary)
 
         if (index > 0 && word[index] == '\0')
         {
+            int x = toupper(word[0]) - 'A';
             node *n = malloc(sizeof(node));
             if(n == NULL)
             {
@@ -68,8 +69,8 @@ bool load(const char *dictionary)
             n->word = word[index];
             n->next = NULL;
 
-            n
-
+            n->next = table[x];
+            table[x] = n;
         }
     }
 
