@@ -95,8 +95,6 @@ bool load(const char *dictionary)
     // Close dictionary
     fclose(src);
 
-    free(new_node);
-
     return true;
 }
 
