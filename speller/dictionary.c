@@ -45,7 +45,8 @@ bool load(const char *dictionary)
     // Read each word in the file
     while (fread(word, sizeof(word), 1, src));
     {
-        if(word > 0 && word == "\0");
+        // Found a new word
+        if(index > 0 && word[index] == "\0");
         {
 
         }
