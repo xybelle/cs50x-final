@@ -50,16 +50,18 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    int a = toupper(word[0] - 'A') * 26 * 26;
-    int b = toupper(word[1] - 'A') * 26 * 26;
-    int c = toupper(word[2] - 'A') * 26 * 26;
-    int x = a + b + c;
-
-    if (x > N)
+    if (strlen(word) < 3)
     {
-        return x % N;
+        return 0;
     }
-    return x;
+
+    int a = toupper(word[0] - 'A');
+    int b = toupper(word[1] - 'A');
+    int c = toupper(word[2] - 'A');
+    int x = (a * 26 * 26) + (b * 26) + c;
+
+    // Ensure the result is within the range of the hash table size
+    return x % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
