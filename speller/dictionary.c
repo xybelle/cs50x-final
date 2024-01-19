@@ -46,7 +46,7 @@ bool load(const char *dictionary)
     // Read each word in the file
     int index = 0;
     char c;
-    while (fread(&c, sizeof(char), 1, src));
+    while (fread(&c, sizeof(char), 1, src))
     {
         word[index] = c;
         index++;
