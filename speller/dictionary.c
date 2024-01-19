@@ -116,11 +116,15 @@ bool unload(void)
     int index = 0;
     while (tmp->next != NULL)
     {
-        tmp1 = 
+        tmp1 = table[index];
+        tmp2 = tmp1;
 
         tmp1 = tmp1->next;
         free(tmp2);
 
+        tmp2 = tmp1;
+        index++;
+    }
 
 
 
