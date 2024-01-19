@@ -51,9 +51,9 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    if (!isalpha(word) || isdigit(word0))
+    if (!isalpha(word[0]) || isdigit(word[0]))
     {
-
+        continue;
     }
     return toupper(word[0]) - 'A';
 }
