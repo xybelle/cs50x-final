@@ -65,6 +65,9 @@ bool load(const char *dictionary)
                 return 1;
             }
 
+            n->word = word[index];
+            n->next = NULL;
+
             n
 
         }
