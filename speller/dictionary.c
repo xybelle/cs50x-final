@@ -42,6 +42,8 @@ bool load(const char *dictionary)
         return false;
     }
 
+    // Create space for new hash table node
+    int hash = hash(word);
     // Read each word in the file
     while (fread(word, sizeof(word), 1, src));
     {
