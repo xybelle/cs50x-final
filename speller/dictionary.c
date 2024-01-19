@@ -47,11 +47,11 @@ bool load(const char *dictionary)
     char c;
     while (fread(&c, sizeof(char), 1, src));
     {
-        word[index] = buffer;
+        word[index] = c;
         index++;
 
         // Found a new word
-        if(LENGTH > 0 && buffer[LENGTH] == "\0");
+        if(index > 0 && c == "\0");
         {
             word[index] = '\0';
 
