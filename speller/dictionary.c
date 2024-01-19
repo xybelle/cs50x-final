@@ -52,11 +52,22 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    if (strlen(word) < 3)
+    // Check if word is nto null
+    if (word == NULL || strlen(word) < 3)
     {
         return 0;
     }
+
+    // Initialize result to 0
+    unsigned int result = 0;
+
+    // Use the first three characters of the word
+    for (int i = 0; i < 3; i++)
+    {
+        
+    }
+
+    if (!isalpha(word))
 
     int a = toupper(word[0] - 'A');
     int b = toupper(word[1] - 'A');
