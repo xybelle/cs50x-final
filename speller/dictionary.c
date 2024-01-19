@@ -56,8 +56,12 @@ bool load(const char *dictionary)
             word[index] = '\0';
             index = 0;
         }
-        
-        // Add each word to the hash table
+
+        if (index > 0 && word[index] == '\0')
+        {
+            int x = toupper(word[0]) - 'A';
+            table[x] = word;
+        }
     }
 
     // Close dictionary
