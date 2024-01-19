@@ -21,30 +21,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // Open dicttionary
-    FILE *src = fopen(dictionary, "r");
-    if (src == NULL)
-    {
-        return false;
-    }
-
-    // Read each word in the file
-
-    while (fread(word, 1, 1, src) != 0);
-    {
-        if(word > 0 && == "\0");
-        {
-
-        }
-
-
-        // Add each word to the hash table
-    }
-
-    // Close dictionary
-    fclose(src);
-
-    return true;
+    return false;
 }
 
 // Hashes word to a number
@@ -69,6 +46,30 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    // Open dicttionary
+    FILE *src = fopen(dictionary, "r");
+    if (src == NULL)
+    {
+        return false;
+    }
+
+    // Read each word in the file
+
+    while (fread(word, 1, 1, src) != 0);
+    {
+        if(word > 0 && == "\0");
+        {
+
+        }
+
+
+        // Add each word to the hash table
+    }
+
+    // Close dictionary
+    fclose(src);
+
+    return true;
     return 0;
 }
 
