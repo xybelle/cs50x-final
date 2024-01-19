@@ -114,22 +114,14 @@ bool unload(void)
     node *tmp2 = malloc(sizeof(node));
 
     int index = 0;
-    while (tmp->next != NULL)
+    while (index != N - 1)
     {
         tmp1 = table[index];
         tmp2 = tmp1;
 
         tmp1 = tmp1->next;
         free(tmp2);
-
-        tmp2 = tmp1;
         index++;
-    }
-
-
-
-
-
     }
     return true;
 }
