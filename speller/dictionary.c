@@ -25,6 +25,9 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // Return true if word is in the dictionary, false otherwise
+
+    
     return false;
 }
 
