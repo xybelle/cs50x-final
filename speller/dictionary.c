@@ -46,7 +46,7 @@ bool load(const char *dictionary)
 
     // Read each word in the file
     char words[LENGTH];
-    while(fscanf(dictionary, "%s", word) == 1)
+    while(fscanf(dictionary, "%s", words) == 1)
     {
         // Create space for new hash table node
         node *new_node = (malloc(sizeof(node)));
