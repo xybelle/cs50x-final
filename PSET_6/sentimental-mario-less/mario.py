@@ -3,8 +3,8 @@ from cs50 import get_int
 def main():
     while True:
         height = get_int("Height: ")
-        if height > 8 or height < 0:
-            pass
+        if height > 0 or height < 8:
+            break
     draw(height)
 
 
