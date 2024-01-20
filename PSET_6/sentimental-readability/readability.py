@@ -11,8 +11,12 @@ def main():
     sentences = count_sentences(txt)
 
     # Compute the Coleman-Liau index
+    L = 100.0 * letters / words
+    S = 100.0 * sentences / words
+    index = 0.0588 * L - 0.296 * S - 15.8
 
     # Print the grade level
+    if 
 
 def count_letters(txt):
     return len(txt)
@@ -24,4 +28,10 @@ def count_words(txt):
 
 
 def count_sentences(txt)
-    
+    dot_count = txt.count('.')
+    excl_count = txt.count('!')
+    question_count = txt.count('?')
+
+    cs = dot_count + excl_count + question_count
+
+    return cs
