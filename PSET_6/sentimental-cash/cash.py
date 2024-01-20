@@ -28,28 +28,28 @@ def get_cents():
             pass
 
 
-def calc_quarters():
+def calc_quarters(cents):
     while cents >= 25:
         cents = -25
         quarters += 1
     return quarters
 
 
-def calc_dimes():
+def calc_dimes(cents):
     while cents >= 10:
         cents = cents - 10
         dimes += 1
     return dimes
 
 
-def calc_nickels():
+def calc_nickels(cents):
     while cents >= 5:
         cents = cents - 5
         nickels += 1
     return nickels
 
 
-def calc_pennies():
+def calc_pennies(cents):
     while cents >= 1:
         cents = cents - 1
         pennies += 1
