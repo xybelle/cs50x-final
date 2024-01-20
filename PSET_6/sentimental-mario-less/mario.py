@@ -10,7 +10,7 @@ def main():
 
 def draw(h):
     for i in range(h):
-        for j in range(h):
+        for j in range(h - 1):
             print("*", end="")
         for k in range(i):
             print("#", end="")
