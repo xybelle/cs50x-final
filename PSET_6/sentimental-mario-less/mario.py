@@ -8,10 +8,15 @@ def main():
         draw(height)
 
 def draw(h):
-    if h == 1:
-        return 1
-    else:
-        for i in range(h):
-            print("#" * h * draw(h-1))
+    # If nothing to draw
+    if h <= 0:
+        return;
+
+    # Print pyramid of height h - 1
+    draw( h - 1)
+
+    for i in range(h):
+        print("#" * h * draw(h-1))
+
 
 main()
