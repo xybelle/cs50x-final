@@ -16,7 +16,12 @@ def main():
     index = 0.0588 * L - 0.296 * S - 15.8
 
     # Print the grade level
-    if 
+    if round(index) >= 16:
+        print("Grade 16+")
+    elif round(index) < 1:
+        print("Before Grade 1")
+    else:
+        print(f"Grade {round(index)}")
 
 def count_letters(txt):
     return len(txt)
@@ -27,7 +32,7 @@ def count_words(txt):
     return len(words)
 
 
-def count_sentences(txt)
+def count_sentences(txt):
     dot_count = txt.count('.')
     excl_count = txt.count('!')
     question_count = txt.count('?')
@@ -35,3 +40,6 @@ def count_sentences(txt)
     cs = dot_count + excl_count + question_count
 
     return cs
+
+
+main()
