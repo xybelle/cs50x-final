@@ -9,16 +9,9 @@ def main():
 
 
 def draw(h):
-    # If nothing to draw
-    if h <= 0:
-        return;
-
-    # Print pyramid of height h - 1
-    draw(h - 1)
-
-    # Print one more row
-    for _ in range(h):
-        print("#", end="")
+    for i in range(h)
+        print(" " * h)
     print()
+
 
 main()
