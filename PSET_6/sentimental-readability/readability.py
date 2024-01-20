@@ -1,7 +1,7 @@
 from cs50 import get_string
 
 
-def main()
+def main():
     # Prompt user for some text
     txt = get_string("Text: ")
 
@@ -14,8 +14,11 @@ def main()
 
     # Print the grade level
 
-def count_letters(txt)
+def count_letters(txt):
     return len(txt)
+
+def count_words(txt):
+    
 
 
 
