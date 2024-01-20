@@ -18,6 +18,7 @@ def draw(h):
 
     # Print one more row
     for _ in range(h):
+        print(" ", end="")
         print("#", end="")
     print()
 
