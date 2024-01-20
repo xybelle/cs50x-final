@@ -11,9 +11,11 @@ def main():
 
 def draw(h):
     for i in range(h):
-        spaces = " " * (h - (i + 1))
-        hashes = "#" * (i + 1)
-        print(f"{spaces}{hashes}")
+        for j in range(h - (i+1)):
+            print(" ", end="")
+        for k in range(i + 1):
+            print("#", end="")
+        print()
 
 
 main()
