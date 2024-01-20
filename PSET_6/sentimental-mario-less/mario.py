@@ -2,7 +2,7 @@ from cs50 import get_int
 
 def draw(n):
     # Base case
-    if n == 1:
+    if n == 0:
         return 1
     # Recursive call
     else:
