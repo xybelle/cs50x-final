@@ -18,7 +18,9 @@ def count_letters(txt):
     return len(txt)
 
 def count_words(txt):
-    
+    words = txt.split()
+    return len(words)
+
 
 
 
