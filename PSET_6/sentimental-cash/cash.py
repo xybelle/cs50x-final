@@ -22,7 +22,7 @@ def main():
 def get_cents():
     while True:
         c = get_float("Change owed: ")
-        if c > 0:
+        if c is not None and c > 0:
             return c
         else:
             pass
