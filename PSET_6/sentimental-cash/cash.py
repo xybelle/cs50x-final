@@ -31,7 +31,7 @@ def get_cents():
 def calc_quarters(cents):
     quarters = 0
     while cents >= 25:
-        cents = -25
+        cents = cents - 25
         quarters += 1
     return quarters
 
