@@ -22,3 +22,10 @@ def draw(h):
     print()
 
 main()
+
+
+def draw(h):
+    for i in range(h):
+        for j in range(h):
+            print("*", end="")
+        for k in range(i)
