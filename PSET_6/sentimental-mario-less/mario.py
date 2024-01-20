@@ -5,8 +5,8 @@ def main():
         height = get_int("Height: ")
         if height > 8 or height < 0:
             pass
-        else:
-            draw(height)
+    draw(height)
+
 
 def draw(h):
     # If nothing to draw
