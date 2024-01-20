@@ -3,6 +3,7 @@ from cs50 import get_float
 
 def main():
     cents = get_cents()
+    
     quarters = calc_quarters(cents)
     cents = cents - quarters * 25
 
