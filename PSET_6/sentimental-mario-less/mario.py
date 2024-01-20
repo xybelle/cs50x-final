@@ -13,10 +13,9 @@ def draw(h):
         return;
 
     # Print pyramid of height h - 1
-    draw( h - 1)
+    draw(h - 1)
 
     for i < h:
         print("#")
-
 
 main()
