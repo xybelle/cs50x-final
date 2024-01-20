@@ -17,9 +17,10 @@ def draw(h):
     draw(h - 1)
 
     # Print one more row
-    for _ in range(h):
+    for i in range(h):
         print(" ", end="")
-        print("#", end="")
+        for _ in range(i):
+            print("#", end="")
     print()
 
 main()
