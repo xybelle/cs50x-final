@@ -17,10 +17,11 @@ def main():
 def count_letters(txt):
     return len(txt)
 
+
 def count_words(txt):
     words = txt.split()
     return len(words)
 
 
-
-
+def count_sentences(txt)
+    
