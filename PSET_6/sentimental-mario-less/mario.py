@@ -5,7 +5,8 @@ def main():
         height = get_int("Height: ")
         if height > 8 or height < 0:
             pass
-        draw(height)
+        else:
+            draw(height)
 
 def draw(h):
     # If nothing to draw
@@ -15,7 +16,9 @@ def draw(h):
     # Print pyramid of height h - 1
     draw(h - 1)
 
-    for i in range(i < h):
-        print("#")
+    # Print one more row
+    for _ in range(h):
+        print("#", end="")
+    print()
 
 main()
