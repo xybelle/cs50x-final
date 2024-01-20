@@ -9,8 +9,9 @@ def main():
 
 
 def draw(h):
-    for i in range(h)
-        print(" " * h)
+    for i in range(h + 1):
+        print(" ", end="" * h)
+        print("#", end="" * i) 
     print()
 
 
