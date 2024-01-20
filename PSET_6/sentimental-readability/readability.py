@@ -15,6 +15,7 @@ def main()
     # Print the grade level
 
 def count_letters(txt)
-    
+    return len(txt)
+
 
 
