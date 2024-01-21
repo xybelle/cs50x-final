@@ -13,19 +13,24 @@ def main():
     dna = []
     with open(sys.argv[1]) as csvfile:
         dna_db = csv.DictReader(csvfile)
-        dna = list(dna_db)
+        for row in dna_db:
+            dna.append(row)
+
+    fname = dna_db.fieldnames
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
         seq = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    subseq = [longest_match(seq, row) for row in dna]
+    x = len(dna)
+    subseq = []
+    for i in range(x):
+        subseq.append(longest_match(seq, dna[i]))
 
     # TODO: Check database for matching profiles
-    field_names = dna[0].keys()
-    for i, row in enumerate(dna):
-        if subseq[i] == int(row[field_names[i]]):
+    for row in dna:
+        if subseq[i] == int(dna[i][fname[i + 1]]):
             print(f"Match found for {dna[i]['name']}")
     else:
         print("No match")
