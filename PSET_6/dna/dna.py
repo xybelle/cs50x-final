@@ -30,7 +30,7 @@ def main():
     # TODO: Check database for matching profiles
     for row in dna_db:
         if subseq == dna_db:
-            print(f"{dna_db.name}")
+            print("{dna_db.name}")
         else:
             print("No match")
 
