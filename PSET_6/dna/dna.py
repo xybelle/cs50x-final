@@ -13,11 +13,7 @@ def main():
     dna = []
     with open(sys.argv[1]) as csvfile:
         dna_db = csv.DictReader(csvfile)
-        for row in dna_db:
-            dna.append(row)
-
-    dna = list(dna_db)
-    fname = dna_db.fieldnames
+        dna = list(dna_db)
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
