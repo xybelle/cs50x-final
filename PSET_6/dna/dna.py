@@ -25,7 +25,7 @@ def main():
     subseq = dict.fromkeys(dna_seq[1:])
 
     for keys in subseq:
-        subseq.append() =
+        subseq.append() = 
 
     x = len(dna)
     subseq = dict()
