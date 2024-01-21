@@ -29,6 +29,7 @@ def main():
         subseq.append(longest_match(seq, dna[i]))
 
     # TODO: Check database for matching profiles
+    result = []
     for row in dna:
         if subseq[i] == int(dna[i][fname[i + 1]]):
             print(f"Match found for {dna[i]['name']}")
