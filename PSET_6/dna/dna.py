@@ -24,18 +24,15 @@ def main():
         seq = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    x = len(dna)
-    subseq = []
-    for i in range(x):
-        subseq.append(longest_match(seq, dna[i]))
+    subseq = [longest_match(seq, row) for row in dna]
 
     # TODO: Check database for matching profiles
-    result = []
-    for row in dna:
-        if subseq[i] == int(dna[i][fname[i + 1]]):
+    field_names = dna[0].keys()
+    for i, row in enumerate(dna):
+        if subseq[i] == int(row[field_names[i + 1]]):
             print(f"Match found for {dna[i]['name']}")
-        else:
-            print("No match")
+    else:
+        print("No match")
 
     return
 
