@@ -29,7 +29,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for i, row in dna_db:
-        if dna_db.keys(i + 1). in subseq:
+        if 
             print("{Name}")
         else:
             print("No match")
