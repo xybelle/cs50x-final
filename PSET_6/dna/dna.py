@@ -16,6 +16,7 @@ def main():
         for row in dna_db:
             dna.append(row)
 
+    dna = list(dna_db)
     fname = dna_db.fieldnames
 
     # TODO: Read DNA sequence file into a variable
