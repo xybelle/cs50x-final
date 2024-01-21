@@ -28,8 +28,7 @@ def main():
         seq[i] = longest_match(sequence, dna[i])
 
     # TODO: Check database for matching profiles
-    for i in range(x):
-        while True:
+    
 
 
     return
