@@ -20,7 +20,7 @@ def main():
         sequence.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+    str1 = "AGAT"
 
     # TODO: Check database for matching profiles
 
