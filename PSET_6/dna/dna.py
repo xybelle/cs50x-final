@@ -25,7 +25,7 @@ def main():
     # TODO: Check database for matching profiles
     field_names = dna[0].keys()
     for i, row in enumerate(dna):
-        if subseq[i] == int(row[field_names[i + 1]]):
+        if subseq[i] == int(row[field_names[i]]):
             print(f"Match found for {dna[i]['name']}")
     else:
         print("No match")
