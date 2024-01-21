@@ -10,9 +10,9 @@ def main():
 
     # TODO: Read database file into a variable
     rows = []
-    with open(sys.argv[1]) as dna_db:
-        reader = csv.DictReader(dna_db)
-        for row in reader:
+    with open(sys.argv[1]) as file:
+        dna_db = csv.DictReader(file)
+        for row in dna_db:
             rows.append(row)
 
     dna = list(dna_db)
