@@ -19,7 +19,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.arg[2]) as txtfile:
-        sequence = file2.read()
+        sequence = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
     x = len(dna)
