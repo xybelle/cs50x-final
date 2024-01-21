@@ -24,14 +24,8 @@ def main():
     dna_seq = dna_db.keys()
     subseq = dict.fromkeys(dna_seq[1:])
 
-    for keys in subseq:
-        subseq.append() = 
-
-    x = len(dna)
-    subseq = dict()
-    subseq["STR"] =
-    for i in range(x):
-        subseq.append(longest_match(seq, dna[i]))
+    for row in subseq:
+        subseq.append(row) = longest_match(seq, subseq)
 
     # TODO: Check database for matching profiles
     for row in dna:
