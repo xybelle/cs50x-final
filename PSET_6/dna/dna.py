@@ -23,6 +23,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     x = len(dna)
+    seq = []
     for i in range(x):
         seq[i] = longest_match(sequence, dna[i])
 
