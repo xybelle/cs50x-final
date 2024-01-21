@@ -15,7 +15,7 @@ def main():
         for row in reader:
             rows.append(row)
 
-    dna = list(rows[0])
+    dna = list(dna_db)
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.arg[2]) as sequence:
