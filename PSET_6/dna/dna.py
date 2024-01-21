@@ -18,8 +18,8 @@ def main():
     dna = list(dna_db)
 
     # TODO: Read DNA sequence file into a variable
-    with open(sys.arg[2]) as sequence:
-        read_data = sequence.read()
+    with open(sys.arg[2]) as file2:
+        sequence = file2.read()
 
     # TODO: Find longest match of each STR in DNA sequence
     x = len(dna)
