@@ -24,16 +24,12 @@ def main():
     dna_seq = dna_db.keys()
     subseq = dict.fromkeys(dna_seq[1:])
 
-    for keys in subseq:
+    for key in subseq:
         value = longest_match(seq, subseq)
-        subseq.append(keys)
+        subseq.append(key)
 
     # TODO: Check database for matching profiles
-    for row in dna:
-        if subseq[i] == int(dna[i][fname[i + 1]]):
-            print(f"Match found for {dna[i]['name']}")
-    else:
-        print("No match")
+    
 
     return
 
