@@ -9,8 +9,8 @@ def main():
         print("Usage ./dna FILE")
 
     # TODO: Read database file into a variable
-    with open(sys.argv[1]) as str:
-        reader = csv.DictReader(str)
+    with open(sys.argv[1]) as dna_db:
+        reader = csv.DictReader(dna_db)
         for row in reader:
             rows.append(row)
 
