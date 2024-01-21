@@ -16,6 +16,7 @@ def main():
             dna.append(row)
 
     dna = list(dna_db)
+    fname = dna_db.fieldnames
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
