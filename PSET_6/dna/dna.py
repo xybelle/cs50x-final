@@ -25,11 +25,11 @@ def main():
     subseq = dict.fromkeys(dna_seq[1:])
 
     for key in subseq:
-        value = longest_match(seq, subseq)
+        key[key] = longest_match(seq, subseq)
         subseq.append(key)
 
     # TODO: Check database for matching profiles
-    
+
 
     return
 
