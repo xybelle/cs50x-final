@@ -28,7 +28,9 @@ def main():
         subseq[i] = longest_match(seq, dna[i])
 
     # TODO: Check database for matching profiles
-
+    for i in range(x):
+        if subseq[i] in dna:
+            print(")
 
 
     return
