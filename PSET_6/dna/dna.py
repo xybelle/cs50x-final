@@ -16,20 +16,20 @@ def main():
         for row in reader:
             dna_db.append(row)
 
-    fname = dna_db.fieldnames
-
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
         seq = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    subseq = []
-    for keys[1:] in dna_db:
-        subseq.append["keys"] =
+    dna_seq = dna_db.keys()
+    subseq = dict.fromkeys(dna_seq[1:])
+
+    for keys in subseq:
+        subseq.append() =
 
     x = len(dna)
     subseq = dict()
-    subseq["STR"] = 
+    subseq["STR"] =
     for i in range(x):
         subseq.append(longest_match(seq, dna[i]))
 
