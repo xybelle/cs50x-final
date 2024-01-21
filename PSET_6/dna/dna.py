@@ -25,10 +25,11 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     subseq = []
     for keys[1:] in dna_db:
-        subseq.append["keys"] = 
+        subseq.append["keys"] =
 
     x = len(dna)
-    subseq = []
+    subseq = dict()
+    subseq["STR"] = 
     for i in range(x):
         subseq.append(longest_match(seq, dna[i]))
 
