@@ -30,12 +30,12 @@ def main():
 
     # TODO: Check database for matching profiles
     result = []
-    for i in range(x):
+    for key in dna:
         if subseq[i] == fname[i + 1]:
             result = true
         else:
             result = false
-    
+
 
     return
 
