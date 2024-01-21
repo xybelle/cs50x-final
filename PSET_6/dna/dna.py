@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) < 3:
-        print("Usage python ./dna.py database_file sequence_file")
+        print("Usage ./dna.py database_file sequence_file")
         return
 
     # TODO: Read database file into a variable
@@ -21,18 +21,16 @@ def main():
         seq = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    dna_seq = dna_db.keys()
-    subseq = dict.fromkeys(dna_seq[1:])
+    same_keys = dna_db.keys()
+    subseq = dict.fromkeys(same_keys)
 
     for i, key in enumerate(subseq):
         subseq[i] = longest_match(seq, key)
 
     # TODO: Check database for matching profiles
     for row in dna_db:
-        if subseq == dna_db:
-            print("{dna_db.name}")
-        else:
-            print("No match")
+        if 
+
 
     return
 
