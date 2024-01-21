@@ -26,7 +26,7 @@ def main():
     x = len(dna)
     subseq = []
     for i in range(x):
-        subseq.append = longest_match(seq, dna[i])
+        subseq.append(longest_match(seq, dna[i]))
 
     # TODO: Check database for matching profiles
     for row in dna:
