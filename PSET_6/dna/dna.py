@@ -9,7 +9,8 @@ def main():
         print("Usage ./dna FILE")
 
     # TODO: Read database file into a variable
-    
+    str_count = sys.argv[1]
+    dna_sequence = sys.argv[2]
 
     # TODO: Read DNA sequence file into a variable
 
