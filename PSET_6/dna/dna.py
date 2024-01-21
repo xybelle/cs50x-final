@@ -28,7 +28,8 @@ def main():
         subseq[i] = longest_match(seq, key)
 
     # TODO: Check database for matching profiles
-
+    for keys in subseq:
+        if 
 
     return
 
