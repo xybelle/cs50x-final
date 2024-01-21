@@ -32,10 +32,9 @@ def main():
     result = []
     for key in dna:
         if subseq[i] == fname[i + 1]:
-            result = true
+            print(f"{dna.name}")
         else:
-            result = false
-
+            print("No match")
 
     return
 
