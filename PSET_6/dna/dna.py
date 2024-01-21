@@ -29,7 +29,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for i, row in dna_db:
-        if int(subseq[i]) == dna_db
+        if int(subseq[i]) == dna_db:
             print("{Name}")
         else:
             print("No match")
