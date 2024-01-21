@@ -26,12 +26,12 @@ def main():
     x = len(dna)
     subseq = []
     for i in range(x):
-        subseq[i] = longest_match(seq, dna[i])
+        subseq.append = longest_match(seq, dna[i])
 
     # TODO: Check database for matching profiles
     for row in dna:
-        if subseq[i] == fname[i + 1]:
-            print(f"{dna.name}")
+        if subseq[i] == int(dna[i][fname[i + 1]]:
+            print(f"Match found for {dna[i]['name']}")
         else:
             print("No match")
 
