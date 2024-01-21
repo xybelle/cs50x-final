@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) < 3:
-        print("Usage ./dna FILE")
+        print("Usage ./dna.py database_file sequence_file")
 
     # TODO: Read database file into a variable
     dna = []
