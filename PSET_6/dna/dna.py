@@ -33,7 +33,7 @@ def main():
         subseq[f"{keys_list[i + 1]}"] = longest_match(seq, keys_list[i + 1])
 
     # TODO: Check database for matching profiles
-    for i in range(len(dna_db)):
+    for i in keys_list[1:]:
         if all(subseq[key] == dna_db[i][key] for key in subseq):
             print(f"{dna_db[i]['name']}")
     else:
