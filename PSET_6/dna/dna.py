@@ -34,8 +34,8 @@ def main():
     # TODO: Check database for matching profiles
     common_keys = set(dna_db[0].keys()) & set(subseq.keys())
     match = False
-    for row in dna_db except row['name']:
-        row_number = {key: int(value) for key, value in row.items()}
+    for row in dna_db:
+        
         print(f"Checking row: {row}")
         if all(subseq[key] == row[key] for key in common_keys):
             if 'name' in row:
