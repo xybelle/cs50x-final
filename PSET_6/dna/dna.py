@@ -33,6 +33,7 @@ def main():
 
     # TODO: Check database for matching profiles
     common_keys = set(dna_db[0].keys()) & set(subseq.keys())
+    match = False
     for row in dna_db:
         if all(subseq[key] == row[key] for key in common_keys):
             if 'name' in row:
