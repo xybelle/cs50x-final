@@ -21,18 +21,17 @@ def main():
         seq = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    #same_keys = dna_db.keys()
-    #subseq = dict.fromkeys(same_keys)
-    subseq = 
+    same_keys = dna_db.keys()
+    subseq = dict.fromkeys(same_keys)
 
-    #for i, key in enumerate(subseq):
-    #    subseq[i] = longest_match(seq, key)
+    #for i in range(len(subseq.keys())):
+    #    subseq[i] = longest_match(seq, subseq.key())
 
     # TODO: Check database for matching profiles
     #for i, row in dna_db:
     #    if
 
-    print(f"{dna_db[0].keys()}")
+    print(f"{subseq.keys()}")
     return
 
 
