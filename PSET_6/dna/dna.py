@@ -34,7 +34,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(dna_db)):
-        if all(dna_db[i][key] == subseq[key] for key in dna_db[i]):
+        if all(subseq[key] == dna_db[i][key] for key in subseq):
             print(f"{dna_db[i]['name']}")
     else:
         print("No match")
