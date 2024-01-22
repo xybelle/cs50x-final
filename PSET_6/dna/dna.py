@@ -37,7 +37,8 @@ def main():
         if all(subseq[key] == row[key] for key in common_keys):
             if 'name' in row:
                 print(f"{row['name']}")
-    else:
+            match = True
+    if not match:
         print("No match")
 
     return
