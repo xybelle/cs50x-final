@@ -31,7 +31,7 @@ def main():
     #for row in dna_db:
     #    if
 
-    print(f"{dna_db}")
+    print(f"{dna_db[0]}")
     return
 
 
