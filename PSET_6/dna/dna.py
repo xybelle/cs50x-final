@@ -37,7 +37,6 @@ def main():
     for row in dna_db:
         row_values = {key: int(value) if isinstance(value, str) and value.isdigit() else value
                       for key, value in row.items()}
-        print(f"Checking row: {row}")
         if all(subseq[key] == row_values[key] for key in common_keys):
             if 'name' in row:
                 print(f"{row['name']}")
@@ -45,7 +44,6 @@ def main():
     if not match:
         print("No match")
 
-    print(subseq)
     return
 
 
