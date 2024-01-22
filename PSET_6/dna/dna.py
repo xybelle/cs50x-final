@@ -24,8 +24,8 @@ def main():
     keys_list = list(dna_db[0].keys())
     subseq = dict()
 
-    for i in keys_list:
-        subseq[keys_list[i + 1]]
+    for i in range(len(keys_list[1:])):
+        subseq[f"{keys_list[i]}"] = 0
 
     #subseq = dict.fromkeys(dna_db[0].keys())
 
@@ -34,7 +34,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(dna_db)):
-        if all(dna_db[i][key] == subseq[key] for key in keys_list[1:]):
+        if all(dna_db[i][key] == subseq[key] for key in dna_db[i]):
             print(f"{dna_db[i]['name']}")
     else:
         print("No match")
