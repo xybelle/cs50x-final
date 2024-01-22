@@ -29,6 +29,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(dna_db)):
+        for i in range(len(keys_list[1:])):
+            if dna_
         #if int(dna_db[i]) == int(subseq):
 
     #        print(f"{dna_db[i]['name']}")
