@@ -21,14 +21,9 @@ def main():
         seq = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    subseq = dict.fromkeys(dna_db[0].keys())
     keys_list = list(dna_db[0].keys())
-    subseq = dict()
-
-    for i in range(len(keys_list[1:])):
-        subseq[f"{keys_list[i]}"] = 0
-
-    #subseq = dict.fromkeys(dna_db[0].keys())
-
+    
     for i in range(len(keys_list[1:])):
         subseq[f"{keys_list[i + 1]}"] = longest_match(seq, keys_list[i + 1])
 
