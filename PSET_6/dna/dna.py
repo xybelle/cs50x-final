@@ -23,13 +23,13 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     subseq = dict.fromkeys(dna_db[0].keys())
     keys_list = list(dna_db[0].keys())
-    
+
     for i in range(len(keys_list[1:])):
         subseq[f"{keys_list[i + 1]}"] = longest_match(seq, keys_list[i + 1])
 
     # TODO: Check database for matching profiles
     for i in keys_list[1:]:
-        if all(subseq[key] == dna_db[i][key] for key in subseq):
+        if subseq[f"{keys_list[i]}"] == dna_db[f"{keys_list[i + 1]}"]
             print(f"{dna_db[i]['name']}")
     else:
         print("No match")
