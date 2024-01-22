@@ -40,8 +40,9 @@ def main():
     else:
         print("No match")
 
-    print(f"{subseq}")
-    print(keys_list)
+    print(f"{dna_db[0]}")
+
+    print(common_keys)
     return
 
 
