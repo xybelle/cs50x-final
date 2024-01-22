@@ -28,10 +28,10 @@ def main():
     #    subseq[i] = longest_match(seq, key)
 
     # TODO: Check database for matching profiles
-    #for row in dna_db:
+    #for i, row in dna_db:
     #    if
 
-    print(f"{dna_db[0]}")
+    print(f"{dna_db[0].keys()}")
     return
 
 
