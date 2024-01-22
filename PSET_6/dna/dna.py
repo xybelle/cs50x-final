@@ -24,9 +24,9 @@ def main():
     subseq = dict.fromkeys(dna_db[0].keys())
     subseq['name'] = "unknown"
 
-    if keys == None:
-        for keys in subseq:
-            subseq = longest_match(seq, keys)
+    for keys in subseq:
+        if keys == None:
+            keys = longest_match(seq, keys)
 
     # TODO: Check database for matching profiles
     #for i, row in dna_db:
