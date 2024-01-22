@@ -35,7 +35,8 @@ def main():
     common_keys = set(dna_db[0].keys()) & set(subseq.keys())
     for row in dna_db:
         if all(subseq[key] == row[key] for key in common_keys):
-            print(f"{row['name']}")
+            if 'name' in row:
+                print(f"{row['name']}")
 
     else:
         print("No match")
