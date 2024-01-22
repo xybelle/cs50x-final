@@ -26,10 +26,10 @@ def main():
     subseq = dict()
 
     for key in keys_list:
-        subseq[f"{key}"] = longest_match(seq, keys_list[key])
+        subseq[f"{key}"] = 0
 
-    #for i in range(len(keys_list)):
-    #    subseq[f"{keys_list[i]}"] =
+    for i in range(len(keys_list)):
+        subseq[f"{keys_list[i]}"] = longest_match(seq, keys_list[i])
 
     # TODO: Check database for matching profiles
     for row in dna_db:
