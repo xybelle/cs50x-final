@@ -29,9 +29,9 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in dna_db:
-        for key in keys_list[1:]:
-            if all(subseq[f"{keys_list[key]}"] == dna_db[row][f"{keys_list[key + 1]}"] for key in keys_list[1:]):
-                print(f"{dna_db[i]['name']}")
+        if all(subseq[keys_list[key]] == row[keys_list[key + 1]] for key in range(len(keys_list) - 1)):
+            print(f"{row['name']}")
+
     else:
         print("No match")
 
