@@ -30,8 +30,8 @@ def main():
     # TODO: Check database for matching profiles
     for i in range(len(dna_db)):
         for i in range(len(keys_list[1:])):
-            if dna_db[f"{keys_list[i + 1]}"]
-        #if int(dna_db[i]) == int(subseq):
+            if int(dna_db[f"{keys_list[i + 1]}"]) == int(subseq[f"{keys_list[i + 1]}"])
+                
 
     #        print(f"{dna_db[i]['name']}")
         #else:
