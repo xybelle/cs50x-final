@@ -25,7 +25,7 @@ def main():
 
     for i in range(len(subseq.keys())):
         subseq[i] = "unknown"
-        subseq[i + 1] = longest_match(seq, subseq.key())
+        subseq[i + 1] = longest_match(seq, subseq.keys())
 
     # TODO: Check database for matching profiles
     #for i, row in dna_db:
