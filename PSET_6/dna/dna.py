@@ -22,9 +22,10 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     subseq = dict.fromkeys(dna_db[0].keys())
+    keys_list = list(subseq.keys())
 
-    for keys in subseq:
-        keys = 2
+    for i in range(len(keys_list[1:])):
+        subseq["{keys_list[1]}"] = 2
 
     # TODO: Check database for matching profiles
     #for i, row in dna_db:
