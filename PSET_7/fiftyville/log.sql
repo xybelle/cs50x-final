@@ -58,3 +58,13 @@ WHERE passport_number in (
 -- Check bakery security logs around what time both
 SELECT license_plate, activity, hour, minute FROM bakery_security_logs
 WHERE license_plate in ('1106N58', '94KL13X');
+
+-- Theft happened around 10.15am and Ruby (witness) said that sometime within 10 mins of the
+    -- theft, the thief got into a car. Based on the security logs, the theif isn't Taylor
+    -- they left or exited the premise at 10.35am which is well beyong the 10 mins Ruby mentioned.
+-- Primary suspect is now Bruce.
+
+-- Check who Bruce called
+
+
+
