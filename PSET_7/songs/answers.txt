@@ -3,5 +3,5 @@ avg_valence = 0.484443 (max_valence: 0.931)
 avg_danceability = 0.71646 (max_danceability: 0.964)
 
 1. Based on the average energy, valence, danceability of the songs listened to, the person
-    appears to really like songs that has strong, steady beat (danceable) and sounds more on
-    negative side (e.g. angry, sad, etc.) given the low average valence.
+    appears to really like songs that are quite intense and has strong, steady beat or danceable
+    and sounds more on negative side (e.g. angry, sad, etc.) given the low average valence.
