@@ -1,1 +1,1 @@
-SELECT COUNT(energy) FROM songs
+SELECT AVG(energy) AS ave_energy FROM songs;
