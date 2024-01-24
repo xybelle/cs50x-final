@@ -27,4 +27,4 @@ SELECT * FROM airports
 
 -- Check earliest flight out of Fiftyville
 SELECT * FROM flights
-WHERE origin_airport_id = 8 AND year = 2023 AND month = 
+WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
