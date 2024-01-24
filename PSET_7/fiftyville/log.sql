@@ -35,6 +35,11 @@ WHERE license_plate IN ('R3G7486', '13FNH73', '5P2BI95', '94KL13X', '6P58WS2', '
 SELECT * FROM airports
 -- | 8 | CSF | Fiftyville Regional Aiport | Fiftyville |
 
+-- Get flight_id out of Fiftyville on July 29, 2023
+SELECT id
+FROM flights
+WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
+
 -- Check passengers table to find if anyone from the people left or booked a flight out
     -- of Fiftyville
 SELECT flight_id
