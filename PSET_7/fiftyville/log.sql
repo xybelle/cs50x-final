@@ -65,6 +65,12 @@ WHERE license_plate in ('1106N58', '94KL13X');
 -- Primary suspect is now Bruce.
 
 -- Check who Bruce called
+SELECT name FROM people
+WHERE phone_number in (
+    SELECT receiver FROM phone_calls
+    WHERE caller = '(367) 555-5533' AND year = 2023 AND month = 07 AND day = 28
+        AND duration <= 60
+);
 
 
 
