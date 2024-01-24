@@ -21,7 +21,7 @@ WHERE year = 2023 AND month = 07 AND day = 28;
     -- to purchase flight ticket for earliest flight out of Fiftyville on 29th July.
 
 -- Get origin_airport_id of Fiftyville
-SELECT * FROM airports
+SELECT * FROM airports;
 
 -- | 8 | CSF | Fiftyville Regional Aiport | Fiftyville |
 
@@ -30,6 +30,9 @@ SELECT * FROM flights
 WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 
 -- Earliest flight out of Fiftyville is flight_id: 36 followed by 43, 23, 53, 18
+
+-- Check flight_id 36 destination.
+SELECT * FROM airports
 
 -- Check passengers who booked flight_id: 36, who may have also withdrew money from ATM on
     -- Leggett Street on the 28th, and made a phone call to someone with less than a minute
@@ -74,7 +77,7 @@ WHERE phone_number in (
 
 -- Bruce called Robin on the 28th July, 2023 and duration was less than a minute.
 
--- Check where 
+-- Check where
 
 
 
