@@ -28,3 +28,11 @@ SELECT * FROM airports
 -- Check earliest flight out of Fiftyville
 SELECT * FROM flights
 WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
+
+-- Earliest flight out of Fiftyville is flight_id: 36 followed by 43, 23, 53, 18
+
+-- Check passengers
+SELECT name
+FROM people
+JOIN passengers ON people.passport_number = passengers.passport_number
+WHERE flight_id = 36;
