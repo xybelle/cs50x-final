@@ -1,1 +1,1 @@
-select name in songs where 
+select name in songs group by tempo
