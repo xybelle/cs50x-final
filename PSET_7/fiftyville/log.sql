@@ -66,4 +66,6 @@ WHERE id IN (
     -- withdrew money on the ATM on Leggett Street, narrowed names to Diana and Bruce.
 
 -- Check phonecalls
-
+SELECT caller, receiver
+FROM phone_calls
+WHERE duration < 60 AND year = 2023 AND month = 07 AND day = 28;
