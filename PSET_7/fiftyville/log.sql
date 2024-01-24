@@ -15,4 +15,7 @@ SELECT hour, minute, activity, license_plate
 FROM bakery_security_logs
 WHERE year = 2023 AND day = 28 AND month = 07 AND hour = 10;
 
--- Check license_plate
+-- Check interviews of the 3 witnesses
+SELECT id, name, transcript
+FROM interviews
+WHERE year = 2023 AND month = 07 AND day = 28;
