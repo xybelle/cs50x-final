@@ -32,7 +32,8 @@ WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 -- Earliest flight out of Fiftyville is flight_id: 36 followed by 43, 23, 53, 18
 
 -- Check passengers who booked flight_id: 36, who also made a call to someone on the 28th July,
-    -- 2023 in less than a minute, who may also withdrew money from ATM in Leggett Street
+    -- 2023 in less than a minute, who may also withdrew money from ATM in Leggett Street,
+    -- and also may be around the bakery around 10.15am.
 SELECT name, phone_number, license_plate FROM people
 WHERE passport_number in (
     SELECT passport_number FROM passengers
@@ -46,4 +47,7 @@ WHERE passport_number in (
 ) AND phone_number in (
     SELECT caller FROM phone_calls
     WHERE duration <= 60 AND year = 2023 AND month = 07 AND day = 28
-) AND 
+) AND license_plate in (
+    SELECT license_plate FROM bakery_security_logs
+    WHERE year = 2023 AND month = 07 AND day = 28 AND hour = 10
+);
