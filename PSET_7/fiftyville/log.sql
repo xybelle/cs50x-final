@@ -31,8 +31,9 @@ WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 
 -- Earliest flight out of Fiftyville is flight_id: 36 followed by 43, 23, 53, 18
 
--- Check flight_id 36 destination.
+-- Check airport id 4 (destination).
 SELECT * FROM airports
+-- | 4 | LGA | LaGuardia Airport | New York City |
 
 -- Check passengers who booked flight_id: 36, who may have also withdrew money from ATM on
     -- Leggett Street on the 28th, and made a phone call to someone with less than a minute
