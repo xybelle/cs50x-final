@@ -42,7 +42,8 @@ WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 
 -- Check passengers table to find if anyone from the people left or booked a flight out
     -- of Fiftyville
-SELECT flight_id
+SELECT *
 FROM passengers
 WHERE passport_number in (2963008352, 7526138472, 7874488539, 7049073643, 1695452385,
-    1988161715, 8496433585, 3592750733, 8294398571, 5773159633, 3642612721);
+    1988161715, 8496433585, 3592750733, 8294398571, 5773159633, 3642612721)
+    AND flight_id in (18, 23, 36,);
