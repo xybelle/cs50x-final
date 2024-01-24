@@ -20,4 +20,11 @@ WHERE year = 2023 AND month = 07 AND day = 28;
 -- Raymond (witness) saw thief called someone on the phone (< 1 minute). Asked the other person
     -- to purchase flight ticket for earliest flight out of Fiftyville on 29th July.
 
+-- Get origin_airport_id of Fiftyville
+SELECT * FROM airports
 
+-- | 8 | CSF | Fiftyville Regional Aiport | Fiftyville |
+
+-- Check earliest flight out of Fiftyville
+SELECT * FROM flights
+WHERE origin_airport_id = 8 AND year = 2023 AND month = 
