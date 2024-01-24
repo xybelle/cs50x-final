@@ -1,2 +1,6 @@
 SELECT id FROM movies
-WHERE year = '2004' AND 
+JOIN stars ON movies.id = stars.movie_id
+WHERE stars.person_id IN (
+    SELECT names FROM people
+    WHERE 
+)
