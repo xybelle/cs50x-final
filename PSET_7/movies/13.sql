@@ -1,10 +1,14 @@
-SELECT name FROM people
+SELECT name
+FROM people
 WHERE id IN (
-    SELECT person_id FROM stars
+    SELECT person_id
+    FROM stars
     WHERE movie_id in (
-        SELECT movie_id FROM stars
+        SELECT movie_id
+        FROM stars
         WHERE person_id IN (
-            SELECT id IN PEOPLE
+            SELECT id
+            FROM PEOPLE
             WHERE name = 'Kevin Bacon' AND birth = '1958'
         )
     )
