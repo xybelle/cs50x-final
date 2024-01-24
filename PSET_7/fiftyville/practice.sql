@@ -42,7 +42,8 @@ WHERE passport_number in (
     SELECT person_id FROM bank_accounts
     WHERE account_number in (
         SELECT account_number FROM atm_transactions
-        WHERE transaction_type = 'withdraw' AND year = 2023 AND month = 07 AND day = 28
+        WHERE atm_location = 'Leggett Street' AND transaction_type = 'withdraw' AND year = 2023
+            AND month = 07 AND day = 28
     )
 ) AND phone_number in (
     SELECT caller FROM phone_calls
@@ -52,4 +53,4 @@ WHERE passport_number in (
     WHERE year = 2023 AND month = 07 AND day = 28 AND hour = 10
 );
 
--- Narrowed down to Taylor and Bruce
+
