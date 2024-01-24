@@ -33,6 +33,7 @@ WHERE license_plate IN ('R3G7486', '13FNH73', '5P2BI95', '94KL13X', '6P58WS2', '
 
 -- Check passengers table to find if anyone from the people left or booked a flight out
     -- of Fiftyville
-SELECT id, full_name
-FROM airports
-WHERE
+SELECT flight_id
+FROM passengers
+WHERE passport_number in (2963008352, 7526138472, 7874488539, 7049073643, 1695452385,
+    1988161715, 8496433585, 3592750733, 8294398571, 5773159633, 3642612721);
