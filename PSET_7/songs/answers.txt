@@ -6,4 +6,4 @@
 
 2. The audio aura (if calculated this way) may not be very representative of the listener
     because 1.) some songs may be part of a playlist (not created by user) where the listener
-    wasn't really
+    wasn't really 
