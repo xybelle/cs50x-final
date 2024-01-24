@@ -32,8 +32,17 @@ WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 -- Earliest flight out of Fiftyville is flight_id: 36 followed by 43, 23, 53, 18
 
 -- Check passengers
-SELECT name
-FROM people
-JOIN passengers ON people.passport_number = passengers.passport_number
-WHERE flight_id = 36
-AND WHERE 
+SELECT name, phone_number, license_plate FROM people
+WHERE passport_number in (
+    SELECT passport_number FROM passengers
+    WHERE flight_id = 36
+) AND id IN (
+    SELECT person_id FROM bank_accounts
+    WHERE account_number in (
+        SELECT account_number FROM atm_transactions
+        WHERE transaction_type = 'withdraw' AND year = 2023 AND month = 07 AND day = 28
+    )
+) AND phone_number in (
+    SELECT caller FROM phone_calls
+    WHERE duration <= 60 AND year = 2023 AND month = 07 AND day = 28
+);
