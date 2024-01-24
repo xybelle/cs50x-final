@@ -52,6 +52,12 @@ WHERE passport_number in (2963008352, 7526138472, 7874488539, 7049073643, 169545
 SELECT name
 FROM people
 WHERE id IN (
-    
+    SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN (
+        SELECT account_number
+        FROM atm_transactions
+        WHERE
+    )
 )
 
