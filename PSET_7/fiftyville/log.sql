@@ -59,7 +59,7 @@ WHERE passport_number in (
 
 -- Narrowed down to Taylor and Bruce
 
--- Check bakery security logs around what time both
+-- Check bakery security logs around what time both were there
 SELECT license_plate, activity, hour, minute FROM bakery_security_logs
 WHERE license_plate in ('1106N58', '94KL13X');
 
