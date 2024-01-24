@@ -9,5 +9,4 @@
     may not really like all the other songs in the playlist, 2.) sometimes it may be another
     person who has access to the listener's phone (or account) could play some of the songs.
     It might be better to look into what songs the listener actually liked (or hearted?), also
-    looking at 
-    as well as looking into how many times the listener listened to it.
+    looking at how many times they listened to it.
