@@ -72,5 +72,9 @@ WHERE phone_number in (
         AND duration <= 60
 );
 
+-- Bruce called Robin on the 28th July, 2023 and duration was less than a minute.
+
+-- Check where 
+
 
 
