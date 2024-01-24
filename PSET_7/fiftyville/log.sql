@@ -9,5 +9,8 @@ SELECT description
 FROM crime_scene_reports
 WHERE year = 2023 AND day = 28 AND month = 07;
 
--- It was mentioned there are 3 witnesses who were present at the time and all mentions the bakery
-
+-- Theft took place 10.15am at the bakery. There are 3 witnesses.
+-- Check bakery_security_logs around 10.15am
+SELECT hoursactivity, license_plate
+FROM bakery_security_logs
+WHERE year = 2023 AND day = 28 AND month = 07 AND hour = 10;
