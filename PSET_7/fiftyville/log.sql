@@ -11,6 +11,6 @@ WHERE year = 2023 AND day = 28 AND month = 07;
 
 -- Theft took place 10.15am at the bakery. There are 3 witnesses.
 -- Check bakery_security_logs around 10.15am
-SELECT hoursactivity, license_plate
+SELECT hour, minute, activity, license_plate
 FROM bakery_security_logs
 WHERE year = 2023 AND day = 28 AND month = 07 AND hour = 10;
