@@ -25,7 +25,7 @@ SELECT * FROM airports;
 
 -- | 8 | CSF | Fiftyville Regional Aiport | Fiftyville |
 
--- Check earliest flight out of Fiftyville
+-- Check earliest flight out of Fiftyville and destination
 SELECT * FROM flights
 WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 
