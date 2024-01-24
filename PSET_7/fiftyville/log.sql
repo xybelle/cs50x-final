@@ -57,7 +57,8 @@ WHERE id IN (
     WHERE account_number IN (
         SELECT account_number
         FROM atm_transactions
-        WHERE
+        WHERE year = 2023 AND month = 07 AND day = 28 AND transaction_type = 'withdraw'
+            AND atm_location = 'Leggett Street'
     )
-)
+);
 
