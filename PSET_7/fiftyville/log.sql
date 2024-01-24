@@ -4,7 +4,7 @@
 .schema
 
 -- Check crime_scene_reports for crime that took place on 28th July, 2023 on Humphrey Street
-SELECT *
+SELECT description
 FROM crime_scene_reports
 WHERE year = '2023' AND day = '28' AND month = 'July';
 
