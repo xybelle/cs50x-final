@@ -62,3 +62,8 @@ WHERE id IN (
     )
 );
 
+-- Comparing the names of people that flew out of Fiftyville on 29th July and people who
+    -- withdrew money on the ATM on Leggett Street, narrowed names to Diana and Bruce.
+
+-- Check phonecalls
+
