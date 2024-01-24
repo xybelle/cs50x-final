@@ -31,7 +31,8 @@ FROM people
 WHERE license_plate IN ('R3G7486', '13FNH73', '5P2BI95', '94KL13X', '6P58WS2', '4328GD8',
     'G412CB7', 'L93JTIZ', '322W7JE', '0NTHK55', '1106N58')
 
--- Check airports table to get origin_airport_id
+-- Check passengers table to find if anyone from the people left or booked a flight out
+    -- of Fiftyville
 SELECT id, full_name
 FROM airports
-WHERE 
+WHERE
