@@ -61,9 +61,9 @@ WHERE license_plate in ('1106N58', '94KL13X');
 
 -- The above didn't really help.
 
--- Check who Bruce called
+-- Check who Taylor called
 SELECT name FROM people
 WHERE phone_number IN (
     SELECT receiver FROM phone_calls
-    WHERE caller = '(367) 555-5533' AND duration <= 60
+    WHERE caller = '(286) 555-6063' AND duration <= 60
 );
