@@ -51,3 +51,7 @@ WHERE passport_number in (2963008352, 7526138472, 7874488539, 7049073643, 169545
 -- Check atm_tansactions
 SELECT name
 FROM people
+WHERE id IN (
+    
+)
+
