@@ -1,0 +1,3 @@
+avg_energy = 0.65906 (max_energy: 0.909)
+avg_valence = 0.484443 (max_valence: 0.931)
+avg_danceability = 0.71646 (max_danceability: 0.964)
