@@ -3,8 +3,7 @@
 -- To see schema
 .schema
 
--- Check description for any witnesses in the crime_scene_reports for crime that took place
--- on 28th July, 2023
+-- Check for more info in the crime_scene_reports for theft that took place on 28th July, 2023
 SELECT description
 FROM crime_scene_reports
 WHERE year = 2023 AND day = 28 AND month = 07;
