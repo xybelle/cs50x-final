@@ -1,6 +1,7 @@
 SELECT title
 FROM movies
-WHERE id IN (
+JOIN ratings ON movies.id = ratings.movie_id
+WHERE movies.id IN (
     SELECT movie_id
     FROM stars
     WHERE person_id = (
