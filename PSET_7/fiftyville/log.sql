@@ -25,4 +25,4 @@ WHERE year = 2023 AND month = 07 AND day = 28;
 -- Raymond (witness) saw thief called someone on the phone (< 1 minute). Asked the other person
     -- to purchase flight ticket for earliest flight out of Fiftyville on 19th July.
 
--- Check people
+-- Check people table with license_plate gathered from bakery_security_logs 
