@@ -19,3 +19,10 @@ WHERE year = 2023 AND day = 28 AND month = 07 AND hour = 10;
 SELECT id, name, transcript
 FROM interviews
 WHERE year = 2023 AND month = 07 AND day = 28;
+
+-- Ruth (withness) mentioned sometime within 10 mins of the theft, thief got into a car.
+-- Eugene (withness) saw thief withdrawing some money on an ATM on Leggett Street.
+-- Raymond (witness) saw thief called someone on the phone (< 1 minute). Asked the other person
+    -- to purchase flight ticket for earliest flight out of Fiftyville on 19th July.
+
+-- 
