@@ -1,3 +1,5 @@
 SELECT name FROM people
 JOIN stars ON people.id = stars.person_id
-WHERE stars
+WHERE stars.movie_id IN (
+    SELECT 
+)
