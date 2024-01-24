@@ -13,4 +13,4 @@ WHERE year = 2023 AND day = 28 AND month = 07;
 -- Check bakery_security_logs around 10.15am
 SELECT hour, minute, activity, license_plate
 FROM bakery_security_logs
-WHERE year = 2023 AND day = 28 AND month = 07 AND hour = 10;
+WHERE year = 2023 AND day = 28 AND month = 07;
