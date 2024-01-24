@@ -35,4 +35,5 @@ WHERE origin_airport_id = 8 AND year = 2023 AND month = 07 AND day = 29;
 SELECT name
 FROM people
 JOIN passengers ON people.passport_number = passengers.passport_number
-WHERE flight_id = 36;
+WHERE flight_id = 36
+AND WHERE 
