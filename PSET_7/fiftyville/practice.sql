@@ -51,3 +51,5 @@ WHERE passport_number in (
     SELECT license_plate FROM bakery_security_logs
     WHERE year = 2023 AND month = 07 AND day = 28 AND hour = 10
 );
+
+-- Narrowed down to Taylor and Bruce
