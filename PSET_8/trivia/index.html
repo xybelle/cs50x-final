@@ -7,6 +7,17 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            document.querySelector('#g').addEventListener('click', function() {
+                document.button.style.color = 'red';
+            });
+
+             document.querySelector('#w').addEventListener('click', function() {
+                document.button.style.color = 'green';
+            });
+
+            document.querySelector('#f').addEventListener('click', function() {
+                document.body.style.color = 'red';
+            });
         </script>
     </head>
     <body>
@@ -23,19 +34,6 @@
                         <button id='g'> Grass-type pokemon</button>
                         <button id='w'> Water-type pokemon</button>
                         <button id='f'>Fire-type pokemon</button>
-                        <script>
-                            document.querySelector('#g').addEventListener('click', function() {
-                                document.body.style.color = 'red';
-                            });
-
-                            document.querySelector('#w').addEventListener('click', function() {
-                                document.body.style.color = 'green';
-                            });
-
-                            document.querySelector('#f').addEventListener('click', function() {
-                                document.body.style.color = 'red';
-                            });
-                        </script>
             </div>
 
             <div class="section">
@@ -45,8 +43,7 @@
                     <h3>Psyduck is constantly stunned by its headache and requires attention from
                         trainers trying to raise it. If the headache isn't treated, Psyduck's
                         psychic powers awaken. But it never remembers using its odd powers,
-                        so it always titls its head in puzzlement. Because of said
-                        qualities of Psyduck, would you still want to care for one, and why or why not?
+                        so it always titls its head in puzzlement.
                     </h3>
                     <input type='text'>
             </div>
