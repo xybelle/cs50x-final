@@ -12,13 +12,21 @@
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#result').innerHTML = 'Correct!';
-                });
+
+                for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener('click', function() {
+                        corrects[i].style.backgroundColor = 'Green';
+                        corrects[i].parentElement.querySelector('#result').innerHTML = 'Correct!';
+                    });
+                }
 
                 let incorrect = document.querySelectpr('.incorrect');
-                incorrect.addEventListener('click', function() {
-                    incorrect.stle.backgroundColor = 'red';
-                    document.querySelector('#result1').innerHTML = 'Incorrect';
-                });
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'Red';
+                        incorrects[i].parentElement.querySelector('#result').innerHTML = 'Incorrect';
+                    });
+                }
 
                 document.querySelector('#check').addEventListener('click', function() {
                     let input = document.querySelector('input');
