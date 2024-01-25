@@ -12,7 +12,7 @@
                 document.querySelector('#result').innerHTML = 'Correct!';
             });
 
-            let incorrects = document.querySelectorAll('.incorrect'); // fix: use 'incorrects' instead of 'incorrect'
+            let incorrects = document.querySelectorAll('.incorrect');
             for (let i = 0; i < incorrects.length; i++) {
                 incorrects[i].addEventListener('click', function() {
                     incorrects[i].style.backgroundColor = 'red';
