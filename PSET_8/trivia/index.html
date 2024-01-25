@@ -21,7 +21,7 @@
                 }
 
                 let incorrect = document.querySelector('.incorrect');
-                for (let i = 0; i < incorrects.length; i++) {
+                for (let i = 0; i < incorrect.length; i++) {
                     incorrects[i].addEventListener('click', function() {
                         incorrects[i].style.backgroundColor = 'Red';
                         incorrects[i].parentElement.querySelector('#result').innerHTML = 'Incorrect';
