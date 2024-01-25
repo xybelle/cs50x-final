@@ -25,7 +25,7 @@
                         <input id='f' name='q1' type='radio' value='fire'>Fire-type pokemon
                     <script>
 
-                        let answer = document.querySelector('input');
+                        let answer = document.querySelector('input[name='q1']:checked');
                         document.querySelector('#g').addEventListener('click', function() {
                             answer.style.color = 'red';
                         });
