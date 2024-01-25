@@ -7,16 +7,12 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelector('#g').addEventListener('click', function() {
+            document.querySelector('#incorrect').addEventListener('click', function() {
                 document.button.style.color = 'red';
             });
 
-             document.querySelector('#w').addEventListener('click', function() {
+             document.querySelector('#correct').addEventListener('click', function() {
                 document.button.style.color = 'green';
-            });
-
-            document.querySelector('#f').addEventListener('click', function() {
-                document.body.style.color = 'red';
             });
         </script>
     </head>
@@ -31,7 +27,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                     <h3>What type of pokemon is a Psyduck?</h3>
-                        <button id='g'> Grass-type pokemon</button>
+                        <button classid='g'> Grass-type pokemon</button>
                         <button id='w'> Water-type pokemon</button>
                         <button id='f'> Fire-type pokemon</button>
             </div>
