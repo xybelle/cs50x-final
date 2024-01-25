@@ -7,11 +7,11 @@
         <title>Trivia!</title>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                
+
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#result1').innerHTML = 'Correct!';
+                    document.querySelector('#result').innerHTML = 'Correct!';
                 });
 
                 let incorrect = document.querySelectpr('.incorrect');
@@ -19,11 +19,19 @@
                     incorrect.stle.backgroundColor = 'red';
                     document.querySelector('#result1').innerHTML = 'Incorrect';
                 });
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value == 'Golduck') {
+                        input.style.backgroundColor = 'green'l
+                        input.parentElement.querySelector('#result').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('#result').innerHTML = 'Incorrect';
+                    }
+                });
             });
-
-
-
-
 
         </script>
     </head>
@@ -38,7 +46,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What type of pokemon is a Psyduck?</h3>
-                <p id="result1"></p>
+                <p id="result"></p>
                 <button class="incorrect"> Grass-type pokemon </button>
                 <button class="correct"> Water-type pokemon </button>
                 <button class="incorrect"> Fire-type pokemon </button>
@@ -49,7 +57,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the evolved Psyduck called?</h3>
-                <p id="result2"></p>
+                <p id="result"></p>
                 <input type="text" name="answer" placeholder="Answer">
                 <button id="check"> Check answer </button>
             </div>
