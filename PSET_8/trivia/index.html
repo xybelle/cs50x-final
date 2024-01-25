@@ -24,18 +24,16 @@
                         <button id='w'> Water-type pokemon</button>
                         <button id='f'>Fire-type pokemon</button>
                         <script>
-                            let answer = document.querySelector('input[name="q1"]:checked');
-
                             document.querySelector('#g').addEventListener('click', function() {
-                                answer.style.color = 'red';
+                                document.body.style.color = 'red';
                             });
 
                             document.querySelector('#w').addEventListener('click', function() {
-                                answer.style.color = 'green';
+                                document.body.style.color = 'green';
                             });
 
                             document.querySelector('#f').addEventListener('click', function() {
-                                answer.style.color = 'red';
+                                document.body.style.color = 'red';
                             });
                         </script>
             </div>
