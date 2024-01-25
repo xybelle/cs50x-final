@@ -6,10 +6,9 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            function result()
-            {
-                if document.querySelector('#grass').value == 'grass'
-            }
+            document.querySelector('#grass').addEventListener('click', function() {
+                document.querySelector('#grass').style.color = 'red';
+            });
 
 
         </script>
@@ -26,7 +25,7 @@
                 <!-- TODO: Add multiple choice question here -->
                     <h3>What type of pokemon is a Psyduck?</h3>
                     <p id="result1")></p>
-                        <button id="grass" onclick="result(); return false;"> Grass-type pokemon </button>
+                        <button id="grass"> Grass-type pokemon </button>
                         <button id="water"> Water-type pokemon </button>
                         <button id="fire"> Fire-type pokemon </button>
             </div>
