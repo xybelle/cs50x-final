@@ -24,26 +24,18 @@
                         <input id='w' name='q1' type='radio' value='water'> Water-type pokemon
                         <input id='f' name='q1' type='radio' value='fire'>Fire-type pokemon
                         <script>
-                            // Selecting the input elements with the name 'q1'
-                            let inputs = document.querySelectorAll('input[name="q1"]');
+                            let answer = document.querySelector('input[name="q1"]:checked');
 
-                            // Adding click event listeners to each input
-                            inputs.forEach(function(input) {
-                                input.addEventListener('click', function() {
-                                    // Resetting the color of all inputs before setting the color for the selected one
-                                    inputs.forEach(function(innerInput) {
-                                        innerInput.nextElementSibling.style.color = '';
-                                    });
+                            document.querySelector('#g').addEventListener('click', function() {
+                                answer.style.color = 'red';
+                            });
 
-                                    // Setting the color based on the selected input
-                                    if (input.value === 'grass') {
-                                        input.nextElementSibling.style.color = 'red';
-                                    } else if (input.value === 'water') {
-                                        input.nextElementSibling.style.color = 'green';
-                                    } else if (input.value === 'fire') {
-                                        input.nextElementSibling.style.color = 'red';
-                                    }
-                                });
+                            document.querySelector('#w').addEventListener('click', function() {
+                                answer.style.color = 'green';
+                            });
+
+                            document.querySelector('#f').addEventListener('click', function() {
+                                answer.style.color = 'red';
                             });
                         </script>
             </div>
