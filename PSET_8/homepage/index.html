@@ -14,3 +14,54 @@
         hello, homepage
     </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Customer Satisfaction Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Customer Satisfaction Survey Form</h1>
+    <p id="description">Thanks for taking the time to help us improve choom!</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Name <input id="name" name="name" type="text" required placeholder="Please enter your name" /></label>
+        <label id="email-label" for="email">Email <input id="email" name="email" type="email" required placeholder="Please enter your email" /></label>
+        <label id="number-label" for="number">Age <input id="number" name="number" type="number" min="12" max="100" placeholder="Please enter your age" /></label>
+      </fieldset>
+
+      <fieldset>
+        <label for="dropdown">Would you recommend NiCola to your chooms? <select id="dropdown" name="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Absolutely</option>
+          <option value="2">Not quite</option>
+          <option value="3">Definitely not</option></select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What's your favorite flavor? </legend>
+        <label for="fave-flavor"><input type="radio" id="fave-flavor" name="flavor" checked value="classic" class="inline"> NiCola Classic</label>
+        <label for="fave-flavor"><input type="radio" id="fave-flavor" name="flavor" value="blue" class="inline"> NiCola Blue</label>
+        <label for="fave-flavor"><input type="radio" id="fave-flavor" name="flavor" value="sakura" class="inline"> NiCola Sakura</label>
+        <label for="fave-flavor"><input type="radio" id="fave-flavor" name="flavor" value="fire" class="inline"> NiCola Fire</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="improvements">What do you think we can improve on? </label>
+        <label><input id="improvements" type="checkbox" name="improvements" value="flavor" class="inline"> Additional flavors</label>
+        <label><input id="improvements" type="checkbox" name="improvements" value="packaging" class="inline"> Packaging</label>
+        <label><input id="improvements" type="checkbox" name="improvements" value="availability" class="inline"> Need more stores</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="comments">Any additional comments? <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
