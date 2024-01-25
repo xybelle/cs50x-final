@@ -20,9 +20,23 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                     <h3>What type of pokemon is a Psyduck?</h3>
-                        <input name='q1' type='radio' value='grass'>Grass-type pokemon
-                        <input name='q1' type='radio' value='water'> Water-type pokemon
-                        <input name='q1' type='radio' value='fire'>Fire-type pokemon
+                        <input id='g' name='q1' type='radio' value='grass'>Grass-type pokemon
+                        <input id='w' name='q1' type='radio' value='water'> Water-type pokemon
+                        <input id='f' name='q1' type='radio' value='fire'>Fire-type pokemon
+                <script>
+
+                    let answer = document.queryselector('input');
+                    document.querySelector('#g').addEventListener('click', function() {
+                        input.style.fontColor = 'red';
+                    });
+                    document.querySelector('#w').addEventListener('click', function() {
+                        body.style.fontColor = 'green';
+                    });
+                    document.querySelector('#g').addEventListener('click', function() {
+                        body.style.fontColor = 'red';
+                    });
+
+                </script>
             </div>
 
             <div class="section">
