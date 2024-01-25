@@ -6,13 +6,15 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            let answer = document.querySelector('button')
-            document.querySelector('#incorrect').addEventListener('click', function() {
-                document.querySelector('#incorrect').style.color = 'red';
+            let correct = document.querySelector('#correct');
+            let incorrect = document.querySelector('#incorrect');
+
+            correct.addEventListener('click', function() {
+                correct.style.color = 'red';
             });
 
-             document.querySelector('#correct').addEventListener('click', function() {
-                document.querySelector('#correct').style.color = 'green';
+             incorrect.addEventListener('click', function() {
+                incorrect.style.color = 'green';
             });
         </script>
     </head>
