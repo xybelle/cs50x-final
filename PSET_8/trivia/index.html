@@ -23,20 +23,29 @@
                         <input id='g' name='q1' type='radio' value='grass'>Grass-type pokemon
                         <input id='w' name='q1' type='radio' value='water'> Water-type pokemon
                         <input id='f' name='q1' type='radio' value='fire'>Fire-type pokemon
-                    <script>
+                        <script>
+                            // Selecting the input elements with the name 'q1'
+                            let inputs = document.querySelectorAll('input[name="q1"]');
 
-                        let answer = document.querySelector('input[name="q1"]:checked');
-                        document.querySelector('#g').addEventListener('click', function() {
-                            answer.style.color = 'red';
-                        });
-                        document.querySelector('#w').addEventListener('click', function() {
-                            answer.style.color = 'green';
-                        });
-                        document.querySelector('#g').addEventListener('click', function() {
-                            answer.style.color = 'red';
-                        });
+                            // Adding click event listeners to each input
+                            inputs.forEach(function(input) {
+                                input.addEventListener('click', function() {
+                                    // Resetting the color of all inputs before setting the color for the selected one
+                                    inputs.forEach(function(innerInput) {
+                                        innerInput.nextElementSibling.style.color = '';
+                                    });
 
-                    </script>
+                                    // Setting the color based on the selected input
+                                    if (input.value === 'grass') {
+                                        input.nextElementSibling.style.color = 'red';
+                                    } else if (input.value === 'water') {
+                                        input.nextElementSibling.style.color = 'green';
+                                    } else if (input.value === 'fire') {
+                                        input.nextElementSibling.style.color = 'red';
+                                    }
+                                });
+                            });
+                        </script>
             </div>
 
             <div class="section">
