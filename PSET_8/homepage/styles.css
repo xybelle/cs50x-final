@@ -2,7 +2,6 @@
   border-radius: 50%;
   width: 30%;
   height: 30%;
-  align: center;
 }
 
 $container-max-widths: (
@@ -13,9 +12,6 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+div {
+  justify-content: center;
 }
