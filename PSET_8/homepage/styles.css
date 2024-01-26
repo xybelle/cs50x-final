@@ -5,6 +5,10 @@
   text-align: left;
 }
 
+header {
+  background-color: #192841;
+}
+
 body {
   background-image: url('/images/background.jpg');
   background-repeat: no-repeat;
@@ -13,7 +17,7 @@ body {
 }
 
 footer {
-  background-color: blue;
+  background-color: #152238;
   padding: 10px;
   text-align: center;
 }
