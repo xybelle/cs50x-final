@@ -13,6 +13,6 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-.container-fluid img {
-
+section {
+  display: block;
 }
