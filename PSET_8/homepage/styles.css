@@ -12,6 +12,6 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-div {
-  justify-content: center;
+.container-fluid img {
+  
 }
