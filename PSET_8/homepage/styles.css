@@ -1,7 +1,5 @@
 
-header {
-  background-color: #192841;
-}
+
 
 body {
   background-repeat: no-repeat;
@@ -35,7 +33,7 @@ main {
 }
 
 footer {
-  background-color: #152238;
+  background-color: #f0f0f0;
   padding: 10px;
   text-align: center;
 }
