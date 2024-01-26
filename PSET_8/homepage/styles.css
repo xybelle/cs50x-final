@@ -13,5 +13,5 @@ $container-max-widths: (
 );
 
 .container-fluid img {
-  
+  margin: auto;
 }
