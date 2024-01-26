@@ -1,9 +1,3 @@
-.header {
-  font-size: 50px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  text-align: left;
-}
 
 header {
   background-color: #192841;
@@ -25,10 +19,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
 }
 
 main {
