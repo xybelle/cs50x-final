@@ -13,6 +13,4 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-section {
-  display: block;
-}
+
