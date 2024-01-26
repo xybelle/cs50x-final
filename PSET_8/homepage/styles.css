@@ -13,3 +13,16 @@ $container-max-widths: (
   xxl: 1320px
 );
 
+.container-fluid {
+  width: 200px;
+  height: 200px;
+  background-color: #0a0a23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid img {
+  width: 100px;
+  height: 100px;
+}
