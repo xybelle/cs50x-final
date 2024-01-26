@@ -2,6 +2,7 @@
   border-radius: 50%;
   width: 30%;
   height: 30%;
+  margin: auto;
 }
 
 $container-max-widths: (
@@ -12,6 +13,3 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-.container-fluid img {
-  margin: auto;
-}
