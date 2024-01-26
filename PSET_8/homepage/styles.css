@@ -2,10 +2,3 @@
   font-size: 50px;
 }
 
-@media all and (max-width:800px) {
-  #one, #two, #three {
-    display: block;
-    float: none;
-    width: 100%;
-  }
-}
