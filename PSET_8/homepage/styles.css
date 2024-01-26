@@ -4,7 +4,6 @@ header {
 }
 
 body {
-  background-image: url('/images/background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -19,6 +18,17 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Light pink background color */
+}
+
+.container {
+    margin: 20px; /* Adjust the margin as needed for thin white borders */
+    border: 1px solid #ffe6f2; /* White border */
+    background-color: #ffe6f2; /* White background for the container */
+    padding: 20px; /* Adjust the padding as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 main {
