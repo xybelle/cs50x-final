@@ -85,7 +85,7 @@ section {
   color: #fff;
   margin-bottom: 40px;
   text-align: center;
-  line
+  line-height: 1;
 }
 
 @media (max-width: 1460px){
