@@ -42,3 +42,9 @@ footer {
   background-color: #FDAB9F;
   padding: 30px;
 }
+
+button {
+  font-size: 20px;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+}
