@@ -52,9 +52,7 @@ button {
 
 #hidden-icon {
   display: none;
-  width: 5%;
-  height: 65%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 30%;
+  height: 40%;
+
 }
