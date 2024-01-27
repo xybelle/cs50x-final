@@ -66,9 +66,6 @@
             <div class="container-fluid">
               <div class="container text-center">
                 <div class="row">
-                  <img id="hidden-icon" src="/images/cat.png" alt="hidden icon">
-                </div>
-                <div class="row">
                   <div class="col" style="position: relative;">
                     <img id="hidden-icon" src="/images/cat.png" alt="hidden icon">
                     <button onclick="showIcon()">give treats!</button>
@@ -77,6 +74,13 @@
                       function showIcon() {
                         var icon = document.getElementById('hidden-icon');
                         icon.style.display = 'inline-block';
+
+                      var buttonRect = document.querySelector('button').getBoundingClientRect();
+                      icon.style.top = buttonRect.top - icon.clientHeight + 'px';
+
+                      // Adjust the value based on your layout preferences
+                      icon.style.left = buttonRect.left - icon.width + 'px';
+
 
                       setTimeout(function() {
                         icon.style.display = 'none';
