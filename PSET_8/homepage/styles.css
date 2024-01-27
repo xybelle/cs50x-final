@@ -88,9 +88,14 @@ section {
   }
 }
 
-@media (max-width: 1195px) {
+@media (max-width: 500px) {
   section {
     padding: 0 2%;
   }
-  .meet-text
+  .meet {
+    text-align: center;
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
 }
