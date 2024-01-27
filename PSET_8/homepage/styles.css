@@ -28,6 +28,10 @@ main {
   flex: 1;
 }
 
+.avatar {
+  border: 8px solid #fff;
+}
+
 footer {
   background-color: #f0f0f0;
   text-align: center;
