@@ -87,3 +87,5 @@ section {
     transition: 2s;
   }
 }
+
+@media (max-width: 1340px)
