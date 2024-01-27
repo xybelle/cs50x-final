@@ -67,9 +67,17 @@
               <div class="container text-center">
                 <div class="row">
                   <div class="col">
-                    <button>give treats!</button>
+                    <button onclick="show-icon()">give treats!</button>
                   </div>
                 </div>
+                <div class="hidden"></div>
+
+                <script>
+                  function show-icon() {
+                    var icon = document.getElementByID('hidden-icon');
+                    icon.style.display: 'inline-block';
+                  }
+                </script>
 
               </div>
 
@@ -79,7 +87,7 @@
         </main>
 
         <footer>
-
+          <a href="https://www.flaticon.com/free-icons/cat" title="cat icons">Cat icons created by Freepik - Flaticon</a>
         </footer>
     </body>
 </html>

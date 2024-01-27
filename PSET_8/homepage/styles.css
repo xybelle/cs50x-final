@@ -49,3 +49,8 @@ button {
   border-radius: 25px;
   padding: 12px 30px;
 }
+
+#hidden-icon {
+  display: none;
+  font-size: 30px;
+}
