@@ -54,7 +54,7 @@ button {
   display: none;
   width: 80px;
   height: 50px;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
 }
