@@ -33,11 +33,6 @@ footer {
   text-align: center;
 }
 
-.tiktok {
-  width: 250px;
-  height: 500px;
-}
-
 .container-fluid {
   background-color: #FDAB9F;
   padding: 30px;
@@ -55,6 +50,11 @@ button {
   width: 60px;
   height: 60px;
   padding: 10px;
+}
+
+.tiktok {
+  width: 250px;
+  height: 500px;
 }
 
 .meet {
