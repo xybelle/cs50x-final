@@ -68,17 +68,20 @@
                 <div class="row">
                   <div class="col">
                     <button onclick="show-icon()">give treats!</button>
-                    <img id="hidden-icon" src="images/cat.png" alt="hidden icon">
+                    <img id="hidden-icon" src="/images/cat.png" alt="hidden icon">
+
+                    <script>
+                      function show-icon() {
+                        var icon = document.getElementByID('hidden-icon');
+                        icon.style.display: 'inline-block';
+                      }
+                    </script>
+
                   </div>
                 </div>
                 <div class="hidden"></div>
 
-                <script>
-                  function show-icon() {
-                    var icon = document.getElementByID('hidden-icon');
-                    icon.style.display: 'inline-block';
-                  }
-                </script>
+
 
               </div>
 
