@@ -70,7 +70,7 @@ video {
 }
 
 section {
-  padding: 0, 19%;
+  padding: 0 19%;
 }
 
 .meet-text h1 {
@@ -88,4 +88,9 @@ section {
   }
 }
 
-@media (max-width: 1340px)
+@media (max-width: 1195px) {
+  section {
+    padding: 0 2%;
+  }
+  .meet-text
+}
