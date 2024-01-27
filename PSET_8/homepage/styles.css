@@ -61,6 +61,7 @@ video {
   width: 250px;
   height: 500px;
   border-radius: 20px;
+  border: 8px solid #fff;
 }
 
 .meet {
@@ -81,9 +82,10 @@ section {
 .meet-text h1 {
   font-size: 50px;
   font-weight: 600;
-  color: gray;
+  color: #fff;
   margin-bottom: 40px;
   text-align: center;
+  line
 }
 
 @media (max-width: 1460px){
