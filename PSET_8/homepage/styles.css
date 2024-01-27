@@ -38,6 +38,7 @@ footer {
   height: 500px;
 }
 
-.row {
-  background-color: #FEC535;
+.container-fluid {
+  background-color: #FEC5E5;
+  padding: 30px;
 }
