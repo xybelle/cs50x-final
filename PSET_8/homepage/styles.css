@@ -54,4 +54,11 @@ button {
   display: none;
   width: 80px;
   height: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.col {
+  position: relative;
 }
