@@ -21,6 +21,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  color: #fff;
 }
 
 main {
@@ -29,7 +30,6 @@ main {
 
 footer {
   background-color: #f0f0f0;
-
   text-align: center;
 }
 
