@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+STUDENTS = {}
+
 CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
 
 @app.route("/", methods=["POST"])
@@ -17,3 +19,5 @@ def register():
             or not request.form.get("email") or not in CLASSES:
         return render_template("error.html", message="Missing email")
     return render_template("success.html")
+
+    STUDENTS[fname]
