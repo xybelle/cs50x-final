@@ -2,8 +2,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+CLASS = ["Ballet", "Jazz", "Hip-Hop"]
+
 @app.route("/", methods=["POST"])
-    return render_template("index.html")
+    return render_template("index.html", class=CLASS)
 
 @app.route("/register", methods=["POST"])
 def register():

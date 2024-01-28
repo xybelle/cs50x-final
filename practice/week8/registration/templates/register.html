@@ -11,9 +11,9 @@
 
         <select name="class">
             <option disabled selected value="">Class</option>
-            <option>Ballet</option>
-            <option>Jazz</option>
-            <option>Hip-Hop</option>
+            {% for class in classes %}
+            <option>{{ class }}</option>
+            {% endfor %}
         </select>
 
         <button type="submit">Register</button>
