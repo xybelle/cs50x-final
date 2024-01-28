@@ -1,8 +1,9 @@
+from cs50 import SQL
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-STUDENTS = {}
+db = SQL("sqlite:///gds.db")
 
 CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
 
