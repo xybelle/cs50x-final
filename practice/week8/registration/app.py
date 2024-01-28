@@ -7,5 +7,7 @@ app = Flask(__name__)
 
 @app.route("/register", methods=["POST"])
 def register():
-    if not request.form.get("name"):
-        return "failure"
+    if not request.form.get("fname") or not request.form.get("sname")
+        or not request.form.get("email"):
+            return render_template("fail.html")
+    return render_template("success.html")
