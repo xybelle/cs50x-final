@@ -21,3 +21,9 @@ def register():
     return render_template("success.html")
 
     STUDENTS[fname]
+
+    return redirect("/confirmation")
+
+@app.route("/confirmation")
+def confirmation():
+     return render_template("confirmation.html", students=STUDENTS)
