@@ -11,4 +11,5 @@ app = Flask(__name__)
 
 @app.route("/register")
 def register():
-    
+    if not request.form.get("name"):
+        return "failure"
