@@ -21,7 +21,7 @@ def register():
         return render_template("error.html", message="Missing email")
     return render_template("success.html")
 
-    STUDENTS[fname]
+    
 
     return redirect("/confirmation")
 
