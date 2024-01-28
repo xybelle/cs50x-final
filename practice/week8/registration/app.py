@@ -13,18 +13,20 @@ CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
 @app.route("/register", methods=["POST"])
 def register():
 
-    #fname = request.form.get("fname")
-    #if not name:
-    #    return render_template("error.html", message="Missing name")
-    if not request.form.get("fname") or not request.form.get("sname")
-            or not request.form.get("email") or not in CLASSES:
-        return render_template("error.html", message="Missing email")
-    return render_template("success.html")
+    # Validate submission
+    fname = request.form.get("fname")
+    sname = request.form.get("sname")
+    email = request.form.get("email")
+    if not fname or sname or email or class in CLASSES:
+        return render_template("error.html", message="Something is missing")
 
-    
+    # Remember students
+    db.execute("INSERT INTO students (fname, sname, email) VALUES (?, ?, ?)", fname, sname, email)
 
-    return redirect("/confirmation")
+    # Confirm registration
+    return redirect("/registrants")
 
-@app.route("/confirmation")
-def confirmation():
+@app.route("/registrants")
+def registrants():
+    registrants = db.execute("SELECT * FROM)
      return render_template("confirmation.html", students=STUDENTS)
