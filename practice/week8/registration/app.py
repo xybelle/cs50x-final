@@ -9,7 +9,11 @@ CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
 
 @app.route("/register", methods=["POST"])
 def register():
+
+    #fname = request.form.get("fname")
+    #if not name:
+    #    return render_template("error.html", message="Missing name")
     if not request.form.get("fname") or not request.form.get("sname")
             or not request.form.get("email") or not in CLASSES:
-        return render_template("fail.html")
+        return render_template("error.html", message="Missing email")
     return render_template("success.html")
