@@ -12,7 +12,7 @@ Session(app)
 CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
 
 @app.route("/", methods=["POST"])
-    return render_template("index.html", class=CLASSES)
+    return render_template("index.html")
 
 @app.route("/register", methods=["POST"])
 def register():
