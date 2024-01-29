@@ -21,6 +21,21 @@
                     <input name="day" type="numbers" min="1" max="31" placeholder="Day" autocomplete="off">
                     <button type="submit">Add Birthday</button>
                 </form>
+
+                <!-- JS for form validation -->
+                <script>
+                    function validateForm() {
+                        var name = document.forms[0]["name"].value;
+                        var month = document.forms[0]["month"].value;
+                        var day = document.forms[0]["day"].value;
+
+                        if (name === "" || month === "" || day === "") {
+                            alert("Please fill out all fields");
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
             </div>
 
             <div class="section">
