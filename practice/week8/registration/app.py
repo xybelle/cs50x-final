@@ -33,5 +33,5 @@ def register():
 
 @app.route("/registrants")
 def registrants():
-    registrants = db.execute("SELECT * FROM)
-     return render_template("confirmation.html", students=STUDENTS)
+    registrants = db.execute("SELECT * FROM")
+    return render_template("confirmation.html", students=STUDENTS)
