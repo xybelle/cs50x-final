@@ -35,7 +35,7 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for birthday in birthdays %}
-                            <li>{{ birthdays["name"] }}</li>
+                            <li>{{ birthdays["name"], birthday[] }}</li>
                         {% endfor %}
                     </tbody>
                 </table>
