@@ -5,10 +5,6 @@ app = Flask(__name__)
 
 db = SQL("sqlite:///gds.db")
 
-app.config["SESSION_PERMANENT"] = False
-app.config["SESSION_TYPE"] = "filesystem"
-Session(app)
-
 CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
 
 @app.route("/", methods=["POST"])
@@ -22,7 +18,7 @@ def register():
     fname = request.form.get("fname")
     sname = request.form.get("sname")
     email = request.form.get("email")
-    if not fname or sname or email or class in CLASSES:
+    if not fname or sname or email or "class" in CLASSES:
         return render_template("error.html", message="Something is missing")
 
     # Remember students
@@ -34,4 +30,4 @@ def register():
 @app.route("/registrants")
 def registrants():
     registrants = db.execute("SELECT * FROM")
-    return render_template("confirmation.html", students=STUDENTS)
+    return render_template("confirmation.html")
