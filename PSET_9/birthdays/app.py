@@ -33,7 +33,9 @@ def index():
     else:
 
         # TODO: Display the entries in the database on index.html
-        all_birthdays = db.execute("SELECT * FROM birthdays")
+        name = db.execute("SELECT name FROM birthdays")
+        birth_month = db.execute("SELECT month FROM birthdays")
+        birth_day = db.execute("SELECT day FROM birthdays")
         return render_template("index.html", birthdays = all_birthdays)
 
 
