@@ -139,8 +139,14 @@ def buy():
         elif shares <= 0:
             return apology("Enter the number of shares you wish to buy")
         else:
-            cash = db.execute("SELECT cash FROM users WHERE username = ?", )
+            cash = db.execute("SELECT cash FROM users WHERE username = ?", request.form.get("username"))
+            buy_price = stock['price'] * shares
+            bal = cash - buy_price
 
+            if cash < buy_price:
+                return apology("Not enough balance")
+            else:
+                
 
 
 @app.route("/register", methods=["GET", "POST"])
