@@ -152,7 +152,7 @@ def buy():
                 return apology("Not enough balance")
             else:
                 rows = db.execute(
-                "SELECT * FROM users WHERE username = ?", request.form.get("username")
+                "SELECT * FROM users WHERE id = ?", request.form.get("username")
                 )
                 id = rows[0]["id"]
 
