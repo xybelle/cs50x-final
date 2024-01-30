@@ -253,7 +253,11 @@ def sell():
     if request.method == "POST":
         stock = request.form.get('stock_options')
         shares = request.form.get('shares')
-        
+
+        if not stock and not shares:
+            return apology("Must select stock and enter shares")
+        elif shares
+
 
         return apology("todo")
 
