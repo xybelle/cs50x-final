@@ -151,9 +151,7 @@ def buy():
             if bal < 0:
                 return apology("Not enough balance")
             else:
-                rows = db.execute(
-                "SELECT * FROM users WHERE id = ?", request.form.get("username")
-                )
+                rows = db.execute("SELECT * FROM users WHERE id = ?", user)
                 id = rows[0]["id"]
 
                 # Add transaction to database
@@ -161,6 +159,8 @@ def buy():
 
                 # Update cash balance
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", bal, id)
+
+    return redirect("/")
 
 
 
