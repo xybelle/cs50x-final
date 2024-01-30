@@ -99,8 +99,7 @@ def buy():
         elif shares is None or shares == "" or int(shares) <= 0:
             return apology("Enter the number of shares you wish to buy")
         else:
-            user = session["user_id"]
-            rows = db.execute("SELECT * FROM users WHERE id = ?", user)
+            rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
             cash = rows[0]["cash"]
             buy_price = int(stock['price']) * int(shares)
             bal = cash - buy_price
@@ -267,7 +266,7 @@ def sell():
             return apology("Enter number of shares you wish to sell")
 
         rows = db.execute("SELECT * FROM users WHERE id = ?", session['user_id'])
-        
+
 
 
 
