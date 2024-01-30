@@ -18,10 +18,10 @@
             <tbody>
                 {% for stock in stocks %}
                     <tr>
-                        <td>{{ portfolio.symbol }}</td>
-                        <td>{{ portfolio.shares_owned }}</td>
-                        <td>{{ portfolio.current_price }}</td>
-                        <td>{{ portfolio.total_value }}</td>
+                        <td>{{ stocks.sym }}</td>
+                        <td>{{ stocks.shares }}</td>
+                        <td>{{ stocks.xprice }}</td>
+                        <td>{{ stocks.total }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
