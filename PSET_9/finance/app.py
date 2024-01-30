@@ -43,7 +43,7 @@ def index():
     grand_total = 0
 
     # Get current price of each stock and calculate total value
-    for i in stocks:
+    for i in range(len(stocks)):
         symbol = stocks[i]['stock']
         price = lookup(symbol)
         current_price = price['price']
