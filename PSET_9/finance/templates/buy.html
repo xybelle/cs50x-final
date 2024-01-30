@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Quoted
+    Buy
 {% endblock %}
 
 {% block main %}
@@ -21,4 +21,12 @@
             </tbody>
         </table>
     </div>
+
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares"
+                placeholder="Number of shares" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
 {% endblock %}
