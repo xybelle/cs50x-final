@@ -106,16 +106,22 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+    # When requested via GET
     if request.method == "GET":
         return render_template("quote.html")
 
+    # When form is submitted via POST
     if request.method == "POST":
         symbol = request.form.get("symbol")
 
         stock = lookup(symbol)
 
+        # If lookup is unsuccessful
         if stock == None:
             return apology("Symbol does not exist")
+
+        # If lookup is successful
         else:
             print(stock)
             return render_template("quoted.html", price=stock['price'], symbol=stock['symbol'])
