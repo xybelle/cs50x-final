@@ -65,7 +65,7 @@ def index():
         cash_bal = balance[0]['cash']
         grand_total = total_value + cash_bal
 
-        return render_template("index.html", stocks=stocks, shares=shares_owned, current_price=current_price,
+        return render_template("index.html", stocks=stock, shares=shares_owned, current_price=current_price,
                            total_value=total_value, balance=cash_bal, grand_total=grand_total)
 
 
