@@ -143,10 +143,10 @@ def buy():
             buy_price = stock['price'] * shares
             bal = cash - buy_price
 
-            if cash < buy_price:
+            if bal < 0:
                 return apology("Not enough balance")
             else:
-                
+
 
 
 @app.route("/register", methods=["GET", "POST"])
