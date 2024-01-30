@@ -42,6 +42,10 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
+    # When requested via GET
+    if request.method == "GET":
+        return render_template("quote.html")
     return apology("TODO")
 
 
