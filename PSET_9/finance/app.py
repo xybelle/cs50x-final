@@ -116,14 +116,16 @@ def register():
     pw = request.form.get("password")
     conf = request.form.get("confirmation")
     un = db.execute("SELECT username FROM users WHERE username = ?", request.form.get("username"))
-    if not name:
-        return apology("Please enter a username")
-    elif un == name:
-        return apology("Username already exists")
-    elif not pw:
-        return apology("Please enter a password")
-    elif pw != conf:
-        return apology("Passwords do not match")
+
+    if request.method == "POST":
+        if not name:
+            return apology("Please enter a username")
+        elif un == name:
+            return apology("Username already exists")
+        elif not pw:
+            return apology("Please enter a password")
+        elif pw != conf:
+            return apology("Passwords do not match")
 
     hash = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
 
