@@ -35,8 +35,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    stocks = db.execute("SELECT stock FROM stocks WHERE user_id = ?", session["user_id"])
-    shares_owned = db.execute("SELECT stock, shares FROM stocks WHERE user_id = ?", session["user_id"])
+    stocks = db.execute("SELECT stock FROM stocks WHERE user_id = ? GROUP BY stock", session["user_id"])
+    shares_owned = db.execute("SELECT SUM(shares) FROM stocks WHERE user_id = ? GROUP BY stock", session["user_id"])
     return apology("TODO")
 
 
