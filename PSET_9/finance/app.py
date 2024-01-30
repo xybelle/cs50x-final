@@ -51,6 +51,7 @@ def index():
     total_value = shares_owned * current_price
 
     # Get grand total (stocks total value plus cash balance)
+    balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     grand_total = total_value + balance
 
     return apology("TODO")
