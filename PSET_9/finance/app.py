@@ -129,7 +129,7 @@ def register():
 
     db.excute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hash)
 
-    return apology("TODO")
+    return redirect("/login")
 
 
 @app.route("/sell", methods=["GET", "POST"])
