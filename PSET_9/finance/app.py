@@ -114,7 +114,7 @@ def register():
     """Register user"""
 
 
-    return redirect("/register")
+    return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
