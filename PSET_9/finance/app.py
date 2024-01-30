@@ -46,12 +46,11 @@ def index():
     portfolio = []
 
     grand_total = 0
-    total_value = 0
-    
+
     # Get current price of each stock and calculate total value
     for i in range(len(stocks)):
         stock_info = {}
-
+        total_value = 0
         symbol = stocks[i]['stock']
         price = lookup(symbol)
         current_price = price['price']
@@ -65,7 +64,7 @@ def index():
         shares_owned = row[0]['SUM(shares)']
 
         # Total value of each holding
-        total_value += int(current_price) * shares_owned
+        total_value = int(current_price) * shares_owned
 
         # Update stock_info dictionary
         stock_info['symbol'] = symbol
