@@ -5,5 +5,19 @@
 {% endblock %}
 
 {% block main %}
-    
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Symbol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ birthday.name }}</th>
+            <td>{{ birthday.month }} / {{ birthday.day }}</td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}
