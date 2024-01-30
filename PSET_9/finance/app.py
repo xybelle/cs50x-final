@@ -115,8 +115,11 @@ def register():
     name = request.form.get("username")
     pw = request.form.get("password")
 
-    if not name or not pw:
-        return redirect("/register")
+    if not name:
+        return apology("Please enter a username")
+    elif not pw:
+        return apology("Please enter a password")
+    
     return apology("TODO")
 
 
