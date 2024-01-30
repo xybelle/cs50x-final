@@ -155,7 +155,7 @@ def buy():
                 db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], shares)
 
                 # Update cash balance
-                db.execute("INSERT INTO users ())
+                db.execute("UPDATE users SET cash = bal WHERE id =?", id)
 
 
 @app.route("/register", methods=["GET", "POST"])
