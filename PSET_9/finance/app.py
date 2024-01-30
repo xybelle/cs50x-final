@@ -131,11 +131,12 @@ def buy():
         return render_template("quote.html")
 
     if request.method == "POST":
-        stock = lookup(request.form.get("symbol"))
+        quote()
         shares = request.form.get("shares")
-        if shares < 0:
+        if shares <= 0:
             return apology("Enter the number of shares you wish to buy")
         else:
+            
 
 
 @app.route("/register", methods=["GET", "POST"])
