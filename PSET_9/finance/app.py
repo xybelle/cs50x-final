@@ -116,6 +116,7 @@ def quote():
 def register():
     """Register user"""
 
+    # When form is submitted via POST
     if request.method == "POST":
         name = request.form.get("username")
         pw = request.form.get("password")
@@ -134,10 +135,12 @@ def register():
 
         hashed_pw = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
 
+        # Add user to database
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hashed_pw)
 
         return redirect("/login")
 
+    # When requested via GET
     return render_template("register.html")
 
 
