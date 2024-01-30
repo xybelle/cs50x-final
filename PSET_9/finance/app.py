@@ -41,7 +41,7 @@ def index():
     total_value = 0
     grand_total = 0
 
-    # Get current price of each stock
+    # Get current price of each stock and calculate total value
     for stock in stocks:
         symbol = stock['stock']
         price = lookup(symbol)
@@ -51,7 +51,8 @@ def index():
         shares_owned = db.execute(
             "SELECT SUM(shares) FROM stocks WHERE user_id = ? AND stock = ?",
             session["user_id"], symbol)
-        total_value += current_price * stock['total_shares']
+
+        total_value += int(current_price) * shares_owned
 
     # Total value of each holding
     #total_value = shares_owned * current_price
