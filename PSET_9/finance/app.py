@@ -141,6 +141,7 @@ def buy():
             return apology("Enter the number of shares you wish to buy")
         else:
             c = db.execute("SELECT cash FROM users WHERE username = ?", request.form.get("username"))
+            print(c)
             cash = c[0]
             buy_price = stock['price'] * int(shares)
             bal = cash - buy_price
@@ -157,7 +158,7 @@ def buy():
                 db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], int(shares))
 
                 # Update cash balance
-                db.execute("UPDATE users SET cash = bal WHERE id =?", id)
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", bal, id)
 
 
 
