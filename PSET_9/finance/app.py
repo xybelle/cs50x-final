@@ -37,21 +37,21 @@ def index():
     """Show portfolio of stocks"""
     # List of stocks user owns
     stocks = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
-
+    print(stocks)
 
     total_value = 0
     grand_total = 0
 
     # Get current price of each stock and calculate total value
-    for stock in stocks:
-        symbol = stocks[0]['stock']
+    for i in stocks:
+        symbol = stocks[i]['stock']
         price = lookup(symbol)
         current_price = price['price']
 
         # Get number of shares owned
         row = db.execute(
             "SELECT SUM(shares) FROM stocks WHERE user_id = ? AND stock = ?",
-            session["user_id"], stocks[0]['stock'])
+            session["user_id"], stocks[i]['stock'])
         print(row)
 
         shares_owned = row[0]['SUM(shares)']
