@@ -120,7 +120,7 @@ def register():
     if request.method == "POST":
         if not name:
             return apology("Please enter a username")
-        elif un == name:
+        elif name == un:
             return apology("Username already exists")
         elif not pw:
             return apology("Please enter a password")
