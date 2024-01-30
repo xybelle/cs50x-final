@@ -41,7 +41,7 @@ def index():
 
     for stock in stocks:
         price = lookup(stocks(stock))
-
+        current_price = price['price']
 
     return apology("TODO")
 
