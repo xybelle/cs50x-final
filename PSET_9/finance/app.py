@@ -130,7 +130,12 @@ def buy():
     # When requested via GET
     if request.method == "GET":
         quote()
-        
+        shares = request.form.get("shares")
+
+        if shares < 0:
+            return apology("Enter the number of shares you wish to buy")
+        else:
+            
     return apology("TODO")
 
 
