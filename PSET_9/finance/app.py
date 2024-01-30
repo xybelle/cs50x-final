@@ -35,13 +35,23 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # List of stocks user owns
     stocks = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
+
+    # Number of shares owned
     shares_owned = db.execute(
         "SELECT SUM(shares) FROM stocks WHERE user_id = ? GROUP BY stock", session["user_id"])
 
+    # Get current price
     for stock in stocks:
         price = lookup(stocks(stock))
         current_price = price['price']
+
+    # Total value of each holding
+    total_value = shares_owned * current_price
+
+    # Get grand total (stocks total value plus cash balance)
+    grand_total = total_value + balance
 
     return apology("TODO")
 
