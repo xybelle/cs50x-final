@@ -38,7 +38,43 @@ def index():
     return apology("TODO")
 
 
+@app.route("/buy", methods=["GET", "POST"])
+@login_required
+def buy():
+    """Buy shares of stock"""
 
+    # When requested via GET
+    if request.method == "GET":
+        return render_template("buy.html")
+
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        stock = lookup(symbol)
+        shares = request.form.get("shares")
+        if stock == None:
+            return apology("Symbol does not exist")
+
+        elif shares is None or shares == "" or int(shares) <= 0:
+            return apology("Enter the number of shares you wish to buy")
+        else:
+            user = session["user_id"]
+            rows = db.execute("SELECT * FROM users WHERE id = ?", user)
+            cash = rows[0]["cash"]
+            buy_price = int(stock['price']) * int(shares)
+            bal = cash - buy_price
+
+            if bal < 0:
+                return apology("Not enough balance")
+            else:
+                id = rows[0]["id"]
+
+                # Add transaction to database
+                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], int(shares))
+
+                # Update cash balance
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", bal, id)
+
+    return redirect("/")
 
 
 @app.route("/history")
@@ -120,45 +156,6 @@ def quote():
         # If lookup is successful
         else:
             return render_template("quoted.html", price=stock['price'], symbol=stock['symbol'])
-
-@app.route("/buy", methods=["GET", "POST"])
-@login_required
-def buy():
-    """Buy shares of stock"""
-
-    # When requested via GET
-    if request.method == "GET":
-        return render_template("buy.html")
-
-    if request.method == "POST":
-        symbol = request.form.get("symbol")
-        stock = lookup(symbol)
-        shares = request.form.get("shares")
-        if stock == None:
-            return apology("Symbol does not exist")
-
-        elif shares is None or shares == "" or int(shares) <= 0:
-            return apology("Enter the number of shares you wish to buy")
-        else:
-            user = session["user_id"]
-            rows = db.execute("SELECT * FROM users WHERE id = ?", user)
-            cash = rows[0]["cash"]
-            buy_price = int(stock['price']) * int(shares)
-            bal = cash - buy_price
-
-            if bal < 0:
-                return apology("Not enough balance")
-            else:
-                id = rows[0]["id"]
-
-                # Add transaction to database
-                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], int(shares))
-
-                # Update cash balance
-                db.execute("UPDATE users SET cash = ? WHERE id = ?", bal, id)
-
-    return redirect("/")
-
 
 
 @app.route("/register", methods=["GET", "POST"])
