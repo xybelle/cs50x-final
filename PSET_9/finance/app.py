@@ -51,7 +51,7 @@ def index():
         # Get number of shares owned
         row = db.execute(
             "SELECT SUM(shares) FROM stocks WHERE user_id = ? AND stock = ?",
-            session["user_id"], stocks[stock]['stock'])
+            session["user_id"], stocks[0]['stock'])
         print(row)
 
         shares_owned = row[0]['SUM(shares)']
@@ -61,11 +61,11 @@ def index():
     #total_value = shares_owned * current_price
 
     # Get grand total (stocks total value plus cash balance)
-    balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    cash_bal = balance[0]['cash']
-    grand_total = total_value + cash_bal
+        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash_bal = balance[0]['cash']
+        grand_total = total_value + cash_bal
 
-    return render_template("index.html", stocks=stocks, shares=shares_owned, current_price=current_price,
+        return render_template("index.html", stocks=stocks, shares=shares_owned, current_price=current_price,
                            total_value=total_value, balance=cash_bal, grand_total=grand_total)
 
 
