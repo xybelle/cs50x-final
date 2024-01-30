@@ -147,7 +147,7 @@ def buy():
                 return apology("Not enough balance")
             else:
                 # Add transaction to database
-                db.execute("INSERT INTO stocks (user_id, stock, shares, purchase_date))
+                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", x, x, shares)
 
 
 
