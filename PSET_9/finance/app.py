@@ -37,7 +37,6 @@ def index():
     """Show portfolio of stocks"""
     # List of stocks user owns
     stocks = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
-    print(stocks)
 
     # Get user's cash balance
     balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
@@ -60,7 +59,6 @@ def index():
         row = db.execute(
             "SELECT SUM(shares) FROM stocks WHERE user_id = ? AND stock = ?",
             session["user_id"], stocks[i]['stock'])
-        print(row)
 
         shares_owned = row[0]['SUM(shares)']
 
@@ -248,7 +246,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        options = db.execute("SELECT)
+        options = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
         return render_template("sell.html")
 
     if request.method == "POST":
