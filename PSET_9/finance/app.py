@@ -150,8 +150,8 @@ def buy():
                 rows = db.execute(
                 "SELECT * FROM users WHERE username = ?", request.form.get("username")
                 )
-                session["user_id"] = rows[0]["id"]
-                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", x, stock['symbol'], shares)
+                id = rows[0]["id"]
+                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], shares)
 
 
 
