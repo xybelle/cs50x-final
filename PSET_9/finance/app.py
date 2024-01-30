@@ -266,6 +266,7 @@ def sell():
         elif shares <= 0:
             return apology("Enter number of shares you wish to sell")
 
+        rows = db.execute("SELECT * FROM users WHERE id = ?", session['user_id'])
         
 
 
