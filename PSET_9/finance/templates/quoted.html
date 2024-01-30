@@ -5,20 +5,22 @@
 {% endblock %}
 
 {% block main %}
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Symbol</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{ name }}</th>
-            <td>{{ price }}</td>
-            <td>{{ symbol }}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="section">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ name }}</th>
+                <td>{{ price }}</td>
+                <td>{{ symbol }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 {% endblock %}
