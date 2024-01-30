@@ -41,8 +41,8 @@ def index():
     # Get number of shares owned
     rows = db.execute(
             "SELECT SUM(shares) FROM stocks WHERE user_id = ? AND stock = ?",
-            session["user_id"], symbol)
-
+            session["user_id"], stocks[0]['stock'])
+    print(rows)
     total_value = 0
     grand_total = 0
 
@@ -51,7 +51,7 @@ def index():
         symbol = stocks[0]['stock']
         price = lookup(symbol)
         current_price = price['price']
-        shares_owned = rows[0]['sum(shares)']
+        shares_owned = rows[0]['shares']
         total_value += int(current_price) * shares_owned
 
     # Total value of each holding
