@@ -114,7 +114,7 @@ def quote():
 
         stock = lookup(symbol)
 
-        if stock == "None":
+        if stock == None:
             return apology("Symbol does not exist")
         else:
             print(stock)
