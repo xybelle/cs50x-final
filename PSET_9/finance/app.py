@@ -128,9 +128,11 @@ def buy():
 
     # When requested via GET
     if request.method == "GET":
-        return render_template("quote.html")
+        render_template("quote.html")
+        return render_template("buy.html")
 
     if request.method == "POST":
+        render_template("buy.html")
         stock = lookup(request.form.get("symbol"))
         shares = request.form.get("shares")
         if stock == None:
