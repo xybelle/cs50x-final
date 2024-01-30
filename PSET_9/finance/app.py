@@ -125,7 +125,7 @@ def register():
     elif pw != conf:
         return apology("Passwords do not match")
 
-    hash = generate_password_hash(pw, method="pbkdf2", len(pw))
+    hash = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
 
     db.excute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hash)
 
