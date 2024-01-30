@@ -107,7 +107,7 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "GET":
-        
+
 
 
     return render_template("quote.html")
@@ -144,6 +144,7 @@ def register():
         # Add user to database
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hashed_pw)
 
+        session["user_id"] = rows[0]["id"]
         return redirect("/login")
 
     # When requested via GET
