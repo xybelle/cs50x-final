@@ -146,13 +146,16 @@ def buy():
             if bal < 0:
                 return apology("Not enough balance")
             else:
-                # Add transaction to database
                 rows = db.execute(
                 "SELECT * FROM users WHERE username = ?", request.form.get("username")
                 )
                 id = rows[0]["id"]
+
+                # Add transaction to database
                 db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], shares)
 
+                # Update cash balance
+                db.execute("INSERT INTO users ())
 
 
 @app.route("/register", methods=["GET", "POST"])
