@@ -39,6 +39,10 @@ def index():
     stocks = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
     print(stocks)
 
+    # Get user's cash balance
+    balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    cash_bal = balance[0]['cash']
+
     portfolio = []
 
     # Get current price of each stock and calculate total value
@@ -69,14 +73,12 @@ def index():
 
         portfolio.append(stock_info)
 
-    print(portfolio)
-
-    # Get user's cash balance
-    balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    cash_bal = balance[0]['cash']
-
     # Calculate grand total (stocks total value plus cash balance)
     grand_total = total_value + cash_bal
+
+    print(portfolio)
+
+
 
     return render_template("index.html", stocks=portfolio, balance=cash_bal, grand_total=grand_total)
 
