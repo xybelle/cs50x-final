@@ -7,7 +7,11 @@
 {% block main %}
     <form action="/quote" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Enter Stock's Symbol" type="text">
+            <select name="stock_options" id="stock_options">
+                {% for option in options %}
+                    <option value="{{ option }}">{{ option[0] }}</option>
+                {% endfor %}
+            </select>
         </div>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="text">

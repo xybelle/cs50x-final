@@ -247,7 +247,8 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         options = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
-        return render_template("sell.html")
+        print(options)
+        return render_template("sell.html", options=options)
 
     if request.method == "POST":
         return apology("todo")
