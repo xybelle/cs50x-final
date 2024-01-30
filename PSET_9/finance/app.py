@@ -43,9 +43,8 @@ def index():
         "SELECT SUM(shares) FROM stocks WHERE user_id = ? GROUP BY stock", session["user_id"])
 
     # Get current price of each stock
-    for stock in stocks:
-        price = lookup(stock)
-        current_price = price['price']
+    price = lookup(stocks)
+    current_price = price['price']
 
     # Total value of each holding
     total_value = shares_owned * current_price
@@ -54,7 +53,7 @@ def index():
     balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     grand_total = total_value + balance
 
-    return render_template("index.html", stocks=stock, shares=shares_owned, current_price=current_price,
+    return render_template("index.html", stocks=stocks, shares=shares_owned, current_price=current_price,
                            total_value=total_value, balance=balance, grand_total=grand_total)
 
 

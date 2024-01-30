@@ -18,14 +18,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>{{ stocks }}</td>
-                    <td>{{ shares }}</td>
-                    <td>{{ current_price }}</td>
-                    <td>{{ total_value }}</td>
-                    <td>{{ balance }}</td>
-                    <td>{{ grand_total }}</td>
-                </tr>
+                {% for stock in stocks %}
+                    <tr>
+                        <td>{{ stocks }}</td>
+                        <td>{{ shares }}</td>
+                        <td>{{ current_price }}</td>
+                        <td>{{ total_value }}</td>
+                        <td>{{ balance }}</td>
+                        <td>{{ grand_total }}</td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
