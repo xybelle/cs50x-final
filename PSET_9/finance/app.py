@@ -254,9 +254,16 @@ def sell():
         stock = request.form.get('stock_options')
         shares = request.form.get('shares')
 
+        # Get shares owned
+        shares_owned = db.execute(
+            "SELECT SUM(shares) FROM stocks WHERE user_id = ? AND stock = ?",
+            session["user_id"], stock)
+
         if not stock and not shares:
             return apology("Must select stock and enter shares")
-        elif shares
+        elif shares > shares_owned or shares <= 0:
+            return apology("Either You do not have enough shares to sell")
+
 
 
         return apology("todo")
