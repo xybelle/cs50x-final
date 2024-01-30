@@ -48,7 +48,7 @@ def index():
 
     # Get current price of each stock and calculate total value
     for stock in stocks:
-        symbol = stock['stock']
+        symbol = stocks[0]['stock']
         price = lookup(symbol)
         current_price = price['price']
         shares_owned = rows[0]['sum(shares)']
