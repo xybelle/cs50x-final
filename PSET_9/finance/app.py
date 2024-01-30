@@ -127,9 +127,6 @@ def buy():
     """Buy shares of stock"""
 
     # When requested via GET
-    if request.method == "GET":
-        render_template("buy.html")
-        
 
     if request.method == "POST":
         stock = lookup(request.form.get("symbol"))
@@ -157,6 +154,8 @@ def buy():
 
                 # Update cash balance
                 db.execute("UPDATE users SET cash = bal WHERE id =?", id)
+
+    return render_template("buy.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
