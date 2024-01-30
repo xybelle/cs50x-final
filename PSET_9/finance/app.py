@@ -44,7 +44,7 @@ def index():
 
     # Get current price
     for stock in stocks:
-        price = lookup(stocks(stock))
+        price = lookup(stock)
         current_price = price['price']
 
     # Total value of each holding
