@@ -13,8 +13,6 @@
                     <th>Shares</th>
                     <th>Current Price</th>
                     <th>Total Value</th>
-                    <th>Cash Balance</th>
-                    <th>Grand Total</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,14 +22,12 @@
                         <td>{{ shares }}</td>
                         <td>{{ current_price }}</td>
                         <td>{{ total_value }}</td>
-                        <td>{{ balance }}</td>
-                        <td>{{ grand_total }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
 
-        Cash balance: {{ balance }}
-        Grand Total: {{ grand_total }}
+        <h5>Cash balance: {{ balance }}</h5>
+        <h5>Grand Total: {{ grand_total }}</h5>
     </div>
 {% endblock %}

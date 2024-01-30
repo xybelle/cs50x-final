@@ -62,7 +62,7 @@ def index():
 
         # Update portfolio dictionary
         portfolio[symbol] = symbol
-        portfolio[shares] = shares_owned
+        portfolio[shares_owned] = shares_owned
         portfolio[current_price] = current_price
         portfolio[total_value] = total_value
 
@@ -73,8 +73,7 @@ def index():
     # Calculate grand total (stocks total value plus cash balance)
     grand_total = total_value + cash_bal
 
-    return render_template("index.html", stocks=stocks, shares=shares_owned, current_price=current_price,
-                           total_value=total_value, balance=cash_bal, grand_total=grand_total)
+    return render_template("index.html", stocks=stocks, balance=cash_bal, grand_total=grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
