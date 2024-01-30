@@ -110,6 +110,9 @@ def quote():
         return render_template("quote.html")
 
     if request.method == "POST":
+        symbol = request.form.get("symbol")
+
+        
         return redirect("/")
 
 
