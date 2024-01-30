@@ -128,8 +128,6 @@ def buy():
 
     # When requested via GET
     if request.method == "GET":
-        render_template("quote.html")
-        render_template("quoted.html")
         return render_template("buy.html")
 
     if request.method == "POST":
