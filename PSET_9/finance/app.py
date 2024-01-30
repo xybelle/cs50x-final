@@ -112,24 +112,25 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    name = request.form.get("username")
-    pw = request.form.get("password")
-    conf = request.form.get("confirmation")
-    un = db.execute("SELECT username FROM users WHERE username = ?", request.form.get("username"))
 
     if request.method == "POST":
+        name = request.form.get("username")
+        pw = request.form.get("password")
+        conf = request.form.get("confirmation")
+        existing_user = db.execute("SELECT username FROM users WHERE username = ?", name).fetchone()
+
+        if existing_user:
+            return apology ("Username already exists")
         if not name:
             return apology("Please enter a username")
-        elif name == un:
-            return apology("Username already exists")
         elif not pw:
             return apology("Please enter a password")
         elif pw != conf:
             return apology("Passwords do not match")
 
-        hash = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
+        hashed_pw = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
 
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hash)
+        db.execute("INSERT INTO users (username, hashed_pw) VALUES (?, ?)", name, hash)
 
         return redirect("/login")
 
