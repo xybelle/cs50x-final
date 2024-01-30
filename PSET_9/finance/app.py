@@ -42,7 +42,7 @@ def index():
     shares_owned = db.execute(
         "SELECT SUM(shares) FROM stocks WHERE user_id = ? GROUP BY stock", session["user_id"])
 
-    # Get current price
+    # Get current price of each stock
     for stock in stocks:
         price = lookup(stock)
         current_price = price['price']
