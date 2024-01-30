@@ -67,6 +67,8 @@ def index():
         stock_info['xprice'] = current_price
         stock_info['total'] = total_value
 
+        portfolio.append(stock_info)
+
     print(portfolio)
 
     # Get user's cash balance
