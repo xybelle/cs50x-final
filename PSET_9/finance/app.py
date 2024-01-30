@@ -45,11 +45,13 @@ def index():
 
     portfolio = []
 
+    grand_total = 0
+    total_value = 0
+    
     # Get current price of each stock and calculate total value
     for i in range(len(stocks)):
         stock_info = {}
-        total_value = 0
-        grand_total = 0
+
         symbol = stocks[i]['stock']
         price = lookup(symbol)
         current_price = price['price']
