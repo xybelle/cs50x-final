@@ -265,8 +265,8 @@ def sell():
         elif shares <= 0:
             return apology("Enter number of shares you wish to sell")
 
-        updated_shares = shares_owned - shares
-        
+        updated_shares = shares_owned - int(shares)
+
 
 
 
