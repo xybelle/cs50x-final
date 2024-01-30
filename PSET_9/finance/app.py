@@ -137,7 +137,7 @@ def buy():
         if stock == None:
             return apology("Symbol does not exist")
 
-        elif int(shares) <= 0:
+        elif int(shares) <= None:
             return apology("Enter the number of shares you wish to buy")
         else:
             cash = db.execute("SELECT cash FROM users WHERE username = ?", request.form.get("username"))
