@@ -251,6 +251,10 @@ def sell():
         return render_template("sell.html", options=options)
 
     if request.method == "POST":
+        stock = request.form.get('stock_options')
+        shares = request.form.get('shares')
+        
+
         return apology("todo")
 
 
