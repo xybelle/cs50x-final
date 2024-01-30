@@ -248,6 +248,9 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
+        return
+
+    if request.method == "POST":
         
 
     return apology("TODO")
