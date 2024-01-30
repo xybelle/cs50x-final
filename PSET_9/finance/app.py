@@ -38,15 +38,7 @@ def index():
     return apology("TODO")
 
 
-@app.route("/buy", methods=["GET", "POST"])
-@login_required
-def buy():
-    """Buy shares of stock"""
 
-    # When requested via GET
-    if request.method == "GET":
-        return render_template("quote.html")
-    return apology("TODO")
 
 
 @app.route("/history")
@@ -129,6 +121,17 @@ def quote():
         else:
             print(stock)
             return render_template("quoted.html", price=stock['price'], symbol=stock['symbol'])
+
+@app.route("/buy", methods=["GET", "POST"])
+@login_required
+def buy():
+    """Buy shares of stock"""
+
+    # When requested via GET
+    if request.method == "GET":
+        quote()
+        
+    return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
