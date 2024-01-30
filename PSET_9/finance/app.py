@@ -131,17 +131,17 @@ def buy():
         return render_template("buy.html")
 
     if request.method == "POST":
-        render_template("buy.html")
-        stock = lookup(request.form.get("symbol"))
+        symbol = request.form.get("symbol")
+        stock = lookup(symbol)
         shares = request.form.get("shares")
         if stock == None:
             return apology("Symbol does not exist")
 
-        elif shares <= 0:
+        elif int(shares) <= 0:
             return apology("Enter the number of shares you wish to buy")
         else:
             cash = db.execute("SELECT cash FROM users WHERE username = ?", request.form.get("username"))
-            buy_price = stock['price'] * shares
+            buy_price = stock['price'] * int(shares)
             bal = cash - buy_price
 
             if bal < 0:
@@ -153,7 +153,7 @@ def buy():
                 id = rows[0]["id"]
 
                 # Add transaction to database
-                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], shares)
+                db.execute("INSERT INTO stocks (user_id, stock, shares) VALUES (?, ?, ?)", id, stock['symbol'], int(shares))
 
                 # Update cash balance
                 db.execute("UPDATE users SET cash = bal WHERE id =?", id)
