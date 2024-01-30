@@ -112,7 +112,7 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
 
-        
+        if lookup
         return redirect("/")
 
 
