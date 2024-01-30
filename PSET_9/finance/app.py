@@ -129,7 +129,7 @@ def buy():
 
     # When requested via GET
     if request.method == "GET":
-        quote()
+        return render_template("quote.html")
 
     shares = request.form.get("shares")
 
@@ -137,7 +137,7 @@ def buy():
         if shares < 0:
             return apology("Enter the number of shares you wish to buy")
         else:
-            
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
