@@ -65,7 +65,8 @@ def index():
         shares_owned = row[0]['SUM(shares)']
 
         # Total value of each holding
-        total_value += int(current_price) * shares_owned
+        total_value_ps = int(current_price) * shares_owned
+        total_value += total_value_ps
 
         # Update stock_info dictionary
         stock_info['symbol'] = symbol
