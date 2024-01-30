@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block main %}
-    <div class="text-center">
-        <table class="text-center">
+    <div class="container text-center">
+        <table class="container text-center">
             <thead>
                 <tr>
                     <th>Stocks</th>
@@ -26,7 +26,8 @@
                 {% endfor %}
             </tbody>
         </table>
-
+    </div>
+    <div class="container text-center">
         <h5>Cash balance: {{ balance }}</h5>
         <h5>Grand Total: {{ grand_total }}</h5>
     </div>
