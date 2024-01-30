@@ -261,8 +261,12 @@ def sell():
 
         if not stock and not shares:
             return apology("Must select stock and enter shares")
-        elif shares > shares_owned or shares <= 0:
-            return apology("Either You do not have enough shares to sell")
+        elif shares > shares_owned:
+            return apology("You do not have enough shares to sell")
+        elif shares <= 0:
+            return apology("Enter number of shares you wish to sell")
+
+        
 
 
 
