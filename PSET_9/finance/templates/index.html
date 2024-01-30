@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Stocks</th>
+                    <th>Shares</th>
+                    <th>Current Price</th>
+                    <th>Total Value Of Each Holding</th>
+                    <th>Cash Balance</th>
+                    <th>Grand Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ stocks }}</td>
+                    <td>{{ shares }}</td>
+                    <td>{{ current_price }}</td>
+                    <td>{{ total_value }}</td>
+                    <td>{{ balance }}</td>
+                    <td>{{ grand_total }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
