@@ -125,7 +125,7 @@ def register():
     elif pw != conf:
         return apology("Passwords do not match")
 
-    
+    password = generate_password_hash(pw, method="pbkdf2",)
 
     return apology("TODO")
 
