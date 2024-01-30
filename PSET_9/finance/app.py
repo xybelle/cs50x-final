@@ -39,10 +39,11 @@ def index():
     stocks = db.execute("SELECT DISTINCT stock FROM stocks WHERE user_id = ?", session["user_id"])
     print(stocks)
 
-    portfolio = {}
+    portfolio = []
 
     # Get current price of each stock and calculate total value
     for i in range(len(stocks)):
+        stock_info = {}
         total_value = 0
         grand_total = 0
         symbol = stocks[i]['stock']
@@ -60,11 +61,11 @@ def index():
         # Total value of each holding
         total_value += int(current_price) * shares_owned
 
-        # Update portfolio dictionary
-        portfolio[i][sym] = symbol
-        portfolio[i]['shares'] = shares_owned
-        portfolio[i]['xprice'] = current_price
-        portfolio[i]['total'] = total_value
+        # Update stock_info dictionary
+        stock_info['symbol'] = symbol
+        stock_info['shares'] = shares_owned
+        stock_info['xprice'] = current_price
+        stock_info['total'] = total_value
 
     print(portfolio)
 
