@@ -117,7 +117,7 @@ def quote():
         if lookup == "None":
             return apology("Symbol does not exist")
         else:
-            return render_template()
+            return render_template("quoted.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
