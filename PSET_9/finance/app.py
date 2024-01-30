@@ -118,8 +118,8 @@ def register():
         pw = request.form.get("password")
         conf = request.form.get("confirmation")
         user = db.execute("SELECT username FROM users WHERE username = ?", name)
-        existing_user = user.fetchone()
-        
+        existing_user = user[0] if user else None
+
         if existing_user:
             return apology ("Username already exists")
         if not name:
