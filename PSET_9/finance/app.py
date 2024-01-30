@@ -140,7 +140,9 @@ def buy():
         elif shares is None or shares == "" or int(shares) <= 0:
             return apology("Enter the number of shares you wish to buy")
         else:
-            c = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
+            user = session["user_id"]
+            print(user)
+            c = db.execute("SELECT cash FROM users WHERE username = ?", user)
             print(c)
             cash = c[0]
             buy_price = stock['price'] * int(shares)
