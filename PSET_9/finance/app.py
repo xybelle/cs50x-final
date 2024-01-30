@@ -128,7 +128,7 @@ def buy():
 
     # When requested via GET
     if request.method == "GET":
-        quote()
+        return render_template("quote.html")
 
     if request.method == "POST":
         stock = lookup(request.form.get("symbol"))
