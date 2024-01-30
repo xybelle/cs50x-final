@@ -124,15 +124,20 @@ def register():
         user = db.execute("SELECT username FROM users WHERE username = ?", name)
         existing_user = user[0] if user else None
 
+        # Check if user already exists in the database
         if existing_user:
             return apology ("Username already exists")
+        # Ensure username is entered
         if not name:
             return apology("Please enter a username")
+        # Ensure password is entered
         elif not pw:
             return apology("Please enter a password")
+        # Ensure password and confirmation matches
         elif pw != conf:
             return apology("Passwords do not match")
 
+        # Hash the password
         hashed_pw = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
 
         # Add user to database
