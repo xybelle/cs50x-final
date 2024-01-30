@@ -129,7 +129,7 @@ def register():
 
         hash = generate_password_hash(pw, method='pbkdf2', salt_length=len(pw))
 
-        db.excute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hash)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", name, hash)
 
         return redirect("/login")
 
