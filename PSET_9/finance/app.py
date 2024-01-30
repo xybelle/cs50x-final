@@ -274,4 +274,4 @@ def sell():
         return apology("todo")
 
 
-    return apology("TODO")
+    return redirect("/")
