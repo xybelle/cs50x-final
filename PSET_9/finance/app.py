@@ -118,7 +118,7 @@ def quote():
             return apology("Symbol does not exist")
         else:
             print(stock)
-            return render_template("quoted.html")
+            return render_template("quoted.html", price=stock['price'], symbol=stock['symbol'])
 
 
 @app.route("/register", methods=["GET", "POST"])
