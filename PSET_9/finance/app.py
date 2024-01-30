@@ -142,7 +142,7 @@ def buy():
         else:
             user = session["user_id"]
             print(user)
-            c = db.execute("SELECT cash FROM users WHERE username = ?", user)
+            c = db.execute("SELECT cash FROM users WHERE id = ?", user)
             print(c)
             cash = c[0]
             buy_price = stock['price'] * int(shares)
