@@ -9,7 +9,7 @@
         <div class="mb-3">
             <select name="stock_options" id="stock_options">
                 {% for option in options %}
-                    <option value="{{ option }}">{{ option[0] }}</option>
+                    <option value="{{ option }}">{{ option.value }}</option>
                 {% endfor %}
             </select>
         </div>
