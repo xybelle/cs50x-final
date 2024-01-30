@@ -146,7 +146,7 @@ def buy():
             if bal < 0:
                 return apology("Not enough balance")
             else:
-
+                
 
 
 @app.route("/register", methods=["GET", "POST"])
