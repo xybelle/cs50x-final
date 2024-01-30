@@ -248,9 +248,11 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        return
+        options = db.execute("SELECT)
+        return render_template("sell.html")
 
     if request.method == "POST":
-        
+        return apology("todo")
+
 
     return apology("TODO")
