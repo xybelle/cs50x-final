@@ -141,17 +141,14 @@ def buy():
             return apology("Enter the number of shares you wish to buy")
         else:
             user = session["user_id"]
-            print(user)
-            c = db.execute("SELECT cash FROM users WHERE id = ?", user)
-            print(c)
-            cash = c[0]["cash"]
+            c = db.execute("SELECT * FROM users WHERE id = ?", user)
+            cash = c[3]["cash"]
             buy_price = int(stock['price']) * int(shares)
             bal = cash - buy_price
 
             if bal < 0:
                 return apology("Not enough balance")
             else:
-                rows = db.execute("SELECT * FROM users WHERE id = ?", user)
                 id = rows[0]["id"]
 
                 # Add transaction to database
