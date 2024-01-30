@@ -119,7 +119,6 @@ def quote():
 
         # If lookup is successful
         else:
-            print(stock)
             return render_template("quoted.html", price=stock['price'], symbol=stock['symbol'])
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -131,9 +130,9 @@ def buy():
     if request.method == "GET":
         return render_template("quote.html")
 
-    shares = request.form.get("shares")
-
     if request.method == "POST":
+        stock = lookup(request.form.get("symbol"))
+        shares = request.form.get("shares")
         if shares < 0:
             return apology("Enter the number of shares you wish to buy")
         else:
