@@ -131,14 +131,15 @@ def buy():
         return render_template("quote.html")
 
     if request.method == "POST":
-        
-
-        if quote == apology:
-
+        stock = lookup(request.form.get("symbol"))
         shares = request.form.get("shares")
-        if shares <= 0:
+        if stock == None:
+            return apology("Symbol does not exist")
+
+        elif shares <= 0:
             return apology("Enter the number of shares you wish to buy")
         else:
+            cash = db.execute("SELECT cash FROM users WHERE username = ?", )
 
 
 
