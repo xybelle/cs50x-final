@@ -115,7 +115,7 @@ def register():
     name = request.form.get("username")
     pw = request.form.get("password")
     conf = request.form.get("confirmation")
-    un = db.execute("SELECT username FROM users")
+    un = db.execute("SELECT username FROM users WHERE username = ?", request.form.get("username"))
     if not name:
         return apology("Please enter a username")
     elif un == name:
