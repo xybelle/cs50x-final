@@ -112,8 +112,12 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
 
-        if lookup
-        return redirect("/")
+        lookup(symbol)
+
+        if lookup == "None":
+            return apology("Symbol does not exist")
+        else:
+            return render_template()
 
 
 @app.route("/register", methods=["GET", "POST"])
