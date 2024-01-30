@@ -114,14 +114,17 @@ def register():
     """Register user"""
     name = request.form.get("username")
     pw = request.form.get("password")
+    pw2 = request.form.get("password2")
     un = db.execute("SELECT username FROM users")
     if not name:
         return apology("Please enter a username")
     elif un == name:
         return apology("Username already exists")
-    elif not pw:
-        return apology("Please enter a password")
 
+    if not pw:
+        return apology("Please enter a password")
+    elif pw != pw2:
+        return apology("Passwords do not match")
 
     return apology("TODO")
 
