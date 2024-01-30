@@ -144,7 +144,7 @@ def buy():
             print(user)
             c = db.execute("SELECT cash FROM users WHERE id = ?", user)
             print(c)
-            cash = c[0]
+            cash = c[0]["cash"]
             buy_price = int(stock['price']) * int(shares)
             bal = cash - buy_price
 
