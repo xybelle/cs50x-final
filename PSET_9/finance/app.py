@@ -146,7 +146,9 @@ def buy():
             if bal < 0:
                 return apology("Not enough balance")
             else:
-                
+                # Add transaction to database
+                db.execute("INSERT INTO stocks (user_id, stock, shares, purchase_date))
+
 
 
 @app.route("/register", methods=["GET", "POST"])
