@@ -50,6 +50,11 @@ def index():
         symbol = stock['stock']
         price = lookup(symbol)
         current_price = price['price']
+
+        # Get number of shares owned
+        shares_owned = db.excute(
+            "SELECT SUM(shares)
+        )
         total_value += current_price * stock['total_shares']
 
     # Total value of each holding
