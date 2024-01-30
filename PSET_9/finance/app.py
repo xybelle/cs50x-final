@@ -112,12 +112,12 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
 
-        lookup(symbol)
+        stock = lookup(symbol)
 
         if lookup == "None":
             return apology("Symbol does not exist")
         else:
-            print(symbol)
+            print(stock)
             return render_template("quoted.html")
 
 
