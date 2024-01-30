@@ -43,8 +43,9 @@ def index():
         "SELECT SUM(shares) FROM stocks WHERE user_id = ? GROUP BY stock", session["user_id"])
 
     # Get current price of each stock
-    price = lookup(stocks)
-    current_price = price['price']
+    for stock in stocks:
+        price = lookup(stocks)
+        current_price = price['price']
 
     # Total value of each holding
     total_value = shares_owned * current_price
