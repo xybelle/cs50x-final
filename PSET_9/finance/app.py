@@ -141,8 +141,8 @@ def buy():
             return apology("Enter the number of shares you wish to buy")
         else:
             user = session["user_id"]
-            c = db.execute("SELECT * FROM users WHERE id = ?", user)
-            cash = c[3]["cash"]
+            rows = db.execute("SELECT * FROM users WHERE id = ?", user)
+            cash = rows[0]["cash"]
             buy_price = int(stock['price']) * int(shares)
             bal = cash - buy_price
 
