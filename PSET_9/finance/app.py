@@ -60,7 +60,11 @@ def index():
         # Total value of each holding
         total_value += int(current_price) * shares_owned
 
-        
+        # Update portfolio dictionary
+        portfolio[symbol] = symbol
+        portfolio[shares] = shares_owned
+        portfolio[current_price] = current_price
+        portfolio[total_value] = total_value
 
     # Get user's cash balance
     balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
