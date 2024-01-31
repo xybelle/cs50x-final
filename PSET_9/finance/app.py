@@ -106,10 +106,10 @@ def buy():
 
         if stock == None:
             return apology("Symbol does not exist")
-        elif not isinstance(shares, int):
-            return apology("Enter an integer")
         elif shares is None or shares == "" or int(shares) <= 0:
             return apology("Enter the number of shares you wish to buy", 400)
+        elif not isinstance(shares, int):
+            return apology("Enter an integer")
         else:
             rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
             cash = rows[0]["cash"]
