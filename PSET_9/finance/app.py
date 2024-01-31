@@ -112,12 +112,10 @@ def buy():
             return apology("Enter the number of shares you wish to buy", 400)
         else:
             rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
-            cash = float(rows[0]["cash"])
+            
+            cash_balance = "{:.2f}".format(float(rows[0]["cash"]))
 
-            cash_balance = "{:.2f}".format(cash)
-
-            price = float(stock["price"])
-            stock_price = "{:.2f}".format(price)
+            stock_price = "{:.2f}".format(float(stock["price"]))
 
             buy_price = stock_price * int(shares)
             bal = cash_balance - float(buy_price)
