@@ -75,6 +75,7 @@ def index():
         # Total value of each holding
         total_value_ps = round((current_price), 2) * shares_owned
         total_value += total_value_ps
+        formatted_total_value = round(total_value, 2)
 
         # Update stock_info dictionary
         stock_info['symbol'] = symbol
