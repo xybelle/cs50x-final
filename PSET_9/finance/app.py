@@ -117,7 +117,7 @@ def buy():
             rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
             cash_balance = round(float(rows[0]["cash"]), 2)
-            stock_price = round(float(stock["price"]),2)
+            stock_price = round(float(stock["price"]), 2)
             buy_price = stock_price * int(shares)
             bal = cash_balance - round(buy_price, 2)
             balance = round(bal, 2)
