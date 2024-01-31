@@ -106,8 +106,8 @@ def buy():
 
         if stock == None:
             return apology("Symbol does not exist")
-        elif shares is 
-
+        elif not isinstance(shares, int):
+            return apology("Enter an integer")
         elif shares is None or shares == "" or int(shares) <= 0:
             return apology("Enter the number of shares you wish to buy", 400)
         else:
