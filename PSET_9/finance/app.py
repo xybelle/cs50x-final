@@ -73,7 +73,7 @@ def index():
         shares_owned = b - s
 
         # Total value of each holding
-        total_value_ps = int(current_price) * shares_owned
+        total_value_ps = round((current_price), 2) * shares_owned
         total_value += total_value_ps
 
         # Update stock_info dictionary
