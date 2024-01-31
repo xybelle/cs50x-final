@@ -41,7 +41,8 @@ def index():
 
     # Get user's cash balance
     balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    cash_bal = "{:.2f}".format(balance[0]['cash'])
+    cash = balance[0]['cash']
+    cash_bal = "{:.2f}".format(cash)
 
     portfolio = []
 
@@ -86,8 +87,8 @@ def index():
         portfolio.append(stock_info)
 
     # Calculate grand total (stocks total value plus cash balance)
-
-    grand_total = "{:.2f}".format(cash_bal + total_value)
+    total =  cash + total_value
+    grand_total = "{:.2f}".format(total)
 
     return render_template("index.html", stocks=portfolio, balance=cash_bal, grand_total=grand_total)
 
