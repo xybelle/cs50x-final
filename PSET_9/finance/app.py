@@ -54,7 +54,7 @@ def index():
         total_value_ps = 0
         symbol = stocks[i]['stock']
         price = lookup(symbol)
-        current_price = price['price']
+        current_price = round(float(price['price']), 2)
 
         # Get number of shares bought
         bought = db.execute(
@@ -73,7 +73,7 @@ def index():
         shares_owned = b - s
 
         # Total value of each holding
-        total_value_ps = round((current_price), 2) * shares_owned
+        total_value_ps = current_price * shares_owned
         total_value += total_value_ps
         formatted_total_value = round(total_value, 2)
 
