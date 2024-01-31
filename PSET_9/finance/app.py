@@ -121,7 +121,7 @@ def buy():
             bal = cash_bal - buy_price
 
             if bal < 0:
-                return apology("Not enough balance")
+                return apology("Not enough cash balance")
             else:
                 id = rows[0]["id"]
 
