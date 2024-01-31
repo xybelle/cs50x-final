@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/quote" method="post">
+    <form action="/sell" method="post">
         <div class="mb-3">
             <select name="stock_options" id="stock_options">
                 <option selected disabled>Select stock you want to sell</option>
                 {% for option in options %}
-                    <option value="{{ option }}">{{ option['stock'] }}</option>
+                    <option value="{{ option['stock'] }}">{{ option['stock'] }}</option>
                 {% endfor %}
             </select>
         </div>
