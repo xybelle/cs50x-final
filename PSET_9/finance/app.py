@@ -330,10 +330,9 @@ def sell():
         cash_balance = round(float(rows[0]["cash"]), 2)
 
         updated_cash = xprice + cash_balance
-        updated_cash_bal = "{:.2f}".format(updated_cash)
 
         # Update cash balance
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_bal, session["user_id"])
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash, session["user_id"])
 
         return redirect("/")
 
