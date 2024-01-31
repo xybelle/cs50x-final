@@ -147,6 +147,9 @@ def history():
     if request.method == "GET":
         history = db.execute(
             "SELECT type, stock, shares, buy_sell_price, date_purchased FROM transactions WHERE user_id = ?", session["user_id"])
+
+        type = db.execute("SELECT type, stock, shares, buy_sell_price, date_purchased FROM transactions WHERE user_id = ?", session["user_id"]))
+
         return render_template("history.html", history=history)
 
 
