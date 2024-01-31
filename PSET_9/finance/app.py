@@ -104,6 +104,8 @@ def buy():
         stock = lookup(symbol)
         shares = request.form.get("shares")
 
+        xshares = isinstance()
+
         if stock == None:
             return apology("Symbol does not exist")
 
