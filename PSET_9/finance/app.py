@@ -310,8 +310,6 @@ def sell():
         elif int(shares) <= 0:
             return apology("Enter number of shares you wish to sell")
 
-        updated_shares = shares_owned - int(shares)
-
         # Add sell transaction to database and handling error
         try:
             db.execute(
@@ -323,7 +321,7 @@ def sell():
 
         # Get current stock price
         cprice = lookup(stock)
-        xprice = cprice['price'] * int(shares)
+        xprice = round(cprice['price'], 2) * int(shares)
         sell_price = "{:.2f}".format(xprice)
 
         # Update cash balance
