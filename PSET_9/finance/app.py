@@ -322,8 +322,9 @@ def sell():
             return apology("Error selling shares")
 
         # Get current stock price
-        xprice = lookup(stock)
-        sell_price = xprice['price'] * int(shares)
+        cprice = lookup(stock)
+        xprice = xprice['price'] * int(shares)
+        sell_price = "{:.2f}".format(xprice)
 
         # Update cash balance
         db.execute("UPDATE users SET cash = ? WHERE id = ?", sell_price, session["user_id"])
