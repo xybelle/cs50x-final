@@ -21,49 +21,47 @@ def index():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    dance_class = request.args.get('class')
-    if dance_class:
-        if request.method == "POST":
-            fname = request.form.get("fname")
-            sname = request.form.get("sname")
-            parname = request.form.get("parent-guardian")
-            email = request.form.get("email")
-            pw = request.form.get("password")
-            conf = request.form.get("confirmation")
+    if request.method == "POST":
+        fname = request.form.get("fname")
+        sname = request.form.get("sname")
+        parname = request.form.get("parent-guardian")
+        email = request.form.get("email")
+        pw = request.form.get("password")
+        conf = request.form.get("confirmation")
 
-            # Check if email is already registered
-            stu = db.execute("SELECT email FROM students WHERE email = ?", email)
-            existing_stu = stu[0] if stu else None
+        # Check if email is already registered
+        stu = db.execute("SELECT email FROM students WHERE email = ?", email)
+        existing_stu = stu[0] if stu else None
 
-            # Check if stu already exists in the database
-            if existing_stu:
-                return apology("Email already registered. Please try logging in instead.")
-            # Validate submission
-            elif not fname or not sname:
-                return apology("Please enter your name")
-            # Ensure password is entered
-            elif not pw:
-                return apology("Please enter a password")
-            # Ensure password and confirmation matches
-            elif pw != conf:
-                return apology("Passwords do not match")
+        # Check if stu already exists in the database
+        if existing_stu:
+            return apology("Email already registered. Please try logging in instead.")
+        # Validate submission
+        elif not fname or not sname:
+            return apology("Please enter your name")
+        # Ensure password is entered
+        elif not pw:
+            return apology("Please enter a password")
+        # Ensure password and confirmation matches
+        elif pw != conf:
+            return apology("Passwords do not match")
 
-            # Hash password
-            hashed_pw = generate_password_hash(pw, method='pbkdf2', salt_length=2)
+        # Hash password
+        hashed_pw = generate_password_hash(pw, method='pbkdf2', salt_length=2)
 
-            try:
-                # Remember students
-                db.execute("INSERT INTO students (fname, sname, email, hash) VALUES (?, ?, ?, ?)",
+        try:
+            # Remember students
+            db.execute("INSERT INTO students (fname, sname, email, hash) VALUES (?, ?, ?, ?)",
                         fname, sname, email, hashed_pw)
-            except Exception as e:
-                print(e)
-                return apology("Something went wrong. Please try again.")
+        except Exception as e:
+            print(e)
+            return apology("Something went wrong. Please try again.")
 
-            rows = db.execute("SELECT * FROM students WHERE email = ?", email)
-            session["user_id"] = rows[0]["id"]
+        rows = db.execute("SELECT * FROM students WHERE email = ?", email)
+        session["user_id"] = rows[0]["id"]
 
-            # Confirm registration
-            return redirect("/home")
+        # Confirm registration
+        return redirect("/home")
 
     return render_template("register.html")
 
