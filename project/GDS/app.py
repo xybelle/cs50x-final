@@ -67,7 +67,7 @@ def register():
         session["user_id"] = rows[0]["id"]
 
         # Confirm registration
-        return redirect("/home")
+        return render_template("home.html", name=")
 
     return render_template("register.html")
 
