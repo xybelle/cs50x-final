@@ -24,7 +24,7 @@ def register():
     if request.method == "POST":
         fname = request.form.get("fname")
         sname = request.form.get("sname")
-        parname = request.form.get("parent-guardian")
+        guardian = request.form.get("parent-guardian")
         email = request.form.get("email")
         pw = request.form.get("password")
         conf = request.form.get("confirmation")
@@ -51,8 +51,8 @@ def register():
 
         try:
             # Remember students
-            db.execute("INSERT INTO students (fname, sname, email, hash) VALUES (?, ?, ?, ?)",
-                        fname, sname, email, hashed_pw)
+            db.execute("INSERT INTO students (fname, sname, email, hash, guardian) VALUES (?, ?, ?, ?, ?)",
+                        fname, sname, email, hashed_pw, guardian)
         except Exception as e:
             print(e)
             return apology("Something went wrong. Please try again.")
