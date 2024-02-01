@@ -122,4 +122,8 @@ def classes():
 @app.route("/home", methods=["GET", "POST"])
 def home():
     name = db.execute("SELECT guardian FROM students WHERE id =?", session["user_id"])
+
+    enrolled_in = db.execute("SELECT name FROM enroments_summer2023 WHERE student_id = ?", session["user_id"])
+
+    
     return render_template("home.html", name=name)
