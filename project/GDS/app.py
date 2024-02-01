@@ -58,7 +58,7 @@ def register():
                         fname, sname, email, hashed_pw, guardian)
 
             # Update classes database
-            db.execute("INSERT INTO classes (name, student_id) VALUES (?, ?)", c, session["user_id"])
+            db.execute("INSERT INTO enrolments_summer2023 (name, student_id) VALUES (?, ?)", c, session["user_id"])
         except Exception as e:
             print(e)
             return apology("Something went wrong. Please try again.")
