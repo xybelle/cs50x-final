@@ -13,7 +13,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-CLASSES = ["Ballet", "Jazz", "Hip-Hop"]
+CLASSES = ["ballet", "tap", "hiphop"]
 
 @app.route("/", methods=["GET"])
 def index():
@@ -22,6 +22,9 @@ def index():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        c = request.form.get("class")
+        if c not in CLASSES:
+            return apology("Please select class")
         fname = request.form.get("fname")
         sname = request.form.get("sname")
         guardian = request.form.get("parent-guardian")
@@ -53,6 +56,8 @@ def register():
             # Remember students
             db.execute("INSERT INTO students (fname, sname, email, hash, guardian) VALUES (?, ?, ?, ?, ?)",
                         fname, sname, email, hashed_pw, guardian)
+
+            
         except Exception as e:
             print(e)
             return apology("Something went wrong. Please try again.")
