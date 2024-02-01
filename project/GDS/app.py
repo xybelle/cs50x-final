@@ -64,6 +64,7 @@ def register():
             return apology("Something went wrong. Please try again.")
 
         rows = db.execute("SELECT * FROM students WHERE email = ?", email)
+        print(rows)
         session["user_id"] = rows[0]["id"]
 
         # Confirm registration
