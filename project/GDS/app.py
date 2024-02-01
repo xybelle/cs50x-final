@@ -57,7 +57,8 @@ def register():
             db.execute("INSERT INTO students (fname, sname, email, hash, guardian) VALUES (?, ?, ?, ?, ?)",
                         fname, sname, email, hashed_pw, guardian)
 
-            
+            # Update classes database
+            db.execute("INSERT INTO classes)
         except Exception as e:
             print(e)
             return apology("Something went wrong. Please try again.")
