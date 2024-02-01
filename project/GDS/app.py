@@ -67,7 +67,7 @@ def register():
         session["user_id"] = rows[0]["id"]
 
         # Confirm registration
-        return render_template("home.html", name="guardian")
+        return redirect("/home", name="guardian")
 
     return render_template("register.html")
 
@@ -119,6 +119,6 @@ def logout():
 def classes():
     return render_template("classes.html")
 
-@app.route("/book", methods=["GET", "POST"])
-def book():
-    return redirect("/")
+@app.route("/home", methods=["GET", "POST"])
+def home():
+    return render_template("home.html", name="guardian")
