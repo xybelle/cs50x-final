@@ -6,7 +6,14 @@
 
 {% block main %}
     <form action="/register" method="post">
-
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" aria-label="Default select example">
+                <option selected disabled>Select class</option>
+                <option value="ballet">Ballet</option>
+                <option value="tap">Tap</option>
+                <option value="hiphop">Hip Hop</option>
+              </select>
+        </div>
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" required autocomplete="off" autofocus name="fname" placeholder="First Name" type="text">
         </div>
@@ -24,9 +31,6 @@
         </div>
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" required autocomplete="off" name="confirmation" placeholder="Confirm Password" type="password">
-        </div>
-        <div class="mb-3">
-            
         </div>
         <button class="btn btn-primary" type="submit">Register</button>
     </form>
