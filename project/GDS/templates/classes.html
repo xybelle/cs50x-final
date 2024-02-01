@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <h1 class="display-1">Summer Classes</h1>
+  <p class="lead">Register now for our Summer Classes.</p>
+{% endblock %}
+
+{% block main %}
+  <div class="container-fluid">
+    <div class="card-group">
+
+        <div class="card">
+          <img src="static/ballet.jpg" class="card-img-top" alt="cute little ballerinas in pink ballet custome">
+          <div class="card-body">
+            <h5 class="card-title">Ballet (Ages 3 - 5)</h5>
+            <p class="card-text">
+              In this class, the focus is on refining the so-called gross motor skills,
+              moving to music, an introduction to basic dance steps, creativity, imagination, and fun!
+            </p>
+            <a href="/register?class=ballet" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="static/tap.jpg" class="card-img-top" alt="cute little ballerinas in pink ballet custome">
+          <div class="card-body">
+            <h5 class="card-title">Tap (Ages 4 - 6)</h5>
+            <p class="card-text">
+              In this class, we help develop rhythm, style and sound. Students will focus
+              on building flexibility of the knee and ankles, coordination, and speed of movement.
+            </p>
+            <a href="/register?class=tap" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="static/hiphop.jpg" class="card-img-top" alt="kids at dance school, hiphop dance">
+          <div class="card-body">
+            <h5 class="card-title">Hip Hop (Ages 4 - 6)</h5>
+            <p class="card-text">
+              In this class, we teach rhythm, coordination, and balance through age-appropriate movements
+              set to fun upbeat music.
+            </p>
+            <a href="/register?class=hiphop" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="https://www.freepik.com/free-photo/kids-dance-school-ballet-hiphop-street-funky-modern-dancers-studio-background_13457001.htm#query=hiphop%20dance%20class%20kids&position=1&from_view=search&track=ais&uuid=51ae28c5-a4df-4ea7-b624-78c2983b97d9">Image by master1305</a> on Freepik
+
+    <a href="https://www.freepik.com/free-photo/cute-little-ballerinas-pink-ballet-costume-children-pointe-shoes-is-dancing-room_11194851.htm">Image by prostooleh</a> on Freepik
+{% endblock %}

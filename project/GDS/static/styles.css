@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+.content {
+    flex: 1; /* This allows the content to expand and fill the available space */
+    /* Add your content styles here */
+}
+
+.footer {
+    /* Your footer styles */
+    background-color: #f8f9fa;
+    padding: 5px;
+    text-align: center;
+}
