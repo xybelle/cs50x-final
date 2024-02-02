@@ -22,9 +22,6 @@ def index():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        c = request.form.get("class")
-        if c not in CLASSES:
-            return apology("Please select class")
         fname = request.form.get("fname")
         sname = request.form.get("sname")
         guardian = request.form.get("parent-guardian")
@@ -57,8 +54,6 @@ def register():
             db.execute("INSERT INTO students (fname, sname, email, hash, guardian) VALUES (?, ?, ?, ?, ?)",
                         fname, sname, email, hashed_pw, guardian)
 
-            # Update classes database
-            db.execute("INSERT INTO enrolments_summer2023 (name, student_id) VALUES (?, ?)", c, session["user_id"])
         except Exception as e:
             print(e)
             return apology("Something went wrong. Please try again.")
@@ -123,8 +118,21 @@ def classes():
 @app.route("/home", methods=["GET", "POST"])
 def home():
     name = db.execute("SELECT guardian FROM students WHERE id =?", session["user_id"])
-
+    guardian = name[0]
     enrolled_in = db.execute("SELECT name FROM enrolments_summer2023 WHERE student_id = ?", session["user_id"])
 
+    print(name)
+    print(enrolled_in)
+    return render_template("home.html", name=guardian, c=enrolled_in)
 
-    return render_template("home.html", name=name, c=enrolled_in)
+@app.route("/book", methods=["GET"])
+def book():
+    return render_template("book.html")
+
+@app.route("/booked", methods=["GET"])
+def booked():
+    return render_template("booked.html")
+
+@app.route("/about", methods=["GET"])
+def about():
+    return apology("todo")

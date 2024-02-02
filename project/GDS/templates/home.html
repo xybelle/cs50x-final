@@ -1,19 +1,26 @@
 {% extends "layout.html" %}
 
 {% block header %}
-  <h1 class="display-1">Hey {{ name.guardian }} </h1>
-  <p class="lead">Dec 1, 2023 to Feb 29, 2024</p>
-  <a href="/register" class="btn btn-primary">Register Now</a>
+  <h1 class="display-6">Hey, {{ name.guardian }} </h1>
+  <a href="/book" class="btn btn-primary">Book a class</a>
+
 
 {% endblock %}
 
 {% block main %}
+
+
     <h1 class="display-5">Upcoming Classes</h1>
-    <p class="lead">{{ c.name }}</p>
+    {% if c == [] %}
+      <p class="lead"> No upcoming classes</p>
+    {% else %}
+      {% for entry in c %}
+        <p class="lead">{{ c.name }}</p>
+      {% endfor %}
+    {% endif %}
+
 {% endblock %}
 
 {% block footer %}
-    <a href="https://www.freepik.com/free-photo/kids-dance-school-ballet-hiphop-street-funky-modern-dancers-studio-background_13457001.htm#query=hiphop%20dance%20class%20kids&position=1&from_view=search&track=ais&uuid=51ae28c5-a4df-4ea7-b624-78c2983b97d9">Image by master1305</a> on Freepik
-
-    <a href="https://www.freepik.com/free-photo/cute-little-ballerinas-pink-ballet-costume-children-pointe-shoes-is-dancing-room_11194851.htm">Image by prostooleh</a> on Freepik
+    
 {% endblock %}

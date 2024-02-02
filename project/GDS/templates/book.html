@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <h1 class="display-6">Select the class below</h1>
+{% endblock %}
+
+{% block main %}
+
+    <div class="row">
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Ballet</h5>
+          <p class="card-text">Mondays, 3pm - 4pm</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">
+            Book
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Tap</h5>
+          <p class="card-text">Thursdays, 3pm - 4pm</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">
+            Book
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hip Hop</h5>
+            <p class="card-text">Saturdays, 3pm - 4pm</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">
+                Book
+              </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
