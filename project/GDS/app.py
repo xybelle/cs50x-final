@@ -103,6 +103,7 @@ def login():
 
 
 @app.route("/logout")
+@login_required
 def logout():
     # Forget any user_id
     session.clear()
@@ -117,6 +118,7 @@ def classes():
 
 
 @app.route("/home")
+@login_required
 def home():
     # Get name to display greeting
     name = db.execute("SELECT guardian FROM students WHERE id = ?", session["user_id"])
@@ -138,6 +140,7 @@ def book():
 
 
 @app.route("/confirm", methods=["GET", "POST"])
+@login_required
 def confirm():
     if request.method == "POST":
         selected_class = request.form.get('confirmation')
