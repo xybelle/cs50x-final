@@ -130,7 +130,7 @@ def home():
         enrolled_in = enrolled[0]
         return render_template("home.html", name = guardian, c=enrolled_in)
 
-    return render_template("home.html", name=guardian, c=enrolled_in)
+    return render_template("home.html", name=guardian, c=enrolled)
 
 
 @app.route("/book", methods=["GET", "POST"])
