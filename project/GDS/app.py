@@ -154,7 +154,7 @@ def confirm():
             class_id = db.execute("SELECT id FROM classes WHERE name = ?", selected_class)
             print(class_id)
             db.execute("INSERT INTO enrolments (class_id, student_id, name) VALUES (?, ?, ?)",
-                       (class_id[0]['id'], session["user_id"], selected_class))
+                       class_id[0]['id'], session["user_id"], selected_class)
 
         except Exception as e:
             print(e)
