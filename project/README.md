@@ -21,13 +21,7 @@
         - enrolments - Contains class_id, class name, student_id, and enrolment date.
 3. **helpers.py**
     - Where login_required decorator is defined to ensure that a user is logged in before accessing specific route.
-4. **templates folder**
-    - Contains:
-        - about.html: Displays the school's mission, vision, etc.
-        - apology.html: For displaying specific error messages.
-        - book.html: Displays a form so user can select the class they want to book with button to submit
-        - booked.html: Displays thank-you message when user successfully booked a class.
-        - change_password: 
+
 
 
 
