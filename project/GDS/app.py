@@ -123,13 +123,13 @@ def home():
     guardian = name[0]
 
     # Get upcoming classes student already enrolled in
-    enrolled = db.execute("SELECT name FROM enrolments WHERE student_id = ?", session["user_id"])
-    enrolled_in = enrolled[0]
-    
-    return render_template("home.html", name=guardian, c=enrolled_in)
+    enrolled_in = db.execute("SELECT name FROM enrolments WHERE student_id = ?", session["user_id"])
+
+    return render_template("home.html", name=guardian, c=enrolled_in[0])
 
 
 @app.route("/book", methods=["GET", "POST"])
+@login_required
 def book():
     if request.method == "POST":
         selected_class = request.form.get('classes')
@@ -141,12 +141,10 @@ def book():
 def confirm():
     if request.method == "POST":
         selected_class = request.form.get('confirmation')
-        print(selected_class)
 
         # Check if user already enrolled in class
         already_enrolled = db.execute("SELECT name FROM enrolments WHERE name = ? AND student_id = ?", selected_class, session["user_id"])
 
-        print(already_enrolled)
         if already_enrolled != []:
             return render_template("apology.html", message="You've already enrolled in this class")
 
