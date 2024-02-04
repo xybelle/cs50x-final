@@ -123,7 +123,7 @@ def home():
     guardian = name[0]
 
     # Get upcoming classes student already enrolled in
-    enrolled_in = db.execute("SELECT name FROM classes WHERE id IN (SELECT id FROM enrolments WHERE student_id = ?)", session["user_id"])
+    enrolled_in = db.execute("SELECT name FROM enrolments WHERE id IN (SELECT id FROM enrolments WHERE student_id = ?)", session["user_id"])
 
     return render_template("home.html", name=guardian, c=enrolled_in)
 
