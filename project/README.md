@@ -1,7 +1,7 @@
 # book it
 #### Video Demo: https://youtu.be/qXxA4oaRb2I
 #### Description:
-My final project for CS50X 2024 online course offered by Harvard University. I've used Flask framework and some software development/web programming languages covered by the course such as Python, SQL, HTML, and CSS. 'book it' is a web app for a school that offers primay dance classes to handle or manage enrolments. in 'book it' a parent can register and book classes for their child. Right now, it only assumes one email address per parent-student.
+My final project for CS50X 2024 online course offered by Harvard University. I've used Flask framework and some software development/web programming languages covered by the course such as Python, SQLite, HTML, and CSS. 'book it' is a web app for a school that offers primay dance classes to handle or manage enrolments. in 'book it' a parent can register and book classes for their child. Right now, it only assumes one email address per parent-student.
 
 1. **app.py**
     - Contains functions:
