@@ -140,6 +140,7 @@ def book():
 def confirm():
     if request.method == "POST":
         selected_class = request.form.get('confirmation')
+        print(selected_class)
 
         # Check if user already enrolled in class
         already_enrolled = db.execute("SELECT name FROM enrolments WHERE name = ? AND student_id = ?", selected_class, session["user_id"])
