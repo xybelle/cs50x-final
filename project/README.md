@@ -21,10 +21,6 @@ My final project for CS50X 2024 online course offered by Harvard University. I'v
         - enrolments - Contains class_id, class name, student_id, and enrolment date.
 3. **helpers.py**
     - Where login_required decorator is defined to ensure that a user is logged in before accessing specific route.
-4. templates
-[about.html](/workspaces/150109343/project/GDS/templates)
-5. asdf
-
 
 
 
