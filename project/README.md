@@ -22,8 +22,6 @@ My final project for CS50X 2024 online course offered by Harvard University. I'v
 3. **helpers.py**
     - Where login_required decorator is defined to ensure that a user is logged in before accessing specific route.
 
-'asdfasdf' wasdfasdfxczvc asdrftawe
-
 
 
 
