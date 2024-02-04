@@ -56,7 +56,7 @@ def register():
 
         except Exception as e:
             print(e)
-            return apology("Something went wrong. Please try again.")
+            return render_template("apology.html", message="Something went wrong. Please try again.")
 
         rows = db.execute("SELECT * FROM students WHERE email = ?", email)
         session["user_id"] = rows[0]["id"]
@@ -142,7 +142,7 @@ def confirm():
         selected_class = request.form.get('confirmation')
 
         # Check if user already enrolled in class
-        already_enrolled = db.execute("SELECT student_id FROM enrolments WHERE name = ?", selected_class)
+        already_enrolled = db.execute("SELECT name FROM enrolments WHERE name = ? AND student_id = ?", selected_class, session["user_id"])
 
         print(already_enrolled)
         if already_enrolled != []:
@@ -184,7 +184,7 @@ def change_password():
 
         # Check database if old password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], pw):
-            return arender_template("apology.html", message="Password incorrect")
+            return render_template("apology.html", message="Password incorrect")
 
         if pw != confirm:
             return render_template("apology.html", message="Old password and confirmation don't match")
