@@ -127,7 +127,7 @@ def home():
     # Get upcoming classes student already enrolled in
     enrolled_in = db.execute("SELECT name FROM enrolments WHERE student_id = ?", session["user_id"])
 
-    return render_template("home.html", name=guardian, c=enrolled_in[0])
+    return render_template("home.html", name=guardian, c=enrolled_in)
 
 
 @app.route("/book", methods=["GET", "POST"])
