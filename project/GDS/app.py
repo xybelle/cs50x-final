@@ -33,7 +33,7 @@ def register():
         stu = db.execute("SELECT email FROM students WHERE email = ?", email)
         existing_stu = stu[0] if stu else None
 
-        # Check if stu already exists in the database
+        # Check if email already exists in the database
         if existing_stu:
             return render_template("apology.html", message="Email already registered. Please try logging in instead.")
         # Validate submission
