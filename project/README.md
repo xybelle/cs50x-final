@@ -14,7 +14,7 @@ I've used Flask web framework based in Python
         - home: Requires user is logged in. Query database to get the parent or guardian name for greeting. Will show any upcoming classes if there is any. Otherwise will show 'no upcoming classes'.
         - book: Renders book.html where user can select which class they want to book. Requires user is logged in.
         - confirm: Gets selected class after user confirms. Will check if user already booked the class by querying the database, if so, will show message 'already enrolled'. Otherwise, will try to update the *enrolments* table except if there are any errors. Requires user is logged in.
-        - about: Just renders about.html.
+        - about: Renders about.html.
         - change_password: Allows user to change their password. Requires that user is logged in. Requires that user enters old password and confirm the old password, then nominate a new password. If a field is empty it will show an error message. Query the database for username (or email) and checks that the password is correct. Will check if old password and confirmation matches, if not, will show an error message. If matches, will proceed to hash the new password and update the hashed password in students table.
 2. **gds.db**
     - Contains 3 tables:
