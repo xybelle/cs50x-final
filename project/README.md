@@ -20,6 +20,7 @@
         - classes: Contains class_id, name of class, teacher's name, semester, year, and status
         - enrolments - Contains class_id, class name, student_id, and enrolment date.
 3. **helpers.py**
+    - Contains login_required function to check 
 
 
 
