@@ -20,7 +20,10 @@
         - classes: Contains class_id, name of class, teacher's name, semester, year, and status
         - enrolments - Contains class_id, class name, student_id, and enrolment date.
 3. **helpers.py**
-    - Where login_required decorator is defined that takes another function as argument.
+    - Where login_required decorator is defined to ensure that a user is logged in before accessing specific route.
+4. **templates folder**
+    - Contains:
+        - about.html: 
 
 
 
