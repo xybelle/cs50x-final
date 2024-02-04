@@ -16,7 +16,10 @@
         - change_password: Allows user to change their password. Requires that user is logged in. Requires that user enters old password and confirm the old password, then nominate a new password. If a field is empty it will show an error message. Query the database for username (or email) and checks that the password is correct. Will check if old password and confirmation matches, if not, will show an error message. If matches, will proceed to hash the new password and update the hashed password in students table.
 2. **gds.db**
     - Contains 3 tables:
-        - students: Stores student_id, fname, sname, 
+        - students: Contains student_id, fname, sname, parent or guardian name, email address and hash (password).
+        - classes: Contains class_id, name of class, teacher's name, semester, year, and status
+        - enrolments - Contains class_id, class name, student_id, and enrolment date.
+3. **helpers.py**
 
 
 
