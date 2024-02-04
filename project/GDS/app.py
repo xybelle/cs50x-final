@@ -2,7 +2,7 @@ from cs50 import SQL
 from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import apology, login_required
+from helpers import login_required
 
 app = Flask(__name__)
 
@@ -13,11 +13,11 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-CLASSES = ["ballet", "tap", "hiphop"]
 
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -35,16 +35,16 @@ def register():
 
         # Check if stu already exists in the database
         if existing_stu:
-            return apology("Email already registered. Please try logging in instead.")
+            return render_template("apology.html", message="Email already registered. Please try logging in instead.")
         # Validate submission
         elif not fname or not sname:
-            return apology("Please enter your name")
+            return render_template("apology.html", message="Please enter your name")
         # Ensure password is entered
         elif not pw:
-            return apology("Please enter a password")
+            return render_template("apology.html", message="Please enter a password")
         # Ensure password and confirmation matches
         elif pw != conf:
-            return apology("Passwords do not match")
+            return render_template("apology.html", message="Passwords do not match")
 
         # Hash password
         hashed_pw = generate_password_hash(pw, method='pbkdf2', salt_length=2)
@@ -52,14 +52,13 @@ def register():
         try:
             # Remember students
             db.execute("INSERT INTO students (fname, sname, email, hash, guardian) VALUES (?, ?, ?, ?, ?)",
-                        fname, sname, email, hashed_pw, guardian)
+                       fname, sname, email, hashed_pw, guardian)
 
         except Exception as e:
             print(e)
             return apology("Something went wrong. Please try again.")
 
         rows = db.execute("SELECT * FROM students WHERE email = ?", email)
-        print(rows)
         session["user_id"] = rows[0]["id"]
 
         # Confirm registration
@@ -76,11 +75,11 @@ def login():
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("email"):
-            return apology("Please enter your email", 403)
+            return render_template("apology.html", message="Please enter your email")
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("Please enter your password", 403)
+            return render_template("apology.html", message="Please enter your password")
 
         # Query database for email
         rows = db.execute(
@@ -91,7 +90,7 @@ def login():
         if len(rows) != 1 or not check_password_hash(
             rows[0]["hash"], request.form.get("password")
         ):
-            return apology("Invalid email and/or password", 403)
+            return render_template("apology.html", message="Invalid email and/or password")
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -111,28 +110,89 @@ def logout():
     # Redirect user to index
     return redirect("/")
 
-@app.route("/classes", methods=["GET"])
+
+@app.route("/classes")
 def classes():
     return render_template("classes.html")
 
-@app.route("/home", methods=["GET", "POST"])
-def home():
-    name = db.execute("SELECT guardian FROM students WHERE id =?", session["user_id"])
-    guardian = name[0]
-    enrolled_in = db.execute("SELECT name FROM enrolments_summer2023 WHERE student_id = ?", session["user_id"])
 
-    print(name)
-    print(enrolled_in)
+@app.route("/home")
+def home():
+    # Get name to display greeting
+    name = db.execute("SELECT guardian FROM students WHERE id = ?", session["user_id"])
+    guardian = name[0]
+
+    # Get upcoming classes student already enrolled in
+    enrolled_in = db.execute("SELECT name FROM classes WHERE id IN (SELECT id FROM enrolments WHERE student_id = ?)", session["user_id"])
+
     return render_template("home.html", name=guardian, c=enrolled_in)
 
-@app.route("/book", methods=["GET"])
+
+@app.route("/book", methods=["GET", "POST"])
 def book():
+    if request.method == "POST":
+        selected_class = request.form.get('classes')
+        return render_template("confirm.html", class_name=selected_class)
     return render_template("book.html")
 
-@app.route("/booked", methods=["GET"])
-def booked():
+
+@app.route("/confirm", methods=["GET", "POST"])
+def confirm():
+    if request.method == "POST":
+        selected_class = request.form.get('confirmation')
+
+        # Check if user already enrolled in class
+        already_enrolled = db.execute("SELECT student_id FROM enrolments WHERE name = ?", selected_class)
+
+        print(already_enrolled)
+        if already_enrolled != []:
+            return render_template("apology.html", message="You've already enrolled in this class")
+
+        # Update enrolments database
+        try:
+            class_id = db.execute("SELECT id FROM classes WHERE name = ?", selected_class)
+            db.execute("INSERT INTO enrolments (class_id, student_id, name) VALUES (?, ?, ?)",
+                       class_id[0], (session["user_id"], selected_class))
+
+        except Exception as e:
+            print(e)
+            return render_template("apology.html", message="Something went wrong. Please try again.")
     return render_template("booked.html")
+
 
 @app.route("/about", methods=["GET"])
 def about():
-    return apology("todo")
+    return render_template("about.html")
+
+
+@app.route("/change_password", methods=["GET", "POST"])
+@login_required
+def change_password():
+    if request.method == "GET":
+        return render_template("change_password.html")
+
+    if request.method == "POST":
+        pw = request.form.get("password")
+        confirm = request.form.get("confirmation")
+        newpw = request.form.get("new_password")
+
+        if not pw or not confirm or not newpw:
+            return render_template("apology.html", message="Please enter password")
+
+        # Query database for username
+        rows = db.execute("SELECT * FROM students WHERE id = ?", session["user_id"])
+
+        # Check database if old password is correct
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], pw):
+            return arender_template("apology.html", message="Password incorrect")
+
+        if pw != confirm:
+            return render_template("apology.html", message="Old password and confirmation don't match")
+        else:
+            # Hash new password
+            hashed_new_pw = generate_password_hash(newpw, method='pbkdf2', salt_length=2)
+
+            # Update database with new hashed password
+            db.execute("UPDATE students SET hash = ? WHERE id = ?", hashed_new_pw, session["user_id"])
+
+            return redirect("/")
