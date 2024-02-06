@@ -1,6 +1,6 @@
-f = input("File name: ").lower().lstrip().rstrip().partition('.')
+f = input("File name: ").lower().lstrip().rstrip()
 
-if f
+if 
 
 if f[2] == 'gif' or f[2] == 'jpg' or f[2] == 'jpeg' or f[2] == 'png':
     if f[2] == 'jpg' or f[2] == 'jpeg':
