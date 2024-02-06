@@ -11,9 +11,8 @@ def main():
 
 
 def convert(time):
-    h, m = time.split(':')
-    m = f"0.{m}"
-    return (float(h) + float(m))
+    h, m = map(float, time.split(':'))
+    return h + m / 60
 
 if __name__ == "__main__":
     main()
