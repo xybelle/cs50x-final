@@ -5,7 +5,10 @@ def main():
     print(converted_message)
 
 def convert(m):
-    new_m = m.replace(":)", "🙂")
+    if ":)" in m:
+        new_m = m.replace(":)", "🙂")
+    if ":(" in m:
+        new_m = m.replace(":(", "🙁")
     return new_m
 
 main()
