@@ -1,2 +1,2 @@
-f = input("File name: ")
+f = input("File name: ").lower()
 
