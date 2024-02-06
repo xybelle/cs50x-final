@@ -1,4 +1,4 @@
 expression = input("Expression: ")
 x, y, z = expression.split(" ")
-
-print("{0}".format())
+answer = float(x), y, float(z)
+print(answer)
