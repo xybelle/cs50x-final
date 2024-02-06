@@ -1,4 +1,4 @@
-amount_due, c, change = 50, 0, 0
+amount_due, c = 50, 0
 valid_c = [25, 10, 5]
 
 while c <= 50:
@@ -9,4 +9,5 @@ while c <= 50:
     c += c
     amount_due -= c
     if amount_due <= 0:
-        print(f"Change owed: {change}", change = c + amount_due)
+        change = c + amount_due
+        print(f"Change owed: {change}")
