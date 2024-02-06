@@ -1,9 +1,8 @@
-f = input("File name: ").lower().lstrip().rstrip()
+f = input("File name: ").lower().lstrip().rstrip().split('.')
 
 if f.count('.') >= 2 or f.count('.') == 0:
     print("application/octet-stream")
 
-f = f.partition('.')
 
 if f[2] == 'gif' or f[2] == 'png':
     print(f"image/{f[2]}")
