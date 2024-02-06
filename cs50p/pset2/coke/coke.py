@@ -1,4 +1,4 @@
-amount_due = 50, c = 0, change = 0
+amount_due, c, change = 50, 0, 0
 valid_c = [25, 10, 5]
 
 while amount_due != 0:
