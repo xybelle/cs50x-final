@@ -10,7 +10,6 @@ while c <= 50:
     else:
         amount_due -= c
         if amount_due <= 0:
+            change = c + amount_due
+            print(f"Change owed: {change}")
             break
-
-change = amount_due - c
-print(f"Change owed: {change}")
