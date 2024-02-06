@@ -13,8 +13,8 @@ def dollars_to_float(d):
 
 def percent_to_float(p):
     p = p.removesuffix('%')
-    pp = float(f'{p}e-00')
-    print(p)
+    pp = float(f'0.{p}')
+    print(pp)
     return p
 
 
