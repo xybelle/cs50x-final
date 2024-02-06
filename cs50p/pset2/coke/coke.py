@@ -6,8 +6,8 @@ while c <= 50:
     c = int(input("Insert coin: "))
     if c not in valid_c:
         continue
-    c += c
-    amount_due -= c
+    else:
+        amount_due -= c
 
 change = amount_due - c
 print(f"Change owed: {change}")
