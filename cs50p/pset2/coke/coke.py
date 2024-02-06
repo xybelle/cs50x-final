@@ -7,6 +7,7 @@ while c <= 50:
     if c not in valid_c:
         continue
     else:
+        c = c + c
         amount_due -= c
         if amount_due <= 0:
             break
