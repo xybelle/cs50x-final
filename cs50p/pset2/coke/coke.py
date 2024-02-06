@@ -11,3 +11,5 @@ while amount_due != 0:
         c = int(input("Insert coin: "))
     else:
         print(f"Amount due: {amount_due}")
+        break
+    continue
