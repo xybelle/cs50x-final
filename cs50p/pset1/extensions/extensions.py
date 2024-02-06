@@ -1,5 +1,7 @@
 f = input("File name: ").lower().lstrip().rstrip().partition('.')
 
+if f
+
 if f[2] == 'gif' or f[2] == 'jpg' or f[2] == 'jpeg' or f[2] == 'png':
     if f[2] == 'jpg' or f[2] == 'jpeg':
         print("image/jpeg")
