@@ -4,17 +4,14 @@ if f.count('.') >= 2 or f.count('.') == 0:
     print("application/octet-stream")
 
 f = f.split('.')
-c = len(f)
-print(f)
-print(c)
-print(f[0])
-if f[len(f)] == 'gif' or f[len(f)] == 'png':
-    print(f"image/{f[len(f)]}")
-elif f[len(f)] == 'jpg' or f[len(f)] == 'jpeg':
+
+if f[len(f) - 1] == 'gif' or f[len(f) - 1] == 'png':
+    print(f"image/{f[len(f) - 1]}")
+elif f[len(f) - 1] == 'jpg' or f[len(f) - 1] == 'jpeg':
     print("image/jpeg")
-elif f[len(f)] == 'pdf' or f[len(f)] == 'zip':
+elif f[len(f) - 1] == 'pdf' or f[len(f) - 1] == 'zip':
     print(f"application/{f[len(f)]}")
-elif f[len(f)] == 'txt':
+elif f[len(f) - 1] == 'txt':
     print("text/plain")
 else:
     print("application/octet-stream")
