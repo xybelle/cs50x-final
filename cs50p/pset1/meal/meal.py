@@ -12,8 +12,8 @@ def main():
 
 def convert(time):
     h, m = time.split(':')
-    m = float(m).format()
-    return t
+    m = f"0.{m}"
+    return (float(h) + float(m))
 
 if __name__ == "__main__":
     main()
