@@ -9,6 +9,6 @@ if f[2] == 'gif' or f[2] == 'jpg' or f[2] == 'jpeg' or f[2] == 'png':
 elif f[2] == 'pdf' or f[2] == 'zip':
     print(f"application/{f[2]}")
 elif f[2] == 'txt':
-    print(f"text/{f[2]}")
+    print("text/plain")
 else:
     print("application/octet-stream")
