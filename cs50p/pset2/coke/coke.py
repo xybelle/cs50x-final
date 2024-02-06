@@ -1,6 +1,9 @@
 amount_due, c, change = 50, 0, 0
 valid_c = [25, 10, 5]
 
+print(f"Amount due: {amount_due}")
+c = int(input("Insert coin: "))
+
 while c <= 50:
     print(f"Amount due: {amount_due}")
     c = int(input("Insert coin: "))
