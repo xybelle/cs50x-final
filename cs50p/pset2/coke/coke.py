@@ -1,2 +1,6 @@
 print("Amount due: 50")
-c = input()
+amount_due = 50
+c = int(input("Insert coin: "))
+
+for c in amount_due:
+    
