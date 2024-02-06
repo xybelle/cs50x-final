@@ -12,7 +12,7 @@ def main():
 
 def convert(time):
     h, m = time.split(':')
-    t = h.m
+    m = float(m).format()
     return t
 
 if __name__ == "__main__":
