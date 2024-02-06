@@ -6,7 +6,7 @@ if f.count('.') >= 2 or f.count('.') == 0:
 f = f.split('.')
 c = len(f)
 print(f)
-print
+print(c)
 if f[len(f)] == 'gif' or f[len(f)] == 'png':
     print(f"image/{f[len(f)]}")
 elif f[len(f)] == 'jpg' or f[len(f)] == 'jpeg':
