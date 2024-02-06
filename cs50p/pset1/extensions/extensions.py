@@ -1,9 +1,8 @@
 f = input("File name: ").lower().partition('.')
 
-if f.endswith('gif') or f.endswith('jpg') or f.endswith('jpeg') or f.endswith('png'):
+if f[2] == 'gif' or f[2] == 'jpg' or f[2] == 'jpeg' or f[2] == 'png':
     print(f"image/{f[2]}")
-elif f.endswith('pdf') or f.endswith('zip'):
+if f[2] == 'pdf' or f[2] == 'zip':
     print(f"application/{f[2]}")
-elif f.endswith('txt'):
+if f[2] == 'txt':
     print(f"txt/{f[2]}")
-
