@@ -1,1 +1,2 @@
-message = input()
+message = input("Message: ").replace(" ", "...")
+print(message)
