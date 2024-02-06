@@ -4,11 +4,13 @@ def main():
 
     print(converted_message)
 
+
 def convert(m):
     if ":)" in m:
         new_m = m.replace(":)", "🙂")
     if ":(" in m:
-        new_m = m.replace(":(", "🙁")
+        new_m = new_m.replace(":(", "🙁")
     return new_m
+
 
 main()
