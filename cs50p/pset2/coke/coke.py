@@ -8,6 +8,6 @@ while c <= 50:
         continue
     c += c
     amount_due -= c
-    if amount_due <= 0:
-        change = c + amount_due
-        print(f"Change owed: {change}")
+
+change = amount_due - c
+print(f"Change owed: {change}")
