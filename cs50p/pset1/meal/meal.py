@@ -12,7 +12,8 @@ def main():
 
 def convert(time):
     h, m = time.split(':')
-
+    t = h.m
+    return t
 
 if __name__ == "__main__":
     main()
