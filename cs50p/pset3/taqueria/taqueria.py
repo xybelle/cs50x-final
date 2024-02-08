@@ -13,9 +13,18 @@ menu = {
 
 def main():
     item = get_item()
+    total = 
 
 
 def get_item():
-    
-        food = input("Item: ")
+    while True
+        try:
+            item = input("Item: ")
+            if item not in menu:
+                raise NotInMenu
+            return item
+        except NotInMenu:
+            pass
 
+class NotInMenu(Exception):
+    pass
