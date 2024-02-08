@@ -15,10 +15,14 @@ def get_fraction():
             fraction = input("Fraction: ").split('/')
             percent = (int(fraction[0]) / int(fraction[1])) * 100
             if percent > 100:
-                percent = 'cat'
+                raise ExceedHundred
             return percent
-        except (ValueError, ZeroDivisionError):
+        except (ValueError, ZeroDivisionError, ExceedHundred):
             pass
+
+
+class ExceedHundred(Exception):
+    pass
 
 
 main()
