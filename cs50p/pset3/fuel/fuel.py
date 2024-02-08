@@ -4,6 +4,6 @@ while True:
         percent = float(fraction[0]) / float(fraction[2])
         break
     except ValueError:
-        print("That was not a fraction")
+        pass
 
 print(f"{float(percent)}%")
