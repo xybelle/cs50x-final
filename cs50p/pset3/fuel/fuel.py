@@ -19,3 +19,6 @@ def get_fraction(fraction):
             break
         except (ValueError, ZeroDivisionError):
             pass
+
+
+main()
