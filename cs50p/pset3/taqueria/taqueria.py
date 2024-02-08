@@ -13,7 +13,7 @@ menu = {
 
 def main():
     item = get_item()
-    total = 
+    total =
 
 
 def get_item():
@@ -23,7 +23,7 @@ def get_item():
             if item not in menu:
                 raise NotInMenu
             return item
-        except NotInMenu:
+        except (NotInMenu, EOFError):
             pass
 
 class NotInMenu(Exception):
