@@ -5,7 +5,5 @@ while True:
         break
     except ValueError:
         print("That was not a fraction")
-    else:
-        break
 
 print(f"{float(percent)}%")
