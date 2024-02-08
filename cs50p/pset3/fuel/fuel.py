@@ -7,7 +7,7 @@ while True:
             print("E")
         elif percent >= 99:
             print("F")
-        else
+        elif percent <= 100:
             print(f"{int(percent)}%")
         break
     except (ValueError, ZeroDivisionError):
