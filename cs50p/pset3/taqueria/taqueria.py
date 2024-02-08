@@ -10,3 +10,12 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
+
+def main():
+    item = get_item()
+
+
+def get_item():
+    while True:
+        food = input("Item: ")
+        
