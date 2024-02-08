@@ -1,8 +1,8 @@
 while True:
 
-        fraction = input("Fraction: ").split()
-        percent = float(fraction[0]) / float(fraction[2])
+        fraction = input("Fraction: ").split('/')
+        percent = (int(fraction[0]) / int(fraction[1])) * 100
         break
 
 
-print(f"{float(percent)}%")
+print(percent)
