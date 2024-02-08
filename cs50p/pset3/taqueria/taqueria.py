@@ -16,6 +16,6 @@ def main():
 
 
 def get_item():
-    while True:
+    
         food = input("Item: ")
-        
+
