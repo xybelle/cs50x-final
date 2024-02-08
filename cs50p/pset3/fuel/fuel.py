@@ -6,4 +6,5 @@ while True:
     except ValueError:
         print
     else:
-        print(f"{float(percent)}%")
+
+print(f"{float(percent)}%")
