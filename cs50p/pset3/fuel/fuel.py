@@ -5,4 +5,4 @@ while True:
         break
 
 
-print(f"{percent}%")
+print(f"{int(percent)}%")
