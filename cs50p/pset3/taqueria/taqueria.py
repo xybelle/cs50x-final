@@ -11,15 +11,15 @@ menu = {
 }
 
 
-while True
+while True:
     try:
-        item = input("Item: ")
+        item = input("Item: ").lower
         if item not in menu:
             raise NotInMenu
         total += menu['item']
         print(f"${total}")
     except (NotInMenu, EOFError):
-        pass
+        break
 
 
 class NotInMenu(Exception):
