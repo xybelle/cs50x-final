@@ -44,7 +44,7 @@ def check_day(day):
 
 
 def check_year(year):
-    if len(year) < 4:
+    if len(year) < 4 and year.isdigit():
         raise ValueError
     else:
         return year
