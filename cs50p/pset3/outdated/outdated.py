@@ -53,7 +53,7 @@ def check_year(year):
 
 def validate_date(ymd):
     if ymd.isalnum() and ' ' in ymd and ',' in ymd:
-        return ymd.split().rtrip(',')
+        return ymd.split().rstrip(',')
     elif '/' in ymd and not ymd.isalnum():
         return ymd.split('/')
     else:
