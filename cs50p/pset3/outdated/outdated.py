@@ -19,7 +19,6 @@ def main():
         try:
             date = input("Date: ").strip()
             mdy = validate_date(date)
-
             m = check_month(mdy[0])
             d = check_day(mdy[1])
             y = check_year(mdy[2])
