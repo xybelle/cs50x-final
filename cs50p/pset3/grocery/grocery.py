@@ -6,3 +6,4 @@ while True:
 
     except EOFError:
         print(grocery_list)
+        break
