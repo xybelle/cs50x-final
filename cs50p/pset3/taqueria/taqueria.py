@@ -19,8 +19,7 @@ while True:
             raise KeyError
         total += menu[f'{item}']
         print(f"${float(total)}")
+    except KeyError:
+        pass
     except EOFError:
         break
-    else:
-        pass
-
