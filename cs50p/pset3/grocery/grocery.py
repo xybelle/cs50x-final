@@ -2,7 +2,7 @@ grocery_list = [{}]
 while True:
     try:
         item = input()
-        li= 1
+        ls = dict('name': item, 'amt': 1)
 
     except EOFError:
         for item in grocery_list:
