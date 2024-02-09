@@ -1,4 +1,4 @@
-grocery_list = {}
+grocery_list = [{}]
 while True:
     try:
         item = input()
