@@ -18,7 +18,7 @@ while True:
         if item not in menu:
             raise KeyError
         total += menu[f'{item}']
-        print(f"${round(total, 2)}")
+        print(f"${round(total, 3)}")
     except KeyError:
         pass
     except EOFError:
