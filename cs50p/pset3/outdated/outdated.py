@@ -18,10 +18,10 @@ def main():
     while True:
         try:
             date = input("Date: ").strip()
-            date = validate_date(date)
-            m = check_month(date[0])
-            d = check_day(date[1].rstrip(','))
-            y = check_year(date[2])
+            mdy = validate_date(date)
+            m = check_month(mdy[0])
+            d = check_day(mdy[1].rstrip(','))
+            y = check_year(mdy[2])
             print(f"{y}-{m:02}-{d:02}")
             break
         except (KeyError, ValueError):
