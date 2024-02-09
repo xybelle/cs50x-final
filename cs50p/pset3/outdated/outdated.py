@@ -21,6 +21,7 @@ def main():
             check_day(date[1].rstrip(','))
             check_year(date[2])
             print(f"{check_year(date[2])}-{check_month(date[0])}-{check_day(date[1].rstrip(','))}")
+            break
         except (KeyError, ValueError):
             pass
 
