@@ -11,16 +11,20 @@ menu = {
 }
 
 
+class NotInMenu(Exception):
+    pass
+
+
+total = 0
 while True:
     try:
-        item = input("Item: ").lower
+        item = input("Item: ").title()
         if item not in menu:
             raise NotInMenu
-        total += menu['item']
+        total += menu[f'{item}']
         print(f"${total}")
     except (NotInMenu, EOFError):
         break
 
 
-class NotInMenu(Exception):
-    pass
+
