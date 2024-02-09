@@ -21,7 +21,7 @@ def main():
             mdy = validate_date(date)
             print(mdy)
             m = check_month(mdy[0])
-            d = check_day(mdy[1].rstrip(','))
+            d = check_day(mdy[1])
             y = check_year(mdy[2])
             print(f"{y}-{m:02}-{d:02}")
             break
@@ -39,8 +39,8 @@ def check_month(month):
 
 
 def check_day(day):
-    if int(day) >= 1 and int(day) <= 31:
-        return int(day)
+    if int(day.rstrip(',')) >= 1 and int(day.rstrip(',')) <= 31:
+        return int(day.rstrip(','))
     else:
         raise ValueError
 
