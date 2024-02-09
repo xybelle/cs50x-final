@@ -54,4 +54,11 @@ def check_year(year):
         return year
 
 
+def validate_date(ymd):
+    if ymd.isalnum() and ' ' in ymd:
+        ymd = ymd.split()
+    elif ymd
+    else
+        raise ValueError
+
 main()
