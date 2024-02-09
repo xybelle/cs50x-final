@@ -31,8 +31,8 @@ def main():
 
 
 def check_month(month):
-    if month.isdigit() and month <= 12:
-        return month
+    if month.isdigit() and int(month) <= 12:
+        return int(month)
     elif month.isalpha() and month.title() in months:
         return months.index(month.title()) + 1
     else:
