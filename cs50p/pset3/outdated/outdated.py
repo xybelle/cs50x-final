@@ -16,4 +16,8 @@ months = [
 
 while True:
     date = input("Date: ").split()
-    print(date)
+    validate(date[0])
+
+def validate(month)
+    if month.isdigit and month !> 12:
+        month = months[]
