@@ -6,5 +6,8 @@ while True:
 
     except EOFError:
         print(f"{grocery_list.get(item)} {grocery_list[item]}")
-        print(grocery_list.keys().upper)
+        i = grocery_list.keys()
+        for item in grocery_list:
+
+            print(i[item].upper)
         break
