@@ -11,10 +11,13 @@ menu = {
 }
 
 
-class NotInMenu(Exception):
-    pass
+def main():
+    while true:
+        try:
+            
 
 
+w
 total = 0
 while True:
     try:
