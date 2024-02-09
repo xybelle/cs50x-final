@@ -13,3 +13,7 @@ months = [
     "December"
 ]
 
+def get_date():
+    while True:
+        date = input("Date: ")
+        
