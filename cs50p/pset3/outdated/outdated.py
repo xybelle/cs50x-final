@@ -54,8 +54,7 @@ def check_year(year):
 
 def validate_date(mdy):
     if mdy.isalnum() and ' ' in mdy and ',' in mdy:
-        print(mdy)
-        return mdy.split()
+        return mdy.split(' ')
     elif '/' in mdy and not mdy.isalnum():
         print(mdy)
         return mdy.split('/')
