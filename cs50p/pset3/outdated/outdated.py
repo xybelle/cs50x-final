@@ -20,7 +20,7 @@ def main():
             date = input("Date: ").strip()
             date = validate_date(date)
             m = check_month(date[0])
-            d = check_day(date[1])
+            d = check_day(date[1].rstrip(','))
             y = check_year(date[2])
             print(f"{y}-{m:02}-{d:02}")
             break
@@ -53,7 +53,7 @@ def check_year(year):
 
 def validate_date(ymd):
     if ymd.isalnum() and ' ' in ymd and ',' in ymd:
-        return ymd.split().rstrip(',')
+        return ymd.split()
     elif '/' in ymd and not ymd.isalnum():
         return ymd.split('/')
     else:
