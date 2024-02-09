@@ -11,20 +11,16 @@ menu = {
 }
 
 
-def main():
-    item = get_item()
-    total =
+while True
+    try:
+        item = input("Item: ")
+        if item not in menu:
+            raise NotInMenu
+        total += menu['item']
+        print(f"${total}")
+    except (NotInMenu, EOFError):
+        pass
 
-
-def get_item():
-    while True
-        try:
-            item = input("Item: ")
-            if item not in menu:
-                raise NotInMenu
-            return item
-        except (NotInMenu, EOFError):
-            pass
 
 class NotInMenu(Exception):
     pass
