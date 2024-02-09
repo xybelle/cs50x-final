@@ -23,8 +23,8 @@ while True:
             raise NotInMenu
         total += menu[f'{item}']
         print(f"${total}")
-    except (NotInMenu, EOFError):
+    except NotInMenu:
+        pass
+    else EOFError:
         break
-
-
 
