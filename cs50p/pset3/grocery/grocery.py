@@ -5,5 +5,5 @@ while True:
         grocery_list[item] = 1
 
     except EOFError:
-        print(grocery_list)
+        print(grocery_list.items())
         break
