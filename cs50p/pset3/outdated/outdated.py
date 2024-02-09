@@ -16,7 +16,11 @@ months = [
 def main():
     while True:
         try:
-            date = input("Date: ").split('/', ' ')
+            date = input("Date: ")
+            if '/' in date:
+                date = date.split('/')
+            if ' ' in date:
+                date = date.split()
             m = check_month(date[0])
             d = check_day(date[1].rstrip(','))
             y = check_year(date[2])
