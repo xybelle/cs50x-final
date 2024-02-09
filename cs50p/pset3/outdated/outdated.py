@@ -15,18 +15,21 @@ months = [
 
 def main():
     while True:
-        date = input("Date: ").split()
-        check_month(date[0])
-        check_day(date[1].rstrip(','))
-        check_year(date[2])
-        print(f"{check_year(date[2])}-{check_month(date[0])}-{check_day(date[1].rstrip(','))}")
+        try:
+            date = input("Date: ").split()
+            check_month(date[0])
+            check_day(date[1].rstrip(','))
+            check_year(date[2])
+            print(f"{check_year(date[2])}-{check_month(date[0])}-{check_day(date[1].rstrip(','))}")
+        except (KeyError, ValueError):
+            pass
 
 
 def check_month(month):
-    if month.isdigit and month <= 12:
+    if month.isdigit() and month <= 12:
         return month
-    elif month.isalpha and month in months:
-        return months.index(month)
+    elif month.isalpha() and month in months:
+        return months.index(month.title())
     else:
         raise KeyError
 
