@@ -19,5 +19,6 @@ while True:
     validate(date[0])
 
 def validate(month)
-    if month.isalpha and month in months:
-        month = months[]
+    if month not in months:
+        raise KeyError
+    return
