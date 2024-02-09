@@ -18,10 +18,7 @@ def main():
     while True:
         try:
             date = input("Date: ").strip()
-            if '/' in date:
-                date = date.split('/')
-            if ' ' in date:
-                date = date.split()
+            date = validate_date(date)
             m = check_month(date[0])
             d = check_day(date[1])
             y = check_year(date[2])
@@ -57,7 +54,9 @@ def check_year(year):
 def validate_date(ymd):
     if ymd.isalnum() and ' ' and ',' in ymd:
         ymd = ymd.split().rtrip(',')
-    else
+    elif '/' in ymd and not ymd.isalnum():
+        ymd = ymd.split('/')
+    else:
         raise ValueError
 
 
