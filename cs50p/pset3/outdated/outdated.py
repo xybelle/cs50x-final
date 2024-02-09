@@ -18,7 +18,9 @@ while True:
     date = input("Date: ").split()
     validate(date[0])
 
-def validate(month)
+def validate(month):
+    if month.isdigit and month !> 12:
+        return month
     if month not in months:
         raise KeyError
     return
