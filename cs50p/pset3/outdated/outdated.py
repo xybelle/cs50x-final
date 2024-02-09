@@ -17,7 +17,7 @@ months = [
 def main():
     while True:
         try:
-            date = input("Date: ")
+            date = input("Date: ").strip()
             if '/' in date:
                 date = date.split('/')
             if ' ' in date:
