@@ -16,7 +16,7 @@ while True:
     try:
         item = input("Item: ").title()
         if item not in menu:
-            raise NotInMenu
+            raise KeyError
         total += menu[f'{item}']
         print(f"${float(total)}")
     except EOFError:
