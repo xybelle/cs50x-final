@@ -16,10 +16,19 @@ months = [
 
 while True:
     date = input("Date: ").split()
-    validate(date[0])
+    check_month(date[0])
+    check_day[date[1]]
 
-def validate(month):
+def check_month(month):
     if month.isdigit and month !> 12:
         return month
     elif month.isalpha and month in months:
-        return
+        return months.index(month)
+    else:
+        raise KeyError
+
+def check_day(day):
+    if day >= 1 and day <= 31:
+        return day
+    else:
+        raise Value
