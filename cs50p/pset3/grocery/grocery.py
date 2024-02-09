@@ -2,8 +2,8 @@ grocery_list = [{}]
 while True:
     try:
         item = input()
-        grocery_list['name'] = item
-        grocery_list['amt'] = 1
+        grocery_list[] = item
+        
 
     except EOFError:
         key = grocery_list.keys()
