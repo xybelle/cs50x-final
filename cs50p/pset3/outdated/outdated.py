@@ -29,7 +29,7 @@ def check_month(month):
     if month.isdigit() and month <= 12:
         return month
     elif month.isalpha() and month in months:
-        return months.index(month.title())
+        return months.index(month.title()) + 1
     else:
         raise KeyError
 
