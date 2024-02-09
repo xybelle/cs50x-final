@@ -29,13 +29,12 @@ def main():
 
 
 def check_month(month):
-    if month.isdigit() and int(month) <= 12:
+    if month.isdigit() and int(month) >= 1 and int(month) <= 12:
         return int(month)
     elif month.isalpha() and month.title() in months:
         return months.index(month.title()) + 1
     else:
         raise KeyError
-
 
 def check_day(day):
     if int(day) >= 1 and int(day) <= 31:
