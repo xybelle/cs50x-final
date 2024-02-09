@@ -13,7 +13,7 @@ months = [
     "December"
 ]
 
-def get_date():
-    while True:
-        date = input("Date: ")
-        
+
+while True:
+    date = input("Date: ").split()
+    print(date)
