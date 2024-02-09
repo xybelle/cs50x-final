@@ -39,8 +39,8 @@ def check_month(month):
 
 
 def check_day(day):
-    if int(day.rstrip(',')) >= 1 and int(day.rstrip(',')) <= 31:
-        return int(day.rstrip(','))
+    if int(day) >= 1 and int(day) <= 31:
+        return int(day)
     else:
         raise ValueError
 
