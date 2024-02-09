@@ -19,5 +19,5 @@ while True:
     validate(date[0])
 
 def validate(month)
-    if month.isdigit and month !> 12:
+    if month.isalpha and month in months:
         month = months[]
