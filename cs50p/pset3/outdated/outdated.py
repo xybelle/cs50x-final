@@ -21,6 +21,5 @@ while True:
 def validate(month):
     if month.isdigit and month !> 12:
         return month
-    if month not in months:
-        raise KeyError
-    return
+    elif month.isalpha and month in months:
+        return
