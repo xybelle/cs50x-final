@@ -60,4 +60,5 @@ def validate_date(ymd):
     else
         raise ValueError
 
+
 main()
