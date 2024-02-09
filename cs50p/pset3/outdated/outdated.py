@@ -35,7 +35,7 @@ def check_month(month):
 
 
 def check_day(day):
-    if day >= 1 and day <= 31:
+    if day >= '1' and day <= '31':
         return day
     else:
         raise ValueError
