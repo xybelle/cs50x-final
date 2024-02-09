@@ -18,7 +18,7 @@ while True:
         if item not in menu:
             raise KeyError
         total += menu[f'{item}']
-        print(f"${float(total).format(g)}")
+        print(f"${float(total, format_spec='g')}")
     except KeyError:
         pass
     except EOFError:
