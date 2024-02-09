@@ -8,5 +8,5 @@ while True:
         key = grocery_list.keys()
         for item in grocery_list:
 
-            print(f"{grocery_list.get(item)} {item.upper}")
+            print(f"{grocery_list.get(item)} {s.upper}", s = item)
         break
