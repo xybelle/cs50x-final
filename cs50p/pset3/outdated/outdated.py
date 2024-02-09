@@ -17,7 +17,7 @@ months = [
 while True:
     date = input("Date: ").split()
     check_month(date[0])
-    check_day(date[1])
+    check_day(date[1].rstrip(','))
     check_year(date[2])
 
 def check_month(month):
