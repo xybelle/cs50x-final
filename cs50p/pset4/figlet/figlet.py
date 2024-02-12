@@ -6,7 +6,8 @@ figlet = Figlet()
 
 
 fonts = figlet.getFonts()
-
+f_one = '-f'
+f_two = '--f'
 if len(sys.argv) > 3:
     sys.exit("Too many arguments")
 elif sys.argv[1] != '--font' or sys.argv[1] != '-f':
