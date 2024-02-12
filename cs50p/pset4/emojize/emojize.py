@@ -6,10 +6,11 @@ print(a)
 word = {}
 i = 0
 for c in a:
-    if c = ' ':
+    word[i] = c
+    if c == ' ':
+        i += 1
         continue
-    word[0] = c
-
+print(word)
 for _ in a:
     if ':' in _:
         print(emoji.emojize('_'))
