@@ -6,5 +6,5 @@ print(a)
 for _ in a:
     if ':' in _:
         print(emoji.emojize(_))
-    print(_)
+    print(_, end="")
 
