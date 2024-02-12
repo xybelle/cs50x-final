@@ -3,8 +3,8 @@ import emoji
 a = input("Input: ")
 print(a)
 
-for _ in a:
-    if ':' in _:
-        print(emoji.emojize(_))
-    print(_, end="")
+for c in a:
+    if ':' in c:
+        print(emoji.emojize(f'{c}'))
+    print(c, end="")
 
