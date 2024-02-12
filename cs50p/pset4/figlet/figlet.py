@@ -12,7 +12,7 @@ def main():
     msg = input("Input: ")
     if len(sys.argv) > 3:
         sys.exit("Too many arguments")
-    elif len(sys.argv) == 0:
+    elif len(sys.argv) == 1:
         random_font(msg)
     elif len(sys.argv) == 3:
         if sys.argv[1] != '--font' and sys.argv[1] != '-f':
