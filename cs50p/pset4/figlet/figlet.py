@@ -16,13 +16,20 @@ def main():
         sys.exit("Invalid argument")
     elif sys.argv[2] not in fonts:
         sys.exit("Invalid font name")
-    else:
-        print_message(msg, sys.argv[2])
+    elif len(sys.argv) == 0:
+        random_font(msg)
+    elif len(sys.argv) == 3:
+        specific_font(msg, sys.argv[2])
 
 
-def print_message(msg, font=None):
-    if font is None:
-        font = random.choice(fonts)
+def random_font(msg):
+    font = random.choice(fonts)
+    figlet.setFont(font=font)
+    print("Output: ")
+    print(figlet.renderText(msg))
+
+
+def specific_font(msg, font):
     figlet.setFont(font=font)
     print("Output: ")
     print(figlet.renderText(msg))
