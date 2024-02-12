@@ -1,4 +1,4 @@
-
+import random
 import sys
 
 from pyfiglet import Figlet
@@ -22,3 +22,9 @@ figlet.setFont(font=sys.argv[2])
 msg = input("Input: ")
 
 print(figlet.renderText(msg))
+
+
+def random_font(msg):
+    font = random.choice(fonts)
+    figlet.setfont(font=font)
+    print(figlet.renderText(msg))
