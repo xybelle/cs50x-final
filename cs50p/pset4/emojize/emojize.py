@@ -1,6 +1,6 @@
 import emoji
 
-a = {input("Input: ")}
+a = input("Input: ")
 print(a)
 for _ in a:
     if ':' in _:
