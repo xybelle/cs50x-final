@@ -3,5 +3,7 @@ import emoji
 a = input("Input: ")
 print(a)
 
-print(emoji.emojize(f'{a}'))
+for c in a:
+    print(c, end="")
+print(emoji.emojize(f"{a}"))
 
