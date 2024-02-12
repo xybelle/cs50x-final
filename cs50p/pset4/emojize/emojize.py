@@ -2,4 +2,5 @@ import emoji
 
 a = input("Input: ")
 
-print(emoji.emojize(':thumbs_up:'))
+for _ in a:
+    print(emoji.emojize(':thumbs_up:'))
