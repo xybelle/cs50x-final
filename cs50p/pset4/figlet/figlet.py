@@ -8,6 +8,7 @@ figlet = Figlet()
 
 fonts = figlet.getFonts()
 
+
 def main():
     msg = input("Input: ")
     if len(sys.argv) > 3:
