@@ -9,6 +9,7 @@ figlet = Figlet()
 fonts = figlet.getFonts()
 
 def main():
+    msg = input("Input: ")
     if len(sys.argv) > 3:
         sys.exit("Too many arguments")
     elif sys.argv[1] != '--font' and sys.argv[1] != '-f':
@@ -16,21 +17,22 @@ def main():
     elif sys.argv[2] not in fonts:
         sys.exit("Invalid font name")
     elif len(sys.argv) == 0:
-
-
-    figlet.setFont(font=sys.argv[2])
-
-    msg = input("Input: ")
-
-    print(figlet.renderText(msg))
+        random_font(msg)
+    elif len(sys.argv) == 3:
+        specific_font(msg, sys.argv[2])
 
 
 def random_font(msg):
     font = random.choice(fonts)
-    figlet.setfont(font=font)
+    figlet.setFont(font=font)
+    print("Output: ")
     print(figlet.renderText(msg))
 
 
 def specific_font(msg, font):
-    figlet.setfont(font=font)
+    figlet.setFont(font=font)
+    print("Output: ")
     print(figlet.renderText(msg))
+
+
+main()
