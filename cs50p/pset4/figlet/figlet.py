@@ -28,3 +28,7 @@ def random_font(msg):
     font = random.choice(fonts)
     figlet.setfont(font=font)
     print(figlet.renderText(msg))
+
+
+def specific_font(msg):
+    
