@@ -19,7 +19,6 @@ def main():
             sys.exit("Invalid argument")
         elif sys.argv[2] not in fonts:
             sys.exit("Invalid font name")
-
         specific_font(msg, sys.argv[2])
 
 
