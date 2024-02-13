@@ -4,10 +4,10 @@ import random
 def main():
     while True:
         try:
-            number = input("Level: ")
-            if n <= 0:
+            number = int(input("Level: "))
+            if number <= 0:
                 raise ValueError
-            guess(n)
+            guess(number)
         except ValueError:
             pass
 
@@ -16,7 +16,7 @@ def guess(number):
     while True:
         try:
             n = random.randint(1, number)
-            g = input("Guess: ")
+            g = int(input("Guess: "))
             if g == n:
                 print("Just right!")
             elif g < n:
