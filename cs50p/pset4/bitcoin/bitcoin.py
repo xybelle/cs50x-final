@@ -15,12 +15,8 @@ try:
 except requests.RequestException:
     sys.exit()
 
-
 res = response.json()
-price = res["bpi"]["USD"]["rate"]
-price = price.strip(",")
+price = res["bpi"]["USD"]["rate"].replace(",", "")
 current_cost = n * float(price)
 
-
-print(price)
 print(f"${current_cost:,.4f}")
