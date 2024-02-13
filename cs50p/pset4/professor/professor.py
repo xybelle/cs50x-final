@@ -25,7 +25,7 @@ def main():
 
 
 def get_level():
-    
+
         try:
             level = int(input("Level: "))
             if level > 3 or level <= 0:
@@ -37,11 +37,11 @@ def get_level():
 
 def generate_integer(level):
     if level == 1:
-        random_number = random.randint(1, 9)
+        return random.randint(1, 9)
     elif level == 2:
-        random_number = random.randint(10, 99)
+        return random.randint(10, 99)
     elif level == 3:
-        random_number = random.randint(100, 999)
+        return random.randint(100, 999)
 
 
 if __name__ == "__main__":
