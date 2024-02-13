@@ -5,7 +5,14 @@ def main():
     n = get_level()
     correct_ans = 0
     for i in range(10):
-        
+        x = generate_integer(n)
+        y = generate_integer(n)
+        ans = input(f"{x} + {y} = ")
+        if x + y == ans:
+            correct_ans += 1
+            continue
+        else:
+            
 
 def get_level():
     while True:
