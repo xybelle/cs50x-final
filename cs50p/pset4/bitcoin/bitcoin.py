@@ -5,7 +5,7 @@ import sys
 
 if len(sys.argv) != 2:
     sys.exit("Usage: python bitcoin.py n")
-    
+
 try:
     n = float(sys.argv[1])
 except ValueError:
@@ -14,7 +14,7 @@ except ValueError:
 try:
     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
 except requests.RequestException:
-    sys.exit()
+    sys.exit("Error: Unable to retrieve data from CoinDesk API.")
 
 res = response.json()
 price = res["bpi"]["USD"]["rate"].replace(",", "")
