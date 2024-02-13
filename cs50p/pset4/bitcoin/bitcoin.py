@@ -14,4 +14,5 @@ try:
 except requests.RequestException:
     sys.exit()
 
-current_cost = n * 
+price = bpi USD rate
+current_cost = n *
