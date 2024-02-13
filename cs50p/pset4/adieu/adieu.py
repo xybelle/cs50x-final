@@ -4,12 +4,12 @@ import inflect
 p = inflect.engine()
 
 
-names =()
+names = []
 
 while True:
     try:
         name = input("Name: ")
-        names = name
+        names.append(name)
     except EOFError:
         #print("Adiue, addieu, to ", end="")
 
