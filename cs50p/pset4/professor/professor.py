@@ -8,7 +8,7 @@ def main():
         x = generate_integer(n)
         y = generate_integer(n)
         try:
-            ans = input(f"{x} + {y} = ")
+            ans = int(input(f"{x} + {y} = "))
             if x + y == ans:
                 correct_ans += 1
                 continue
