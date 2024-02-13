@@ -7,15 +7,19 @@ def main():
     for i in range(10):
         x = generate_integer(n)
         y = generate_integer(n)
+        tries = 0
         try:
             ans = int(input(f"{x} + {y} = "))
             if x + y == ans:
                 correct_ans += 1
                 continue
             else:
+                tries += 1
                 raise ValueError
         except ValueError:
             pass
+        else:
+            
 
 
 def get_level():
