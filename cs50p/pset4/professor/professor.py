@@ -8,7 +8,7 @@ def main():
         x = generate_integer(n)
         y = generate_integer(n)
         tries = 0
-        while True:
+        while x + y != ans:
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
