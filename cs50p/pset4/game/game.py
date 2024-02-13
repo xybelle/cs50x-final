@@ -7,13 +7,13 @@ def main():
             number = int(input("Level: "))
             if number <= 0:
                 raise ValueError
-            guess(number)
+            guess_number(number)
             break
         except ValueError:
             pass
 
 
-def guess(number):
+def guess_number(number):
     while True:
         try:
             n = random.randint(1, number)
