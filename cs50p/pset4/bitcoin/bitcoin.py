@@ -1,3 +1,4 @@
+import json
 import requests
 import sys
 
@@ -14,5 +15,6 @@ try:
 except requests.RequestException:
     sys.exit()
 
+res = response.json()
 price = bpi USD rate
 current_cost = n *
