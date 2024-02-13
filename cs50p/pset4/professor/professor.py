@@ -2,7 +2,10 @@ import random
 
 
 def main():
-    get_level()
+    n = get_level()
+    correct_ans = 0
+    for i in range(10):
+        
 
 def get_level():
     while True:
@@ -10,7 +13,6 @@ def get_level():
             level = int(input("Level: "))
             if level > 3 or level <= 0:
                 raise ValueError
-            generate_integer(level)
         except ValueError:
             pass
 
