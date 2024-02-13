@@ -16,7 +16,7 @@ def main():
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"{x} + {y} = {answer}")
+                    print(f"EEE \n{x} + {y} = {answer}")
                     break
                 else:
                     tries += 1
@@ -24,17 +24,17 @@ def main():
                     raise ValueError
             except ValueError:
                 pass
+    print(f"Score: {correct_ans}")
 
 
 def get_level():
-
-        try:
-            level = int(input("Level: "))
-            if level > 3 or level <= 0:
-                raise ValueError
-            return level
-        except ValueError:
-            pass
+    try:
+        level = int(input("Level: "))
+        if level > 3 or level <= 0:
+            raise ValueError
+        return level
+    except ValueError:
+        pass
 
 
 def generate_integer(level):
