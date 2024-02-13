@@ -18,8 +18,11 @@ except requests.RequestException:
 #p = {"bpi":{"USD":{"rate"}}}
 #r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json", params=p)
 res = response.json()
+for result in res["bpi"]:
+    for _ in res["USD"]:
+        print(_['rate'])
 #price = bpi USD rate
 #current_cost = n *
 
 
-print(res)
+print()
