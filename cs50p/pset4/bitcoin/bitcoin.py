@@ -15,11 +15,11 @@ try:
 except requests.RequestException:
     sys.exit()
 
-p = {"bpi":{"USD":{"rate"}}}
-r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json", params=p)
-#res = response.json()
+#p = {"bpi":{"USD":{"rate"}}}
+#r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json", params=p)
+res = response.json()
 #price = bpi USD rate
 #current_cost = n *
 
-print(p)
-print(r)
+
+print(res)
