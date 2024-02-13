@@ -8,7 +8,7 @@ def main():
         x = generate_integer(n)
         y = generate_integer(n)
         tries = 0
-        for i in range(3)
+        for i in range(3):
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
