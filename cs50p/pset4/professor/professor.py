@@ -8,12 +8,12 @@ def main():
         x = generate_integer(n)
         y = generate_integer(n)
         tries = 0
-        while x + y != ans:
+        for i in range(3)
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
                     correct_ans += 1
-                    continue
+                    break
                 else:
                     tries += 1
                     print("EEE")
