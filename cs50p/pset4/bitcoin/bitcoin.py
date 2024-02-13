@@ -17,8 +17,8 @@ except requests.RequestException:
 
 
 res = response.json()
-price = res["bpi"]["USD"]["rate"].strip(',')
-#price = bpi USD rate
+price = res["bpi"]["USD"]["rate"]
+price = price.strip(",")
 current_cost = n * float(price)
 
 
