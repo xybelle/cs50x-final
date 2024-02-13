@@ -8,20 +8,22 @@ def main():
         x = generate_integer(n)
         y = generate_integer(n)
         tries = 0
-        try:
-            ans = int(input(f"{x} + {y} = "))
-            if x + y == ans:
-                correct_ans += 1
-                continue
-            else:
-                tries += 1
-                raise ValueError
+        while True:
+            try:
+                ans = int(input(f"{x} + {y} = "))
+                if x + y == ans:
+                    correct_ans += 1
+                    continue
+                else:
+                    tries += 1
+                    print("EEE")
+                    raise ValueError
 
-            if tries == 3:
-                print(f"{x} + {y} = {answer}", answer = x + y)
-                continue
-        except ValueError:
-            pass
+                if tries == 3:
+                    print(f"{x} + {y} = {answer}", answer = x + y)
+                    continue
+            except ValueError:
+                pass
 
 
 def get_level():
