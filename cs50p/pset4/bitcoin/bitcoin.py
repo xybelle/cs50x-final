@@ -24,7 +24,7 @@ res = response.json()
 try:
     price = res["bpi"]["USD"]["rate"].replace(",", "")
 except KeyError:
-    sys.exit("Error: Unexpected structure in JSON response. UNable to find expected keys.")
+    sys.exit("Error: Unexpected structure in JSON response. Unable to find expected keys.")
 
 # Get current cost
 current_cost = n * float(price)
