@@ -5,8 +5,8 @@ import sys
 
 if len(sys.argv) != 2:
     sys.exit("Usage: python bitcoin.py n")
-elif not sys.argv[1].isdigit():
-    sys.exit("n is not an integer")
+elif not sys.argv[1].isdigit() and not sys.argv[1].isdecimal():
+    sys.exit("n is not a number")
 
 n = float(sys.argv[1])
 
