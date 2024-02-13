@@ -15,20 +15,20 @@ def main():
 
 
 def guess_number(n):
-    while True:
+    while g != n:
         try:
             g = int(input("Guess: "))
             if g < 0:
                 raise ValueError
             if g == n:
                 print("Just right!")
-                break
+                #break
             elif g < n:
                 print("Too small!")
             elif g > n:
                 print("Too large!")
         except ValueError:
             pass
-    sys.exit()
+    #sys.exit()
 
 main()
