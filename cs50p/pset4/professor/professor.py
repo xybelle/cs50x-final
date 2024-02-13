@@ -16,18 +16,21 @@ def main():
             else:
                 tries += 1
                 raise ValueError
+
+            if tries == 3:
+                print(f"{x} + {y} = {answer}", answer = x + y)
+                continue
         except ValueError:
             pass
-        else:
-            
 
 
 def get_level():
-    while True:
+    
         try:
             level = int(input("Level: "))
             if level > 3 or level <= 0:
                 raise ValueError
+
         except ValueError:
             pass
 
