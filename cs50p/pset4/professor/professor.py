@@ -7,7 +7,7 @@ def main():
     for i in range(10):
         x = generate_integer(n)
         y = generate_integer(n)
-        tries = 0
+        tries = 1
         for i in range(3):
             try:
                 ans = int(input(f"{x} + {y} = "))
@@ -21,7 +21,7 @@ def main():
 
                 if tries == 3:
                     print(f"{x} + {y} = {answer}", answer = x + y)
-                    continue
+                    break
             except ValueError:
                 pass
 
