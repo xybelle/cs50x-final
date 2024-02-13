@@ -17,7 +17,12 @@ except requests.RequestException:
     sys.exit("Error: Unable to retrieve data from CoinDesk API.")
 
 res = response.json()
-price = res["bpi"]["USD"]["rate"].replace(",", "")
+
+try:
+    price = res["bpi"]["USD"]["rate"].replace(",", "")
+except KeyError:
+    sys.exit("Error)
+
 current_cost = n * float(price)
 
 print(f"${current_cost:,.4f}")
