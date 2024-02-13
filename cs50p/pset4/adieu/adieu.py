@@ -4,7 +4,7 @@ import inflect
 p = inflect.engine()
 
 
-names = []
+names = p.join([])
 
 while True:
     try:
