@@ -15,7 +15,7 @@ def main():
 
 
 def guess_number(n):
-    while g != n:
+    while True:
         try:
             g = int(input("Guess: "))
             if g < 0:
@@ -29,6 +29,6 @@ def guess_number(n):
                 print("Too large!")
         except ValueError:
             pass
-    #sys.exit()
+    sys.exit()
 
 main()
