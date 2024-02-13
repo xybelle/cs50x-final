@@ -13,6 +13,9 @@ def main():
                 correct_ans += 1
                 continue
             else:
+                raise ValueError
+        except ValueError:
+            pass
 
 
 def get_level():
