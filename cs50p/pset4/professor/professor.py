@@ -14,14 +14,14 @@ def main():
                 if x + y == ans:
                     correct_ans += 1
                     break
+                elif tries == 3:
+                    answer = x + y
+                    print(f"{x} + {y} = {answer}")
+                    break
                 else:
                     tries += 1
                     print("EEE")
                     raise ValueError
-
-                if tries == 3:
-                    print(f"{x} + {y} = {answer}", answer = x + y)
-                    break
             except ValueError:
                 pass
 
