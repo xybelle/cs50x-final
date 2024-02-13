@@ -6,3 +6,8 @@ for c in s:
         continue
     print(c, end="")
 print()
+
+
+def main():
+    s = input("Input: ")
+    print(shorten)
