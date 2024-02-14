@@ -6,7 +6,7 @@ def main():
 def value(greeting):
     if "hello" in greeting:
         return 0
-    elif greeting[0] == 'h':
+    elif greeting[0] == 'h' or greeting[0] == 'H':
         return 20
     else:
         return 100
