@@ -32,7 +32,7 @@ if __name__ == "__main__"
 def main():
     f = input("Fraction: ")
     convert(f)
-    
+
 
 def convert(fraction):
     z = fraction.split('/')
@@ -42,6 +42,6 @@ def convert(fraction):
         if x > y:
             raise ValueError
         percent = ( x / y ) * 100
-        return percent
+        return int(round(percent))
     except (ValueError, ZeroDivisionError):
         pass
