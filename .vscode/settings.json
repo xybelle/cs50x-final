@@ -8,6 +8,7 @@
         "*.tcc": "c",
         "string_view": "c"
     },
-    "editor.guides.bracketPairs": "active",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairsHorizontal": true
 }
