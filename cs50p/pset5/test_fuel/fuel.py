@@ -1,7 +1,6 @@
 def main():
     f = input("Fraction: ")
-    convert(f)
-    print(gauge)
+    print(gauge(convert(f)))
 
 
 def convert(fraction):
@@ -12,7 +11,7 @@ def convert(fraction):
         if x > y:
             raise ValueError
         percent = ( x / y ) * 100
-        return gauge(int(round(percent)))
+        return int(round(percent))
     except (ValueError, ZeroDivisionError):
         pass
 

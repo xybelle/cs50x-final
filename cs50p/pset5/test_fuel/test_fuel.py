@@ -1,31 +1,12 @@
-def main():
-    percent = get_fraction()
-
-    if percent <= 1:
-        print("E")
-    elif percent >= 99:
-        print("F")
-    else:
-        print(f"{int(round(percent))}%")
+from fuel import convert, gauge
 
 
-def get_fraction():
-    while True:
-        try:
-            fraction = input("Fraction: ").split('/')
-            percent = (int(fraction[0]) / int(fraction[1])) * 100
-            if percent > 100:
-                raise ExceedHundred
-            return percent
-        except (ValueError, ZeroDivisionError, ExceedHundred):
-            pass
+def test_convert():
+    assert convert("1/4") == 25
+    assert convert("3/4") == 75
 
 
-class ExceedHundred(Exception):
-    pass
-
-
-if __name__ == "__main__"
-    main()
-
-
+def test_gauge():
+    assert gauge(1) == "E"
+    assert gauge(99) == "F"
+    assert gauge(75) == "75%"
