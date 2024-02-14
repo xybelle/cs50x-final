@@ -31,4 +31,9 @@ if __name__ == "__main__"
 
 def convert(fraction):
     z = fraction.split('/')
-    
+    x = fraction[0]
+    y = fraction[1]
+    try:
+        if x > y:
+            raise ValueError
+        
