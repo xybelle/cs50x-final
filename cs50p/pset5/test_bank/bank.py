@@ -1,13 +1,13 @@
 def main():
-    greeting = input("Greeting: ")
+    greeting = input("Greeting: ").strip().lower()
     print(f"${value(greeting)}")
     sys.exit(0)
 
 
 def value(greeting):
-    if "hello" in greeting.lower():
+    if "hello" in greeting:
         return 0
-    elif greeting[0] == 'h' or greeting[0] == 'H':
+    elif greeting[0] == 'h':
         return 20
     else:
         return 100
