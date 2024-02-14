@@ -31,9 +31,12 @@ if __name__ == "__main__"
 
 def convert(fraction):
     z = fraction.split('/')
-    x = fraction[0]
-    y = fraction[1]
+    x = int(fraction[0])
+    y = int(fraction[1])
     try:
         if x > y:
             raise ValueError
-        
+        percent = ( x / y ) * 100
+        return percent
+    except (ValueError, ZeroDivisionError):
+        pass
