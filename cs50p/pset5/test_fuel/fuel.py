@@ -31,8 +31,8 @@ if __name__ == "__main__"
 
 def convert(fraction):
     z = fraction.split('/')
-    x = int(fraction[0])
-    y = int(fraction[1])
+    x = int(z[0])
+    y = int(z[1])
     try:
         if x > y:
             raise ValueError
