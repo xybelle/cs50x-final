@@ -31,6 +31,8 @@ if __name__ == "__main__"
 
 def main():
     f = input("Fraction: ")
+    convert(f)
+    
 
 def convert(fraction):
     z = fraction.split('/')
