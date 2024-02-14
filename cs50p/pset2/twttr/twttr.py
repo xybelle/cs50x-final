@@ -14,10 +14,9 @@ def main():
 
 
 def shorten(word):
-    for c in word:
-        if c in vowels:
-            continue
-    return(c)
+    if vowels in word:
+        word = word.replace(f"{vowel}", "")
+    return(word)
 
 
 if __name__ == "__main__":
