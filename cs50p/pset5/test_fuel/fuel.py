@@ -42,6 +42,19 @@ def convert(fraction):
         if x > y:
             raise ValueError
         percent = ( x / y ) * 100
-        return int(round(percent))
+        return gauge(int(round(percent)))
     except (ValueError, ZeroDivisionError):
         pass
+
+
+def gauge(percentage):
+    if percent <= 1:
+        print("E")
+    elif percent >= 99:
+        print("F")
+    else:
+        print(f"{percent}%")
+
+
+if __name__ == "__main__"
+    main()
