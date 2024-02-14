@@ -1,10 +1,10 @@
 def main():
     greeting = input("Greeting: ")
-    print(f"${value(greeting.lower())}")
+    print(f"${value(greeting)}")
 
 
 def value(greeting):
-    if "hello" in greeting:
+    if "hello" in greeting.lower():
         return 0
     elif greeting[0] == 'h' or greeting[0] == 'H':
         return 20
