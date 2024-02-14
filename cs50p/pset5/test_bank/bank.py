@@ -1,7 +1,6 @@
 def main():
     greeting = input("Greeting: ")
     print(f"${value(greeting)}")
-    sys.exit(0)
 
 
 def value(greeting):
