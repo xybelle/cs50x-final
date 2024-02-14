@@ -25,4 +25,10 @@ class ExceedHundred(Exception):
     pass
 
 
-main()
+if __name__ == "__main__"
+    main()
+
+
+def convert(fraction):
+    z = fraction.split('/')
+    
