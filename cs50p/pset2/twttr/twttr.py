@@ -14,7 +14,7 @@ def main():
 
 
 def shorten(word):
-    if vowels in word:
+    for vowel in vowels:
         word = word.replace(f"{vowel}", "")
     return(word)
 
