@@ -7,5 +7,7 @@
         "typeinfo": "c",
         "*.tcc": "c",
         "string_view": "c"
-    }
+    },
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
