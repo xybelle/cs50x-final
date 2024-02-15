@@ -11,8 +11,8 @@ elif ".py" not in sys.argv[1]:
 try:
     with open(sys.argv[1], "r") as file:
         for line in file:
-            if "#" in line:
+            if line.startswith("#")
                 continue
-            elif
+            elif line.lstrip()
 except FileNotFoundError:
     sys.exit("File does not exist")
