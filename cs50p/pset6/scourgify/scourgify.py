@@ -23,7 +23,7 @@ except FileNotFoundError:
 after = []
 
 for row in before:
-    fname, sname  = row[0].rstrip().split(",")
+    fname, sname  = row["name"].rstrip().split(",")
     after.append({"first name": fname, "last name": sname})
 
 print(after)
