@@ -1,20 +1,20 @@
 import sys
 
-from
-
 valid_extensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]
 
 
 def main():
     if not valid():
         sys.exit()
-    get_images()
+    #get_images()
+    temp1 = sys.argv[1].splitext()
+    print(temp1)
 
 
 def get_images():
     images = []
-    for arg in sys.argv:
-        image = Im
+    #for arg in sys.argv:
+    #   image = Im
 
 
 def valid():
@@ -25,14 +25,14 @@ def valid():
     elif len(sys.argv) > 3:
         print("Too many command-line arguments\nUsage: python shirt.py input output")
         return False
-    temp1 = splitext(sys.argv[1])
-    temp2 = splitext(sys.argv[2])
-    if temp1[1] != temp2[1]:
-        print("Input and output have different extensions")
-        return False
-    if temp1[1] not in valid_extensions and temp2[1] not in valid_extensions:
-        print("Invalid input or output extension(s)")
-        return False
+    #temp1 = splitext(sys.argv[1])
+    #temp2 = splitext(sys.argv[2])
+    #if temp1[1] != temp2[1]:
+        #print("Input and output have different extensions")
+        #return False
+    #if temp1[1] not in valid_extensions and temp2[1] not in valid_extensions:
+        #print("Invalid input or output extension(s)")
+        #return False
     return True
 
 
