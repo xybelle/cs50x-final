@@ -15,11 +15,12 @@ def main():
 def resize_image():
     shirt = Image.open("shirt.png")
     size = shirt.size
-
+    new_image = ImageOps.fit(sys.argv[2], size=size)
+    return new_image
     # Resize input image
-    with Image.open(sys.argv[1]) as im:
-        (width, height) = size
-        im_resized = im.resize((width, height))
+    #with Image.open(sys.argv[1]) as im:
+    #   (width, height) = size
+    #   im_resized = im.resize((width, height))
 
 
 def valid():
