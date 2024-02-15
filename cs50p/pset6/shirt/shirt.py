@@ -16,7 +16,7 @@ def resize_image():
     shirt = Image.open("shirt.png")
     size = shirt.size
     new_image = ImageOps.fit(sys.argv[2], size=size)
-    save_image(new_image)
+    save_image(shirt, new_image)
     # Resize input image
     #with Image.open(sys.argv[1]) as im:
     #   (width, height) = size
@@ -42,8 +42,8 @@ def valid():
     return True
 
 
-def save_image(after):
-    
+def save_image(shirt, new_image):
+    new_image = Image.paste(shirt)
 
 
 if __name__ == "__main__":
