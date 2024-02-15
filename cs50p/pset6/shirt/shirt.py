@@ -14,8 +14,8 @@ def main():
 
 def get_images():
     images = []
-    #for arg in sys.argv:
-    #   image = Im
+    for arg in sys.argv:
+       image = Image.open(arg)
 
 
 def valid():
