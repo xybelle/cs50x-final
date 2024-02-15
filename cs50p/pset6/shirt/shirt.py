@@ -10,7 +10,7 @@ def main():
     #get_images()
     temp1 = os.path.splitext(sys.argv[1])
     print(temp1)
-    print(temp1[1])
+    print(temp1['ext'])
 
 
 def get_images():
