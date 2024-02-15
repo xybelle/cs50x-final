@@ -1,6 +1,9 @@
 import sys
 
+
 valid_extensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]
+
+
 def main():
     # Ensure user provide two command-line arguments
     if len(sys.argv) < 3:
@@ -16,7 +19,7 @@ def main():
     if temp1[1] not in valid_extensions and temp2[1] not in valid_extensions:
         sys.exit("Invalid input or output extension(s)")
 
-    
+
 
 
 if __name__ == "__main__":
