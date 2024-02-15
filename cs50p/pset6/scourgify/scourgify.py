@@ -32,6 +32,8 @@ for row in before:
 
 
 with open(sys.argv[2], "a") as file:
-    writer = csv.DictWriter(file, fieldnames=["first name", "last name", "house"])
+    fieldnames = ["first name", "last name", "house"]
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer.writeheader()
     for row in after:
         writer.writerow(row)
