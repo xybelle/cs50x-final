@@ -1,6 +1,8 @@
 import csv
 import sys
 
+from tabulate import tabulate
+
 
 if len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
@@ -24,6 +26,7 @@ after = []
 
 for row in before:
     fname, sname  = row["name"].rstrip().split(",")
-    after.append({"first name": fname, "last name": sname})
+    house = row["house"]
+    after.append({"first name": fname, "last name": sname, "house": house})
 
-print(after)
+print(tabulate(after, headers="keys", tablefmt="grid"))
