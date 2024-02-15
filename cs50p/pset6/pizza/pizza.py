@@ -1,3 +1,4 @@
+import csv
 import sys
 
 from tabulate import tabulate
@@ -14,11 +15,10 @@ table = []
 
 try:
     with open(sys.argv[1], "r") as file:
-        for line in file:
+        reader = csv.reader(file)
+        for line in reader:
             table.append(line)
-
-    #print(tabulate(table, headers="firstrow", tablefmt="grid"))
+    print(tabulate(table, headers="firstrow", tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File not found")
 
-print(table)
