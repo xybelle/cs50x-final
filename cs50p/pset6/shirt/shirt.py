@@ -1,3 +1,4 @@
+import os
 import sys
 
 valid_extensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]
@@ -7,8 +8,9 @@ def main():
     if not valid():
         sys.exit()
     #get_images()
-    temp1 = sys.argv[1].splitext()
+    temp1 = os.path.splitext(sys.argv[1])
     print(temp1)
+    print(temp1[1])
 
 
 def get_images():
