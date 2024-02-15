@@ -24,7 +24,7 @@ except FileNotFoundError:
 after = []
 
 for row in before:
-    fname, sname  = row["name"].rstrip().split(",")
+    fname, sname  = row["name"].lstrip().split(",")
     house = row["house"]
     after.append({"first name": fname, "last name": sname, "house": house})
 
@@ -32,6 +32,6 @@ for row in before:
 
 
 with open(sys.argv[2], "a") as file:
-    writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
+    writer = csv.DictWriter(file, fieldnames=["first name", "last name", "house"])
     for row in after:
         writer.writerow(row)
