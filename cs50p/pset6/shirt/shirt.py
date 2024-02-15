@@ -1,7 +1,7 @@
 import os
 import sys
 
-valid_extensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]
+valid_extensions = [".jpg", ".JPG", ".jpeg", ".JPEG", ".png", ".PNG"]
 
 
 def main():
