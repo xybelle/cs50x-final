@@ -15,11 +15,13 @@ def main():
 def resize_image():
     shirt = Image.open("shirt.png")
     size = shirt.size
+    model = Image.open(sys.argv[1])
     try:
-        new_image = ImageOps.fit(sys.argv[1], size=size)
+        new_image = ImageOps.fit(model, size=size)
         save_image(shirt, new_image)
     except FileNotFoundError:
-        sys.exit("")
+        sys.exit(f"Cannot open {sys.argv[1]}")
+
 
 def valid():
     # Ensure user provide two command-line arguments
