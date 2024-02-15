@@ -9,15 +9,18 @@ valid_extensions = [".jpg", ".JPG", ".jpeg", ".JPEG", ".png", ".PNG"]
 def main():
     if not valid():
         sys.exit()
-    #get_images()
+    resize_image()
 
 
-def get_images():
+def resize_image():
     shirt = Image.open("shirt.png")
     size = shirt.size
-    print(size)
+
     # Resize input image
-    #with Image.open(sys.argv[1]) as im:
+    with Image.open(sys.argv[1]) as im:
+        (width, height) = size
+        im_resized = im.resize((width, height))
+
 
 def valid():
     # Ensure user provide two command-line arguments
