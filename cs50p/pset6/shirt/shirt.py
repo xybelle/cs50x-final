@@ -15,7 +15,7 @@ def main():
 def resize_image():
     shirt = Image.open("shirt.png")
     size = shirt.size
-    new_image = ImageOps.fit(sys.argv[2], size=size)
+    new_image = ImageOps.fit(sys.argv[1], size=size)
     save_image(shirt, new_image)
     # Resize input image
     #with Image.open(sys.argv[1]) as im:
