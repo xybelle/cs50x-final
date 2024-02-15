@@ -14,9 +14,10 @@ try:
         for line in file:
             if line.startswith("#"):
                 continue
-            if line.lstrip() != None:
+            elif line.lstrip() == "\n":
+                continue
+            else:
                 count += 1
-
         print(count)
 except FileNotFoundError:
     sys.exit("File does not exist")
