@@ -20,3 +20,7 @@ try:
 except FileNotFoundError:
     sys.exit(f"Could not read {sys.argv[1]}")
 
+after = []
+
+for row in before:
+    
