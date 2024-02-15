@@ -44,7 +44,7 @@ def valid():
 
 def save_image(shirt, new_image):
     new_image = Image.paste(shirt)
-    final = Image.save(sys.argv[2])
+    new_image.save(sys.argv[2])
 
 
 if __name__ == "__main__":
