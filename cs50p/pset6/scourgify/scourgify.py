@@ -24,7 +24,7 @@ except FileNotFoundError:
 after = []
 
 for row in before:
-    fname, sname  = row["name"].lstrip().split(",")
+    sname, fname  = row["name"].lstrip().split(",")
     house = row["house"]
     after.append({"first name": fname, "last name": sname, "house": house})
 
