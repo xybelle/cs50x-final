@@ -14,3 +14,5 @@ table[]
 
 try:
     with open(sys.argv[1], "r") as file:
+        for line in file:
+            table.append(line)
