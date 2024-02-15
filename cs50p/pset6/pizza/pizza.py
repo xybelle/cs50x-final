@@ -10,7 +10,6 @@ elif len(sys.argv) > 2:
 elif ".csv" not in sys.argv[1]:
     sys.exit("Not a CSV file")
 
-
 table = []
 
 try:
@@ -21,4 +20,3 @@ try:
     print(tabulate(table, headers="firstrow", tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File not found")
-
