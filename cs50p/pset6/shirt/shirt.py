@@ -25,8 +25,8 @@ def valid():
     elif len(sys.argv) > 3:
         print("Too many command-line arguments\nUsage: python shirt.py input output")
         return False
-    temp1 = sys.argv[1].split(".")
-    temp2 = sys.argv[2].split(".")
+    temp1 = splitext(sys.argv[1])
+    temp2 = splitext(sys.argv[2])
     if temp1[1] != temp2[1]:
         print("Input and output have different extensions")
         return False
