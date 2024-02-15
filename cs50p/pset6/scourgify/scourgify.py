@@ -3,11 +3,7 @@ import sys
 
 from tabulate import tabulate
 
-# Ensure user prove two command-line arguments
-if len(sys.argv) < 3:
-    sys.exit("Too few command-line arguments")
-elif len(sys.argv) > 3:
-    sys.exit("Too many command-line arguments")
+
 
 raw_data = []
 
@@ -31,8 +27,17 @@ for row in raw_data:
 
 # Writing new CSV
 with open(sys.argv[2], "a") as file:
-    fieldnames = ["first name", "last name", "house"]
-    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer = csv.DictWriter(file, fieldnames=["first name", "last name", "house"])
     writer.writeheader()
     for row in processed_data:
         writer.writerow(row)
+
+def main():
+    # Ensure user prove two command-line arguments
+    if len(sys.argv) < 3:
+        sys.exit("Too few command-line arguments")
+    elif len(sys.argv) > 3:
+        sys.exit("Too many command-line arguments")
+
+
+
