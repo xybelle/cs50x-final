@@ -28,9 +28,9 @@ for row in before:
     house = row["house"]
     after.append({"first name": fname, "last name": sname, "house": house})
 
-print(tabulate(after, headers="keys", tablefmt="grid"))
+#print(tabulate(after, headers="keys", tablefmt="grid"))
 
-try:
-    with open(sys.argv[2], "a") as file:
-        writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
-        writer.writerow("first" : fname)
+
+with open(sys.argv[2], "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
+    writer.writerow(after)
