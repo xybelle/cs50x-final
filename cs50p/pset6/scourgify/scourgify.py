@@ -37,14 +37,14 @@ def process_csv(data):
     for row in data:
         sname, fname = row["name"].lstrip().split(",")
         house = row["house"]
-        processed_data.append({"first name": fname, "last name": sname, "house": house})
+        processed_data.append({"first": fname, "last": sname, "house": house})
     return processed_data
 
 
 def write_csv(processed_data):
     # Writing new CSV
     with open(sys.argv[2], "a") as file:
-        writer = csv.DictWriter(file, fieldnames=["first name", "last name", "house"])
+        writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
         writer.writeheader()
         for row in processed_data:
             writer.writerow(row)
