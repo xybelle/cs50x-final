@@ -16,11 +16,14 @@ try:
         reader = csv.DictReader(file)
         for row in reader:
             before.append(row)
-        print(before)
+        #print(before)
 except FileNotFoundError:
     sys.exit(f"Could not read {sys.argv[1]}")
 
 after = []
 
 for row in before:
-    
+    fname, sname  = row[0].rstrip().split(",")
+    after.append({"first name": fname, "last name": sname})
+
+print(after)
