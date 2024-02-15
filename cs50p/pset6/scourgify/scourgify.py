@@ -32,4 +32,5 @@ print(tabulate(after, headers="keys", tablefmt="grid"))
 
 try:
     with open(sys.argv[2], "a") as file:
-        fieldnames 
+        writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
+        writer.writerow("first" : fname)
