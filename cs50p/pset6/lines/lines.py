@@ -10,9 +10,14 @@ elif ".py" not in sys.argv[1]:
 
 try:
     with open(sys.argv[1], "r") as file:
+        count = 0
         for line in file:
-            if line.startswith("#")
+            if line.startswith("#"):
                 continue
-            elif line.lstrip()
+            if line.lstrip() != None:
+                count += 1
+
+        print(count)
 except FileNotFoundError:
     sys.exit("File does not exist")
+
