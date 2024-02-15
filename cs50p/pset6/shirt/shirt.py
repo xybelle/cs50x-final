@@ -1,5 +1,6 @@
 import sys
 
+from
 
 valid_extensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]
 
@@ -7,6 +8,13 @@ valid_extensions = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]
 def main():
     if not valid():
         sys.exit()
+    get_images()
+
+
+def get_images():
+    images = []
+    for arg in sys.argv:
+        image = Im
 
 
 def valid():
