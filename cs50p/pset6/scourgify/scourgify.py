@@ -5,7 +5,7 @@ from tabulate import tabulate
 
 
 
-raw_data = []
+
 
 # Error handling when reading CSV and appending raw_data dict
 try:
@@ -39,5 +39,16 @@ def main():
     elif len(sys.argv) > 3:
         sys.exit("Too many command-line arguments")
 
+    read_csv()
 
 
+def read_csv():
+    raw_data = []
+    # Error handling when reading CSV and appending raw_data dict
+    try:
+        with open(sys.argv[1], "r") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                raw_data.append(row)
+    except FileNotFoundError:
+        sys.exit(f"Could not read {sys.argv[1]}")
