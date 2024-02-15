@@ -16,6 +16,7 @@ def main():
     processed_data = process_csv(data)
     write_csv(processed_data)
 
+
 def read_csv():
     raw_data = []
     # Error handling when reading CSV and appending raw_data dict
