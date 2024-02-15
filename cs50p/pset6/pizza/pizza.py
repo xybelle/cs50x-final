@@ -17,6 +17,8 @@ try:
         for line in file:
             table.append(line)
 
-    print(tabulate(table, headers="firstrow", tablefmt="grid"))
+    #print(tabulate(table, headers="firstrow", tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File not found")
+
+print(table)
