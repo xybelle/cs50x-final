@@ -18,7 +18,6 @@ try:
         reader = csv.DictReader(file)
         for row in reader:
             before.append(row)
-        #print(before)
 except FileNotFoundError:
     sys.exit(f"Could not read {sys.argv[1]}")
 
@@ -30,3 +29,7 @@ for row in before:
     after.append({"first name": fname, "last name": sname, "house": house})
 
 print(tabulate(after, headers="keys", tablefmt="grid"))
+
+try:
+    with open(sys.argv[2], "a") as file:
+        fieldnames 
