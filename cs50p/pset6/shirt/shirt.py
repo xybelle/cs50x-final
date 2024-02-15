@@ -16,6 +16,9 @@ def get_images():
     images = []
     for arg in sys.argv:
        image = Image.open(arg)
+       images.append(image)
+
+    size = images[0].size
 
 
 def valid():
