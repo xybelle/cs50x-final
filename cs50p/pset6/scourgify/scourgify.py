@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    # Ensure user prove two command-line arguments
+    # Ensure user provide two command-line arguments
     if len(sys.argv) < 3:
         sys.exit("Too few command-line arguments")
     elif len(sys.argv) > 3:
