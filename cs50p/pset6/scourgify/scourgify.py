@@ -30,7 +30,8 @@ for row in before:
 
 #print(tabulate(after, headers="keys", tablefmt="grid"))
 
-for row in after:
-    with open(sys.argv[2], "a") as file:
-        writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
+
+with open(sys.argv[2], "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
+    for row in after:
         writer.writerow(row)
