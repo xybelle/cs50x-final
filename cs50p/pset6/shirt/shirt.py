@@ -14,11 +14,10 @@ def main():
 
 def get_images():
     shirt = Image.open("shirt.png")
-    model = Image.open(sys.argv[1])
-    size = model.size
-
-    # Resize shirt
-    with Image.open("shirt.png")
+    size = shirt.size
+    print(size)
+    # Resize input image
+    #with Image.open(sys.argv[1]) as im:
 
 def valid():
     # Ensure user provide two command-line arguments
