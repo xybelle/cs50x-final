@@ -43,7 +43,7 @@ def valid():
 
 
 def save_image(shirt, new_image):
-    new_image = Image.paste(shirt)
+    new_image.paste(shirt, shirt)
     new_image.save(sys.argv[2])
 
 
