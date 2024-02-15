@@ -39,7 +39,7 @@ def main():
     elif len(sys.argv) > 3:
         sys.exit("Too many command-line arguments")
 
-    read_csv()
+    before = read_csv()
 
 
 def read_csv():
