@@ -39,7 +39,7 @@ def main():
     elif len(sys.argv) > 3:
         sys.exit("Too many command-line arguments")
 
-    before = read_csv()
+    data = read_csv()
 
 
 def read_csv():
@@ -52,3 +52,4 @@ def read_csv():
                 raw_data.append(row)
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
+    return raw_data
