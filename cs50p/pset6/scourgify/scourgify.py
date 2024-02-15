@@ -13,7 +13,7 @@ def main():
         sys.exit("Too many command-line arguments")
 
     data = read_csv()
-    proceessed_data = process_csv(data)
+    processed_data = process_csv(data)
     write_csv(processed_data)
 
 def read_csv():
@@ -40,7 +40,7 @@ def process_csv(data):
     return processed_data
 
 
-def write_csv(processed_data)
+def write_csv(processed_data):
     # Writing new CSV
     with open(sys.argv[2], "a") as file:
         writer = csv.DictWriter(file, fieldnames=["first name", "last name", "house"])
@@ -49,5 +49,5 @@ def write_csv(processed_data)
             writer.writerow(row)
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()
