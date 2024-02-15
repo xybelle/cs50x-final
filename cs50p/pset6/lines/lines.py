@@ -14,7 +14,7 @@ try:
         for line in file:
             if line.startswith("#"):
                 continue
-            elif line.lstrip() == "\n":
+            elif line == "\n":
                 continue
             else:
                 count += 1
