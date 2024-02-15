@@ -10,11 +10,13 @@ elif ".csv" not in sys.argv[1]:
     sys.exit("Not a CSV file")
 
 
-table[]
+table = []
 
 try:
     with open(sys.argv[1], "r") as file:
         for line in file:
             table.append(line)
+
+    print(tabulate(table, headers="firstrow", tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File not found")
