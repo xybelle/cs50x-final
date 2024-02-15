@@ -1,7 +1,7 @@
 import os
 import sys
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 valid_extensions = [".jpg", ".JPG", ".jpeg", ".JPEG", ".png", ".PNG"]
