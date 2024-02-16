@@ -7,7 +7,7 @@ def test_validate():
     assert validate("cat") == False
 
 
-def test_validate():
+def test_max_255():
     assert max_255("256.255.255.255") == False
     assert max_255("255.255.255.255") == True
     assert max_255("1.1.1.1") == True
