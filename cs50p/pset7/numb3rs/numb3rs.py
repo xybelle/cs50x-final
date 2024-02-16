@@ -7,13 +7,13 @@ def main():
 
 def validate(ip):
     if valid := re.search(r"([0-2]?[0-9]?[0-9]?\.){3}[0-2]?[0-9]?[0-9]?", ip):
-        numbers = ip.split(".")
-        if max_255(numbers):
+        if max_255(ip):
             return True
     return False
 
 
-def max_255(parts):
+def max_255(digits):
+    parts = digits.split(".")
     for part in parts:
         if int(part) > 255:
             return False
