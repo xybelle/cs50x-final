@@ -1,5 +1,4 @@
 import re
-import sys
 
 
 def main():
@@ -7,7 +6,8 @@ def main():
 
 
 def validate(ip):
-    ip = input
+    ip = input("IPv4 Address: ").strip()
+    
 
 
 ...
