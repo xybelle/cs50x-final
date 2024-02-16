@@ -8,7 +8,7 @@ def main():
 def validate(ip):
     n = ip.strip(".")
     if max_255(n):
-        re.search(r"[0-2]?[0-9]?[0-9]?\.")
+        re.search(r"[0-2]?[0-9]?[0-9]?\.{3}")
 
 
 def max_255(num):
