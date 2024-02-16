@@ -7,7 +7,6 @@ def main():
 
 def validate(ip):
     sets = ip.split(".")
-
     if valid := re.search(r"([0-2]?[0-9]?[0-9]?\.){3}[0-2]?[0-9]?[0-9]?", ip):
         if max_255(sets) and four_sets(sets):
             return True
