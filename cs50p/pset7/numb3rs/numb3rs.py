@@ -15,6 +15,8 @@ def validate(ip):
 
 def max_255(digits):
     for digit in digits:
+        if not digit.isdigit():
+            return False
         if int(digit) > 255:
             return False
             break
@@ -22,8 +24,6 @@ def max_255(digits):
 
 
 def four_sets(n):
-    if not n.isdigit():
-        return False
     if len(n) > 4:
         return False
     return True
