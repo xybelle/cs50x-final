@@ -8,11 +8,11 @@ def main():
 def validate(ip):
     if not ip.isdigit():
         return False
-    parts = digits.split(".")
+    parts = ip.split(".")
     if len(parts) > 4:
         return False
     if valid := re.search(r"([0-2]?[0-9]?[0-9]?\.){3}[0-2]?[0-9]?[0-9]?", ip):
-        if max_255(ip):
+        if max_255(parts):
             return True
     return False
 
