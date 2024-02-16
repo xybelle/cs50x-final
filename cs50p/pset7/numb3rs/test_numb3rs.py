@@ -1,4 +1,4 @@
-from numb3rs import validate, max_255
+from numb3rs import validate, max_255, four_sets
 
 def test_validate():
     assert validate("1.2.3.4") == True

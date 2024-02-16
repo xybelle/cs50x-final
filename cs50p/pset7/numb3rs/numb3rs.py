@@ -6,14 +6,14 @@ def main():
 
 
 def validate(ip):
-    sets = ip.split(".")
     if valid := re.search(r"([0-2]?[0-9]?[0-9]?\.){3}[0-2]?[0-9]?[0-9]?", ip):
-        if max_255(sets) and four_sets(sets):
+        if max_255(ip) and four_sets(ip):
             return True
     return False
 
 
 def max_255(digits):
+    digits = digits.split(".")
     for digit in digits:
         if not digit.isdigit():
             return False
@@ -24,6 +24,7 @@ def max_255(digits):
 
 
 def four_sets(n):
+    n = n.split(".")
     if len(n) > 4:
         return False
     return True
