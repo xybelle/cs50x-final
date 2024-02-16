@@ -6,12 +6,12 @@ def main():
 
 
 def validate(ip):
-    numbers = ip.split(".")
-    if max_255(numbers) == True:
-        if valid := re.search(r"[0-2]?[0-9]?[0-9]?\.{3}[0-2]?[0-9]?[0-9]?", ip):
+    if valid := re.search(r"[0-2]?[0-9]?[0-9]?\.{3}[0-2]?[0-9]?[0-9]?", ip):
+        numbers = ip.split(".")
+        if max_255(numbers) == True:
             print("True")
-    else:
-        print("False")
+        else:
+            print("False")
 
 
 def max_255(parts):
