@@ -8,7 +8,7 @@ def main():
 def validate(ip):
     n = ip.strip(".")
     if max_255(n):
-        if valid := re.search(r"[0-2]?[0-9]?[0-9]?\.{3}[0-2]?[0-9]?[0-9]?", n):
+        if valid := re.search(r"[0-2]?[0-9]?[0-9]?\.{3}[0-2]?[0-9]?[0-9]?", ip):
             print("True")
     else:
         print("False")
