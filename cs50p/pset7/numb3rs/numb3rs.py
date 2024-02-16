@@ -8,10 +8,9 @@ def main():
 def validate(ip):
     if valid := re.search(r"[0-2]?[0-9]?[0-9]?\.{3}[0-2]?[0-9]?[0-9]?", ip):
         numbers = ip.split(".")
-        if max_255(numbers) == True:
-            print("True")
-        else:
-            print("False")
+        if max_255(numbers):
+            return True
+    return False
 
 
 def max_255(parts):
