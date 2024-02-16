@@ -6,8 +6,8 @@ def main():
 
 
 def validate(ip):
-    ip = input("IPv4 Address: ").strip()
-    
+    re.search(r"(0-2)?(0-5)?(0-5)?\.")
+
 
 
 ...
