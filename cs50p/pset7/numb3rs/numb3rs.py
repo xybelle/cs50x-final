@@ -15,10 +15,10 @@ def validate(ip):
 def max_255(digits):
     parts = digits.split(".")
     for part in parts:
-        if int(part) > 255:
+        if part.isalnum():
             return False
             break
-        elif part.isalnum():
+        if int(part) > 255:
             return False
             break
     return True
