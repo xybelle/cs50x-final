@@ -1,19 +1,19 @@
-from numb3rs import validate, max_255, four_sets
+import numb3rs
 
 
 def test_validate():
-    assert validate("1.2.3.4") == True
-    assert validate("255.255.255.255") == True
-    assert validate("275.1.1.1") == False
-    assert validate("cat") == False
+    assert numb3rs.validate("1.2.3.4") == True
+    assert numb3rs.validate("255.255.255.255") == True
+    assert numb3rs.validate("275.1.1.1") == False
+    assert numb3rs.validate("cat") == False
 
 
 def test_max_255():
-    assert max_255("256.255.255.255") == False
-    assert max_255("255.255.255.255") == True
-    assert max_255("1.1.1.1") == True
+    assert numb3rs.max_255("256.255.255.255") == False
+    assert numb3rs.max_255("255.255.255.255") == True
+    assert numb3rs.max_255("1.1.1.1") == True
 
 
 def test_four_sets():
-    assert four_sets("1.1.1.1.1") == False
-    assert four_sets("1.1.1.1") == True
+    assert numb3rs.four_sets("1.1.1.1.1") == False
+    assert numb3rs.four_sets("1.1.1.1") == True
