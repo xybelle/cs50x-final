@@ -18,6 +18,9 @@ def max_255(digits):
         if int(part) > 255:
             return False
             break
+        elif part.isalnum():
+            return False
+            break
     return True
 
 
