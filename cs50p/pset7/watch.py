@@ -7,7 +7,8 @@ def main():
 
 def parse(s):
     url = re.search(r".+src=\"https://www\.youtube\.com/embed/(\w+)\".+", s)
-    print(url)
+    vid_id = url.groups()
+    print(vid_id)
 
 ...
 
