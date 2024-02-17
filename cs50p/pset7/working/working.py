@@ -1,4 +1,5 @@
 import re
+import sys
 
 
 def main():
@@ -46,7 +47,7 @@ def for_am(time):
             h = 0
         return int(h), int(m)
     else:
-        if h == "12"
+        if h == "12":
             h = 0
         m = 0
         return int(h), m
