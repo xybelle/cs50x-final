@@ -29,11 +29,10 @@ def for_pm(time):
     if ":" in time:
             h, m = time.split(":")
             h = int(h) + 12
-            hh = f"{h}:{m}"
-            return hh
+            return f"{h}:{m}"
     else:
         h = int(time) + 12
-        return h
+        return f"{h}:00"
 
 if __name__ == "__main__":
     main()
