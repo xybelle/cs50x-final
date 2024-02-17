@@ -8,7 +8,7 @@ def main():
 def parse(s):
     if found := re.search(r".+src=\"https://www\.youtube\.com/embed/(\w+)\".+", s):
         return found.groups(1)
-    print(vid_id)
+    print(found.groups())
 
 ...
 
