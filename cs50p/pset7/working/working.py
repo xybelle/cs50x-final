@@ -9,8 +9,10 @@ def main():
 def convert(s):
     valid_time = validate_input(s)
     if valid_time[1] == "PM":
-        for_pm(valid_time[0])
-
+        hour1 = for_pm(valid_time[0])
+    if valid_time[4] == "PM":
+        hour2 = for_pm(valid_time[0])
+    
 
 
 def validate_input(s):
@@ -28,9 +30,10 @@ def for_pm(time):
             h, m = valid_time[0].split(":")
             h = int(h) + 12
             hh = f"{h}:{m}"
+            return hh
     else:
         h = int(valid_time[0]) + 12
-        hh = h
+        return h
 
 if __name__ == "__main__":
     main()
