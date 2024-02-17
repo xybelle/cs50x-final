@@ -8,11 +8,11 @@ def main():
 
 def convert(s):
     valid_time = validate_input(s)
-    if ":" in valid_time[0]:
-        h, m = valid_time[0].split(":")
-    if ":" in valid_time[2]:
-        h, m = valid_time[2].split(":")
-        hh = int(h) + 12
+    if valid_time[1] == "PM":
+        if ":" in valid_time[0]:
+            h, m = valid_time[0].split(":")
+        else:
+            hh = int(valid_time[0]) + 12
 
 
 def validate_input(s):
