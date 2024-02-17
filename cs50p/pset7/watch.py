@@ -6,7 +6,7 @@ def main():
 
 
 def parse(s):
-    url = re.search(r".+src=\"https://www.youtube.com/embed/(\w+)\".+", s)
+    url = re.search(r".+src=([\"|:|/|.|\w+]).+", s)
     print(url)
 
 ...
