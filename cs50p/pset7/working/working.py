@@ -8,7 +8,9 @@ def main():
 
 def convert(s):
     valid_time = validate_input(s)
-    print(valid_time[1])
+    if ":" in valid_time[0]:
+        h, m = valid_time[0].split(":")
+        
 
 
 def validate_input(s):
