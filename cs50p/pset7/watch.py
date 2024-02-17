@@ -6,7 +6,7 @@ def main():
 
 
 def parse(s):
-    re.search()
+    re.search(r".+src=".+)
 
 
 ...
