@@ -7,6 +7,10 @@ def main():
 
 
 def convert(s):
+    valid_time = validate_input(s)
+
+
+def validate_input(s):
     try:
         if matches := re.search(r"(\d:?\d?\d?) ([A|P|]M) to (\d:?\d?\d?) ([A|P|]M)", s):
             print(matches.groups())
@@ -14,8 +18,6 @@ def convert(s):
             raise ValueError
     except ValueError:
         sys.exit("Hours: time AM/PM to time AM/PM")
-
-def validate_
 
 
 if __name__ == "__main__":
