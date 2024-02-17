@@ -47,10 +47,10 @@ def for_am(time):
             h = 0
         return int(h), int(m)
     else:
-        if h == "12":
+        if time == "12":
             h = 0
         m = 0
-        return int(h), m
+        return h, m
 
 
 if __name__ == "__main__":
