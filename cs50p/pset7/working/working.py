@@ -7,8 +7,11 @@ def main():
 
 
 def convert(s):
-    if matches := (re.search(r"\d:?\d?\d? [A|P|M] to \d:?\d?\d?"))
-
+    try:
+        if matches := (re.search(r"\d:?\d?\d? [A|P|]M to \d:?\d?\d? [A|P|]M", s, re.IGNORECASE)):
+            print(matches.groups())
+    except ValueError:
+        sys.exit("Hours: time AM/PM to time AM/PM")
 
 ...
 
