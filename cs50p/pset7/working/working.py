@@ -10,7 +10,9 @@ def convert(s):
     valid_time = validate_input(s)
     if ":" in valid_time[0]:
         h, m = valid_time[0].split(":")
-        
+    if ":" in valid_time[2]:
+        h, m = valid_time[2].split(":")
+        hh = int(h) + 12
 
 
 def validate_input(s):
