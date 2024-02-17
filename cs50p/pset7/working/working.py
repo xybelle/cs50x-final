@@ -10,6 +10,7 @@ def convert(s):
     valid_time = validate_input(s)
     if valid_time[1] == "PM":
         hour1 = for_pm(valid_time[0])
+        
     elif valid_time[1] == "AM":
         hour1 = int(valid_time[0])
     if valid_time[3] == "PM":
@@ -34,18 +35,11 @@ def for_pm(time):
     if ":" in time:
             h, m = time.split(":")
             h = int(h) + 12
-            return f"{h}:{m}"
+            return h, m
     else:
         h = int(time) + 12
         return f"{h}:00"
 
-
-def for_am(time):
-    if ":" in time:
-            h, m = time.split(":")
-            return f"{h}:{m}"
-    else:
-        return f"{time}:00"
 
 if __name__ == "__main__":
     main()
