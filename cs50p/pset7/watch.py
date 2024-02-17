@@ -6,10 +6,9 @@ def main():
 
 
 def parse(s):
-    url = re.search(r".+src=\"https://www\.youtube\.com/embed/(\w+)\".+", s)
-    vid_id = url.groups(1)
+    if found := re.search(r".+src=\"https://www\.youtube\.com/embed/(\w+)\".+", s):
+        return found.groups(1)
     print(vid_id)
-    return vid_id.strip("(", ")", "")
 
 ...
 
