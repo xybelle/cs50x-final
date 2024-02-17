@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    if matches := (re.search(r""))
+    if matches := (re.search(r"\d:?\d?\d? [A|P|M] to \d:?\d?\d?"))
 
 
 ...
