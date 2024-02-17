@@ -39,6 +39,14 @@ def for_pm(time):
         h = int(time) + 12
         return f"{h}:00"
 
+
+def for_am(time):
+    if ":" in time:
+            h, m = time.split(":")
+            return f"{h}:{m}"
+    else:
+        return f"{time}:00"
+
 if __name__ == "__main__":
     main()
 
