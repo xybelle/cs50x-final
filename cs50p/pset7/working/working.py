@@ -9,10 +9,8 @@ def main():
 def convert(s):
     valid_time = validate_input(s)
     if valid_time[1] == "PM":
-        if ":" in valid_time[0]:
-            h, m = valid_time[0].split(":")
-        else:
-            hh = int(valid_time[0]) + 12
+        for_pm(valid_time[0])
+
 
 
 def validate_input(s):
@@ -23,6 +21,13 @@ def validate_input(s):
             raise ValueError
     except ValueError:
         sys.exit("Hours: time AM/PM to time AM/PM")
+
+
+def for_pm():
+    if ":" in valid_time[0]:
+            h, m = valid_time[0].split(":")
+        else:
+            hh = int(valid_time[0]) + 12
 
 
 if __name__ == "__main__":
