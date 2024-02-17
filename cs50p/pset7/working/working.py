@@ -10,8 +10,8 @@ def convert(s):
     valid_time = validate_input(s)
     if valid_time[1] == "PM":
         hour1 = for_pm(valid_time[0])
-    if valid_time[4] == "PM":
-        hour2 = for_pm(valid_time[])
+    if valid_time[3] == "PM":
+        hour2 = for_pm(valid_time[2])
     return f"{hour1:02} to {hour2:02}"
 
 
