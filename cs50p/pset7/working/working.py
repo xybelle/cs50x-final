@@ -8,14 +8,14 @@ def main():
 
 def convert(s):
     try:
-        if matches := (re.search(r"(\d:?\d?\d?) ([A|P|]M) to (\d:?\d?\d?) ([A|P|]M)", s, re.IGNORECASE)):
+        if matches := re.search(r"(\d:?\d?\d?) ([A|P|]M) to (\d:?\d?\d?) ([A|P|]M)", s):
             print(matches.groups())
         else:
             raise ValueError
     except ValueError:
         sys.exit("Hours: time AM/PM to time AM/PM")
 
-...
+def validate_
 
 
 if __name__ == "__main__":
