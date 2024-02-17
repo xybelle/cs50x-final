@@ -6,8 +6,8 @@ def main():
 
 
 def parse(s):
-    re.search(r".+src=".+)
-
+    url = re.search(r".+src=(.+).+", s)
+    print(url)
 
 ...
 
