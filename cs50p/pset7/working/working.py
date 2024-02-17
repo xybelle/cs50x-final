@@ -12,7 +12,7 @@ def convert(s):
         hour1 = for_pm(valid_time[0])
     if valid_time[4] == "PM":
         hour2 = for_pm(valid_time[0])
-    
+    return f"{}"
 
 
 def validate_input(s):
