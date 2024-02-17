@@ -6,9 +6,9 @@ def main():
 
 
 def parse(s):
-    if found := re.search(r".+src=\"https://www\.youtube\.com/embed/(.+)\".+", s):
+    if found := re.search(r".+src=\"(.+)\".+", s):
         return found.groups(1)
-    print(found.groups())
+    print(found.groups(1))
 
 ...
 
