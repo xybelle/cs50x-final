@@ -23,7 +23,7 @@ def validate_input(s):
         sys.exit("Hours: time AM/PM to time AM/PM")
 
 
-def for_pm():
+def for_pm(time):
     if ":" in valid_time[0]:
             h, m = valid_time[0].split(":")
         else:
