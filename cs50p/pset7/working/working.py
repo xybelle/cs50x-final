@@ -12,7 +12,7 @@ def convert(s):
 
 def validate_input(s):
     try:
-        if matches := re.search(r"([1[0-2]|[0-9]]:?\d?\d?) ([A|P|]M) to (\d:?\d?\d?) ([A|P|]M)", s):
+        if matches := re.search(r"([1[0-2]|[0-9]]:?[0-5]?[0-9]?\d?) ([A|P|]M) to (\d:?\d?\d?) ([A|P|]M)", s):
             print(matches.groups())
         else:
             raise ValueError
