@@ -26,9 +26,11 @@ def validate_input(s):
 def for_pm(time):
     if ":" in valid_time[0]:
             h, m = valid_time[0].split(":")
-        else:
-            hh = int(valid_time[0]) + 12
-
+            h = int(h) + 12
+            hh = f"{h}:{m}"
+    else:
+        h = int(valid_time[0]) + 12
+        hh = h
 
 if __name__ == "__main__":
     main()
