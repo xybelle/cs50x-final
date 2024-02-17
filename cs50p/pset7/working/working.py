@@ -49,6 +49,7 @@ def for_am(time):
     else:
         if time == "12":
             h = 0
+        h = int(time)
         m = 0
         return h, m
 
