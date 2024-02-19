@@ -8,6 +8,7 @@ def main():
 
 def convert(s):
     valid_time = validate_input(s)
+    print(valid_time)
     if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
         h, m1 = valid_time[0].split(":")
         h1 = hours_mins_fmt(h, valid_time[1])
