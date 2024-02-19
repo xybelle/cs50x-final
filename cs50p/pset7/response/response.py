@@ -1,4 +1,4 @@
-from validator_collection import checkers, errors
+from validator_collection import checkers
 
 
 def main():
@@ -6,7 +6,10 @@ def main():
 
 
 def validate(email):
-    return checker.is_email(email)
+    if checkers.is_email(email) == True:
+        return "Valid"
+    else:
+        return "Invalid"
 
 
 if __name__ == "__main__":
