@@ -34,22 +34,22 @@ def validate_input(s):
         #print("Hour: time AM/PM to time AM/PM")
 
 
-def hours_mins_fmt(hour, midday):
-    if midday == "AM":
+def hours_mins_fmt(hour, mid):
+    if mid == "AM":
         if  hour == "12":
             hour = 0
-        return int(hour)
-    if midday == "PM":
+            return int(hour)
+    if mid == "PM":
         hour = int(hour) + 12
         return int(hour)
 
 
-def hours_fmt(hour, midday):
-    if midday == "AM":
+def hours_fmt(hour, mid):
+    if mid == "AM":
         if hour == "12":
             hour = 0
-        return int(hour)
-    if midday == "PM":
+            return int(hour)
+    if mid == "PM":
         hour = int(hour) + 12
         return int(hour)
 
