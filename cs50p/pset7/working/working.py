@@ -20,7 +20,6 @@ def convert(s):
     elif re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
         h2 = hours_fmt(valid_time[2], valid_time[3])
         m2 = 0
-
     return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"
 
 
