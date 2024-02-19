@@ -72,4 +72,4 @@ if __name__ == "__main__":
     main()
 
 
-if matches := research(r"")
+if matches := research(r"(?:1[0-2]|[1-9]):?([0-5][0-9])?)")
