@@ -50,6 +50,13 @@ if __name__ == "__main__":
     main()
 
 
-def hours_mins_fmt(time):
+def hours_mins_fmt(time, midday):
     h, m = time.split(":")
-    
+    if midday == "AM":
+        return h, m
+    if midday == "PM":
+        h = int(h) + 12
+        return h, m
+
+
+def is
