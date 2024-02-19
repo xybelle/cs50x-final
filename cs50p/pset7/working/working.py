@@ -13,7 +13,7 @@ def convert(s):
     if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
         h, m1 = valid_time[0].split(":")
         h1 = hours_mins_fmt(h, valid_time[1])
-    if re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
+    elif re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
         h1 = hours_fmt(valid_time[0], valid_time[1])
         m1 = 0
     if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
