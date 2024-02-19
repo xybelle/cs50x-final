@@ -48,3 +48,8 @@ def validate_input(s):
 
 if __name__ == "__main__":
     main()
+
+
+def hours_mins_fmt(time):
+    h, m = time.split(":")
+    
