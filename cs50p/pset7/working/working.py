@@ -34,16 +34,19 @@ def for_pm(time):
             h, m = time.split(":")
             if h == "12":
                 h == 12
+                return h, m
             else:
                 h = int(h) + 12
-            return h, int(m)
+                return h, int(m)
     else:
         if time == "12":
-            h == 12
+            h = 12
+            m = 0
+            return h, m
         else:
             h = int(time) + 12
-        m = 0
-        return h, m
+            m = 0
+            return h, m
 
 
 def for_am(time):
@@ -51,14 +54,18 @@ def for_am(time):
         h, m = time.split(":")
         if h == "12":
             h = 0
-        return int(h), int(m)
+            return h, m
+        else:
+            return int(h), int(m)
     else:
         if time == "12":
             h = 0
+            m = 0
+            return h, m
         else:
             h = int(time)
-        m = 0
-        return h, m
+            m = 0
+            return h, m
 
 
 if __name__ == "__main__":
