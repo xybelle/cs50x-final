@@ -9,11 +9,11 @@ def main():
 def convert(s):
     valid_time = validate_input(s)
     print(valid_time)
-    if first := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
-        h, m1 = first.split(":")
+    if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
+        h, m1 = valid_time[0].split(":")
         h1 = hours_mins_fmt(h, valid_time[1])
-    elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
-        h1 = hours_fmt(first, valid_time[1])
+    elif re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
+        h1 = hours_fmt(valid_time[0], valid_time[1])
         m1 = 0
     if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
         hh, m2 = valid_time[2].split(":")
