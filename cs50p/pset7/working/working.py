@@ -44,7 +44,7 @@ def validate_input(s):
         else:
             raise ValueError
     except ValueError:
-        sys.exit()
+        pass
 
 if __name__ == "__main__":
     main()
