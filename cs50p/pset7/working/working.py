@@ -10,7 +10,8 @@ def convert(s):
     valid_time = validate_input(s)
     if first := re.search(r"(?:1[0-2]|[1-9]):([0-5][0-9]))", valid_time[0]):
         int(h1), int(m1) = valid_time[0].split(":")
-    elif first := re.search(r"(?:1[0-2]|[1-9])")
+    elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
+        h1 = int
     if second := re.search(r"(?:1[0-2]|[1-9]):([0-5][0-9]))", valid_time[2]):
         int(h1), int(m1) = valid_time[2].split(":")
 
