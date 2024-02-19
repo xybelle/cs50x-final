@@ -8,8 +8,7 @@ def main():
 
 def count(s):
     if ums := re.findall(r".+?[? .,](um)[ ?,.].+?", s):
-        um = ums.groups()
-        print(um)
+        print(ums)
 
 
 ...
