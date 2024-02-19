@@ -7,12 +7,8 @@ def main():
 
 
 def count(s):
-    if ums := re.findall(r"(?:.+?[? .,])?(um)[ ?,.].+?", s):
-
+    if ums := re.findall(r"(?:.+?[ ?.,])?(um)(?:[ ?.,].+?)?", s):
         print(ums)
-
-
-...
 
 
 if __name__ == "__main__":
