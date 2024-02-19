@@ -15,8 +15,10 @@ def convert(s):
         else:
             h1 = int(h1) + 12
     elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
-        h1 = int(valid_time[0])
-        m1 = 0
+        if valid_time[0] == "12":
+            h1 = 0
+        else:
+            h1 = int(h1) + 12
 
     if second := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
         h2, m2 = valid_time[2].split(":")
