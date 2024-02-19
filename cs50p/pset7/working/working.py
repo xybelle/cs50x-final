@@ -8,19 +8,20 @@ def main():
 
 def convert(s):
     valid_time = validate_input(s)
-    if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
+    if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0].strip('"')):
         h, m1 = valid_time[0].split(":")
         h1 = hours_mins_fmt(h, valid_time[1])
-    elif re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
+    elif re.search(r"(?:1[0-2]|[1-9])", valid_time[0].strip('"')):
         h1 = hours_fmt(valid_time[0], valid_time[1])
         m1 = 0
-    if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
+    if re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2].strip('"')):
         hh, m2 = valid_time[2].split(":")
         h2 = hours_mins_fmt(hh, valid_time[3])
-    elif re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
+    elif re.search(r"(?:1[0-2]|[1-9])", valid_time[2].strip('"')):
         h2 = hours_fmt(valid_time[2], valid_time[3])
         m2 = 0
-    return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"
+    print(f"{h1} {m1} - {h2} {m2}")
+    #return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"
 
 
 def validate_input(s):
