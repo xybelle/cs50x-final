@@ -10,13 +10,13 @@ def convert(s):
     valid_time = validate_input(s)
     if first := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
         h1, m1 = valid_time[0].split(":")
-        hours_mins_fmt(h1, valid_time[1])
+        h1 = hours_mins_fmt(h1, valid_time[1])
     elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
         h1 = hours_fmt(valid_time[0], valid_time[1])
         m1 = 0
     if second := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
         h2, m2 = valid_time[2].split(":")
-        hours_mins_fmt(h2, valid_time[3])
+        h2 = hours_mins_fmt(h2, valid_time[3])
     elif second := re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
         h2 = hours_fmt(valid_time[2], valid_time[3])
         m2 = 0
@@ -37,20 +37,20 @@ def hours_mins_fmt(hour, midday):
     if midday == "AM":
         if  hour == "12":
             hour = 0
-        return hour
+        return int(hour)
     if midday == "PM":
         hour = int(hour) + 12
-        return hour
+        return int(hour)
 
 
 def hours_fmt(hour, midday):
     if midday == "AM":
         if hour == "12":
             hour = 0
-        return hour
+        return int(hour)
     if midday == "PM":
         hour = int(hour) + 12
-        return hour
+        return int(hour)
 
 
 if __name__ == "__main__":
