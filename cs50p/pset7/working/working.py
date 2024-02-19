@@ -9,12 +9,14 @@ def main():
 def convert(s):
     valid_time = validate_input(s)
     if first := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
-        h1, m1 = hours_mins_fmt(valid_time[0], valid_time[1])
+        h1, m1 = valid_time[0].split(":")
+        hours_mins_fmt(h1, valid_time[1])
     elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
         h1 = hours_fmt(valid_time[0], valid_time[1])
         m1 = 0
     if second := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
-        h2, m2 = hours_mins_fmt(valid_time[2], valid_time[3])
+        h2, m2 = valid_time[2].split(":")
+        hours_mins_fmt(h2, valid_time[3])
     elif second := re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
         h2 = hours_fmt(valid_time[2], valid_time[3])
         m2 = 0
@@ -31,27 +33,24 @@ def validate_input(s):
         sys.exit()
 
 
-def hours_mins_fmt(time, midday):
-    h, m = time.split(":")
+def hours_mins_fmt(hour, midday):
     if midday == "AM":
-        if  h == "12":
-            h = 0
-        return h, m
+        if  hour == "12":
+            hour = 0
+        return hour
     if midday == "PM":
-        h = int(h) + 12
-        return h, m
+        hour = int(hour) + 12
+        return hour
 
 
-def hours_fmt(time, midday):
-    h = time
-    m = 0
+def hours_fmt(hour, midday):
     if midday == "AM":
-        if h == "12":
-            h = 0
-        return h, m
+        if hour == "12":
+            hour = 0
+        return hour
     if midday == "PM":
-        h = int(h) + 12
-        return h, m
+        hour = int(hour) + 12
+        return hour
 
 
 if __name__ == "__main__":
