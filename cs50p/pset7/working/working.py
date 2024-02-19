@@ -9,30 +9,15 @@ def main():
 def convert(s):
     valid_time = validate_input(s)
     if first := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
-        h1, m1 = valid_time[0].split(":")
-        if h1 == "12":
-            h1 = 0
-        else:
-            h1 = int(h1) + 12
+        h1, m1 = hours_mins_fmt(valid_time[0], valid_time[1])
     elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
-        m1 = 0
-        if valid_time[0] == "12":
-            h1 = 0
-        else:
-            h1 = int(valid_time[0]) + 12
+        h1, m1 = hours_fmt(valid_time[0], valid_time[1])
 
     if second := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
-        h2, m2 = valid_time[2].split(":")
-        if h2 == "12":
-            h2 = 0
-        else:
-            h2 = int(h2) + 12
+        h2, m2 = hours_mins_fmt(valid_time[2], valid_time[3])
+
     elif second := re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
-        m2 = 0
-        if valid_time[2] == "12":
-            h2 = 0
-        else:
-            h2 = int(valid_time[2]) + 12
+        h2, m2 = hours_fmt(valid_time[2], valid_time[3])
 
     return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"
 
@@ -45,9 +30,6 @@ def validate_input(s):
             raise ValueError
     except ValueError:
         sys.exit()
-
-if __name__ == "__main__":
-    main()
 
 
 def hours_mins_fmt(time, midday):
@@ -77,3 +59,7 @@ def is_midnight(h):
     if h == "12":
         return True
     return False
+
+
+if __name__ == "__main__":
+    main()
