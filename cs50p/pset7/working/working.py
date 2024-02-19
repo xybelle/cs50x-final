@@ -8,7 +8,7 @@ def main():
 
 def convert(s):
     valid_time = validate_input(s)
-    if first := re.search(r"(?:1[0-2]|[1-9]):([0-5][0-9]))", valid_time[0]):
+    if first := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
         h1, m1 = valid_time[0].split(":")
         if h1 == "12":
             h1 = 0
@@ -18,7 +18,7 @@ def convert(s):
         h1 = int(valid_time[0])
         m1 = 0
 
-    if second := re.search(r"(?:1[0-2]|[1-9]):([0-5][0-9]))", valid_time[2]):
+    if second := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
         h2, m2 = valid_time[2].split(":")
         if h2 == "12":
             h2 = 0
