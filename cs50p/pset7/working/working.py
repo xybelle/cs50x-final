@@ -44,7 +44,7 @@ def validate_input(s):
         else:
             raise ValueError
     except ValueError:
-        sys.exit("Hours: time AM/PM to time AM/PM")
+        pass
 
 
 if __name__ == "__main__":
