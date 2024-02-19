@@ -11,14 +11,13 @@ def convert(s):
     if first := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[0]):
         h1, m1 = hours_mins_fmt(valid_time[0], valid_time[1])
     elif first := re.search(r"(?:1[0-2]|[1-9])", valid_time[0]):
-        h1, m1 = hours_fmt(valid_time[0], valid_time[1])
-
+        h1 = hours_fmt(valid_time[0], valid_time[1])
+        m1 = 0
     if second := re.search(r"(?:1[0-2]|[1-9]):[0-5][0-9]", valid_time[2]):
         h2, m2 = hours_mins_fmt(valid_time[2], valid_time[3])
-
     elif second := re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
-        h2, m2 = hours_fmt(valid_time[2], valid_time[3])
-
+        h2 = hours_fmt(valid_time[2], valid_time[3])
+        m2 = 0
     return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"
 
 
