@@ -1,4 +1,6 @@
-import um
+import pytest
+
+from um import count
 
 
 def test_um():
