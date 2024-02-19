@@ -19,7 +19,7 @@ def test_pm_pm():
 
 
 def test_format():
-    with pytest.raises(ValueError):
+    with pytest.raises(SystemExit):
         convert("9 AM 5 PM")
-    with pytest.raises(ValueError):
+    with pytest.raises(SystemExit):
         convert("9 AM 5")
