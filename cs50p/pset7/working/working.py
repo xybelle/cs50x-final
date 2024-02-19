@@ -31,7 +31,7 @@ def validate_input(s):
         else:
             raise ValueError
     except ValueError:
-        sys.exit()
+        print("Hour: time AM/PM to time AM/PM")
 
 
 def hours_mins_fmt(hour, midday):
