@@ -27,8 +27,10 @@ def convert(s):
         else:
             h2 = int(h2) + 12
     elif second := re.search(r"(?:1[0-2]|[1-9])", valid_time[2]):
-        h2 = int(valid_time[2])
-        m2 = 0
+        if valid_time[2] == "12":
+            h2 = 0
+        else:
+            h2 = int(h1) + 12
 
     return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"
 
