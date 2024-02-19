@@ -66,7 +66,7 @@ def hours_fmt(time, midday):
     h = time
     m = 0
     if midday == "AM":
-        if is_noon(h):
+        if is_midnight(h):
             h = 0
         return h, m
     if midday == "PM":
@@ -74,7 +74,7 @@ def hours_fmt(time, midday):
         return h, m
 
 
-def is_noon(h):
+def is_midnight(h):
     if h == "12":
         return True
     return False
