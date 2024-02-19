@@ -35,7 +35,7 @@ def validate_input(s):
 def hours_mins_fmt(time, midday):
     h, m = time.split(":")
     if midday == "AM":
-        if  is_midnight(h):
+        if  h == "12":
             h = 0
         return h, m
     if midday == "PM":
@@ -47,18 +47,12 @@ def hours_fmt(time, midday):
     h = time
     m = 0
     if midday == "AM":
-        if is_midnight(h):
+        if h == "12"
             h = 0
         return h, m
     if midday == "PM":
         h = int(h) + 12
         return h, m
-
-
-def is_midnight(h):
-    if h == "12":
-        return True
-    return False
 
 
 if __name__ == "__main__":
