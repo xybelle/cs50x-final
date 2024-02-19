@@ -52,6 +52,9 @@ if __name__ == "__main__":
 
 def hours_mins_fmt(time, midday):
     h, m = time.split(":")
+    if is_noon(h):
+        h = 0
+        return h, m
     if midday == "AM":
         return h, m
     if midday == "PM":
@@ -59,4 +62,20 @@ def hours_mins_fmt(time, midday):
         return h, m
 
 
-def is
+def hours_fmt(time, midday):
+    h = time
+    m = 0
+    if is_noon(h):
+        h = 0
+        return h, m
+    if midday == "AM":
+        return h, m
+    if midday == "PM":
+        h = int(h) + 12
+        return h, m
+
+
+def is_noon(h):
+    if h == "12":
+        return True
+    return False
