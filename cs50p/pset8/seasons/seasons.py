@@ -7,7 +7,7 @@ from datetime import date
 
 
 def main():
-    dob = input("Date of Birth: ")
+    dob = date.fromisoformat(input("Date of Birth: "))
     age = sing(dob)
 
 
