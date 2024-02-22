@@ -13,7 +13,7 @@ def main():
 
 def get_age(dob):
     age = date.today() - dob
-    delta = timedelta(age)
+    delta = timedelta.max(age)
     print(delta)
 
 
