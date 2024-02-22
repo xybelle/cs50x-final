@@ -6,6 +6,6 @@ def test_age():
     assert seasons.sing("525600") == "five hundred twenty-five thousand, six hundred"
 
 
-def test_format():
+def test_main():
     with pytest.raises(ValueError):
-        seasons.get_age("1989-12")
+        seasons.main("1989-12")
