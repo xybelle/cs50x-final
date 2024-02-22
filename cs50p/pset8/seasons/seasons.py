@@ -17,7 +17,7 @@ def sing(dob):
 
 
 def get_age(dob):
-    
+    age = date.today() - dob
 
 
 
