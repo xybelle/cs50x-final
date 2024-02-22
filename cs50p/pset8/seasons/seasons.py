@@ -13,7 +13,8 @@ def main():
 
 def get_age(dob):
     age = date.today() - dob
-    return age
+    age_in_minutes = age * 24 * 60
+    return age_in_minutes
 
 
 #def sing(age):
