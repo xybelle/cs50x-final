@@ -8,8 +8,10 @@ from datetime import date
 
 def main():
     dob = input("Date of Birth: ")
-    age = p.number_to_words(dob)
-    print(f"{age.strip('and')} minutes")
+    age = p.number_to_words(dob, wantlist=True)
+    for _ in age:
+        print(age)
+    print("minutes")
 
 
 if __name__ == "__main__":
