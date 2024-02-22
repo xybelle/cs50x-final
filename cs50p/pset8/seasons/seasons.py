@@ -6,7 +6,7 @@ p = inflect.engine()
 from datetime import date
 
 
-def main():
+def main(dob_input):
     dob = get_dob()
     print(f"{sing(get_age(dob))} minutes")
 
