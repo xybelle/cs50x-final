@@ -3,7 +3,7 @@ import pytest
 
 
 def test_age():
-    assert seasons.sing("525600") == "Five hundred twenty-five thousand, six hundred minutes"
+    assert seasons.sing("525600") == "five hundred twenty-five thousand, six hundred minutes"
 
 
 def test_format():
