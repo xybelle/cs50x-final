@@ -8,12 +8,12 @@ from datetime import date, timedelta
 
 def main():
     dob = date.fromisoformat(input("Date of Birth: "))
-    print(f"{get_age(dob)} in days")
+    print(get_age(dob))
 
 
 def get_age(dob):
     age = date.today() - dob
-    print(date.today())
+    td = 
     #age_in_minutes = timedelta(age)
     return age
 
