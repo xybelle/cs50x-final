@@ -8,4 +8,4 @@ def test_age():
 
 def test_format():
     with pytest.raises(ValueError):
-        seasons.main("1989-12")
+        seasons.get_dob("1989-12")
