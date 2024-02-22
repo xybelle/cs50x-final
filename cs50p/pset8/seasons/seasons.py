@@ -23,7 +23,7 @@ def get_age(dob):
 
 def sing(age):
     s = p.number_to_words(age)
-    return s.replace("and ", "")
+    return s.replace("and ", "").capitalize()
 
 
 if __name__ == "__main__":

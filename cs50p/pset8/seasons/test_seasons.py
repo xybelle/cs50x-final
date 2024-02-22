@@ -3,8 +3,8 @@ import pytest
 
 
 def test_sing():
-    assert seasons.sing("525600") == "five hundred twenty-five thousand, six hundred"
-    assert seasons.sing("1051200") == "one million, fifty-one thousand, two hundred"
+    assert seasons.sing("525600") == "Five hundred twenty-five thousand, six hundred"
+    assert seasons.sing("1051200") == "One million, fifty-one thousand, two hundred"
 
 
 def test_format():
