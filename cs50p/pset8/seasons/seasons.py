@@ -12,10 +12,10 @@ def main():
 
 
 def get_age(dob):
-    age = date.today() - dob
-    td = 
+    #age = date.today() - dob
+    t = date.today() - dob
     #age_in_minutes = timedelta(age)
-    return age
+    return t.timedelta.minutes
 
 
 #def sing(age):
