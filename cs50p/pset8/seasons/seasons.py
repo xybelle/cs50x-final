@@ -3,7 +3,7 @@ import inflect
 p = inflect.engine()
 
 
-from datetime import date, timedelta
+from datetime import date
 
 
 def main():
@@ -13,8 +13,7 @@ def main():
 
 def get_age(dob):
     age = date.today() - dob
-    age_in_minutes = timedelta(minutes=365)
-    print(age)
+    age_in_minutes = int(age) * 24 * 60
     return age_in_minutes
 
 
