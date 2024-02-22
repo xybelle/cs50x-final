@@ -6,14 +6,14 @@ p = inflect.engine()
 from datetime import date
 
 
-def main():
-    dob = get_dob()
+def main(dob_input):
+    dob = date.fromisoformat(dob_input)
     print(f"{sing(get_age(dob))} minutes")
 
 
 def get_dob():
-    dob = date.fromisoformat(input("Date of Birth: "))
-    return dob
+    dob_input = input("Date of Birth: ")
+    return dob_input
 
 
 def get_age(dob):
