@@ -7,8 +7,12 @@ from datetime import date
 
 
 def main():
+    print(f"{sing(get_age(get_dob))} minutes")
+
+
+def get_dob():
     dob = date.fromisoformat(input("Date of Birth: "))
-    print(f"{sing(get_age(dob))} minutes")
+    return dob
 
 
 def get_age(dob):
