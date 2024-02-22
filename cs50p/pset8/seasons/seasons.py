@@ -9,7 +9,7 @@ from datetime import date
 def main():
     dob = input("Date of Birth: ")
     age = p.number_to_words(dob)
-    print(age.strip('and'))
+    print(age.replace(' and', ''))
 
 
 if __name__ == "__main__":
