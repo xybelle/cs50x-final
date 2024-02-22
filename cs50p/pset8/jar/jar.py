@@ -1,2 +1,20 @@
 class Jar:
-    def __init__(self, capacity)
+    def __init__(self, capacity=0)
+        ...
+
+    def __str__(self):
+        ...
+
+    def deposit(self, n):
+        ...
+
+    def withdraw(self, n):
+        ...
+
+    @property
+    def capacity(self):
+        ...
+
+    @property
+    def size(self):
+        ...
