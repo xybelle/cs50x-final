@@ -13,7 +13,7 @@ def main():
 
 def get_age(dob):
     age = date.today() - dob
-    age_in_minutes = date.timedelta(age)
+    age_in_minutes = timedelta(minutes=365)
     print(age)
     return age_in_minutes
 
