@@ -8,8 +8,17 @@ from datetime import date
 
 def main():
     dob = input("Date of Birth: ")
-    age = p.number_to_words(dob)
-    print(age.replace(' and', ''))
+    age = sing(dob)
+
+
+def sing(dob):
+    s = p.number_to_words(dob)
+    return s.replace("and ", "")
+
+
+def get_age(dob):
+    
+
 
 
 if __name__ == "__main__":
