@@ -7,7 +7,8 @@ from datetime import date
 
 
 def main():
-    print(f"{sing(get_age(get_dob))} minutes")
+    dob = get_dob()
+    print(f"{sing(get_age(dob))} minutes")
 
 
 def get_dob():
