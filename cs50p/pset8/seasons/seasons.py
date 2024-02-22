@@ -3,12 +3,12 @@ import inflect
 p = inflect.engine()
 
 
-from datetime import date, timedelta
+from datetime import date
 
 
 def main():
     dob = date.fromisoformat(input("Date of Birth: "))
-    print(sing(get_age(dob)))
+    print(f"{sing(get_age(dob))} minutes")
 
 
 def get_age(dob):
