@@ -14,7 +14,7 @@ class Jar:
         self.size = new_size
 
     def withdraw(self, n):
-        if n > self._size:
+        if n > size:
             raise ValueError("Not enough cookies")
         remaining = self._size - n
         self.size = remaining
