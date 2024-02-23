@@ -8,8 +8,7 @@ class Jar:
             return None
         else:
             for _ in self.size:
-                print("🍪", end="")
-            print()
+                return "🍪"
 
     def deposit(self, n):
         new_size = n + self.size
