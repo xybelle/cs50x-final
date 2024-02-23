@@ -35,7 +35,7 @@ class Jar:
 
     @size.setter
     def size(self, size=0):
-        
+        self._size = size
 
 
 jar = Jar()
