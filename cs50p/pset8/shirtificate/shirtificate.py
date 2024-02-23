@@ -5,9 +5,9 @@ def main():
     name = get_name()
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font('courier bold', size=12)
+    pdf.set_font('helvetica', size=12)
     pdf.image("shirtificate.png", x=0, y=60)
-    pdf.text(50, 50, text="CS50 Shirtificate")
+    pdf.text(100, 50, text="CS50 Shirtificate")
     pdf.output("shirtificate.pdf")
 
 
