@@ -2,8 +2,10 @@ from jar import Jar
 
 
 def test_init():
-    jar = Jar()
-    assert 
+    jar = Jar(1)
+    assert jar.capacity == 1
+    jar = Jar(0)
+    
 
 
 def test_str():
