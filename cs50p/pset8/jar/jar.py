@@ -5,7 +5,7 @@ class Jar:
 
     def __str__(self):
         if self.size == 0:
-            print("")
+            return None
         else:
             for _ in self.size:
                 print("🍪", end="")
