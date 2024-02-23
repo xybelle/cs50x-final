@@ -4,9 +4,12 @@ class Jar:
         self.size = 0
 
     def __str__(self):
-        for _ in self.size:
-            print("🍪", end="")
-        print()
+        if self.size == 0:
+            print("")
+        else:
+            for _ in self.size:
+                print("🍪", end="")
+            print()
 
     def deposit(self, n):
         new_size = n + self.size
