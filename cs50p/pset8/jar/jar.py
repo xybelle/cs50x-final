@@ -3,7 +3,7 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        for _ in self.capacity:
+        for _ in self._size:
             print("🍪", end="")
         print()
 
@@ -35,7 +35,8 @@ class Jar:
 
     @size.setter
     def size(self, size=0):
-        
+
+
 
 jar = Jar()
 
