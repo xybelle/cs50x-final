@@ -10,7 +10,7 @@ def main():
     pdf.cell(text="CS50 Shirtificate", border=0, align="C", center=True)
     pdf.ln(100)
     pdf.set_text_color(255, 255, 255)
-    pdf.cell(text=f"{name} took CS50", border=1, align="C", center=True, new_x="CENTER", new_y="NEXT")
+    pdf.cell(text=f"{name} took CS50", border=0, align="C", center=True, new_x="CENTER", new_y="NEXT")
     pdf.output("shirtificate.pdf")
 
 
