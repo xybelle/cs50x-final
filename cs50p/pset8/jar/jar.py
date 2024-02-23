@@ -8,7 +8,7 @@ class Jar:
         print()
 
     def deposit(self, n):
-        new_size = n + self._size
+        new_size = n + size
         if new_size > self.capacity:
             raise ValueError("Capacity exceeded")
         self.size = new_size
