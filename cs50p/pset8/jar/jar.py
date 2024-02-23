@@ -1,7 +1,6 @@
 class Jar:
     def __init__(self, capacity=12)
         self.capacity = capacity
-        self.size = size
 
     def __str__(self):
         for _ in self.capacity:
@@ -15,9 +14,10 @@ class Jar:
         self._size = new_size
 
     def withdraw(self, n):
-        remaining = self._size - n
         if n > self._size:
             raise ValueError("Not enough cookies")
+        remaining = self._size - n
+        self._size = remaining
 
     @property
     def capacity(self):
@@ -31,7 +31,10 @@ class Jar:
 
     @property
     def size(self):
-        ...
+        return self._size
+
+    @size.setter
+    def size(self, size):
 
 
 jar = Jar()
