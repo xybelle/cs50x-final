@@ -1,9 +1,9 @@
 class Jar:
-    def __init__(self, capacity=12)
+    def __init__(self, capacity=12):
         self.capacity = capacity
 
     def __str__(self):
-        for _ in self._size:
+        for _ in self.size:
             print("🍪", end="")
         print()
 
