@@ -7,7 +7,7 @@ def main():
     pdf.add_page()
     pdf.set_font('helvetica', size=12)
     pdf.image("shirtificate.png", x=0, y=60)
-    pdf.cell(0, 25, text="CS50 Shirtificate")
+    pdf.cell(text="CS50 Shirtificate", text_align="Align")
     pdf.output("shirtificate.pdf")
 
 
