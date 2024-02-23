@@ -9,6 +9,7 @@ def main():
     pdf.image("shirtificate.png", x=10, y=60, w=190, keep_aspect_ratio=True)
     pdf.cell(text="CS50 Shirtificate", border=0, align="C", center=True)
     pdf.ln(100)
+    pdf.set_fill_color(255, 255, 255)
     pdf.cell(text=f"{name} took CS50", border=1, align="C", center=True, new_x="CENTER", new_y="NEXT")
     pdf.output("shirtificate.pdf")
 
