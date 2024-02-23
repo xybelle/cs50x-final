@@ -11,13 +11,13 @@ class Jar:
         new_size = n + self._size
         if new_size > self.capacity:
             raise ValueError("Capacity exceeded")
-        self._size = new_size
+        self.size = new_size
 
     def withdraw(self, n):
         if n > self._size:
             raise ValueError("Not enough cookies")
         remaining = self._size - n
-        self._size = remaining
+        self.size = remaining
 
     @property
     def capacity(self):
@@ -35,7 +35,7 @@ class Jar:
 
     @size.setter
     def size(self, size=0):
-
+        
 
 
 jar = Jar()
