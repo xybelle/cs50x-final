@@ -9,12 +9,15 @@ class Jar:
         print()
 
     def deposit(self, n):
-        if n > self.capacity:
-            raise ValueError("Exceed capacity")
-        self._size += n
+        new_size = n + self._size
+        if new_size > self.capacity:
+            raise ValueError("Capacity exceeded")
+        self._size = new_size
 
     def withdraw(self, n):
-        ...
+        remaining = self._size - n
+        if n > self._size:
+            raise ValueError("Not enough cookies")
 
     @property
     def capacity(self):
