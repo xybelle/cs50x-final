@@ -4,7 +4,9 @@ class Jar:
         self.size = size
 
     def __str__(self):
-        ...
+        for _ in self.capacity:
+            print("🍪", end="")
+        print()
 
     def deposit(self, n):
         ...
