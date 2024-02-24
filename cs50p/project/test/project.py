@@ -47,13 +47,13 @@ def practice_subtraction(n):
         tries = 1
         for i in range(3):
             try:
-                ans = int(input(f"{x} + {y} = "))
+                ans = int(input(f"{x} - {y} = "))
                 if x + y == ans:
                     correct_answer += 1
                     break
                 elif tries == 3:
-                    answer = x + y
-                    print(f"Answer: \n{x} + {y} = {answer}")
+                    answer = x - y
+                    print(f"Answer: \n{x} - {y} = {answer}")
                     break
                 else:
                     tries += 1
@@ -71,13 +71,13 @@ def practice_multiplication():
         tries = 1
         for i in range(3):
             try:
-                ans = int(input(f"{x} + {y} = "))
+                ans = int(input(f"{x} * {y} = "))
                 if x + y == ans:
                     correct_answer += 1
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"Answer: \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} * {y} = {answer}")
                     break
                 else:
                     tries += 1
@@ -95,13 +95,13 @@ def practice_division():
         tries = 1
         for i in range(3):
             try:
-                ans = int(input(f"{x} + {y} = "))
+                ans = int(input(f"{x} / {y} = "))
                 if x + y == ans:
                     correct_answer += 1
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"Answer: \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} / {y} = {answer}")
                     break
                 else:
                     tries += 1
