@@ -7,11 +7,11 @@ def main():
         case "+":
             score = practice_addition(n)
         case "-":
-            practice_subtraction(n)
+            score = practice_subtraction(n)
         case "*":
-            practice_multiplication(n)
+            score = practice_multiplication(n)
         case "/":
-            practice_division(n)
+            score = practice_division(n)
     print(f"Score: {score}")
 
 
@@ -53,13 +53,15 @@ def practice_subtraction(n):
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"EEE \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} + {y} = {answer}")
                     break
                 else:
                     tries += 1
-                    print("EEE")
+                    print("Try again")
             except ValueError:
                 pass
+    return correct_answer
+
 
 def practice_multiplication():
     correct_answer = 0
@@ -75,13 +77,14 @@ def practice_multiplication():
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"EEE \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} + {y} = {answer}")
                     break
                 else:
                     tries += 1
-                    print("EEE")
+                    print("Try again")
             except ValueError:
                 pass
+    return correct_answer
 
 
 def practice_division():
@@ -98,13 +101,14 @@ def practice_division():
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"EEE \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} + {y} = {answer}")
                     break
                 else:
                     tries += 1
-                    print("EEE")
+                    print("Try again")
             except ValueError:
                 pass
+    return correct_answer
 
 
 def generate_integer(level):
