@@ -3,7 +3,15 @@ import random
 def main():
     oper = get_operation()
     level = get_level()
-    match oper
+    match oper:
+        case "+":
+            practice_addition()
+        case "-":
+            practice_subtraction()
+        case "*":
+            practice_multiplication()
+        case "/":
+            practice_division()
     print(f"Score: {correct_ans}")
 
 
@@ -31,15 +39,71 @@ def practice_addition():
 
 
 def practice_subtraction():
-    ...
-
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} + {y} = "))
+                if x + y == ans:
+                    correct_ans += 1
+                    break
+                elif tries == 3:
+                    answer = x + y
+                    print(f"EEE \n{x} + {y} = {answer}")
+                    break
+                else:
+                    tries += 1
+                    print("EEE")
+            except ValueError:
+                pass
 
 def practice_multiplication():
-    ...
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} + {y} = "))
+                if x + y == ans:
+                    correct_ans += 1
+                    break
+                elif tries == 3:
+                    answer = x + y
+                    print(f"EEE \n{x} + {y} = {answer}")
+                    break
+                else:
+                    tries += 1
+                    print("EEE")
+            except ValueError:
+                pass
 
 
 def practice_division():
-    ...
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} + {y} = "))
+                if x + y == ans:
+                    correct_ans += 1
+                    break
+                elif tries == 3:
+                    answer = x + y
+                    print(f"EEE \n{x} + {y} = {answer}")
+                    break
+                else:
+                    tries += 1
+                    print("EEE")
+            except ValueError:
+                pass
 
 
 def generate_integer(level):
