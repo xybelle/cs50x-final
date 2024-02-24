@@ -2,20 +2,20 @@ import random
 
 def main():
     oper = get_operation()
-    level = get_level()
+    n = get_level()
     match oper:
         case "+":
-            practice_addition()
+            practice_addition(n)
         case "-":
-            practice_subtraction()
+            practice_subtraction(n)
         case "*":
-            practice_multiplication()
+            practice_multiplication(n)
         case "/":
-            practice_division()
+            practice_division(n)
     print(f"Score: {correct_ans}")
 
 
-def practice_addition():
+def practice_addition(n):
     correct_answer = 0
     for i in range(10):
         x = generate_integer(n)
@@ -25,7 +25,7 @@ def practice_addition():
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
-                    correct_ans += 1
+                    correct_answer += 1
                     break
                 elif tries == 3:
                     answer = x + y
@@ -38,7 +38,7 @@ def practice_addition():
                 pass
 
 
-def practice_subtraction():
+def practice_subtraction(n):
     correct_answer = 0
     for i in range(10):
         x = generate_integer(n)
@@ -48,7 +48,7 @@ def practice_subtraction():
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
-                    correct_ans += 1
+                    correct_answer += 1
                     break
                 elif tries == 3:
                     answer = x + y
@@ -70,7 +70,7 @@ def practice_multiplication():
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
-                    correct_ans += 1
+                    correct_answer += 1
                     break
                 elif tries == 3:
                     answer = x + y
@@ -93,7 +93,7 @@ def practice_division():
             try:
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
-                    correct_ans += 1
+                    correct_answer += 1
                     break
                 elif tries == 3:
                     answer = x + y
