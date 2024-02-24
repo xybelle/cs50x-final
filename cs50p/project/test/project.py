@@ -131,7 +131,7 @@ def get_operation():
     while True:
         try:
             oper = input(
-                "What do you want to practice today?\nAddition (+) | Subtraction (-) | Multiplication (*) | Division (/)"
+                "Addition (+) | Subtraction (-) | Multiplication (*) | Division (/)\nWhat do you want to practice today? "
                 )
             if oper not in operations:
                 raise ValueError
