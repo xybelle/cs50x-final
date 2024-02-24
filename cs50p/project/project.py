@@ -139,7 +139,7 @@ def get_operation():
                 "Addition (+) | Subtraction (-) | Multiplication (*) | Division (/)\nWhat do you want to practice today? "
                 )
             if oper not in operations:
-                raise ValueError("Invalid operation. (use: + , - , * , /)")
+                print("Invalid operation. (use: + , - , * , /)")
             return oper
         except ValueError:
             pass
