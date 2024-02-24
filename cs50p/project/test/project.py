@@ -29,11 +29,11 @@ def practice_addition(n):
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"EEE \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} + {y} = {answer}")
                     break
                 else:
                     tries += 1
-                    print("EEE")
+                    print("Try again")
             except ValueError:
                 pass
     return correct_answer
