@@ -122,28 +122,23 @@ def generate_integer(level):
 
 def get_level():
     while True:
-        try:
-            level = int(input("Level: "))
-            if level > 3 or level <= 0:
-                raise ValueError
+        level = int(input("Level: "))
+        if level <= 3 or level > 0:
             return level
-        except ValueError:
-            pass
+        else:
+            print("Select levels between 1 - 3")
 
 
 def get_operation():
     operations = ("+", "-", "*", "/")
     while True:
-        try:
-            oper = input(
-                "Addition (+) | Subtraction (-) | Multiplication (*) | Division (/)\nWhat do you want to practice today? "
-                )
-            if oper not in operations:
-                print("Invalid operation. (use: + , - , * , /)")
+        oper = input(
+            "Addition (+) | Subtraction (-) | Multiplication (*) | Division (/)\nWhat do you want to practice today? "
+            )
+        if oper in operations:
             return oper
-        except ValueError:
-            pass
-
+        else:
+            print("Invalid operation. (use: + , - , * , /)")
 
 if __name__ == "__main__":
     main()
