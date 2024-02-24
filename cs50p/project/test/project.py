@@ -2,7 +2,15 @@ import random
 
 def main():
     level = get_level()
-    correct_ans = 0
+    oper = input(
+
+        )
+
+    print(f"Score: {correct_ans}")
+
+
+def practice_addition():
+    correct_answer = 0
     for i in range(10):
         x = generate_integer(n)
         y = generate_integer(n)
@@ -22,11 +30,6 @@ def main():
                     print("EEE")
             except ValueError:
                 pass
-    print(f"Score: {correct_ans}")
-
-
-def practice_addition():
-    ...
 
 
 def practice_subtraction():
@@ -48,6 +51,31 @@ def generate_integer(level):
         return random.randint(10, 99)
     elif level == 3:
         return random.randint(100, 999)
+
+
+def get_level():
+    while True:
+        try:
+            level = int(input("Level: "))
+            if level > 3 or level <= 0:
+                raise ValueError
+            return level
+        except ValueError:
+            pass
+
+
+def get_operation():
+    oprations = ("+", "-", "*", "/")
+    while True:
+        try:
+            oper = input(
+                "What do you want to practice today?\nAddition (+) | Subtraction (-) | Multiplication (*) | Division (/)"
+                )
+            if oper not in operations:
+                raise ValueError
+            return oper
+        except ValueError:
+            pass
 
 
 if __name__ == "__main__":
