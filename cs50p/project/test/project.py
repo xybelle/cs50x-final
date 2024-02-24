@@ -5,14 +5,14 @@ def main():
     n = get_level()
     match oper:
         case "+":
-            practice_addition(n)
+            score = practice_addition(n)
         case "-":
             practice_subtraction(n)
         case "*":
             practice_multiplication(n)
         case "/":
             practice_division(n)
-    print(f"Score: {correct_ans}")
+    print(f"Score: {score}")
 
 
 def practice_addition(n):
