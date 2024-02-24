@@ -36,6 +36,7 @@ def practice_addition(n):
                     print("EEE")
             except ValueError:
                 pass
+    return correct_answer
 
 
 def practice_subtraction(n):
