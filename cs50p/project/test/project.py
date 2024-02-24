@@ -1,11 +1,9 @@
 import random
 
 def main():
+    oper = get_operation()
     level = get_level()
-    oper = input(
-
-        )
-
+    match oper
     print(f"Score: {correct_ans}")
 
 
