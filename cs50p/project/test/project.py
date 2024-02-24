@@ -63,7 +63,7 @@ def get_level():
 
 
 def get_operation():
-    oprations = ("+", "-", "*", "/")
+    operations = ("+", "-", "*", "/")
     while True:
         try:
             oper = input(
