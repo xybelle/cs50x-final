@@ -123,7 +123,7 @@ def generate_integer(level):
 def get_level():
     while True:
         level = int(input("Level: "))
-        if level <= 3 or level > 0:
+        if level <= 3 and level > 0:
             return level
         else:
             print("Select levels between 1 - 3")
@@ -139,6 +139,7 @@ def get_operation():
             return oper
         else:
             print("Invalid operation. (use: + , - , * , /)")
+
 
 if __name__ == "__main__":
     main()
