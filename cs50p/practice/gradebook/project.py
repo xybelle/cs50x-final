@@ -1,3 +1,4 @@
+from cs50 import SQL
 from tabulate import tabulate
 
 student_list = [
