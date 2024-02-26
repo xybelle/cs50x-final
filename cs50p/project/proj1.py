@@ -3,15 +3,7 @@ import random
 def main():
     oper = get_operation()
     level = get_level()
-    match oper:
-        case "+":
-            score = practice_addition(level, oper)
-        case "-":
-            score = practice_subtraction(n)
-        case "*":
-            score = practice_multiplication(n)
-        case "/":
-            score = practice_division(n)
+    score = practice_addition(level, oper)
     print(f"Your score is: {score} 👌\nExiting...")
 
 
@@ -23,13 +15,13 @@ def practice_arithmetic(n, operation):
         tries = 1
         for i in range(3):
             try:
-                ans = int(input(f"{x} + {y} = "))
-                if x + y == ans:
+                ans = int(input(f"{x} {operation} {y} = "))
+                if eval(f"{x} {operation} {y}") == ans:
                     correct_answer += 1
                     print("🤩")
                     break
                 elif tries == 3:
-                    answer = x + y
+                    answer = eval(f"{x} {operation} {y}")
                     print(f"Answer: \n{x} + {y} = {answer} 👈")
                     break
                 else:
