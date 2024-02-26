@@ -14,7 +14,7 @@ expected_results = [10, 10, 10, 10]
 @pytest.mark.parametrize("input_value, expected_result", zip(input_values, expected_results))
 @patch('proj1.generate_integer', side_effect=mock_generate_integer)
 def test_practice_arithmetic_addition(mock_generate_integer, input_value, expected_result):
-    mock_input.side_effect = input_value  # Set side effect for input
+    
     # Testing practice_arithmetic function for addition
     assert proj1.practice_arithmetic(1, '+') == expected_result
 
