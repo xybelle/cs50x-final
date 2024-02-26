@@ -59,7 +59,7 @@ def get_operation():
         if oper in operations:
             return oper
         else:
-            print("\nInvalid operation. (use: + , - , * , /)\n")
+            print("\n\033[3mInvalid operation. (use: + , - , * , /)\033[0m\n")
 
 
 if __name__ == "__main__":
