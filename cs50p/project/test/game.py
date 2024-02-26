@@ -102,7 +102,7 @@ def practice_division(n):
                 ans = int(input(f"{x} / {y} = "))
                 if x / y == ans:
                     correct_answer += 1
-                    print("Good job! 🎉")
+                    print("🤩")
                     break
                 elif tries == 3:
                     answer = x / y
