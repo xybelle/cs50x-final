@@ -8,7 +8,7 @@ def mock_generate_integer(n):
     return 1
 
 
-def test_practice_addition():
+def test_practice_addition(1):
     # Patching generate_integer to always return 1
     with patch('game.generate_integer', side_effect=mock_generate_integer):
         # Providing known inputs to practice_addition
