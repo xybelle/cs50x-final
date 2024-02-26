@@ -77,7 +77,7 @@ def add_grade():
         subj = input("Subject: ")
         grade = input("Grade: ")
 
-        gradebook.append({"stu_id": id, subj: grade})
+        student_list.append({subj: grade})
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
