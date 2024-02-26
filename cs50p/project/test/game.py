@@ -49,7 +49,7 @@ def practice_subtraction(n):
         for i in range(3):
             try:
                 ans = int(input(f"{x} - {y} = "))
-                if x + y == ans:
+                if x - y == ans:
                     correct_answer += 1
                     break
                 elif tries == 3:
