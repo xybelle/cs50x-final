@@ -31,7 +31,7 @@ def practice_addition(n):
                     break
                 elif tries == 3:
                     answer = x + y
-                    print(f"Answer: \n{x} + {y} = {answer}")
+                    print(f"Answer: \n{x} + {y} = {answer} 👈")
                     break
                 else:
                     tries += 1
@@ -56,7 +56,7 @@ def practice_subtraction(n):
                     break
                 elif tries == 3:
                     answer = x - y
-                    print(f"Answer: \n{x} - {y} = {answer}")
+                    print(f"Answer: \n{x} - {y} = {answer} 👈")
                     break
                 else:
                     tries += 1
@@ -81,7 +81,7 @@ def practice_multiplication(n):
                     break
                 elif tries == 3:
                     answer = x * y
-                    print(f"Answer: \n{x} * {y} = {answer}")
+                    print(f"Answer: \n{x} * {y} = {answer} 👈")
                     break
                 else:
                     tries += 1
@@ -106,7 +106,7 @@ def practice_division(n):
                     break
                 elif tries == 3:
                     answer = x / y
-                    print(f"Answer: \n{x} / {y} = {answer}")
+                    print(f"Answer: \n{x} / {y} = {answer} 👈")
                     break
                 else:
                     tries += 1
