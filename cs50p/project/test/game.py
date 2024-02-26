@@ -13,7 +13,7 @@ def main():
             score = practice_multiplication(n)
         case "/":
             score = practice_division(n)
-    print(f"Score: {score}")
+    print(tabulate(score, headers="Score", tablefmt="fancy_outline"))
 
 
 def practice_addition(n):
