@@ -16,5 +16,11 @@ def mock_input(prompt):
 def test_practice_addition(mock_input, mock_generate_integer):
     assert game.practice_addition(2) == 10  # Assuming level 2 requires 10 correct answers
 
+
+@patch('game.generate_integer', side_effect=mock_generate_integer)
+@patch('builtins.input', side_effect=mock_input)
+def test_practice_subtraction(mock_input, mock_generate_integer):
+    assert game.practice_addition(2) == 10  # Assuming level 2 requires 10 correct answers
+
 if __name__ == "__main__":
     test_practice_addition()
