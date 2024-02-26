@@ -3,7 +3,7 @@ import random
 def main():
     oper = get_operation()
     level = get_level()
-    score = practice_addition(level, oper)
+    score = practice_arithmetic(level, oper)
     print(f"Your score is: {score} 👌\nExiting...")
 
 
