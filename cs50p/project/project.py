@@ -1,78 +1,149 @@
+import random
 from tabulate import tabulate
 
-student_list = [
-    {"id": "000001", "name": "Hermione"},
-    {"id": "000002", "name": "Harry"},
-    {"id": "000003", "name": "Ron"}
-]
-
-test_scores = [
-    {"stu_id": "000001", "1st": "", "2nd": "", "3rd": "", "4th": ""},
-    {"stu_id": "000002", "1st": "", "2nd": "", "3rd": "", "4th": ""},
-    {"stu_id": "000003", "1st": "", "2nd": "", "3rd": "", "4th": ""}
-]
-
 def main():
-    main = [
-        ["1", "See Student List"],
-        ["2", "Add Grade"],
-        ["3", "Calculate Average"],
-        ["4", "Generate Report"],
-        ["5", "Exit"]
-    ]
+    oper = get_operation()
+    n = get_level()
+    match oper:
+        case "+":
+            score = practice_addition(n)
+        case "-":
+            score = practice_subtraction(n)
+        case "*":
+            score = practice_multiplication(n)
+        case "/":
+            score = practice_division(n)
+    print(f"Your score is: {score} 👌\nExiting...")
 
+
+def practice_addition(n):
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} + {y} = "))
+                if x + y == ans:
+                    correct_answer += 1
+                    print("🤩")
+                    break
+                elif tries == 3:
+                    answer = x + y
+                    print(f"Answer: \n{x} + {y} = {answer} 👈")
+                    break
+                else:
+                    tries += 1
+                    print("Try again 🙁")
+            except ValueError:
+                pass
+    return correct_answer
+
+
+def practice_subtraction(n):
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} - {y} = "))
+                if x - y == ans:
+                    correct_answer += 1
+                    print("🤩")
+                    break
+                elif tries == 3:
+                    answer = x - y
+                    print(f"Answer: \n{x} - {y} = {answer} 👈")
+                    break
+                else:
+                    tries += 1
+                    print("Try again 🙁")
+            except ValueError:
+                pass
+    return correct_answer
+
+
+def practice_multiplication(n):
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} * {y} = "))
+                if x * y == ans:
+                    correct_answer += 1
+                    print("🤩")
+                    break
+                elif tries == 3:
+                    answer = x * y
+                    print(f"Answer: \n{x} * {y} = {answer} 👈")
+                    break
+                else:
+                    tries += 1
+                    print("Try again 🙁")
+            except ValueError:
+                pass
+    return correct_answer
+
+
+def practice_division(n):
+    correct_answer = 0
+    for i in range(10):
+        x = generate_integer(n)
+        y = generate_integer(n)
+        tries = 1
+        for i in range(3):
+            try:
+                ans = int(input(f"{x} / {y} = "))
+                if x / y == ans:
+                    correct_answer += 1
+                    print("🤩")
+                    break
+                elif tries == 3:
+                    answer = x / y
+                    print(f"Answer: \n{x} / {y} = {answer} 👈")
+                    break
+                else:
+                    tries += 1
+                    print("Try again 🙁")
+            except ValueError:
+                pass
+    return correct_answer
+
+
+def generate_integer(level):
+    if level == 1:
+        return random.randint(1, 9)
+    elif level == 2:
+        return random.randint(10, 99)
+    elif level == 3:
+        return random.randint(100, 999)
+
+
+def get_level():
     while True:
-        print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
-        selected = input("Select an option: ")
-        if selected == "1":
-            show_list()
-        elif select == "5":
-            print("Exiting...")
-            break
+        level = int(input("Level: "))
+        if level <= 3 and level > 0:
+            return level
         else:
-            print("Invalid Input. Please select a valid option.")
+            print("Select levels between 1 - 3")
 
 
-def show_list():
-    """Allows teacher to view student list"""
+def get_operation():
+    operations = ("+", "-", "*", "/")
     while True:
-        print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            break
-
-
-def add_grade(student_id, test_id, grade):
-    """
-    Allows teacher to add a grade for a specific student and assignment/test.
-
-    :param student_id, test_id, grade
-    :type student_id: str, test_id: str, grade: float
-    :raise ValueError: if student_id not in db
-    """
-
-
-def get_average(student_id):
-    """
-    Calculates the average grade for a specific student
-
-    :param student_id: identifier
-    :type student_id: str
-    :raise ValueError: If student_id not in db
-    :return: Grade average
-    :rtype: float
-    """
-
-
-def generate_report(student_id):
-    """
-    Generate report of all grades for a specific student
-
-    :param student_id
-    :type student_id: str
-    :raise ValueError: If student_id not in db
-    :return: A csv file of grade
-    """
+        oper = input(
+            "Addition (+) | Subtraction (-) | Multiplication (*) | Division (/)\nWhat do you want to practice today? "
+            )
+        if oper in operations:
+            return oper
+        else:
+            print("Invalid operation. (use: + , - , * , /)")
 
 
 if __name__ == "__main__":
