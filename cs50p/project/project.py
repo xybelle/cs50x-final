@@ -21,11 +21,14 @@ def main():
         ["5", "Exit"]
     ]
 
-    print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
     while True:
+        print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
         if selected == "1":
             show_list()
+        elif select == "5":
+            print("Exiting...")
+            break
         else:
             print("Invalid Input. Please select a valid option.")
 
@@ -37,8 +40,6 @@ def show_list():
         back = input("Enter 1 to go back to main menu.")
         if back == "1":
             break
-        else:
-            print("Invalid Input. Please select a valid option.")
 
 
 def add_grade(student_id, test_id, grade):
