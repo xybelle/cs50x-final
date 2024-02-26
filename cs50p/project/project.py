@@ -21,8 +21,8 @@ def main():
         ["5", "Exit"]
     ]
 
+    print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
     while True:
-        print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
         if selected == "1":
             show_list()
@@ -34,8 +34,8 @@ def show_list():
     """Allows teacher to view student list"""
     print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
     back = input("Enter 1 to go back to main menu.")
-    if back == "1":
-        
+    
+
 
 
 def add_grade(student_id, test_id, grade):
