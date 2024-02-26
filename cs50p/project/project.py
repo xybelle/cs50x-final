@@ -13,12 +13,20 @@ test_scores = [
 ]
 
 def main():
-    main = [["1", "See Student List"], ["2", "Add Grade"], ["3", "Calculate Average"],
-            ["4", "Generate Report"]]
-    selected = input(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
-    match selected:
-        case "1":
-            show_list()
+    main = [
+        ["1", "See Student List"],
+        ["2", "Add Grade"],
+        ["3", "Calculate Average"],
+        ["4", "Generate Report"]
+        ["5", "Exit"]
+    ]
+
+    while True:
+        print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
+        selected = input("Select an option: ")
+        match selected:
+            case "1":
+                show_list()
 
 
 def show_list():
