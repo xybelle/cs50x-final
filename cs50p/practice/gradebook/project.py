@@ -78,6 +78,7 @@ def add_grade():
             subj = input("Subject: ")
             grade = input("Grade: ")
             gradebook.append({"name": name, subj: grade})
+            print(gradebook)
             break
         except ValueError:
             pass
@@ -94,7 +95,7 @@ def show_gradebook():
         except ValueError:
             pass
 
-        stu_gradebook = [{_["name"]: name}]
+        
         print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
