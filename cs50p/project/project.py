@@ -21,8 +21,10 @@ def add_student():
     """Allows teacher to add a student in db"""
     name = input("Student name: ")
     stu_id = input("Student ID: ")
-    student_list = [{"student_id": stu_id, "name": name}]
-    print(student_list)
+    if not name or stu_id:
+        print("Please enter student name/id")
+    if stu_id
+    student_list.append({"student_id": stu_id, "name": name})
 
 
 
