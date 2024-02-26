@@ -1,32 +1,25 @@
 from tabulate import tabulate
 
 student_list = [
-    {"id": "000001", "name": "Hermione"}
-    {"id": "000002", "name": "Harry"}
+    {"id": "000001", "name": "Hermione"},
+    {"id": "000002", "name": "Harry"},
     {"id": "000003", "name": "Ron"}
 ]
 
 test_scores = []
 
 def main():
-    main = [["1", "Add Student"], ["2", "Add Grade"], ["3", "Calculate Average"],
+    main = [["1", "See Student List"], ["2", "Add Grade"], ["3", "Calculate Average"],
             ["4", "Generate Report"]]
     selected = input(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
     match selected:
         case "1":
-            add_student()
+            show_list()
 
 
-def add_student():
-    """Allows teacher to add a student in db"""
-    name = input("Student name: ")
-    stu_id = input("Student ID: ")
-    if not name or stu_id:
-        print("Please enter student name/id")
-    if not stu_id.isdigit():
-        print("Invalid Student ID")
-    student_list.append({"student_id": stu_id, "name": name})
-
+def show_list():
+    """Allows teacher to view student list"""
+    print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
 
 
 def add_grade(student_id, test_id, grade):
