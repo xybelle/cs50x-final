@@ -110,7 +110,7 @@ def practice_division(n):
                     break
                 else:
                     tries += 1
-                    print("Try again")
+                    print("Try again ")
             except ValueError:
                 pass
     return correct_answer
