@@ -1,6 +1,6 @@
 import game
 
-def test_addition_quiz(monkeypatch):
+def test_practice_addition(monkeypatch):
     # Simulate user input
     user_input = ['5', '7', '12']  # Inputs to simulate for x + y = 12
     def mock_input(_):
