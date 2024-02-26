@@ -22,4 +22,4 @@ def test_practice_arithmetic_addition(mock_input, mock_generate_integer):
 @patch('builtins.input', side_effect=mock_input)
 def test_practice_arithmetic_subtraction(mock_input, mock_generate_integer):
     # Testing practice_arithmetic function for subtraction
-    assert proj1.practice_arithmetic(1, '-') == 10  # Assuming 10 correct answers for level 1
+    assert proj1.practice_arithmetic(mock_input, '-') == 10  # Assuming 10 correct answers for level 1
