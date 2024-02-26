@@ -3,7 +3,7 @@ from tabulate import tabulate
 def main():
     main = [["1", "Add Student"], ["2", "Add Grade"], ["3", "Calculate Average"],
             ["4", "Generate Report"]]
-    print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
+    selected = input(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
 
 
 def add_student():
