@@ -6,7 +6,7 @@ from tabulate import tabulate
 #    {"id": "000003", "name": "Ron"}
 #]
 
-test_scores = [
+student_list = [
     {"stu_id": "", "name": "", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""}
 ]
 
@@ -51,8 +51,8 @@ def add_student():
         name = input("Student name: ")
         id = input("Student ID: ")
         try:
-            test_scores.append({"stu_id": id, "name": name})
-            print("\033[3mSuccessfully added student\033[0m")
+            student_list.append({"stu_id": id, "name": name})
+            print("\033[3mStudent successfully added\033[0m")
             break
         except ValueError:
             pass
@@ -67,7 +67,7 @@ def add_grade():
     :raise ValueError: if student_id not in db
     """
 
-    student_list = [{"id": test_scores[_], "name": test_scores[_]} for _ in test_scores]
+    stu_list = [{"id": test_scores[_], "name": test_scores[_]} for _ in test_scores]
     while True:
         print(student_list)
         print("Select Student: ")
