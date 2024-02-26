@@ -7,9 +7,9 @@ student_list = [
 ]
 
 test_scores = [
-    {"stu_id": "000001", "name": "Hermione", "1st": "", "2nd": "", "3rd": "", "4th": ""},
-    {"stu_id": "000002", "name": "Harry", "1st": "", "2nd": "", "3rd": "", "4th": ""},
-    {"stu_id": "000003", "name": "Ron", "1st": "", "2nd": "", "3rd": "", "4th": ""}
+    {"stu_id": "000001", "name": "Hermione", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""},
+    {"stu_id": "000002", "name": "Harry", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""},
+    {"stu_id": "000003", "name": "Ron", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""}
 ]
 
 def main():
@@ -38,7 +38,7 @@ def main():
 def show_list():
     """Allows teacher to view student list"""
     while True:
-        print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
+        print(tabulate(test_scores, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
