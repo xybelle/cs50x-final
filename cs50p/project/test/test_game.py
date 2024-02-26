@@ -9,11 +9,5 @@ def mock_generate_integer(n):
 
 
 def test_practice_addition(1):
-    # Patching generate_integer to always return 1
-    with patch('game.generate_integer', side_effect=mock_generate_integer):
-        # Providing known inputs to practice_addition
-        result = game.practice_addition(1)
-
-        # Since generate_integer always returns 1 and the correct answers are always 10,
-        # the result should be 10
-        assert result == 10
+    with patch('builtins.input', side_effect=['4', '6', '8', '2', '5', '7', '9', '1', '3', '0']):
+        assert game.practice_addition(1) == 10
