@@ -26,6 +26,8 @@ def main():
         selected = input("Select an option: ")
         if selected == "1":
             show_list()
+        elif selected == "2":
+            add_grade()
         elif select == "5":
             print("Exiting...")
             break
