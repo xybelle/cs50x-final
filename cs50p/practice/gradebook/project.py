@@ -51,7 +51,7 @@ def add_student():
         name = input("Student name: ")
         id = input("Student ID: ")
         try:
-            test_scores.append({"stud_id": id, "name": name})
+            test_scores.append({"stu_id": id, "name": name})
         except ValueError:
             pass
         back = input("Enter 1 to go back to main menu: ")
