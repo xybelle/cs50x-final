@@ -13,7 +13,7 @@ def main():
             score = practice_multiplication(n)
         case "/":
             score = practice_division(n)
-    print(f"Score: {score} 👌")
+    print(f"Your score is: {score} 👌\nExiting...")
 
 
 def practice_addition(n):
