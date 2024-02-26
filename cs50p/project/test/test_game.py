@@ -9,11 +9,8 @@ def mock_generate_integer(n):
 
 
 @patch('game.generate_integer', side_effect=mock_generate_integer)
-def test_practice_addition(mock_generate_integer):
-    # Mocking input to provide correct answers
-    with patch('builtins.input', side_effect=[
-        '4', '6', '8', '2', '5', '7', '9', '1', '3', '0',
-        '4', '6', '8', '2', '5', '7', '9', '1', '3', '0',
-        '4', '6', '8', '2', '5', '7', '9', '1', '3', '0'
-        ]):
-        assert game.practice_addition(1) == 10
+@patch('builtins.input', side_effect=['2', '3', '4', '5', '6', '7', '8', '9', '10', '11'
+                                      '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'
+                                      '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'])
+def test_practice_addition(mock_input, mock_generate_integer):
+    assert game.practice_addition(1) == 10
