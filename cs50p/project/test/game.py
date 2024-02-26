@@ -1,4 +1,5 @@
 import random
+from tabulate import tabulate
 
 def main():
     oper = get_operation()
