@@ -53,7 +53,7 @@ def add_grade():
     :raise ValueError: if student_id not in db
     """
 
-    student_list = {test_scores["id"] for student in test_scores}
+    student_list = [{"id": test_scores[{student}], "name": test_scores[{student}]} for student in test_scores]
     while True:
         print(student_list)
         print("Select Student: ")
