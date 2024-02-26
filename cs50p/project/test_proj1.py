@@ -7,25 +7,13 @@ def mock_generate_integer(n):
     # Return a predictable value for testing
     return 3
 
-# Mocking input function for user input simulation
-def mock_input_six(prompt):
-    # Return a predictable value for testing
-    return '6'  # Sample input for testing
-
-# Mocking input function for user input simulation
-def mock_input_zero(prompt):
-    # Return a predictable value for testing
-    return '0'  # Sample input for testing
-
-# Mocking input function for user input simulation
-def mock_input_nine(prompt):
-    # Return a predictable value for testing
-    return '9'  # Sample input for testing
-
-# Mocking input function for user input simulation
-def mock_input_one(prompt):
-    # Return a predictable value for testing
-    return '1'  # Sample input for testing
+# Parameterized input values and expected results for testing
+@pytest.mark.parametrize("input_value, expected_result", [
+    ('6', 10),  # Sample input for addition
+    ('0', 10),  # Sample input for subtraction
+    ('9', 10),  # Sample input for multiplication
+    ('1', 10)   # Sample input for division
+])
 
 @patch('proj1.generate_integer', side_effect=mock_generate_integer)
 @patch('builtins.input', side_effect=mock_input_six)
