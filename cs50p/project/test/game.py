@@ -64,7 +64,7 @@ def practice_subtraction(n):
     return correct_answer
 
 
-def practice_multiplication():
+def practice_multiplication(n):
     correct_answer = 0
     for i in range(10):
         x = generate_integer(n)
@@ -88,7 +88,7 @@ def practice_multiplication():
     return correct_answer
 
 
-def practice_division():
+def practice_division(n):
     correct_answer = 0
     for i in range(10):
         x = generate_integer(n)
