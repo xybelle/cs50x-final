@@ -48,7 +48,7 @@ def get_level():
             if level <= 3 and level > 0:
                 return level
             else:
-                print("\n\033[3mSelect levels between 1 - 3\033[0m\n")
+                raise ValueError
         except ValueError:
             print("\n\033[3mSelect levels between 1 - 3\033[0m\n")
             pass
