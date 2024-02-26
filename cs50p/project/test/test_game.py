@@ -9,7 +9,7 @@ def mock_generate_integer(n):
 # Mocking input function
 def mock_input(prompt):
     # Return a predictable value for testing
-    return '2'  # Sample input for testing
+    return "2"
 
 @patch('game.generate_integer', side_effect=mock_generate_integer)
 @patch('builtins.input', side_effect=mock_input)
