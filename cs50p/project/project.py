@@ -12,6 +12,7 @@ def add_student():
     """Allows teacher to add a student in db"""
     name = input("Student name: ")
     stu_id = input("Student ID: ")
+    student_list = [{"student_id": stu_id, "name": name}]
 
 
 
