@@ -9,15 +9,15 @@ def mock_generate_integer(n):
 
 
 def mock_input(prompt):
-    return "2"
+    return '2'
 
 
 def mock_input_zero(prompt):
-    return "0"
+    return '0'
 
 
 def mock_input_one(prompt):
-    return "1"
+    return '1'
 
 
 @patch('project.generate_integer', side_effect=mock_generate_integer)
