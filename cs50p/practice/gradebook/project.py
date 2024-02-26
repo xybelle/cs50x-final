@@ -77,22 +77,24 @@ def add_grade():
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
-            gradebook.append({subj: grade})
-            back = input("Enter 1 to go back to main menu: ")
-            add_more = input("Enter 2 to add more: ")
-            if back == "1":
-                break
-
+            gradebook.append({"name": name, subj: grade})
+            break
         except ValueError:
             pass
 
 
-
-
-
 def show_gradebook():
-    """Allows teacher to view student list"""
+    """Allows teacher to view a student gradebook"""
     while True:
+        try:
+            name = input("Student Name: ")
+            if name not in names:
+                print("Invalid student name")
+                raise ValueError
+        except ValueError:
+            pass
+
+        stu_gradebook = [{_["name"]: name, }]
         print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
