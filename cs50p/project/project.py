@@ -1,4 +1,7 @@
+from tabulate import tabulate
+
 def main():
+    main = []
     print(tabulate)
 
 
