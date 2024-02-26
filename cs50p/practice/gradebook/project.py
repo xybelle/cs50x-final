@@ -28,7 +28,7 @@ def main():
         elif selected == "3":
             add_grade()
         elif selected == "4":
-            see_gradebook()
+            show_gradebook()
         elif selected == "6":
             print("Exiting...")
             break
@@ -82,7 +82,7 @@ def add_grade():
             pass
 
 
-def show_list():
+def show_gradebook():
     """Allows teacher to view student list"""
     while True:
         print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
