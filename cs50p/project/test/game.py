@@ -52,6 +52,7 @@ def practice_subtraction(n):
                 ans = int(input(f"{x} - {y} = "))
                 if x - y == ans:
                     correct_answer += 1
+                    print("Good job! 🎉")
                     break
                 elif tries == 3:
                     answer = x - y
@@ -76,6 +77,7 @@ def practice_multiplication(n):
                 ans = int(input(f"{x} * {y} = "))
                 if x * y == ans:
                     correct_answer += 1
+                    print("Good job! 🎉")
                     break
                 elif tries == 3:
                     answer = x * y
@@ -100,6 +102,7 @@ def practice_division(n):
                 ans = int(input(f"{x} / {y} = "))
                 if x / y == ans:
                     correct_answer += 1
+                    print("Good job! 🎉")
                     break
                 elif tries == 3:
                     answer = x / y
