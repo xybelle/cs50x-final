@@ -1,6 +1,6 @@
 import game
 import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 # Mocking generate_integer function
 def mock_generate_integer(n):
