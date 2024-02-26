@@ -14,20 +14,20 @@ test_scores = [
 
 def main():
     main = [
-        ["0", "Add Student"]
-        ["1", "See Student List"],
-        ["2", "Add Grade"],
-        ["3", "Calculate Average"],
-        ["4", "Generate Report"],
-        ["5", "Exit"]
+        ["1", "Add Student"],
+        ["2", "See Student List"],
+        ["3", "Add Grade"],
+        ["4", "Calculate Average"],
+        ["5", "Generate Report"],
+        ["6", "Exit"]
     ]
 
     while True:
         print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
-        if selected == "1":
+        if selected == "2":
             show_list()
-        elif selected == "2":
+        elif selected == "3":
             add_grade()
         elif select == "5":
             print("Exiting...")
