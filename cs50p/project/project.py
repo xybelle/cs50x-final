@@ -2,20 +2,12 @@ import random
 
 def main():
     oper = get_operation()
-    n = get_level()
-    match oper:
-        case "+":
-            score = practice_addition(n)
-        case "-":
-            score = practice_subtraction(n)
-        case "*":
-            score = practice_multiplication(n)
-        case "/":
-            score = practice_division(n)
+    level = get_level()
+    score = practice_arithmetic(level, oper)
     print(f"Your score is: {score} 👌\nExiting...")
 
 
-def practice_addition(n):
+def practice_arithmetic(n, operation):
     correct_answer = 0
     for i in range(10):
         x = generate_integer(n)
@@ -23,89 +15,14 @@ def practice_addition(n):
         tries = 1
         for i in range(3):
             try:
-                ans = int(input(f"{x} + {y} = "))
-                if x + y == ans:
+                ans = int(input(f"{x} {operation} {y} = "))
+                if eval(f"{x} {operation} {y}") == ans:
                     correct_answer += 1
                     print("🤩")
                     break
                 elif tries == 3:
-                    answer = x + y
-                    print(f"Answer: \n{x} + {y} = {answer} 👈")
-                    break
-                else:
-                    tries += 1
-                    print("Try again 🙁")
-            except ValueError:
-                pass
-    return correct_answer
-
-
-def practice_subtraction(n):
-    correct_answer = 0
-    for i in range(10):
-        x = generate_integer(n)
-        y = generate_integer(n)
-        tries = 1
-        for i in range(3):
-            try:
-                ans = int(input(f"{x} - {y} = "))
-                if x - y == ans:
-                    correct_answer += 1
-                    print("🤩")
-                    break
-                elif tries == 3:
-                    answer = x - y
-                    print(f"Answer: \n{x} - {y} = {answer} 👈")
-                    break
-                else:
-                    tries += 1
-                    print("Try again 🙁")
-            except ValueError:
-                pass
-    return correct_answer
-
-
-def practice_multiplication(n):
-    correct_answer = 0
-    for i in range(10):
-        x = generate_integer(n)
-        y = generate_integer(n)
-        tries = 1
-        for i in range(3):
-            try:
-                ans = int(input(f"{x} * {y} = "))
-                if x * y == ans:
-                    correct_answer += 1
-                    print("🤩")
-                    break
-                elif tries == 3:
-                    answer = x * y
-                    print(f"Answer: \n{x} * {y} = {answer} 👈")
-                    break
-                else:
-                    tries += 1
-                    print("Try again 🙁")
-            except ValueError:
-                pass
-    return correct_answer
-
-
-def practice_division(n):
-    correct_answer = 0
-    for i in range(10):
-        x = generate_integer(n)
-        y = generate_integer(n)
-        tries = 1
-        for i in range(3):
-            try:
-                ans = int(input(f"{x} / {y} = "))
-                if x / y == ans:
-                    correct_answer += 1
-                    print("🤩")
-                    break
-                elif tries == 3:
-                    answer = x / y
-                    print(f"Answer: \n{x} / {y} = {answer} 👈")
+                    answer = eval(f"{x} {operation} {y}")
+                    print(f"Answer: \n{x} {operation} {y} = {answer} 👈")
                     break
                 else:
                     tries += 1
@@ -126,11 +43,15 @@ def generate_integer(level):
 
 def get_level():
     while True:
-        level = int(input("Level: "))
-        if level <= 3 and level > 0:
-            return level
-        else:
-            print("Select levels between 1 - 3")
+        try:
+            level = int(input("Level: "))
+            if level <= 3 and level > 0:
+                return level
+            else:
+                raise ValueError
+        except ValueError:
+            print("\n\033[3mSelect levels between 1 - 3\033[0m\n")
+            pass
 
 
 def get_operation():
@@ -142,7 +63,7 @@ def get_operation():
         if oper in operations:
             return oper
         else:
-            print("Invalid operation. (use: + , - , * , /)")
+            print("\n\033[3mInvalid operation. (use: + , - , * , /)\033[0m\n")
 
 
 if __name__ == "__main__":
