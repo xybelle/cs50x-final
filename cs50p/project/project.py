@@ -1,5 +1,7 @@
 from tabulate import tabulate
 
+student_list = []
+
 def main():
     main = [["1", "Add Student"], ["2", "Add Grade"], ["3", "Calculate Average"],
             ["4", "Generate Report"]]
@@ -8,6 +10,9 @@ def main():
 
 def add_student():
     """Allows teacher to add a student in db"""
+    name = input("Student name: ")
+    stu_id = input("Student ID: ")
+
 
 
 def add_grade(student_id, test_id, grade):
