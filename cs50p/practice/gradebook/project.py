@@ -52,11 +52,10 @@ def add_student():
         id = input("Student ID: ")
         try:
             test_scores.append({"stu_id": id, "name": name})
+            print("Successfully added student")
+            break
         except ValueError:
             pass
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            break
 
 
 def add_grade():
