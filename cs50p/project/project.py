@@ -4,4 +4,5 @@ def add_grade():
 
     :param: student_id, test_id, grade
     :type student_id: int, test_id: int, grade: float
-    :raise ValueError: if student_id not
+    :raise ValueError: if student_id not in db
+    :return:
