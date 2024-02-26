@@ -1,11 +1,5 @@
 from tabulate import tabulate
 
-#student_list = [
-#    {"id": "000001", "name": "Hermione"},
-#    {"id": "000002", "name": "Harry"},
-#    {"id": "000003", "name": "Ron"}
-#]
-
 student_list = [
     {"stu_id": "1234", "name": "Harry"},
     {"stu_id": "4567", "name": "Ron"}
@@ -71,17 +65,19 @@ def add_grade():
     """
 
     while True:
-        id = input("StudentID: ")
-        subj = input("Subject: ")
-        grade = input("Grade: ")
-        stud_list = [student_list['id'] for _ in student_list]
+        stu_list = [
+            _["stu_id"] for _ in student_list
+        ]
         try:
+            id = input("StudentID: ")
             if id not in student_list:
-                raise ValueError
-            else:
-                gradebook.append({"stu_id": id, subj: grade})
+                raise ValueError("Invalid student ID")
         except ValueError:
             pass
+        subj = input("Subject: ")
+        grade = input("Grade: ")
+
+        gradebook.append({"stu_id": id, subj: grade})
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
