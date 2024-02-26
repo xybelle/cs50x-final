@@ -7,9 +7,9 @@ student_list = [
 ]
 
 test_scores = [
-    {"stu_id": "000001", "1st": "", "2nd": "", "3rd": "", "4th": ""},
-    {"stu_id": "000002", "1st": "", "2nd": "", "3rd": "", "4th": ""},
-    {"stu_id": "000003", "1st": "", "2nd": "", "3rd": "", "4th": ""}
+    {"stu_id": "000001", "name": "Hermione", "1st": "", "2nd": "", "3rd": "", "4th": ""},
+    {"stu_id": "000002", "name": "Harry", "1st": "", "2nd": "", "3rd": "", "4th": ""},
+    {"stu_id": "000003", "name": "Ron", "1st": "", "2nd": "", "3rd": "", "4th": ""}
 ]
 
 def main():
