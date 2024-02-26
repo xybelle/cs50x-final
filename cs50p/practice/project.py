@@ -52,8 +52,13 @@ def add_grade(student_id, test_id, grade):
     :type student_id: str, test_id: str, grade: float
     :raise ValueError: if student_id not in db
     """
+
+    student_list = {test_scores["id"] for student in test_scores}
+    print(student_list)
     print("Select Student: ")
-    student_list = = {}
+    back = input("Enter 1 to go back to main menu: ")
+    if back == "1":
+        break
 
 
 def get_average(student_id):
