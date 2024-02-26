@@ -6,7 +6,11 @@ student_list = [
     {"id": "000003", "name": "Ron"}
 ]
 
-test_scores = []
+test_scores = [
+    {"stu_id": "000001", "first": "", "second": ""},
+    {"stu_id": "000002", "name": "Harry"},
+    {"stu_id": "000003", "name": "Ron"}
+]
 
 def main():
     main = [["1", "See Student List"], ["2", "Add Grade"], ["3", "Calculate Average"],
