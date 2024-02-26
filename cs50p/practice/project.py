@@ -1,10 +1,10 @@
 from tabulate import tabulate
 
-student_list = [
-    {"id": "000001", "name": "Hermione"},
-    {"id": "000002", "name": "Harry"},
-    {"id": "000003", "name": "Ron"}
-]
+#student_list = [
+#    {"id": "000001", "name": "Hermione"},
+#    {"id": "000002", "name": "Harry"},
+#    {"id": "000003", "name": "Ron"}
+#]
 
 test_scores = [
     {"stu_id": "000001", "name": "Hermione", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""},
@@ -53,7 +53,7 @@ def add_grade(student_id, test_id, grade):
     :raise ValueError: if student_id not in db
     """
     print("Select Student: ")
-    students = 
+    student_list = = {}
 
 
 def get_average(student_id):
