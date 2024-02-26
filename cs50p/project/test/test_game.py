@@ -1,5 +1,4 @@
-
-from main_code import addition_quiz
+import game
 
 def test_addition_quiz(monkeypatch):
     # Simulate user input
@@ -9,7 +8,7 @@ def test_addition_quiz(monkeypatch):
     monkeypatch.setattr('builtins.input', mock_input)
 
     # Call the function
-    correct_answers = addition_quiz()
+    correct_answers = practice_addition()
 
     # Assert that the correct answers are counted
     assert correct_answers == 1
