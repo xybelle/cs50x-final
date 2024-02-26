@@ -22,7 +22,9 @@ def practice_arithmetic(n, operation):
                     print("🤩")
                     break
                 elif tries == 3:
-                    print(f"Answer: \n{x} {operation} {y} = {rounded} 👈")
+                    answer = eval(f"{x} {operation} {y}")
+                    rounded_answer = round(answer, 2)
+                    print(f"Answer: \n{x} {operation} {y} = {rounded_answer} 👈")
                     break
                 else:
                     tries += 1
