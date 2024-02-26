@@ -1,4 +1,4 @@
-import game
+import proj1
 import pytest
 from unittest.mock import patch
 
@@ -8,11 +8,11 @@ def mock_input(prompt):
     return '5'  # Sample input for testing
 
 @patch('builtins.input', side_effect=mock_input)
-def test_practice_operation_addition(mock_input):
-    # Testing practice_operation function for addition
-    assert game.practice_operation(1, '+') == 10  # Assuming 10 correct answers for level 1
+def test_practice_arithmetic_addition(mock_input):
+    # Testing practice_arithmetic function for addition
+    assert proj1.practice_arithmetic(1, '+') == 10  # Assuming 10 correct answers for level 1
 
 @patch('builtins.input', side_effect=mock_input)
-def test_practice_operation_subtraction(mock_input):
-    # Testing practice_operation function for subtraction
-    assert game.practice_operation(1, '-') == 10  # Assuming 10 correct answers for level 1
+def test_practice_arithmetic_subtraction(mock_input):
+    # Testing practice_arithmetic function for subtraction
+    assert proj1.practice_arithmetic(1, '-') == 10  # Assuming 10 correct answers for level 1
