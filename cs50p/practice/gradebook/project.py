@@ -70,17 +70,15 @@ def add_grade():
         ]
         try:
             id = input("StudentID: ")
-            if id not in student_list:
-                raise ValueError("Invalid student ID")
+            if id not in stu_list:
+                print("Invalid student ID")
+                raise ValueError
+            subj = input("Subject: ")
+            grade = input("Grade: ")
+            student_list.append({subj: grade})
+            break
         except ValueError:
             pass
-        subj = input("Subject: ")
-        grade = input("Grade: ")
-
-        student_list.append({subj: grade})
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            break
 
 
 def get_average(student_id):
