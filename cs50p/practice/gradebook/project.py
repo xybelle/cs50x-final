@@ -7,7 +7,8 @@ from tabulate import tabulate
 #]
 
 student_list = [
-    {"stu_id": "", "name": ""}
+    {"stu_id": "1234", "name": "Harry"},
+    {"stu_id": "4567", "name": "Ron"}
 ]
 
 gradebook = []
@@ -73,8 +74,9 @@ def add_grade():
         id = input("StudentID: ")
         subj = input("Subject: ")
         grade = input("Grade: ")
+        stud_list = [{"id": student_list['id']} for _ in student_list]
         try:
-            if id not in student_list["stu_id"]:
+            if id not in student_list:
                 raise ValueError
             else:
                 gradebook.append({"stu_id": id, subj: grade})
