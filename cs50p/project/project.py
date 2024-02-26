@@ -15,14 +15,14 @@ def practice_arithmetic(n, operation):
         tries = 1
         for i in range(3):
             try:
-                ans = int(input(f"{x} {operation} {y} = "))
-                if eval(f"{x} {operation} {y}") == ans:
+                ans = float(input(f"{x} {operation} {y} = "))
+                rounded = round(ans, 2)
+                if eval(f"{x} {operation} {y}") == rounded:
                     correct_answer += 1
                     print("🤩")
                     break
                 elif tries == 3:
-                    answer = eval(f"{x} {operation} {y}")
-                    print(f"Answer: \n{x} {operation} {y} = {answer} 👈")
+                    print(f"Answer: \n{x} {operation} {y} = {rounded} 👈")
                     break
                 else:
                     tries += 1
