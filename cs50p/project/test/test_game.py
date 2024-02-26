@@ -6,21 +6,16 @@ def mock_generate_integer(n):
     # Return a predictable value for testing
     return 1
 
-# Mocking input function
+
 def mock_input(prompt):
-    # Return a predictable value for testing
     return "2"
 
 
-# Mocking input function
 def mock_input_sub(prompt):
-    # Return a predictable value for testing
     return "0"
 
 
-# Mocking input function
 def mock_input_one(prompt):
-    # Return a predictable value for testing
     return "1"
 
 
