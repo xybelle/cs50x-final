@@ -16,8 +16,9 @@ def mock_generate_integer(n):
 ])
 
 @patch('proj1.generate_integer', side_effect=mock_generate_integer)
-@patch('builtins.input', side_effect=mock_input_six)
+@patch('builtins.input')
 def test_practice_arithmetic_addition(mock_input_six, mock_generate_integer):
+    mock_input.side_effect = input_value  # Set side effect for input
     # Testing practice_arithmetic function for addition
     assert proj1.practice_arithmetic(1, '+') == 10  # Assuming 10 correct answers for level 1
 
