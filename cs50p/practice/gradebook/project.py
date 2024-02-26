@@ -27,7 +27,7 @@ def main():
             add_student()
         elif selected == "2":
             show_list()
-        elif selected == "2":
+        elif selected == "3":
             add_grade()
         elif selected == "6":
             print("Exiting...")
