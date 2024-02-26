@@ -65,15 +65,15 @@ def add_grade():
     """
 
     while True:
-        stu_list = [_["stu_id"] for _ in student_list]
+        names = [_["name"] for _ in student_list]
         try:
-            id = input("StudentID: ")
-            if id not in stu_list:
-                print("Invalid student ID")
+            name = input("Student Name: ")
+            if name not in names:
+                print("Invalid student name")
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
-            gradebook.append({"stu_id": id, subj: grade})
+            gradebook.append({"name": name, subj: grade})
             break
         except ValueError:
             pass
