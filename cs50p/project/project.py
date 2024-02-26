@@ -24,9 +24,10 @@ def main():
     while True:
         print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
-        match selected:
-            case "1":
-                show_list()
+        if selected == "1":
+            show_list()
+        else:
+            print("Invalid Input. Please select a valid option.")
 
 
 def show_list():
