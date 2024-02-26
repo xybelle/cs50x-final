@@ -78,9 +78,16 @@ def add_grade():
             subj = input("Subject: ")
             grade = input("Grade: ")
             gradebook.append({subj: grade})
-            break
+            back = input("Enter 1 to go back to main menu: ")
+            add_more = input("Enter 2 to add more: ")
+            if back == "1":
+                break
+
         except ValueError:
             pass
+
+
+
 
 
 def show_gradebook():
