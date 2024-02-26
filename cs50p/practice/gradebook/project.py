@@ -14,6 +14,7 @@ test_scores = [
 
 def main():
     main = [
+        ["0", "Add Student"]
         ["1", "See Student List"],
         ["2", "Add Grade"],
         ["3", "Calculate Average"],
