@@ -13,7 +13,7 @@ def main():
             score = practice_multiplication(n)
         case "/":
             score = practice_division(n)
-    print(f"Score: {score}")
+    print(f"Score: {score} 👌")
 
 
 def practice_addition(n):
@@ -27,7 +27,7 @@ def practice_addition(n):
                 ans = int(input(f"{x} + {y} = "))
                 if x + y == ans:
                     correct_answer += 1
-                    print("Good job! 🎉")
+                    print("🤩")
                     break
                 elif tries == 3:
                     answer = x + y
@@ -35,7 +35,7 @@ def practice_addition(n):
                     break
                 else:
                     tries += 1
-                    print("Try again")
+                    print("Try again 🙁")
             except ValueError:
                 pass
     return correct_answer
@@ -52,7 +52,7 @@ def practice_subtraction(n):
                 ans = int(input(f"{x} - {y} = "))
                 if x - y == ans:
                     correct_answer += 1
-                    print("Good job! 🎉")
+                    print("🤩")
                     break
                 elif tries == 3:
                     answer = x - y
@@ -60,7 +60,7 @@ def practice_subtraction(n):
                     break
                 else:
                     tries += 1
-                    print("Try again")
+                    print("Try again 🙁")
             except ValueError:
                 pass
     return correct_answer
@@ -77,7 +77,7 @@ def practice_multiplication(n):
                 ans = int(input(f"{x} * {y} = "))
                 if x * y == ans:
                     correct_answer += 1
-                    print("Good job! 🎉")
+                    print("🤩")
                     break
                 elif tries == 3:
                     answer = x * y
@@ -85,7 +85,7 @@ def practice_multiplication(n):
                     break
                 else:
                     tries += 1
-                    print("Try again")
+                    print("Try again 🙁")
             except ValueError:
                 pass
     return correct_answer
@@ -110,7 +110,7 @@ def practice_division(n):
                     break
                 else:
                     tries += 1
-                    print("Try again ")
+                    print("Try again 🙁")
             except ValueError:
                 pass
     return correct_answer
