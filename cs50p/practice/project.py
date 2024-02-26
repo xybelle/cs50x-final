@@ -44,7 +44,7 @@ def show_list():
             break
 
 
-def add_grade(student_id, test_id, grade):
+def add_grade():
     """
     Allows teacher to add a grade for a specific student and assignment/test.
 
@@ -54,11 +54,12 @@ def add_grade(student_id, test_id, grade):
     """
 
     student_list = {test_scores["id"] for student in test_scores}
-    print(student_list)
-    print("Select Student: ")
-    back = input("Enter 1 to go back to main menu: ")
-    if back == "1":
-        break
+    while True:
+        print(student_list)
+        print("Select Student: ")
+        back = input("Enter 1 to go back to main menu: ")
+        if back == "1":
+            break
 
 
 def get_average(student_id):
