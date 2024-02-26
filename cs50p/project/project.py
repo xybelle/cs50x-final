@@ -33,6 +33,9 @@ def main():
 def show_list():
     """Allows teacher to view student list"""
     print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
+    back = input("Enter 1 to go back to main menu.")
+    if back == "1":
+        
 
 
 def add_grade(student_id, test_id, grade):
