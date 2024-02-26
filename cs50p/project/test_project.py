@@ -47,4 +47,4 @@ def test_practice_div(mock_input_one, mock_generate_integer):
 @patch('builtins.input', side_effect=mock_input_zero)
 def test_get_level(mock_input_zero):
     with pytest.raises(ValueError):
-        project.get_level() == 0
+        project.get_level()
