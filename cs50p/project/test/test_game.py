@@ -44,5 +44,5 @@ def test_practice_multi(mock_input_one, mock_generate_integer):
 
 @patch('game.generate_integer', side_effect=mock_generate_integer)
 @patch('builtins.input', side_effect=mock_input_one)
-def test_practice_multi(mock_input_one, mock_generate_integer):
+def test_practice_div(mock_input_one, mock_generate_integer):
     assert game.practice_division(2) == 10
