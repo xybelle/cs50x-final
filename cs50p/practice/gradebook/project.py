@@ -52,7 +52,7 @@ def add_student():
         id = input("Student ID: ")
         try:
             test_scores.append({"stu_id": id, "name": name})
-            print("Successfully added student")
+            print("\033[3mSuccessfully added student\033[0m")
             break
         except ValueError:
             pass
