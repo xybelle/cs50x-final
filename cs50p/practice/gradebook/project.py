@@ -7,8 +7,10 @@ from tabulate import tabulate
 #]
 
 student_list = [
-    {"stu_id": "", "name": "", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""}
+    {"stu_id": "", "name": ""}
 ]
+
+gradebook = []
 
 def main():
     main = [
@@ -68,8 +70,15 @@ def add_grade():
     """
 
     while True:
-        print(student_list)
-        print("Select Student: ")
+        id = input("StudentID: ")
+        subj = input("Subject: ")
+        try:
+            if id not in student_list['stu_id']
+                raise ValueError
+            else:
+                gradebook.append({"stu_id": id, })
+        except ValueError:
+            pass
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
