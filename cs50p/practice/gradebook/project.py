@@ -77,7 +77,7 @@ def add_grade():
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
-            gradebook.append({"name": name, subj: grade})
+            gradebook.append({subj: grade})
             break
         except ValueError:
             pass
