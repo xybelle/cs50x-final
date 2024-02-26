@@ -7,9 +7,7 @@ from tabulate import tabulate
 #]
 
 test_scores = [
-    {"stu_id": "000001", "name": "Hermione", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""},
-    {"stu_id": "000002", "name": "Harry", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""},
-    {"stu_id": "000003", "name": "Ron", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""}
+    {"stu_id": "", "name": "", "1st": "", "2nd": "", "3rd": "", "4th": "", "Ave": ""}
 ]
 
 def main():
@@ -25,11 +23,13 @@ def main():
     while True:
         print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
-        if selected == "2":
+        if selected == "1":
+            add_student()
+        elif selected == "2":
             show_list()
-        elif selected == "3":
+        elif selected == "2":
             add_grade()
-        elif select == "5":
+        elif selected == "6":
             print("Exiting...")
             break
         else:
@@ -40,6 +40,20 @@ def show_list():
     """Allows teacher to view student list"""
     while True:
         print(tabulate(test_scores, headers="keys", tablefmt="fancy_outline"))
+        back = input("Enter 1 to go back to main menu: ")
+        if back == "1":
+            break
+
+
+def add_student():
+    """Allows teacher to add student to student list"""
+    while True:
+        name = input("Student name: ")
+        id = input("Student ID: ")
+        try:
+            test_scores.append({"stud_id": id, "name": name})
+        except ValueError:
+            pass
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
