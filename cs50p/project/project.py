@@ -1,8 +1,9 @@
 from tabulate import tabulate
 
 def main():
-    main = []
-    print(tabulate)
+    main = [["1", "Add Student"], ["2", "Add Grade"], ["3", "Calculate Average"],
+            ["4", "Generate Report"]]
+    print(tabulate(main, headers=["Input", "Description"]))
 
 
 def add_student():
@@ -40,3 +41,7 @@ def generate_report(student_id):
     :raise ValueError: If student_id not in db
     :return: A csv file of grade
     """
+
+
+if __name__ == "__main__":
+    main()
