@@ -23,7 +23,8 @@ def add_student():
     stu_id = input("Student ID: ")
     if not name or stu_id:
         print("Please enter student name/id")
-    if stu_id
+    if not stu_id.isdigit():
+        print("Invalid Student ID")
     student_list.append({"student_id": stu_id, "name": name})
 
 
