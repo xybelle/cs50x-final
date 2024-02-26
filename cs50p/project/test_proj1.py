@@ -10,7 +10,7 @@ def mock_generate_integer(n):
 # Mocking input function for user input simulation
 def mock_input(prompt):
     # Return a predictable value for testing
-    return '5'  # Sample input for testing
+    return '2'  # Sample input for testing
 
 @patch('builtins.input', side_effect=mock_input)
 def test_practice_arithmetic_addition(mock_input):
