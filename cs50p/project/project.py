@@ -6,6 +6,9 @@ def main():
     main = [["1", "Add Student"], ["2", "Add Grade"], ["3", "Calculate Average"],
             ["4", "Generate Report"]]
     selected = input(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
+    match selected:
+        case "1":
+            add_student()
 
 
 def add_student():
@@ -13,6 +16,7 @@ def add_student():
     name = input("Student name: ")
     stu_id = input("Student ID: ")
     student_list = [{"student_id": stu_id, "name": name}]
+    print(student_list)
 
 
 
