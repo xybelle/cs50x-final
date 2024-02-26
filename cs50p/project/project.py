@@ -1,8 +1,12 @@
 from tabulate import tabulate
 
 student_list = [
-    {"id": "000001", "name": "Hermione", }
+    {"id": "000001", "name": "Hermione"}
+    {"id": "000002", "name": "Harry"}
+    {"id": "000003", "name": "Ron"}
 ]
+
+test_scores = []
 
 def main():
     main = [["1", "Add Student"], ["2", "Add Grade"], ["3", "Calculate Average"],
