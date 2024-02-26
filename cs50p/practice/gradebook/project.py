@@ -65,9 +65,7 @@ def add_grade():
     """
 
     while True:
-        stu_list = [
-            _["stu_id"] for _ in student_list
-        ]
+        stu_list = [_["stu_id"] for _ in student_list]
         try:
             id = input("StudentID: ")
             if id not in stu_list:
@@ -75,7 +73,7 @@ def add_grade():
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
-            student_list.append({"stu_id": id, subj: grade})
+            gradebook.append({"stu_id": id, subj: grade})
             break
         except ValueError:
             pass
