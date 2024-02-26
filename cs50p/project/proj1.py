@@ -22,7 +22,7 @@ def practice_arithmetic(n, operation):
                     break
                 elif tries == 3:
                     answer = eval(f"{x} {operation} {y}")
-                    print(f"Answer: \n{x} + {y} = {answer} 👈")
+                    print(f"Answer: \n{x} {operation} {y} = {answer} 👈")
                     break
                 else:
                     tries += 1
