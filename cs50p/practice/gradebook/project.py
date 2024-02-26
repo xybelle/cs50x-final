@@ -12,9 +12,10 @@ def main():
         ["1", "Add Student"],
         ["2", "See Student List"],
         ["3", "Add Grade"],
-        ["4", "Calculate Average"],
-        ["5", "Generate Report"],
-        ["6", "Exit"]
+        ["4", "See gradebook"],
+        ["5", "Calculate Average"],
+        ["6", "Generate Report"],
+        ["7", "Exit"],
     ]
 
     while True:
@@ -26,6 +27,8 @@ def main():
             show_list()
         elif selected == "3":
             add_grade()
+        elif selected == "4":
+            see_gradebook()
         elif selected == "6":
             print("Exiting...")
             break
@@ -77,6 +80,15 @@ def add_grade():
             break
         except ValueError:
             pass
+
+
+def show_list():
+    """Allows teacher to view student list"""
+    while True:
+        print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
+        back = input("Enter 1 to go back to main menu: ")
+        if back == "1":
+            break
 
 
 def get_average(student_id):
