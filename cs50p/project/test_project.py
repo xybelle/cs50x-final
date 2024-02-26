@@ -1,4 +1,5 @@
 import project
+import pytest
 from unittest.mock import patch
 
 # Mocking generate_integer function
@@ -41,3 +42,8 @@ def test_practice_multi(mock_input_one, mock_generate_integer):
 @patch('builtins.input', side_effect=mock_input_one)
 def test_practice_div(mock_input_one, mock_generate_integer):
     assert project.practice_division(2) == 10
+
+
+def test_get_level():
+    with pytest.raises(ValueError):
+        project.get_level(4)
