@@ -32,10 +32,13 @@ def main():
 
 def show_list():
     """Allows teacher to view student list"""
-    print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
-    back = input("Enter 1 to go back to main menu.")
-    if back == "1":
-        main()
+    while True:
+        print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
+        back = input("Enter 1 to go back to main menu.")
+        if back == "1":
+            break
+        else:
+            print("Invalid Input. Please select a valid option.")
 
 
 def add_grade(student_id, test_id, grade):
