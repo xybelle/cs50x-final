@@ -41,7 +41,7 @@ def main():
 def show_list():
     """Allows teacher to view student list"""
     while True:
-        print(tabulate(test_scores, headers="keys", tablefmt="fancy_outline"))
+        print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
@@ -72,11 +72,12 @@ def add_grade():
     while True:
         id = input("StudentID: ")
         subj = input("Subject: ")
+        grade = input("Grade: ")
         try:
-            if id not in student_list['stu_id']
+            if id not in student_list["stu_id"]:
                 raise ValueError
             else:
-                gradebook.append({"stu_id": id, })
+                gradebook.append({"stu_id": id, subj: grade})
         except ValueError:
             pass
         back = input("Enter 1 to go back to main menu: ")
