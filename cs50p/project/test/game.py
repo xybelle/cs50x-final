@@ -73,11 +73,11 @@ def practice_multiplication():
         for i in range(3):
             try:
                 ans = int(input(f"{x} * {y} = "))
-                if x + y == ans:
+                if x * y == ans:
                     correct_answer += 1
                     break
                 elif tries == 3:
-                    answer = x + y
+                    answer = x * y
                     print(f"Answer: \n{x} * {y} = {answer}")
                     break
                 else:
@@ -97,11 +97,11 @@ def practice_division():
         for i in range(3):
             try:
                 ans = int(input(f"{x} / {y} = "))
-                if x + y == ans:
+                if x / y == ans:
                     correct_answer += 1
                     break
                 elif tries == 3:
-                    answer = x + y
+                    answer = x / y
                     print(f"Answer: \n{x} / {y} = {answer}")
                     break
                 else:
@@ -114,7 +114,7 @@ def practice_division():
 
 def generate_integer(level):
     if level == 1:
-        return random.randint(0, 9)
+        return random.randint(1, 9)
     elif level == 2:
         return random.randint(10, 99)
     elif level == 3:
