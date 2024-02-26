@@ -74,7 +74,7 @@ def add_grade():
         id = input("StudentID: ")
         subj = input("Subject: ")
         grade = input("Grade: ")
-        stud_list = [{"id": student_list['id']} for _ in student_list]
+        stud_list = [student_list['id'] for _ in student_list]
         try:
             if id not in student_list:
                 raise ValueError
