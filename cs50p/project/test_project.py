@@ -1,8 +1,14 @@
 from project import show_list
 
-# Mock student list for testing
-student_list = []
+# Mock empty student list for testing
+student_list_empty = []
 
+# Mock student list for testing
+student_list = [
+    {"stu_id": "1234", "name": "Harry"},
+    {"stu_id": "4567", "name": "Ron"},
+    {"stu_id": "7890", "name": "Hermione"},
+]
 def test_show_list_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr('builtins.input', lambda _: "")
