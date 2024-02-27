@@ -39,7 +39,7 @@ def main():
 
 
 
-def show_list(student_list):
+def show_list():
     """Allows teacher to view student list"""
     if not student_list:
         print("\033[3mNo students added yet\033[0m\n")
