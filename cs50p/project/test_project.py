@@ -1,4 +1,4 @@
-from project import show_list
+import project
 
 # Mock empty student list for testing
 student_list_empty = []
@@ -15,7 +15,7 @@ def test_show_list_empty(capfd, monkeypatch):
     monkeypatch.delitem(project.student_list, "stu_id", raising=False)
     monkeypatch.delitem(project.student_list, "name", raising=False)
     # Call function
-    show_list()
+    project.show_list()
     # Capture the output
     out, err = capfd.readouterr()
     # Assert that the output is as expected
@@ -24,8 +24,10 @@ def test_show_list_empty(capfd, monkeypatch):
 def test_show_list_not_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr('builtins.input', lambda _: "")
+    monkeypatch.setitem(project.student_list, "stu_id", "1234")
+    monkeypatch.setitem(project.student_list, "name", "Harry")
     # Call function
-    show_list()
+    project.show_list()
     out, err = capfd.readouterr()
     # Assert that the output is as expected
     assert "Press enter to go back to main menu\n" in out
