@@ -72,7 +72,6 @@ def add_student():
             student_list.append({"stu_id": id, "name": name})
             print("\033[3mStudent successfully added\033[0m\n")
             break
-    return
 
 
 def add_grade():
