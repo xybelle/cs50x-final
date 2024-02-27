@@ -1,17 +1,9 @@
 import csv
 from tabulate import tabulate
 
-student_list = [
-    {"stu_id": "1234", "name": "Harry"},
-    {"stu_id": "4567", "name": "Ron"},
-    {"stu_id": "7890", "name": "Hermione"},
-]
+student_list = []
 
-gradebook = [
-    {'name': 'Harry', 'Potions': '90', 'Charms': '90'},
-    {'name': 'Hermione', 'Potions': '80', 'Charms': '100'},
-    {'name': 'Ron', 'Potions': '70', 'Charms': '80'}
-]
+gradebook = []
 
 def main():
     main = [
