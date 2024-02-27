@@ -64,8 +64,8 @@ def test_generate_report(capsys):
 
 
 def test_show_stu_gradebook():
-    # Mocking input to provide a student name
-    with patch('builtins.input', side_effect=['Harry']):
+    # Mocking input to provide a student name and then exit the loop
+    with patch('builtins.input', side_effect=['Harry', '1']):
         # Call the function that needs to be tested
         show_stu_gradebook()
 
