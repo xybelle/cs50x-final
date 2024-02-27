@@ -1,12 +1,17 @@
-from cs50 import SQL
+import csv
 from tabulate import tabulate
 
 student_list = [
     {"stu_id": "1234", "name": "Harry"},
-    {"stu_id": "4567", "name": "Ron"}
+    {"stu_id": "4567", "name": "Ron"},
+    {"stu_id": "7890", "name": "Hermione"},
 ]
 
-gradebook = []
+gradebook = [
+    {'name': 'Harry', 'Potions': '9', 'Charms': '9'},
+    {'name': 'Hermione', 'Potions': '8', 'Charms': '10'},
+    {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
+]
 
 def main():
     main = [
@@ -35,8 +40,7 @@ def main():
         elif selected == "5":
             show_gradebook()
         elif selected == "6":
-            global gradebook
-            gradebook = calculate_ave()
+            calculate_ave()
         elif selected == "7":
             generate_report(gradebook)
         elif selected == "8":
@@ -141,7 +145,17 @@ def calculate_ave():
 
 def generate_report(gradebook):
     """Generate report of all grades for all student"""
-    with open(gradebook, "w") as file:
+    grades = []
+    for student in gradebook:
+        stu_grades = {}
+        for subject, grade in student.items():
+            if subject == "name":
+                continue
+            stu_grades[subject] = int(grade)
+        average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
+        grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
+
+    with open(grades, "w") as file:
         writer = csv.DictWriter(file)
         writer.writeheader()
         for row in gradebook:
