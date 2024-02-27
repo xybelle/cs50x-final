@@ -52,11 +52,10 @@ def main():
 
 def show_list():
     """Allows teacher to view student list"""
-    while True:
-        print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            break
+    print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
+    back = input("Enter 1 to go back to main menu: ")
+    if back == "1":
+        return
 
 
 def add_student():
@@ -126,22 +125,21 @@ def show_gradebook():
 
 def calculate_ave():
     """Calculates the average grade for a specific student"""
-    while True:
-        grades = []
-        for student in gradebook:
-            stu_grades = {}
-            for subject, grade in student.items():
-                if subject == "name":
-                    continue
-                stu_grades[subject] = int(grade)
-            average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
-            grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
-        print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
-        get_report = input("Generate report? (Y/N) ").toupper()
-        if get_report == "Y":
-            generate_report(grades)
-        elif get_report == "N":
-            break
+    grades = []
+    for student in gradebook:
+        stu_grades = {}
+        for subject, grade in student.items():
+            if subject == "name":
+                continue
+            stu_grades[subject] = int(grade)
+        average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
+        grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
+    print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
+    get_report = input("Generate report? (Y/N) ").upper()
+    if get_report == "Y":
+        return generate_report(grades)
+    elif get_report == "N":
+        return
 
 
 def generate_report(grades):
@@ -156,7 +154,6 @@ def generate_report(grades):
         writer.writeheader()
         for row in grades:
             writer.writerow(row)
-
     print("\033[3mSuccessfully generated: gradebook.csv\033[0m")
 
 
