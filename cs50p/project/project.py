@@ -49,7 +49,7 @@ def main():
 
 def show_list():
     """Allows teacher to view student list"""
-    if student_list is None:
+    if not student_list:
         print("\033[3mNo students added yet\033[0m\n")
     else:
         print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
