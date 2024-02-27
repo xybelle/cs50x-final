@@ -79,27 +79,24 @@ def add_grade():
     """Allows teacher to add a grade for a specific student and assignment/test."""
     while True:
         names = [_["name"] for _ in student_list]
-        try:
-            name = input("Student Name: ")
-            if name not in names:
-                print("\033[3mInvalid student name\033[0m")
-                raise ValueError
-            subj = input("Subject: ")
-            grade = input("Grade: ")
-            if grade < 0 and grade > 100:
-                print("\033[3mInvalid grade input (0-100)\033[0m")
+        name = input("Student Name: ")
+        if name not in names:
+            print("\033[3mInvalid student name\033[0m")
+            continue
+        subj = input("Subject: ")
+        grade = input("Grade: ")
+        if grade < 0 and grade > 100:
+            print("\033[3mInvalid grade input (0-100)\033[0m")
 
 
-            student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
-            if student_entry:
-                student_entry[subj] = grade
-                print("\033[3mGrade added successfully\033[0m")
-            else:
-                gradebook.append({"name": name, subj: grade})
-                print("\033[3mGrade added successfully\033[0m")
-            break
-        except ValueError:
-            pass
+        student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
+        if student_entry:
+            student_entry[subj] = grade
+            print("\033[3mGrade added successfully\033[0m")
+        else:
+            gradebook.append({"name": name, subj: grade})
+            print("\033[3mGrade added successfully\033[0m")
+        break
 
 
 def show_stu_gradebook():
