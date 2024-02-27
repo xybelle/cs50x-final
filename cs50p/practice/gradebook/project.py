@@ -95,8 +95,8 @@ def show_gradebook():
         except ValueError:
             pass
 
-        
-        print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
+        stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
+        print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
