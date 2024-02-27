@@ -8,9 +8,9 @@ student_list = [
 ]
 
 gradebook = [
-    {'name': 'Harry', 'Potions': '9', 'Charms': '9'},
-    {'name': 'Hermione', 'Potions': '8', 'Charms': '10'},
-    {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
+    {'name': 'Harry', 'Potions': '90', 'Charms': '90'},
+    {'name': 'Hermione', 'Potions': '80', 'Charms': '100'},
+    {'name': 'Ron', 'Potions': '70', 'Charms': '80'}
 ]
 
 def main():
