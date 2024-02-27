@@ -14,9 +14,10 @@ def main():
         ["2", "See Student List"],
         ["3", "Add Grade"],
         ["4", "See gradebook"],
-        ["5", "Calculate Average"],
-        ["6", "Generate Report"],
-        ["7", "Exit"],
+        ["5", "See all gradebook"],
+        ["6", "Calculate Average"],
+        ["7", "Generate Report"],
+        ["8", "Exit"],
     ]
 
     while True:
@@ -30,8 +31,10 @@ def main():
         elif selected == "3":
             add_grade()
         elif selected == "4":
+            show_stu_gradebook()
+        elif selected == "5":
             show_gradebook()
-        elif selected == "6":
+        elif selected == "8":
             print("Exiting...")
             break
         else:
@@ -89,7 +92,7 @@ def add_grade():
             pass
 
 
-def show_gradebook():
+def show_stu_gradebook():
     """Allows teacher to view a student gradebook"""
     while True:
         names = [_["name"] for _ in student_list]
@@ -103,6 +106,15 @@ def show_gradebook():
 
         stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
         print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
+        back = input("Enter 1 to go back to main menu: ")
+        if back == "1":
+            break
+
+
+def show_gradebook():
+    """Allows teacher to view a student gradebook"""
+    while True:
+        print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
