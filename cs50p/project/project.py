@@ -133,7 +133,7 @@ def calculate_ave():
     get_report = input("Generate report? (Y/N) ").upper()
     if get_report == "Y":
         return generate_report(grades)
-    elif get_report == "N":
+    else
         return
 
 
@@ -149,7 +149,7 @@ def generate_report(grades):
         writer.writeheader()
         for row in grades:
             writer.writerow(row)
-    print("\033[3mSuccessfully generated: gradebook.csv\033[0m")
+    print("\033[3mSuccessfully generated: gradebook.csv\033[0m\n")
 
 
 if __name__ == "__main__":
