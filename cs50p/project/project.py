@@ -63,8 +63,11 @@ def add_student():
     while True:
         name = input("Student name: ")
         id = input("Student ID: ")
+        ids = [student["stu_id"] for student in student_list]
         if not name or not id:
             print("Please enter name/id")
+        elif id in ids:
+            print("Student ID already in use")
         else:
             break
 
