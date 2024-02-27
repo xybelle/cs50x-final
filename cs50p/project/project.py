@@ -14,10 +14,10 @@ gradebook = [
 ]
 
 def main():
-    main = [
-        ["1", add_student],
-        ["2", show_list],
-        ["3", add_grade],
+    menu = [
+        ["1", "Add Student"],
+        ["2", "See Student List"],
+        ["3", "Add Grade"],
         ["4", "See student gradebook"],
         ["5", "See all gradebook"],
         ["6", "Calculate Average"],
