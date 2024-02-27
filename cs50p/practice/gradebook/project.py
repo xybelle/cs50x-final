@@ -13,7 +13,7 @@ def main():
         ["1", "Add Student"],
         ["2", "See Student List"],
         ["3", "Add Grade"],
-        ["4", "See gradebook"],
+        ["4", "See student gradebook"],
         ["5", "See all gradebook"],
         ["6", "Calculate Average"],
         ["7", "Generate Report"],
