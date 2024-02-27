@@ -67,6 +67,8 @@ def add_student():
             print("Please enter name/id")
         else:
             break
+
+    ids = 
     if name.isalpha() and id.isdigit():
         student_list.append({"stu_id": id, "name": name})
     print("\033[3mStudent successfully added\033[0m\n")
