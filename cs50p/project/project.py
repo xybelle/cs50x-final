@@ -21,8 +21,7 @@ def main():
         ["4", "See student gradebook"],
         ["5", "See all gradebook"],
         ["6", "Calculate Average"],
-        #["7", "Generate Report"],
-        ["8", "Exit"],
+        ["7", "Exit"],
     ]
 
     while True:
@@ -42,8 +41,6 @@ def main():
         elif selected == "6":
             calculate_ave()
         elif selected == "7":
-            generate_report()
-        elif selected == "8":
             print("Exiting...")
             break
         else:
@@ -53,7 +50,7 @@ def main():
 def show_list():
     """Allows teacher to view student list"""
     print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
-    back = input("Press enter to go back to main menu")
+    back = input("Press enter to go back to main menu\n")
     if back:
         return
 
@@ -108,18 +105,17 @@ def show_stu_gradebook():
 
     stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
     print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
-    back = input("Press enter to go back to main menu")
+    back = input("Press enter to go back to main menu\n")
     if back:
         return
 
 
 def show_gradebook():
     """Allows teacher to view a student gradebook"""
-    while True:
-        print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            break
+    print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
+    back = input("Press enter to go back to main menu\n")
+    if back:
+        return
 
 
 def calculate_ave():
