@@ -132,7 +132,7 @@ def calculate_ave():
                 if student_entry:
                     student_entry[subj] = grade
                 else:
-                    grades.append({"name": name, subj: grade})
+                    grades.append({"name": student, subj: grade})
 
             if grades:
                 average_grade = sum(grades) / len(grades)
