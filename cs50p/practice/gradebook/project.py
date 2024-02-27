@@ -35,7 +35,8 @@ def main():
         elif selected == "5":
             show_gradebook()
         elif selected == "6":
-            calculate_ave()
+            global gradebook
+            gradebook = calculate_ave()
         elif selected == "7":
             generate_report()
         elif selected == "8":
@@ -134,6 +135,7 @@ def calculate_ave():
         print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
+            return grades
             break
 
 
