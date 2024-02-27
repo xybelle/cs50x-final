@@ -49,9 +49,12 @@ def main():
 
 def show_list():
     """Allows teacher to view student list"""
-    print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
+    if student_list is None:
+        print("\033[3mNo students added yet\033[0m\n")
+    else:
+        print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
     back = input("Press enter to go back to main menu\n")
-    if back:
+    if back == "":
         return
 
 
@@ -106,7 +109,7 @@ def show_stu_gradebook():
     stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
     print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
     back = input("Press enter to go back to main menu\n")
-    if back:
+    if back == "":
         return
 
 
@@ -114,7 +117,7 @@ def show_gradebook():
     """Allows teacher to view a student gradebook"""
     print(tabulate(gradebook, headers="keys", tablefmt="fancy_outline"))
     back = input("Press enter to go back to main menu\n")
-    if back:
+    if back == "":
         return
 
 
