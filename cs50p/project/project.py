@@ -14,7 +14,7 @@ gradebook = [
 ]
 
 def main():
-    menu = [
+    main = [
         ["1", "Add Student"],
         ["2", "See Student List"],
         ["3", "Add Grade"],
@@ -24,29 +24,26 @@ def main():
         ["7", "Exit"],
     ]
 
+    menu = {
+        "1": add_student,
+        "2": show_list,
+        "3": add_grade,
+        "4": show_stu_gradebook,
+        "5": show_gradebook,
+        "6": calculate_ave,
+    }
+
     while True:
         print("Main Menu")
         print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
-        if selected == "1":
-            add_student()
-        elif selected == "2":
-            show_list()
-        elif selected == "3":
-            add_grade()
-        elif selected == "4":
-            show_stu_gradebook()
-        elif selected == "5":
-            show_gradebook()
-        elif selected == "6":
-            calculate_ave()
+        if selected in menu:
+            menu[selected]()
         elif selected == "7":
             print("Exiting...")
             break
         else:
             print("Invalid Input. Please select a valid option.")
-
-    while True:
 
 
 
