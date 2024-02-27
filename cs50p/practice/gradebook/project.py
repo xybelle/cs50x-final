@@ -107,7 +107,7 @@ def show_gradebook():
             break
 
 
-def get_average(student_id):
+def get_average():
     """
     Calculates the average grade for a specific student
 
@@ -119,7 +119,7 @@ def get_average(student_id):
     """
 
 
-def generate_report(student_id):
+def generate_report():
     """
     Generate report of all grades for a specific student
 
