@@ -74,7 +74,7 @@ def add_grade():
         try:
             name = input("Student Name: ")
             if name not in names:
-                print("Invalid student name")
+                print("\033[3mInvalid student name\033[0m")
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
@@ -96,7 +96,7 @@ def show_gradebook():
         try:
             name = input("Student Name: ")
             if name not in names:
-                print("Invalid student name")
+                print("\033[3mInvalid student name\033[0m")
                 raise ValueError
         except ValueError:
             pass
