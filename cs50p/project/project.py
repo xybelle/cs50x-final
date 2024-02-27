@@ -13,6 +13,8 @@ gradebook = [
     {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
 ]
 
+grades = []
+
 def main():
     main = [
         ["1", "Add Student"],
