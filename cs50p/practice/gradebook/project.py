@@ -122,15 +122,14 @@ def calculate_ave():
     while True:
         grades = []
         for student in gradebook:
-            stu_grades = []
+            stu_grades = {}
             for subject, grade in student.items():
                 if subject == "name":
                     continue
-                stu_grades.append(int(grade))
-            average_grade = sum(stu_grades) / len(stu_grades) if stu_grades else 0
+                stu_grades[subject] = int(grade)
+            average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
             grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
         print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
-        back = input("Enter 1 to go back to the main menu: ")
         if back == "1":
             break
 
