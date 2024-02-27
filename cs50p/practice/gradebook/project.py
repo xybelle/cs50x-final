@@ -77,7 +77,12 @@ def add_grade():
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
-            gradebook.append({"name": name, subj: grade})
+
+            student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
+            if student_entry:
+                student_entry[subj] = grade
+            else:
+                gradebook.append({"name": name, subj: grade})
             print(gradebook)
             break
         except ValueError:
