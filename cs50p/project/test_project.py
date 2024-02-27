@@ -41,24 +41,27 @@ def test_add_student(mock_input, capsys):
 
 # Similar tests for other functions...
 
-def test_generate_report(tmp_path, capsys):
-    # Simulate gradebook data
-    gradebook = [
-        {'name': 'Harry', 'Potions': '9', 'Charms': '9'},
-        {'name': 'Hermione', 'Potions': '8', 'Charms': '10'},
-        {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
-    ]
-
+def test_generate_report(capsys):
     # Call the function
     generate_report()
 
-    # Check if the CSV file was generated
-    csv_file = tmp_path / "gradebook.csv"
-    assert csv_file.exists()
-
-    # Check the printed message
+    # Check if the expected message is printed
     captured = capsys.readouterr()
     assert "Successfully generated: gradebook.csv" in captured.out
+
+    # Check if the CSV file is generated
+    with open("gradebook.csv", "r") as csvfile:
+        # Read the contents of the CSV file
+        csv_content = csvfile.read()
+
+    # Check if the CSV file contains the expected headers
+    assert "name,Potions,Charms,ave\n" in csv_content
+
+    # Check if the CSV file contains the expected data
+    assert "Harry,9,9,9.0\n" in csv_content
+    assert "Hermione,8,10,9.0\n" in csv_content
+    assert "Ron,7,8,7.5\n" in csv_content
+
 
 def test_show_stu_gradebook(mock_input, capsys):
     # Simulate gradebook data
