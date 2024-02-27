@@ -106,7 +106,7 @@ def show_stu_gradebook():
                 print("\033[3mInvalid student name\033[0m")
                 raise ValueError
         except ValueError:
-            pass
+            continue
 
         stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
         print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
