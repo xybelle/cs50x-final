@@ -20,6 +20,7 @@ def main():
     ]
 
     while True:
+        print("Main Menu")
         print(tabulate(main, headers=["Input", "Description"], tablefmt="fancy_outline"))
         selected = input("Select an option: ")
         if selected == "1":
