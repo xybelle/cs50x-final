@@ -6,6 +6,13 @@ from project import (add_student, add_grade, generate_report,
                          show_list, show_stu_gradebook, show_gradebook,
                          calculate_ave)
 
+# Define student list for testing
+student_list = [
+    {"stu_id": "1234", "name": "Harry"},
+    {"stu_id": "4567", "name": "Ron"},
+    {"stu_id": "7890", "name": "Hermione"},
+]
+
 @pytest.fixture
 def mock_input(monkeypatch):
     user_inputs = []
@@ -52,5 +59,3 @@ def test_generate_report(tmp_path, capsys):
     # Check the printed message
     captured = capsys.readouterr()
     assert "Successfully generated: gradebook.csv" in captured.out
-
-
