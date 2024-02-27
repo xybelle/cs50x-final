@@ -62,12 +62,11 @@ def add_student():
     """Allows teacher to add student to student list"""
     name = input("Student name: ")
     id = input("Student ID: ")
-    try:
-        student_list.append({"stu_id": id, "name": name})
-        print("\033[3mStudent successfully added\033[0m\n")
-        return
-    except ValueError:
-        pass
+    if not name or not id:
+        print("Please enter name/id")
+    student_list.append({"stu_id": id, "name": name})
+    print("\033[3mStudent successfully added\033[0m\n")
+    return
 
 
 def add_grade():
