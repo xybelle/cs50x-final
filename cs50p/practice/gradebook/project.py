@@ -135,7 +135,7 @@ def calculate_ave():
                     grades.append({"name": student, subject: grade})
 
             if grades:
-                average_grade = sum(grades) / len(grades)
+                average_grade = sum(stu_grades) / len(stu_grades)
                 student_entry = next((entry for entry in grades if entry["name"] == student), None)
                 if student_entry:
                     student_entry["ave"] = average_grade
