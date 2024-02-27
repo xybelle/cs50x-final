@@ -86,6 +86,8 @@ def add_grade():
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
+            if grade >= 0 and grade <= 100:
+                
 
             student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
             if student_entry:
