@@ -34,6 +34,8 @@ def main():
             show_stu_gradebook()
         elif selected == "5":
             show_gradebook()
+        elif selected == "6":
+            calculate_ave()
         elif selected == "8":
             print("Exiting...")
             break
@@ -115,32 +117,24 @@ def show_gradebook():
             break
 
 
-def get_average():
+def calculate_ave():
     """Calculates the average grade for a specific student"""
-    for student in gradebook:
+    while True:
         grades = []
+        for student in gradebook:
+            for subject, grade in student.items():
+                if subject == "name":
+                    continue
+                grades.append(int(grade))
 
-        for subject, grade in student.items():
-            if subject == "name":
-                continue
-            grades.append(int(grade))
-
-        if grades:
-            average_grade = sum(grades) / len(grades)
-
-        else:
-            average_grade = 0
+            if grades:
+                average_grade = sum(grades) / len(grades)
+            else:
+                average_grade = 0
 
 
 def generate_report():
-    """
-    Generate report of all grades for a specific student
-
-    :param student_id
-    :type student_id: str
-    :raise ValueError: If student_id not in db
-    :return: A csv file of grade
-    """
+    """Generate report of all grades for all student"""
 
 
 if __name__ == "__main__":
