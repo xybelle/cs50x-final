@@ -63,16 +63,13 @@ def test_generate_report(capsys):
     assert "Ron,7,8,7.5\n" in csv_content
 
 
-def test_show_stu_gradebook(mock_input, capsys):
-    # Simulate gradebook data
-    gradebook = [
-        {'name': 'Harry', 'Potions': '9', 'Charms': '9'},
-        {'name': 'Hermione', 'Potions': '8', 'Charms': '10'},
-        {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
-    ]
-
+def test_show_stu_gradebook(monkeypatch, capsys):
     # Simulate user input
-    mock_input.append("Harry")
+    mock_input = ["Harry", "1"]  # Providing inputs for both student name and returning to main menu
+    mock_input_impl = lambda _: mock_input.pop(0)  # Define the input implementation function
+
+    # Patching the input function
+    monkeypatch.setattr('builtins.input', mock_input_impl)
 
     # Call the function
     show_stu_gradebook()
@@ -87,3 +84,4 @@ def test_show_stu_gradebook(mock_input, capsys):
 
     # Check if the prompt to go back to the main menu is shown
     assert "Enter 1 to go back to main menu: " in captured.out
+
