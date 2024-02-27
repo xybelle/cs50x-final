@@ -12,8 +12,8 @@ student_list = [
 
 def test_show_list_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
-    monkeypatch.setattr('builtins.input', lambda _: "")
-    monkeypatch.setattr()
+    monkeypatch.setattr("builtins.input", lambda _: "")
+    monkeypatch.setattr("project.student_list.append()", lambda _: "")
     monkeypatch.delitem(project.student_list, "stu_id", raising=False)
     monkeypatch.delitem(project.student_list, "name", raising=False)
     # Call function
