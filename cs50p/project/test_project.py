@@ -59,3 +59,28 @@ def test_generate_report(tmp_path, capsys):
     # Check the printed message
     captured = capsys.readouterr()
     assert "Successfully generated: gradebook.csv" in captured.out
+
+def test_show_stu_gradebook(mock_input, capsys):
+    # Simulate gradebook data
+    gradebook = [
+        {'name': 'Harry', 'Potions': '9', 'Charms': '9'},
+        {'name': 'Hermione', 'Potions': '8', 'Charms': '10'},
+        {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
+    ]
+
+    # Simulate user input
+    mock_input.append("Harry")
+
+    # Call the function
+    show_stu_gradebook()
+
+    # Check if the correct student gradebook is shown
+    captured = capsys.readouterr()
+    assert "Harry" in captured.out
+    assert "Potions" in captured.out
+    assert "9" in captured.out
+    assert "Charms" in captured.out
+    assert "9" in captured.out
+
+    # Check if the prompt to go back to the main menu is shown
+    assert "Enter 1 to go back to main menu: " in captured.out
