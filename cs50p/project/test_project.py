@@ -25,8 +25,8 @@ def test_show_list_empty(capfd, monkeypatch):
 def test_show_list_not_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr('builtins.input', lambda _: "")
-    monkeypatch.setitem(project.student_list, student_list)
-    monkeypatch.setitem(project.student_list, student_list)
+    monkeypatch.setitem(project.student_list, student_list, student_list)
+    monkeypatch.setitem(project.student_list, student_list, student_list)
     # Call function
     project.show_list()
     out, err = capfd.readouterr()
