@@ -36,6 +36,8 @@ def main():
             show_gradebook()
         elif selected == "6":
             calculate_ave()
+        elif selected == "7":
+            generate_report()
         elif selected == "8":
             print("Exiting...")
             break
@@ -137,7 +139,7 @@ def calculate_ave():
 
 def generate_report():
     """Generate report of all grades for all student"""
-    
+
 
 
 if __name__ == "__main__":
