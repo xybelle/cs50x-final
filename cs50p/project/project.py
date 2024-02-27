@@ -97,21 +97,20 @@ def add_grade():
 
 def show_stu_gradebook():
     """Allows teacher to view a student gradebook"""
-    while True:
-        names = [_["name"] for _ in student_list]
-        try:
-            name = input("Student Name: ")
-            if name not in names:
-                print("\033[3mInvalid student name\033[0m")
-                raise ValueError
-        except ValueError:
-            pass
+    names = [_["name"] for _ in student_list]
+    try:
+        name = input("Student Name: ")
+        if name not in names:
+            print("\033[3mInvalid student name\033[0m")
+            raise ValueError
+    except ValueError:
+        pass
 
-        stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
-        print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            break
+    stu_gradebook = filter(lambda s: s["name"] == name, gradebook)
+    print(tabulate(stu_gradebook, headers="keys", tablefmt="fancy_outline"))
+    back = input("Press enter to go back to main menu")
+    if back:
+        return
 
 
 def show_gradebook():
