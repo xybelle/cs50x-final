@@ -45,9 +45,9 @@ def show_list():
         print("\033[3mNo students added yet\033[0m\n")
     else:
         print(tabulate(student_list, headers="keys", tablefmt="fancy_outline"))
-    back = input("Press enter to go back to main menu\n")
-    if back == "":
-        return
+        back = input("Press enter to go back to main menu\n")
+        if back == "":
+            return
 
 
 def add_student():
