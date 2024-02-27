@@ -120,8 +120,8 @@ def show_gradebook():
 def calculate_ave():
     """Calculates the average grade for a specific student"""
     while True:
-        grades = []
         for student in gradebook:
+            grades = []
             for subject, grade in student.items():
                 if subject == "name":
                     continue
@@ -131,7 +131,7 @@ def calculate_ave():
                 average_grade = sum(grades) / len(grades)
             else:
                 average_grade = 0
-        print(grades)
+            print(grades)
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
