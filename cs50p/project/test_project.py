@@ -1,6 +1,6 @@
 from project import show_list
 
-# Mock studend list for testing
+# Mock student list for testing
 student_list = []
 
 def test_show_list_empty(capfd, monkeypatch):
