@@ -74,7 +74,7 @@ def add_student():
     ids = [student["stu_id"] for student in student_list]
     if name.isalpha() and id.isdigit() and id not in ids:
         student_list.append({"stu_id": id, "name": name})
-    print("\033[3mStudent successfully added\033[0m\n")
+        print("\033[3mStudent successfully added\033[0m\n")
     return
 
 
