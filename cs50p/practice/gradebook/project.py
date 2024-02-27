@@ -143,7 +143,7 @@ def calculate_ave():
                     grades.append({"name": name, "ave": average_grade})
             else:
                 average_grade = 0
-            print(grades)
+            print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
         back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
