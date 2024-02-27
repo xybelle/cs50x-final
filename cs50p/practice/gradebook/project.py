@@ -130,7 +130,18 @@ def get_average():
     :return: Grade average
     :rtype: float
     """
-    
+    for student in gradebook:
+        grades = []
+
+        for subject, grade in student.items():
+            if subject == "name":
+                continue
+            grades.append(int(grade))
+
+        if grades:
+            average_grade = sum(grades) / len(grades)
+        else:
+            average_grade = 0
 
 
 def generate_report():
