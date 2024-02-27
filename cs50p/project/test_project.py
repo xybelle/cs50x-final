@@ -1,5 +1,8 @@
 from project import show_list
 
+# Mock studend list for testing
+student_list = []
+
 def test_show_list_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr('builtins.input', lambda _: "")
