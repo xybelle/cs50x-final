@@ -63,18 +63,16 @@ def add_student():
     while True:
         name = input("Student name: ")
         id = input("Student ID: ")
-        ids = [student["stu_id"] for student in student_list]
         if not name or not id:
             print("Please enter name/id")
         elif id in ids:
             print("Student ID already in use")
+        ids = [student["stu_id"] for student in student_list]
+        if name.isalpha() and id.isdigit() and id not in ids:
+            student_list.append({"stu_id": id, "name": name})
+            print("\033[3mStudent successfully added\033[0m\n")
         else:
             break
-
-    ids = [student["stu_id"] for student in student_list]
-    if name.isalpha() and id.isdigit() and id not in ids:
-        student_list.append({"stu_id": id, "name": name})
-        print("\033[3mStudent successfully added\033[0m\n")
     return
 
 
