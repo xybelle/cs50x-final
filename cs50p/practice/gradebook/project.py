@@ -64,14 +64,7 @@ def add_student():
 
 
 def add_grade():
-    """
-    Allows teacher to add a grade for a specific student and assignment/test.
-
-    :param student_id, test_id, grade
-    :type student_id: str, test_id: str, grade: float
-    :raise ValueError: if student_id not in db
-    """
-
+    """Allows teacher to add a grade for a specific student and assignment/test."""
     while True:
         names = [_["name"] for _ in student_list]
         try:
@@ -85,8 +78,10 @@ def add_grade():
             student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
             if student_entry:
                 student_entry[subj] = grade
+                print("\033[3mGrade added successfully\033[0m")
             else:
                 gradebook.append({"name": name, subj: grade})
+                print("\033[3mGrade added successfully\033[0m")
             break
         except ValueError:
             pass
@@ -132,7 +127,7 @@ def get_average():
 
         if grades:
             average_grade = sum(grades) / len(grades)
-            
+
         else:
             average_grade = 0
 
