@@ -13,8 +13,6 @@ gradebook = [
     {'name': 'Ron', 'Potions': '7', 'Charms': '8'}
 ]
 
-grades = []
-
 def main():
     main = [
         ["1", "Add Student"],
@@ -23,7 +21,7 @@ def main():
         ["4", "See student gradebook"],
         ["5", "See all gradebook"],
         ["6", "Calculate Average"],
-        ["7", "Generate Report"],
+        #["7", "Generate Report"],
         ["8", "Exit"],
     ]
 
@@ -139,24 +137,15 @@ def calculate_ave():
             average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
             grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
         print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
-        back = input("Enter 1 to go back to main menu: ")
-        if back == "1":
-            return grades
+        get_report = input("Generate report? (Y/N) ").toupper()
+        if get_report == "Y":
+            generate_report(grades)
+        elif get_report == "N":
             break
 
 
-def generate_report():
+def generate_report(grades):
     """Generate report of all grades for all student"""
-    grades = []
-    for student in gradebook:
-        stu_grades = {}
-        for subject, grade in student.items():
-            if subject == "name":
-                continue
-            stu_grades[subject] = int(grade)
-        average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
-        grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
-
     fieldnames = []
     for grade in grades:
         for key in grade.keys():
