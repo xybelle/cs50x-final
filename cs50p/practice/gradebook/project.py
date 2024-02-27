@@ -140,6 +140,7 @@ def get_average():
 
         if grades:
             average_grade = sum(grades) / len(grades)
+            gradebook.append
         else:
             average_grade = 0
 
