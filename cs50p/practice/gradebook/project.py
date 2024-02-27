@@ -130,6 +130,7 @@ def calculate_ave():
             average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
             grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
         print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
+        back = input("Enter 1 to go back to main menu: ")
         if back == "1":
             break
 
