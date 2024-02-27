@@ -132,11 +132,7 @@ def get_average():
 
         if grades:
             average_grade = sum(grades) / len(grades)
-            student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
-            if student_entry:
-                student_entry[subj] = grade
-            else:
-                gradebook.append({"name": name, subj: grade})
+            
         else:
             average_grade = 0
 
