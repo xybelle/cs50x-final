@@ -83,7 +83,6 @@ def add_grade():
                 student_entry[subj] = grade
             else:
                 gradebook.append({"name": name, subj: grade})
-            print(gradebook)
             break
         except ValueError:
             pass
