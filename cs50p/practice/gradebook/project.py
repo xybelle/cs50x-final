@@ -155,8 +155,8 @@ def generate_report():
         average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
         grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
 
-    with open("gradebook", "w") as file:
-        writer = csv.DictWriter(file, fieldnames=)
+    with open("gradebook.csv", "w") as csvfile:
+        writer = csv.DictWriter(csvfile)
         writer.writeheader()
         for row in grades:
             writer.writerow(row)
