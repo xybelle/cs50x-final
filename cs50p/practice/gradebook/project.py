@@ -131,6 +131,10 @@ def calculate_ave():
                 average_grade = sum(grades) / len(grades)
             else:
                 average_grade = 0
+        print(grades)
+        back = input("Enter 1 to go back to main menu: ")
+        if back == "1":
+            break
 
 
 def generate_report():
