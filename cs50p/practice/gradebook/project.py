@@ -137,6 +137,7 @@ def calculate_ave():
 
 def generate_report():
     """Generate report of all grades for all student"""
+    
 
 
 if __name__ == "__main__":
