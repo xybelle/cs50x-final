@@ -121,15 +121,7 @@ def show_gradebook():
 
 
 def get_average():
-    """
-    Calculates the average grade for a specific student
-
-    :param student_id: identifier
-    :type student_id: str
-    :raise ValueError: If student_id not in db
-    :return: Grade average
-    :rtype: float
-    """
+    """Calculates the average grade for a specific student"""
     for student in gradebook:
         grades = []
 
@@ -140,7 +132,11 @@ def get_average():
 
         if grades:
             average_grade = sum(grades) / len(grades)
-            gradebook.append
+            student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
+            if student_entry:
+                student_entry[subj] = grade
+            else:
+                gradebook.append({"name": name, subj: grade})
         else:
             average_grade = 0
 
