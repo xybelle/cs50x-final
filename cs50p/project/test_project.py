@@ -12,7 +12,8 @@ student_list = [
 def test_show_list_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr('builtins.input', lambda _: "")
-    monkeypatch.delitem(project.student_list, "stu_id", "name" raising=False)
+    monkeypatch.delitem(project.student_list, "stu_id", raising=False)
+    monkeypatch.delitem(project.student_list, "name", raising=False)
     # Call function
     show_list()
     # Capture the output
