@@ -60,10 +60,13 @@ def show_list():
 
 def add_student():
     """Allows teacher to add student to student list"""
-    name = input("Student name: ")
-    id = input("Student ID: ")
-    if not name or not id:
-        print("Please enter name/id")
+    while True:
+        name = input("Student name: ")
+        id = input("Student ID: ")
+        if not name or not id:
+            print("Please enter name/id")
+        else:
+            break
     student_list.append({"stu_id": id, "name": name})
     print("\033[3mStudent successfully added\033[0m\n")
     return
