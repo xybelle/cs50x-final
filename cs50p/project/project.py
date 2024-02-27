@@ -86,8 +86,9 @@ def add_grade():
                 raise ValueError
             subj = input("Subject: ")
             grade = input("Grade: ")
-            if grade >= 0 and grade <= 100:
-                
+            if grade < 0 and grade > 100:
+                print("\033[3mInvalid grade input (0-100)\033[0m")
+
 
             student_entry = next((entry for entry in gradebook if entry["name"] == name), None)
             if student_entry:
