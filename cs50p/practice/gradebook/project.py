@@ -42,7 +42,7 @@ def main():
         elif selected == "6":
             calculate_ave()
         elif selected == "7":
-            generate_report(gradebook)
+            generate_report()
         elif selected == "8":
             print("Exiting...")
             break
@@ -143,7 +143,7 @@ def calculate_ave():
             break
 
 
-def generate_report(gradebook):
+def generate_report():
     """Generate report of all grades for all student"""
     grades = []
     for student in gradebook:
@@ -155,10 +155,10 @@ def generate_report(gradebook):
         average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
         grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
 
-    with open(grades, "w") as file:
+    with open("gradebook", "w") as file:
         writer = csv.DictWriter(file)
         writer.writeheader()
-        for row in gradebook:
+        for row in grades:
             writer.writerow(row)
 
 
