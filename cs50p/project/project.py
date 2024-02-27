@@ -60,15 +60,14 @@ def show_list():
 
 def add_student():
     """Allows teacher to add student to student list"""
-    while True:
-        name = input("Student name: ")
-        id = input("Student ID: ")
-        try:
-            student_list.append({"stu_id": id, "name": name})
-            print("\033[3mStudent successfully added\033[0m")
-            break
-        except ValueError:
-            pass
+    name = input("Student name: ")
+    id = input("Student ID: ")
+    try:
+        student_list.append({"stu_id": id, "name": name})
+        print("\033[3mStudent successfully added\033[0m\n")
+        return
+    except ValueError:
+        pass
 
 
 def add_grade():
@@ -136,7 +135,7 @@ def calculate_ave():
     get_report = input("Generate report? (Y/N) ").upper()
     if get_report == "Y":
         return generate_report(grades)
-    else
+    else:
         return
 
 
