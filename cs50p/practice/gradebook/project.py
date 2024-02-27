@@ -87,6 +87,7 @@ def add_grade():
 def show_gradebook():
     """Allows teacher to view a student gradebook"""
     while True:
+        names = [_["name"] for _ in student_list]
         try:
             name = input("Student Name: ")
             if name not in names:
