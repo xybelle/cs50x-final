@@ -130,6 +130,7 @@ def get_average():
     :return: Grade average
     :rtype: float
     """
+    
 
 
 def generate_report():
