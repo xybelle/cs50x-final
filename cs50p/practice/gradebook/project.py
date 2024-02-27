@@ -155,13 +155,18 @@ def generate_report():
         average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
         grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
 
+    fieldnames = []
+    for grade in grades:
+        for key in grade.keys():
+            if key not in fieldnames:
+                fieldnames.append(key)
     with open("gradebook.csv", "w") as csvfile:
-        fieldnames = set().union(*(grade.keys() for grade in grades))
-        print(fieldnames)
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for row in grades:
             writer.writerow(row)
+
+    print("\033[3mSuccessfully generated: gradebook.csv\033[0m")
 
 
 if __name__ == "__main__":
