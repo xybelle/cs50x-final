@@ -21,4 +21,4 @@ My final project for CS50p 2024 online course offered by Harvard University. The
         - `test_add_student_new` : For testing `add_student` for adding a new student (not in the list yet).
         - `test_add_student_none` : For testing `add_student` assuming user didn't enter a valid name/id.
         - `test_add_student_not_new` : For testing `add_student` assuming the id entered is already in use.
-        - `test_generate_report` : For testing `generate_report` ass
+        - `test_generate_report` : For testing `generate_report` asserting prints success message and CSV generated contains temp gradebook.
