@@ -136,8 +136,8 @@ def calculate_ave():
     print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
     get_report = input("Generate report? (Y/N) ").lower()
     if get_report == "y":
-        path = input("Path: ").lower()
-        return generate_report(grades, path)
+        filepath = input("Save as? ")
+        return generate_report(grades, filepath)
     else:
         return
 
@@ -149,12 +149,12 @@ def generate_report(grades, filepath):
         for key in grade.keys():
             if key not in fieldnames:
                 fieldnames.append(key)
-    with open(filepath, "w") as csvfile:
+    with open(f"{filepath}.csv", "w") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for row in grades:
             writer.writerow(row)
-    print("\033[3mSuccessfully generated: gradebook.csv\033[0m\n")
+    print(f"\033[3mSuccessfully generated: {filepath}.csv\033[0m\n")
 
 
 if __name__ == "__main__":
