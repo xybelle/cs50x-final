@@ -5,11 +5,11 @@ My final project for CS50X 2024 online course offered by Harvard University. I'v
 
 1. **app.py**
     - Contains functions:
-        - 'index' : Renders index.html
-        - 'register': It requires that user enters the first and last name of student, their name (parent/guardian), email address, password and confirmation. Will present different error message depending on issue. Will return message if name fields are empty, if email is already registered, if password field is empty, if password and confirmation do not match. Passwords are hashed before storing into *students* table in gds.db (more on this on gds.db section). After successful registration, user is logged in.
-        - 'login': Requires that user enter email address and password to log in. Will return error if user did not enter email and/or password. Checks the database for the email address and if password is correct and set session id as user id.
-        - 'logout': Forgets user and redirect user to index.
-        - 'home': Requires user is logged in. Query database to get the parent or guardian name for greeting. Will show any upcoming classes if there are any. Otherwise will show 'no upcoming classes'.
+        - `index` : Renders index.html
+        - `register`: It requires that user enters the first and last name of student, their name (parent/guardian), email address, password and confirmation. Will present different error message depending on issue. Will return message if name fields are empty, if email is already registered, if password field is empty, if password and confirmation do not match. Passwords are hashed before storing into *students* table in gds.db (more on this on gds.db section). After successful registration, user is logged in.
+        - `login`: Requires that user enter email address and password to log in. Will return error if user did not enter email and/or password. Checks the database for the email address and if password is correct and set session id as user id.
+        - `logout`: Forgets user and redirect user to index.
+        - `home`: Requires user is logged in. Query database to get the parent or guardian name for greeting. Will show any upcoming classes if there are any. Otherwise will show 'no upcoming classes'.
         - 'book': Renders book.html where user can select which class they want to book. Requires user is logged in.
         - 'confirm': Gets selected class after user confirms. Will check if user already booked the class by querying the database, if so, will show message 'already enrolled'. Otherwise, will try to update the *enrolments* table except if there are any errors. Requires user is logged in.
         - 'about': Renders about.html.
