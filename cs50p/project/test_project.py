@@ -48,4 +48,4 @@ def test_add_student_none(capfd, monkeypatch):
     # Capture the output
     out, err = capfd.readouterr()
     # Assert that the output is as expected
-    
+    assert "Please enter name/id" in out
