@@ -16,4 +16,4 @@ My final project for CS50p 2024 online course offered by Harvard University. The
         - `generate_report` : Takes the grades and filepath from `calculate_ave` to write CSV.
 2. **test_project.py**
     - Contains functions:
-        - `test_show_list_empty` : 
+        - `test_show_list_empty` : To test `show_list` assuming `student_list` is empty.
