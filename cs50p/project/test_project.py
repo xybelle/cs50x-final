@@ -25,11 +25,9 @@ def test_show_list_not_empty(capfd, monkeypatch):
     assert "1234" in out
     assert "Harry" in out
 
-
-
 def test_add_student_new(capfd, monkeypatch):
     # Mock input to simulate user entering a name and ID
-    inputs = iter(["3456", "Gabbie"])
+    inputs = iter(["Gabbie", "3456"])
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
     # Mock student_list to be an empty list
     monkeypatch.setattr("project.student_list", [])
@@ -40,3 +38,14 @@ def test_add_student_new(capfd, monkeypatch):
     # Assert that the output is as expected
     assert "\033[3mStudent successfully added\033[0m\n" in out
 
+def test_add_student_none(capfd, monkeypatch):
+    # Mock input to simulate user not entering name and id
+    monkeypatch.setattr("builtins.input", lambda _: "")
+    # Mock student_list to be an empty list
+    monkeypatch.setattr("project.student_list", [])
+    # Call function
+    project.add_student()
+    # Capture the output
+    out, err = capfd.readouterr()
+    # Assert that the output is as expected
+    
