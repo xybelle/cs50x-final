@@ -133,7 +133,7 @@ def calculate_ave():
         return
 
 
-def generate_report(grades):
+def generate_report(grades, filepath):
     """Generate report of all grades for all student"""
     fieldnames = []
     for grade in grades:
