@@ -29,8 +29,8 @@ def test_show_list_not_empty(capfd, monkeypatch):
 
 def test_add_student_new(capfd, monkeypatch):
     # Mock input to simulate user entering a name and ID
-    monkeypatch.setattr("builtins.input", lambda _: "3456")
-    monkeypatch.setattr("builtins.input", lambda _: "Gabbie")
+    inputs = iter(["3456", "Gabbie"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
     # Mock student_list to be an empty list
     monkeypatch.setattr("project.student_list", [])
     # Call function
