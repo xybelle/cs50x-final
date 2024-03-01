@@ -65,3 +65,22 @@ def test_add_student_not_new(capfd, monkeypatch):
     # Assert that the output is as expected
     assert "Student ID already in use" in out
     assert "\033[3mStudent successfully added\033[0m\n" in out
+
+def test_generate_report(tmpdir, capfd):
+    # Create a list of dictionaries representing the grades
+    gradebook = [
+        {'name': 'Harry', 'Potions': '90', 'Charms': '90'},
+        {'name': 'Hermione', 'Potions': '80', 'Charms': '100'},
+        {'name': 'Ron', 'Potions': '70', 'Charms': '80'}
+    ]
+    # Call function with greade and path to a file in the temporary directory
+    project.generate_report(gradebook, tmpdir / "gradebook.csv")
+    # Capture the output
+    out, err = capfd.readouterr()
+    # Assert that the output is as expected
+    assert "\033[3mSuccessfully generated: gradebook.csv\033[0m\n" in out
+    # Open file and check that it contains the expected data
+    with open(tmpdir / "gradebook.csv") as f:
+        reader = csv.DictReader(f)
+        for row, grade in zip(reader, gradebook):
+            assert row == grade
