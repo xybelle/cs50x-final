@@ -13,7 +13,7 @@ student_list = [
 def test_show_list_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr("builtins.input", lambda _: "")
-    monkeypatch.setattr("builtins.list.append", lambda self, _: "")
+    monkeypatch.setattr("project.student_list", [])
     # Call function
     project.show_list()
     # Capture the output
@@ -24,8 +24,8 @@ def test_show_list_empty(capfd, monkeypatch):
 def test_show_list_not_empty(capfd, monkeypatch):
     # Mock input to simulate user pressing enter
     monkeypatch.setattr('builtins.input', lambda _: "")
-    monkeypatch.setitem(project.student_list, "stu_id", "1234")
-    monkeypatch.setitem(project.student_list, "name", "Harry")
+    monkeypatch.setattr("project.student_list", ["stu_id","1234"])
+    monkeypatch.setattr("project.student_list", ["name", "Harry"])
     # Call function
     project.show_list()
     out, err = capfd.readouterr()
