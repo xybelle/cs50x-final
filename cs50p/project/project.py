@@ -1,9 +1,17 @@
 import csv
 from tabulate import tabulate
 
-student_list = []
+student_list = [
+    {"stu_id": "1234", "name": "Harry"},
+    {"stu_id": "4567", "name": "Ron"},
+    {"stu_id": "7890", "name": "Hermione"},
+]
 
-gradebook = []
+gradebook = [
+    {'name': 'Harry', 'Potions': '90', 'Charms': '90'},
+    {'name': 'Hermione', 'Potions': '80', 'Charms': '100'},
+    {'name': 'Ron', 'Potions': '70', 'Charms': '80'}
+]
 
 def main():
     main = [
@@ -140,7 +148,7 @@ def generate_report(grades, filepath):
         for key in grade.keys():
             if key not in fieldnames:
                 fieldnames.append(key)
-    with open("gradebook.csv", "w") as csvfile:
+    with open(filepath, "w") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for row in grades:
