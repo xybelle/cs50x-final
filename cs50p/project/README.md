@@ -6,5 +6,6 @@ My final project for CS50p 2024 online course offered by Harvard University. The
 
 1. **project.py**
     - Contains functions:
-        - main
+        - this main' has asdfasdfasdfasdf
+        -
 
