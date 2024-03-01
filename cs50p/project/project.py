@@ -134,9 +134,10 @@ def calculate_ave():
         average_grade = sum(stu_grades.values()) / len(stu_grades) if stu_grades else 0
         grades.append({"name": student["name"], **stu_grades, "ave": average_grade})
     print(tabulate(grades, headers="keys", tablefmt="fancy_outline"))
-    get_report = input("Generate report? (Y/N) ").upper()
-    if get_report == "Y":
-        return generate_report(grades)
+    get_report = input("Generate report? (Y/N) ").lower()
+    if get_report == "y":
+        path = input("Path: ").lower()
+        return generate_report(grades, path)
     else:
         return
 
