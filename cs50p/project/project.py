@@ -123,7 +123,7 @@ def show_gradebook():
 
 
 def calculate_ave():
-    """Calculates the average grade for a specific student"""
+    """Calculates the average grade"""
     grades = []
     for student in gradebook:
         stu_grades = {}
