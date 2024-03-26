@@ -93,6 +93,8 @@ def shortest_path(source, target):
     """
 
     # TODO
+    source
+
     raise NotImplementedError
 
 
