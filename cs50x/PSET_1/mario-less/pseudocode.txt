@@ -1,3 +1,0 @@
-Prompt user for height between numbers 1 to 8
-If height is less than one or greater than 8, go back step 1
-On iteration i, print i hashes and then a newline
